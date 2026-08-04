@@ -448,10 +448,26 @@ def enrich_generic(f: Fetcher, p: Posting, cfg: dict) -> None:
         return
     r = f.get(p.link)
     soup = BeautifulSoup(f.text_of(r), "lxml")
-    for t in soup(["script", "style", "nav", "header", "footer"]):
+    # 상세 페이지에는 사이드바·관련공고·다른 공고 목록이 함께 렌더링된다.
+    # 그걸 본문으로 읽으면 '다른 공고의 제목'이 이 공고의 본문이 되어 오탐이 난다
+    # (실측: 송파구 치위생사 채용이 옆에 링크된 '정원지원센터' 공고에 걸렸다).
+    for t in soup(["script", "style", "nav", "header", "footer", "aside",
+                   "form", "select", "button"]):
         t.decompose()
-    main = (soup.select_one("#content, #contents, .content, .board_view, .bbs_view")
+    for sel in (".lnb", ".snb", ".gnb", ".menu", ".sitemap", ".quick",
+                ".related", ".relate", ".other", ".sidebar", ".side",
+                ".board_list", ".bbs_list", ".list_wrap", "#lnb", "#snb",
+                "#gnb", "#footer", "#header", "#nav"):
+        for t in soup.select(sel):
+            t.decompose()
+    main = (soup.select_one("#content, #contents, .content, .board_view, "
+                            ".bbs_view, .view_cont, .board_cont")
             or soup.body or soup)
+    # 본문 영역 안에 남은 목록형 링크 뭉치도 제거 (관련공고 리스트)
+    for tbl in main.find_all("table"):
+        rows = tbl.select("tbody tr") or tbl.find_all("tr")
+        if len(rows) >= 3 and sum(1 for x in rows if x.find("a", href=True)) >= 3:
+            tbl.decompose()
     p.body = main.get_text("\n", strip=True)[:60000]
 
     # 첨부 본문까지 읽는다 (자격 요건이 HWP 안에만 있는 공고가 흔하다)
