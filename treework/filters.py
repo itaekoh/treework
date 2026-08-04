@@ -27,6 +27,7 @@ from __future__ import annotations
 
 import re
 from dataclasses import dataclass, field
+from datetime import datetime
 
 # ── TIER A: 수목진료 법정·전문 용어. 걸리면 사실상 확정. ──────────────────
 TIER_A = [
@@ -101,6 +102,27 @@ RESULT_NOTICE = re.compile(
 def is_result_notice(title: str) -> bool:
     """결과 발표·경과 안내처럼 지원이 불가능한 공고인가."""
     return bool(RESULT_NOTICE.search(title or ""))
+
+
+def is_closed(due: str, now: datetime | None = None) -> bool:
+    """마감이 이미 지났는가.
+
+    마감을 모르면 버리지 않는다(모르는 것을 놓치는 것보다 낫다).
+    날짜만 있으면 그 날 하루는 살아있는 것으로 본다.
+    시각까지 있으면 시각으로 비교한다 — 나라장터 소액 수의시담은 공고 당일
+    오전에 마감되는 일이 흔해서(실측: 07:59 공고 → 10:00 마감) 날짜만으로는
+    이미 끝난 건을 걸러내지 못한다.
+    """
+    due = (due or "").strip()
+    if not due:
+        return False
+    now = now or datetime.now()
+    try:
+        if len(due) > 10:                      # 'YYYY-MM-DD HH:MM'
+            return datetime.strptime(due[:16], "%Y-%m-%d %H:%M") < now
+        return datetime.strptime(due, "%Y-%m-%d").date() < now.date()
+    except ValueError:
+        return False
 
 
 _TIERS = (("A", TIER_A), ("B", TIER_B), ("C", TIER_C))

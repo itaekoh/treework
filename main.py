@@ -26,7 +26,6 @@ import os
 import re
 import sys
 import time
-from datetime import date, datetime
 from pathlib import Path
 
 import yaml
@@ -73,23 +72,6 @@ def wants_deep_scan(src: dict) -> bool:
     if "deep_scan" in src:
         return bool(src["deep_scan"])
     return "채용" in (src.get("name") or "")
-
-
-def is_closed(p) -> bool:
-    """마감이 이미 지난 공고인가.
-
-    마감일을 모르면 버리지 않는다(모르는 것을 놓치는 것보다 낫다).
-    날짜만 있고 시각이 없으면 그 날 하루는 살아있는 것으로 본다.
-    """
-    due = (p.due_date or "").strip()
-    if not due:
-        return False
-    try:
-        if len(due) > 10:      # 'YYYY-MM-DD HH:MM'
-            return datetime.strptime(due, "%Y-%m-%d %H:%M") < datetime.now()
-        return datetime.strptime(due, "%Y-%m-%d").date() < date.today()
-    except ValueError:
-        return False
 
 
 def should_enrich(src: dict, p, deep: bool) -> bool:
@@ -139,18 +121,22 @@ def collect_source(f: Fetcher, src: dict, defaults: dict, *,
     postings = [p for p in postings if _within(p.reg_date, lookback)]
     log.info("[%s] 목록 %d건 (lookback 내 %d건)",
              src["id"], health["rows"], len(postings))
-    if not with_detail or not enrich:
-        return postings, health
 
-    # 결과·경과 공고와 마감된 공고는 여기서 버린다. 상세·첨부를 받지 않으므로
+    # 결과·경과 공고와 마감된 공고를 버린다. 상세 조회 이전에 걸러야
     # 실행 시간도 줄어든다(첨부 다운로드가 전체 시간의 대부분이다).
+    # 상세 조회기가 없는 소스(나라장터)나 --no-detail 실행에서도 반드시 적용돼야
+    # 하므로 아래 조기 반환보다 앞에 둔다.
     before = len(postings)
     postings = [p for p in postings
-                if not filters.is_result_notice(p.title) and not is_closed(p)]
+                if not filters.is_result_notice(p.title)
+                and not filters.is_closed(p.due_date)]
     dropped = before - len(postings)
     if dropped:
         log.info("[%s] 결과공고·마감분 %d건 제외", src["id"], dropped)
     health["dropped"] = dropped
+
+    if not with_detail or not enrich:
+        return postings, health
 
     deep = wants_deep_scan(src)
     for p in postings:

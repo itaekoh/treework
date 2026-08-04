@@ -110,8 +110,34 @@ def check_result_notice() -> int:
     return fails
 
 
+def check_closed() -> int:
+    """마감 판정. 나라장터 소액 수의시담은 공고 당일 오전에 마감되는 일이
+    흔해서 날짜만 비교하면 이미 끝난 건을 걸러내지 못한다."""
+    from datetime import datetime
+    now = datetime(2026, 8, 4, 20, 7)      # 실제 실행 시각으로 고정
+    cases = [
+        ("당일 오전에 마감된 건 (실측 오탐)", "2026-08-04 10:00", True),
+        ("당일 늦은 시각 마감은 아직 유효", "2026-08-04 23:50", False),
+        ("일주일 전 마감", "2026-07-28 17:30", True),
+        ("내일 마감", "2026-08-05 10:00", False),
+        ("날짜만 있고 오늘이면 유효", "2026-08-04", False),
+        ("날짜만 있고 어제면 마감", "2026-08-03", True),
+        ("마감을 모르면 버리지 않는다", "", False),
+        ("형식이 깨져도 버리지 않는다", "확인불가", False),
+    ]
+    fails = 0
+    for desc, due, want in cases:
+        got = filters.is_closed(due, now)
+        if got != want:
+            print(f"FAIL  마감판정: {desc} ({due!r}) 기대={want} 실제={got}")
+            fails += 1
+    print(f"{'PASS' if not fails else 'FAIL'}  마감 판정 "
+          f"{len(cases) - fails}/{len(cases)}")
+    return fails
+
+
 def main() -> int:
-    fails = check_result_notice()
+    fails = check_result_notice() + check_closed()
     for desc, title, body, attach, dept, want in CASES:
         m = filters.classify(title, body, attach, dept)
         ok = m.tier == want
