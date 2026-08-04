@@ -72,8 +72,13 @@ class SeenStore:
     ROWS_WINDOW = 10          # 최근 몇 회분 수집량을 기억할지
     DROP_RATIO = 0.4          # 과거 중간값의 이 비율 미만이면 급감으로 본다
 
-    def record_health(self, source_id: str, *, ok: bool, rows: int) -> dict:
-        """이번 실행 결과를 이력에 반영하고 진단을 돌려준다."""
+    def record_health(self, source_id: str, *, ok: bool, rows: int,
+                      error: str = "") -> dict:
+        """이번 실행 결과를 이력에 반영하고 진단을 돌려준다.
+
+        실패 사유를 함께 남긴다. 이게 없으면 로컬에서는 되는데 Actions 에서만
+        실패하는 소스를 만났을 때 원인(차단/타임아웃/구조변경)을 구분할 수 없다.
+        """
         h = self.health.setdefault(source_id, {"ok": "", "fails": 0, "rows": []})
         prev_rows = list(h.get("rows") or [])
         diag = {"consecutive_failures": 0, "days_since_ok": None,
@@ -82,6 +87,7 @@ class SeenStore:
         if ok:
             h["fails"] = 0
             h["ok"] = date.today().isoformat()
+            h.pop("err", None)
             # 급감 판정은 과거 이력이 충분할 때만
             if len(prev_rows) >= 4:
                 baseline = sorted(prev_rows)[len(prev_rows) // 2]   # 중간값
@@ -91,6 +97,8 @@ class SeenStore:
             h["rows"] = (prev_rows + [rows])[-self.ROWS_WINDOW:]
         else:
             h["fails"] = int(h.get("fails", 0)) + 1
+            h["err"] = (error or "")[:180]
+            h["err_at"] = date.today().isoformat()
             diag["consecutive_failures"] = h["fails"]
             if h.get("ok"):
                 try:

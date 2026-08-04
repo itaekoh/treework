@@ -179,7 +179,8 @@ def main() -> int:
                               "volume_drop": False, "baseline": None}
         else:
             health["diag"] = store.record_health(
-                src["id"], ok=health["status"] == "ok", rows=health["rows"])
+                src["id"], ok=health["status"] == "ok", rows=health["rows"],
+                error=health.get("error", ""))
         d = health["diag"]
         if d["consecutive_failures"] >= 3:
             log.error("[%s] %d회 연속 실패 — 구조 변경 가능성",
