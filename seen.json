@@ -1,12 +1,13 @@
 {
-"count": 7,
+"count": 8,
 "health": {
 "g2b-servc": {
-"err": "RuntimeError: API 오류: SERVICE_KEY_IS_NOT_REGISTERED_ERROR / 등록되지 않은 서비스키",
 "err_at": "2026-08-04",
-"fails": 1,
-"ok": "",
-"rows": []
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+302
+]
 },
 "gu-ddm-n": {
 "fails": 0,
@@ -365,6 +366,12 @@
 "s": "gu-songpa-r",
 "t": "송파책박물관 단시간 근로자(어린이 전시실, 도서보조) 채용 공고"
 },
+"8dd817c93351e7f282ad": {
+"d": "2026-08-04",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01666005&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 산림복원지 유지·관리사업(볼음도) 실시설계 용역"
+},
 "a3c64250c1a8d4fd62b5": {
 "d": "2026-08-04",
 "l": "https://www.nowon.kr/www/user/bbs/BD_selectBbsList.do?q_bbsCode=1003",
@@ -402,5 +409,5 @@
 "t": "서울특별시 중구 임기제공무원 채용시험 최종합격자 공고(SNS구정홍보 전문요원, 언론홍보, 정책홍보, 주민소통활성화, 법무행정, 도시계획, 운동처방사)"
 }
 },
-"updated_at": "2026-08-04T10:44:38+00:00"
+"updated_at": "2026-08-04T11:30:09+00:00"
 }
