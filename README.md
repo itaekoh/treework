@@ -168,8 +168,7 @@ GitHub Actions 러너는 해외 Azure IP를 쓴다. 일부 구청 WAF가 이를 
 
 1. 저장소를 만들고 이 파일들을 넣는다 (Public 이면 Actions 무료 무제한)
 2. 텔레그램 봇 생성: [@BotFather](https://t.me/BotFather) → `/newbot` → 토큰 받기
-3. 봇과 대화를 시작한 뒤 `https://api.telegram.org/bot<토큰>/getUpdates` 에서
-   `chat.id` 확인
+3. 봇과 대화를 시작한 뒤 `chat.id` 확인 — **국내에서는 아래 "국내 네트워크" 참고**
 4. 저장소 **Settings → Secrets and variables → Actions** 에 등록
 
    | 이름 | 필수 | 값 |
@@ -179,6 +178,40 @@ GitHub Actions 러너는 해외 Azure IP를 쓴다. 일부 구청 WAF가 이를 
    | `G2B_SERVICE_KEY` | 선택 | 나라장터 API 키 (아래 참고) |
 
 5. **Actions 탭 → 수목 공고 수집 → Run workflow** 로 수동 1회 실행해 확인
+
+### 국내 네트워크에서 chat_id 를 못 가져올 때
+
+국내 ISP에서 `api.telegram.org` **TCP 443 접속이 차단**되는 경우가 있다.
+실측(2026-08-04): DNS는 정상 해석(`149.154.166.110`)되지만 TCP 연결이 실패하고
+브라우저는 `ERR_CONNECTION_TIMED_OUT` 을 낸다. 유선·모바일 모두 동일했다.
+텔레그램 **앱은 정상 작동**한다(다른 프로토콜을 쓴다).
+
+> **이 차단은 시스템 동작에 영향이 없다.** 발송은 GitHub Actions 러너(해외 IP)가
+> 하고, 알림은 앱으로 정상 수신된다. 막히는 것은 최초 `chat_id` 조회 한 번뿐이다.
+
+두 가지 우회 방법:
+
+**방법 A — 봇으로 확인 (즉시, 앱만 사용)**
+텔레그램 앱에서 [@userinfobot](https://t.me/userinfobot) 에 `/start` 를 보내면
+본인의 숫자 ID가 온다. **1:1 대화의 `chat_id` 는 본인 사용자 ID와 같다.**
+
+**방법 B — Actions 에서 조회 (발송 경로까지 검증)**
+`.github/workflows/telegram-setup.yml` 이 이 용도로 들어 있다.
+
+1. Secret `TELEGRAM_BOT_TOKEN` 만 먼저 등록
+2. 텔레그램 앱에서 **본인 봇에게 아무 메시지나 보낸다** (안 보내면 조회 결과가 빈다)
+3. Actions 탭 → **텔레그램 설정 도우미** → Run workflow
+4. 로그와 실행 요약에 나온 `chat_id` 를 Secret `TELEGRAM_CHAT_ID` 로 등록
+
+방법 B는 봇 토큰 유효성, chat_id, 실제 발송까지 한 번에 확인한다. 테스트 메시지가
+앱에 도착하면 배포 경로에 문제가 없다는 뜻이다.
+
+> Public 저장소는 Actions 로그가 공개된다. `chat_id` 만으로는 아무것도 할 수 없지만
+> (봇 토큰이 있어야 한다) 신경 쓰이면 확인 후 실행 기록을 삭제하거나 이 워크플로우
+> 파일을 지워도 된다. 설정이 끝나면 더 필요 없다.
+
+로컬에서는 `--dry-run` 으로만 테스트할 수 있다(실제 발송은 차단됨). 수집·필터링
+로직 확인에는 충분하다.
 
 ### 나라장터 API 키 (선택, 권장)
 
@@ -300,6 +333,9 @@ G2B_SERVICE_KEY=발급받은키 python main.py --dry-run --source g2b-servc
 main.py               오케스트레이션 · 필터 적용 · 발송
 selftest.py           주간 파서 생존 점검
 sources.yml           소스 정의 (URL 변경은 여기만 고친다)
+.github/workflows/
+  cron.yml            하루 2회 수집 + 실패 알림 + 주간 점검
+  telegram-setup.yml  chat_id 조회 도우미 (설정 후 삭제 가능)
 treework/
   filters.py          3단 티어 키워드 · 부서 안전망
   collectors.py       소스별 수집기 + 범용 테이블 파서
