@@ -1,0 +1,112 @@
+name: 수목 공고 수집
+
+on:
+  schedule:
+    # GitHub Actions 는 UTC 기준. KST = UTC+9.
+    #   00:07 UTC = 09:07 KST  /  06:07 UTC = 15:07 KST
+    # 정시(0분)는 전 세계 작업이 몰려 지연·스킵이 잦으므로 7분으로 흩뿌린다.
+    # 접수기간이 3~5일인 기간제 공고를 놓치지 않도록 하루 2회 돌린다.
+    - cron: "7 0 * * *"
+    - cron: "7 6 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "발송하지 않고 로그만 확인"
+        type: boolean
+        default: false
+
+# 두 스케줄이 겹쳐 seen.json 커밋이 충돌하는 것을 막는다.
+concurrency:
+  group: treework-collect
+  cancel-in-progress: false
+
+permissions:
+  contents: write        # seen.json 커밋용
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: 의존성 설치
+        run: pip install -r requirements.txt
+
+      - name: 수집 및 발송
+        id: run
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          # 미설정이면 나라장터 소스만 '건너뜀'으로 처리되고 경고는 뜨지 않는다
+          G2B_SERVICE_KEY: ${{ secrets.G2B_SERVICE_KEY }}
+        run: |
+          python main.py ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: seen.json 커밋
+        # 발송이 실패하면 main.py 가 상태를 저장하지 않고 종료하므로
+        # 변경이 없으면 커밋도 건너뛴다.
+        if: always() && steps.run.outcome == 'success'
+        run: |
+          if [[ -z "$(git status --porcelain seen.json)" ]]; then
+            echo "변경 없음 — 커밋 생략"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add seen.json
+          git commit -m "chore: 발송 이력 갱신 ($(date -u +%Y-%m-%dT%H:%MZ))"
+          # 다른 스케줄이 먼저 커밋했을 수 있으므로 rebase 후 push
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && \
+            git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            echo "push 재시도 $i"; sleep 5
+          done
+          exit 1
+
+      # ── 스크립트가 죽으면 텔레그램을 보낼 주체가 없어진다.        ──
+      # ── 이 경우를 워크플로우 레벨에서 잡아 '침묵'을 막는다.        ──
+      - name: 실패 알림
+        if: failure()
+        env:
+          TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
+          URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          TEXT=$(printf '🚨 <b>수집 작업 자체가 실패했습니다</b>\n\n스크립트가 중단되어 공고 알림이 발송되지 않았습니다.\n의존성 오류, 사이트 전면 개편, IP 차단 등을 확인하세요.\n\n<a href="%s">실행 로그 보기</a>' "$URL")
+          curl -sS -X POST "https://api.telegram.org/bot${TOKEN}/sendMessage" \
+            -d chat_id="${CHAT}" \
+            -d parse_mode="HTML" \
+            -d disable_web_page_preview=true \
+            --data-urlencode text="$TEXT"
+
+  # ── 주 1회 자기 점검: 모든 소스가 실제로 파싱되는지 확인한다.   ──
+  # ── 공고가 없는 조용한 주에도 파서가 살아있는지 알 수 있다.      ──
+  selftest:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: 소스 헬스 점검 (월요일 오전만)
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          # 미설정이면 나라장터 소스만 '건너뜀'으로 처리되고 경고는 뜨지 않는다
+          G2B_SERVICE_KEY: ${{ secrets.G2B_SERVICE_KEY }}
+        run: |
+          if [[ "$(date -u +%u)" != "1" || "$(date -u +%H)" != "00" ]]; then
+            echo "점검 대상 시각 아님 — 건너뜀"; exit 0
+          fi
+          python selftest.py

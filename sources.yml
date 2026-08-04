@@ -1,0 +1,185 @@
+# 서울 공공기관 수목/나무의사 관련 공고 수집 대상
+#
+# 모든 URL과 파라미터는 2026-08-04 기준 실측 검증했습니다.
+# 검증 방법과 결과는 README.md의 "소스 검증 기록" 참고.
+#
+# kind 별 처리기:
+#   seoul_job_portal : job.seoul.go.kr 공공일자리 (POST, 최우선 소스)
+#   seoul_notice     : www.seoul.go.kr 고시공고 (GET, 본문 HTML 전문 제공)
+#   eminwon          : <구>.eminwon.seoul.kr 공통 고시공고 시스템 (POST)
+#   generic_table    : 범용 테이블 파서 (구청별 CMS가 6종 이상으로 갈려 휴리스틱 사용)
+
+defaults:
+  timeout: 25
+  rate_limit_sec: 1.2
+  retries: 2
+  # 목록에서 이 일수 이내 등록분만 신규 후보로 본다 (중복 방지 파일과 병행)
+  lookback_days: 21
+
+sources:
+  # ─────────────────────────────────────────────────────────────
+  # 1. 최우선: 서울시 일자리포털 공공일자리
+  #    서울시 본청 전 부서 + 사업소 + 산하기관/재단/민간위탁 채용을 통합.
+  #    목록에 마감일이 이미 포함되고 pageSize 200까지 지원. CSRF 불필요.
+  #    ※ 자치구는 포함되지 않음 → 아래 eminwon/generic 소스가 담당.
+  # ─────────────────────────────────────────────────────────────
+  - id: seoul-job-public
+    name: 서울시 일자리포털(공공일자리)
+    org: 서울특별시
+    kind: seoul_job_portal
+    enabled: true
+    list_url: https://job.seoul.go.kr/hmpg/rmim/pjmg/pjmgListPgng.do
+    referer: https://job.seoul.go.kr/hmpg/rmim/pjmg/pjmgListPage.do
+    detail_template: https://job.seoul.go.kr/hmpg/rmim/pjmg/pjmgDetail.do?pbc_recmnt_mng_no={id}
+    page_size: 200
+    # 상세요강 필드가 대부분 비어 있고 실제 내용이 .hwpx 첨부에 있음 → 첨부 파싱 필수
+    parse_attachments: true
+
+  # ─────────────────────────────────────────────────────────────
+  # 2. 서울시 고시공고 (채용 외 용역/모집 공고가 여기로 나오는 경우 대응)
+  #    상세 페이지에 HWP 본문이 HTML로 변환되어 전문 포함 → 본문 검색 가능.
+  #    ※ 사이트 자체 검색은 본문 인덱싱이 빈약해 신뢰 불가 → 목록 전량 크롤 후 로컬 필터.
+  # ─────────────────────────────────────────────────────────────
+  - id: seoul-notice
+    name: 서울시 고시·공고
+    org: 서울특별시
+    kind: seoul_notice
+    enabled: true
+    list_url: https://www.seoul.go.kr/news/news_notice.do
+    bbs_no: 277
+    page_size: 50
+    pages: 2
+    parse_attachments: false   # 본문 HTML에 전문이 있어 첨부 파싱 불필요
+
+  # ─────────────────────────────────────────────────────────────
+  # 3. 자치구 — eMinwon 공통 시스템 (8개 구, POST)
+  #    상세는 POST 전용이라 공유 링크가 없음 → 링크는 구청 게시판으로 대체하고
+  #    고시공고번호를 함께 표기한다.
+  # ─────────────────────────────────────────────────────────────
+  - {id: gu-gangnam,   name: 강남구 고시공고,  org: 강남구,  kind: eminwon, enabled: true,
+     host: gangnam.eminwon.seoul.kr,   board_url: "https://www.gangnam.go.kr/notice/list.do?mid=ID05_040201"}
+  - {id: gu-gangbuk,   name: 강북구 고시공고,  org: 강북구,  kind: eminwon, enabled: true,
+     host: gangbuk.eminwon.seoul.kr,   board_url: "https://www.gangbuk.go.kr/"}
+  - {id: gu-geumcheon, name: 금천구 고시공고,  org: 금천구,  kind: eminwon, enabled: true,
+     host: geumcheon.eminwon.seoul.kr, board_url: "https://www.geumcheon.go.kr/"}
+  - {id: gu-nowon,     name: 노원구 고시공고,  org: 노원구,  kind: eminwon, enabled: true,
+     host: nowon.eminwon.seoul.kr,     board_url: "https://www.nowon.kr/www/user/bbs/BD_selectBbsList.do?q_bbsCode=1003"}
+  - {id: gu-dobong,    name: 도봉구 고시공고,  org: 도봉구,  kind: eminwon, enabled: true,
+     host: dobong.eminwon.seoul.kr,    board_url: "https://www.dobong.go.kr/Contents.asp?code=10008772"}
+  - {id: gu-dongjak,   name: 동작구 고시공고,  org: 동작구,  kind: eminwon, enabled: true,
+     host: dongjak.eminwon.seoul.kr,   board_url: "https://www.dongjak.go.kr/portal/bbs/B0001297/list.do?menuNo=201317"}
+  - {id: gu-seocho,    name: 서초구 고시공고,  org: 서초구,  kind: eminwon, enabled: true,
+     host: eminwon.seocho.go.kr,       board_url: "https://www.seocho.go.kr/site/seocho/05/10506020000002015070811.jsp"}
+  - {id: gu-yangcheon, name: 양천구 고시공고,  org: 양천구,  kind: eminwon, enabled: true,
+     host: yangcheon.eminwon.seoul.kr, board_url: "https://www.yangcheon.go.kr/site/yangcheon/ex/seol/seolCollectList.do"}
+
+  # ─────────────────────────────────────────────────────────────
+  # 4. 자치구 — 범용 테이블 파서 (16개 구)
+  #    link_mode: list  = 제목이 javascript: 호출이라 직접 링크 불가 → 게시판 URL로 대체
+  # ─────────────────────────────────────────────────────────────
+  - {id: gu-gangdong-n,  name: 강동구 고시/공고, org: 강동구, kind: generic_table, enabled: true,
+     list_url: "https://www.gangdong.go.kr/web/newportal/notice/01"}
+  - {id: gu-gangdong-r,  name: 강동구 채용공고,  org: 강동구, kind: generic_table, enabled: true,
+     list_url: "https://www.gangdong.go.kr/web/newportal/notice/02"}
+  - {id: gu-gangseo-n,   name: 강서구 고시공고,  org: 강서구, kind: generic_table, enabled: true,
+     list_url: "https://www.gangseo.seoul.kr/gs040301"}
+  - {id: gu-gangseo-r,   name: 강서구 채용공고,  org: 강서구, kind: generic_table, enabled: true,
+     list_url: "https://www.gangseo.seoul.kr/gs040302"}
+  - {id: gu-gwanak-n,    name: 관악구 고시공고,  org: 관악구, kind: generic_table, enabled: true,
+     list_url: "https://www.gwanak.go.kr/site/gwanak/ex/bbsNew/List.do?typeCode=1"}
+  - {id: gu-gwanak-r,    name: 관악구 채용공고,  org: 관악구, kind: generic_table, enabled: true,
+     list_url: "https://www.gwanak.go.kr/site/gwanak/ex/bbsNew/List.do?typeCode=4"}
+  - {id: gu-gwangjin-n,  name: 광진구 고시공고,  org: 광진구, kind: generic_table, enabled: true,
+     list_url: "https://www.gwangjin.go.kr/portal/bbs/B0000378/list.do?menuNo=200192"}
+  - {id: gu-gwangjin-r,  name: 광진구 채용정보,  org: 광진구, kind: generic_table, enabled: true,
+     list_url: "https://www.gwangjin.go.kr/portal/bbs/B0000004/list.do?menuNo=200193"}
+  - {id: gu-guro-n,      name: 구로구 고시공고,  org: 구로구, kind: generic_table, enabled: true,
+     list_url: "https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=663&key=1791"}
+  - {id: gu-guro-r,      name: 구로구 채용정보,  org: 구로구, kind: generic_table, enabled: true,
+     list_url: "https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=664&key=1792"}
+  - {id: gu-ddm-n,       name: 동대문구 고시공고, org: 동대문구, kind: generic_table, enabled: true,
+     list_url: "https://www.ddm.go.kr/www/selectEminwonWebList.do?key=3291"}
+  - {id: gu-ddm-r,       name: 동대문구 채용공고, org: 동대문구, kind: generic_table, enabled: true,
+     list_url: "https://www.ddm.go.kr/www/selectBbsNttList.do?bbsNo=42&key=208"}
+  - {id: gu-mapo-n,      name: 마포구 고시공고,  org: 마포구, kind: generic_table, enabled: true,
+     list_url: "https://www.mapo.go.kr/site/main/nPortal/list"}
+  - {id: gu-sdm-n,       name: 서대문구 고시공고, org: 서대문구, kind: generic_table, enabled: true,
+     list_url: "https://www.sdm.go.kr/news/notice/notice.do", link_mode: list}
+  - {id: gu-sdm-r,       name: 서대문구 채용공고, org: 서대문구, kind: generic_table, enabled: true,
+     list_url: "https://www.sdm.go.kr/genre/economic/jobinfo/jobs.do", link_mode: list}
+  - {id: gu-seongdong-n, name: 성동구 고시공고,  org: 성동구, kind: generic_table, enabled: true,
+     list_url: "https://www.sd.go.kr/main/selectBbsNttList.do?bbsNo=184&key=1473"}
+  - {id: gu-seongdong-r, name: 성동구 채용공고,  org: 성동구, kind: generic_table, enabled: true,
+     list_url: "https://www.sd.go.kr/main/selectBbsNttList.do?bbsNo=185&key=1474"}
+  - {id: gu-songpa-n,    name: 송파구 고시공고,  org: 송파구, kind: generic_table, enabled: true,
+     list_url: "https://www.songpa.go.kr/www/selectGosiList.do?key=2776"}
+  - {id: gu-songpa-r,    name: 송파구 채용정보,  org: 송파구, kind: generic_table, enabled: true,
+     list_url: "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=94&key=5140"}
+  - {id: gu-ydp-n,       name: 영등포구 고시공고, org: 영등포구, kind: generic_table, enabled: true,
+     list_url: "https://www.ydp.go.kr/www/selectEminwonList.do?menuFlag=01&key=2851"}
+  - {id: gu-ydp-r,       name: 영등포구 채용정보, org: 영등포구, kind: generic_table, enabled: true,
+     list_url: "https://www.ydp.go.kr/www/selectEminwonList.do?menuFlag=03&key=5286"}
+  - {id: gu-yongsan-n,   name: 용산구 고시/공고, org: 용산구, kind: generic_table, enabled: true,
+     list_url: "https://www.yongsan.go.kr/portal/bbs/B0000095/list.do?menuNo=200233"}
+  - {id: gu-ep-n,        name: 은평구 고시/공고, org: 은평구, kind: generic_table, enabled: true,
+     list_url: "https://www.ep.go.kr/www/selectEminwonList.do?key=754&notAncmtSeCode=01"}
+  - {id: gu-ep-r,        name: 은평구 채용공고,  org: 은평구, kind: generic_table, enabled: true,
+     list_url: "https://www.ep.go.kr/www/selectEminwonList.do?key=748&notAncmtSeCode=02"}
+  - {id: gu-jongno-n,    name: 종로구 고시/공고, org: 종로구, kind: generic_table, enabled: true,
+     list_url: "https://www.jongno.go.kr/portal/bbs/selectBoardList.do?bbsId=BBSMSTR_000000000271&menuId=1756",
+     link_mode: list}
+  - {id: gu-jongno-r,    name: 종로구 채용공고,  org: 종로구, kind: generic_table, enabled: true,
+     list_url: "https://www.jongno.go.kr/portal/bbs/selectBoardList.do?bbsId=BBSMSTR_000000000026&menuId=400510",
+     link_mode: list}
+  - {id: gu-junggu-n,    name: 중구 고시/공고,   org: 중구,   kind: generic_table, enabled: true,
+     list_url: "https://www.junggu.seoul.kr/content.do?cmsid=14232"}
+  - {id: gu-junggu-r,    name: 중구 채용정보,    org: 중구,   kind: generic_table, enabled: true,
+     list_url: "https://www.junggu.seoul.kr/content.do?cmsid=15450"}
+  - {id: gu-jungnang-r,  name: 중랑구 채용공고,  org: 중랑구, kind: generic_table, enabled: true,
+     list_url: "https://www.jungnang.go.kr/portal/bbs/list/B0000118.do?menuNo=200476"}
+
+  # ─────────────────────────────────────────────────────────────
+  # 5. 나라장터 입찰공고 (용역)
+  #    나무의사 실수요는 채용보다 용역 발주로 나오는 경우가 많다.
+  #    채용공고와 달리 용역은 공고명이 서술적이라('○○구 생활권 수목 진료 용역')
+  #    공고명 키워드 검색이 잘 듣는다 → 키워드별 질의로 요청 수를 줄인다.
+  #
+  #    ⚠️ 서비스키는 저장소 Secret 'G2B_SERVICE_KEY' 로 넣는다.
+  #       공공데이터포털의 '디코딩 키'를 써야 한다('인코딩 키'는 이중 인코딩됨).
+  #       키가 없으면 이 소스는 '건너뜀'으로 처리되고 경고를 띄우지 않는다.
+  # ─────────────────────────────────────────────────────────────
+  - id: g2b-servc
+    name: 나라장터 용역입찰
+    org: 나라장터
+    kind: g2b_bid
+    enabled: true
+    key_env: G2B_SERVICE_KEY
+    base_url: https://apis.data.go.kr/1230000/ad/BidPublicInfoService
+    operation: getBidPblancListInfoServc      # 용역 입찰공고 목록
+    board_url: https://www.g2b.go.kr/
+    page_size: 100
+    region_keywords: ["서울"]                  # 공고기관/수요기관 이름으로 걸러낸다
+    query_keywords:
+      - 나무의사
+      - 수목진료
+      - 수목진단
+      - 수목치료
+      - 수목관리
+      - 수목전정
+      - 병해충
+      - 예찰
+      - 방제
+      - 가로수
+      - 조경관리
+      - 녹지관리
+      - 산림병해충
+      - 재선충
+      - 수목보호
+
+  # ─────────────────────────────────────────────────────────────
+  # 6. 미해결 — 실측 시 접근 불가. 활성화하면 매 실행마다 헬스 경고가 뜬다.
+  #    성북구: www.seongbuk.go.kr / www.sb.go.kr 모두 불통(2026-08-04),
+  #            seongbuk.eminwon.seoul.kr 은 400. 도메인 재확인 필요.
+  # ─────────────────────────────────────────────────────────────
+  - {id: gu-seongbuk,    name: 성북구 고시공고,  org: 성북구, kind: generic_table, enabled: false,
+     list_url: "https://www.sb.go.kr/", note: "도메인 불통 — 확인 후 활성화"}

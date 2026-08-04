@@ -1,0 +1,6 @@
+requests>=2.32
+beautifulsoup4>=4.12
+lxml>=5.2
+PyYAML>=6.0
+pypdf>=4.2
+olefile>=0.47
