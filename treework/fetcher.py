@@ -51,6 +51,10 @@ class Fetcher:
         오류를 403 + 본문 JSON으로 알려주는 API 는 본문을 읽어야 원인을 알 수 있다.
         """
         kw.setdefault("timeout", self.timeout)
+        # 이 호스트가 이미 SSL 검증에 실패한 적 있으면 처음부터 낮춰서 부른다.
+        # 그러지 않으면 요청마다 실패 1회를 반복해 요청 수가 두 배가 된다.
+        if requests.utils.urlparse(url).netloc in self.insecure_hosts:
+            kw.setdefault("verify", False)
         last: Exception | None = None
         for attempt in range(self.retries + 1):
             self._wait()

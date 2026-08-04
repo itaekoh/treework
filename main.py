@@ -46,7 +46,9 @@ def setup_logging(verbose: bool) -> None:
         datefmt="%H:%M:%S",
         stream=sys.stdout,
     )
-    logging.getLogger("urllib3").setLevel(logging.WARNING)
+    # pdfminer/pypdf 는 DEBUG 에서 PDF 내부 구조를 줄마다 찍어 로그를 뒤덮는다
+    for noisy in ("urllib3", "pdfminer", "pypdf", "PIL"):
+        logging.getLogger(noisy).setLevel(logging.WARNING)
 
 
 def load_config(path: Path) -> tuple[dict, list[dict]]:

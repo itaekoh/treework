@@ -57,15 +57,42 @@ def _zip_xml(data: bytes, kind: str) -> Extracted:
 
 
 def _pdf(data: bytes) -> Extracted:
+    """pypdf → pdfminer 순으로 시도하고, 이미지 스캔 PDF 는 명시적으로 알린다.
+
+    공공기관 공고문 PDF 는 HWP 를 이미지로 인쇄한 스캔본인 경우가 흔하다.
+    실측: 금천구 공고문.pdf 433KB / 7페이지에서 추출 텍스트 6자, /Font 없음,
+    /XObject 만 있음 → 텍스트 레이어가 아예 없다. 이런 파일은 어떤 텍스트
+    파서로도 읽을 수 없으므로(OCR 영역) 조용히 0자로 넘기지 않고 사유를 남긴다.
+    """
     try:
         from pypdf import PdfReader
     except ImportError:
         return Extracted(kind="pdf", error="pypdf 미설치")
+
     reader = PdfReader(io.BytesIO(data))
-    pages = reader.pages[:30]           # 30쪽까지만
-    text = "\n".join((p.extract_text() or "") for p in pages)
-    return Extracted(text=text, kind="pdf",
-                     truncated=len(reader.pages) > 30)
+    n_pages = len(reader.pages)
+    text = "\n".join((p.extract_text() or "") for p in reader.pages[:30])
+
+    if len(text.strip()) < 50:
+        # pypdf 가 한글 PDF 에서 실패하는 경우가 있어 다른 엔진으로 한 번 더
+        try:
+            from pdfminer.high_level import extract_text
+            alt = extract_text(io.BytesIO(data)) or ""
+            if len(alt.strip()) > len(text.strip()):
+                text = alt
+        except Exception:                        # noqa: BLE001
+            pass
+
+    if len(text.strip()) < 50:
+        has_font = any("/Font" in (p.get("/Resources") or {})
+                       for p in reader.pages[:3])
+        if not has_font:
+            return Extracted(kind="pdf", truncated=True,
+                             error=f"이미지 스캔 PDF({n_pages}쪽) — 텍스트 없음")
+        return Extracted(text=text, kind="pdf", truncated=True,
+                         error="텍스트 추출 거의 실패")
+
+    return Extracted(text=text, kind="pdf", truncated=n_pages > 30)
 
 
 def _hwp(data: bytes) -> Extracted:

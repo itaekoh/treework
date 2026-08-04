@@ -11,7 +11,7 @@ import logging
 import re
 from dataclasses import dataclass, field
 from datetime import date, datetime, timedelta
-from urllib.parse import urljoin
+from urllib.parse import quote, urljoin
 
 from bs4 import BeautifulSoup
 
@@ -82,6 +82,37 @@ def _norm_datetime(text: str) -> str:
         return ""
     m = re.search(r"(\d{1,2}):(\d{2})", text or "")
     return f"{d} {int(m.group(1)):02d}:{m.group(2)}" if m else d
+
+
+ATTACH_EXT = re.compile(r"\.(hwpx?|pdf|docx?|xlsx?|zip)(\?|$|\s|\))", re.I)
+MAX_ATTACH = 5          # 공고당 첨부 개수 상한 (실행 시간 보호)
+
+
+def _pull_attachments(f: Fetcher, p: Posting,
+                      links: list[tuple[str, str]], referer: str = "") -> None:
+    """(파일명, URL) 목록을 받아 내려받고 텍스트를 p.attach_text 에 쌓는다.
+
+    첨부를 읽지 않으면 '나무의사 자격 소지자' 같은 요건이 HWP 안에만 있는
+    공고를 영구히 놓친다. 실패는 조용히 넘기지 않고 attach_truncated 로 표시해
+    사용자가 원문을 열어보게 한다.
+    """
+    hdrs = {"Referer": referer} if referer else {}
+    for name, url in links[:MAX_ATTACH]:
+        p.attach_names.append(name)
+        try:
+            r = f.get(url, headers=hdrs)
+            ex = extract(r.content, name)
+            if ex.text:
+                p.attach_text += "\n" + ex.text[:80000]
+            if ex.truncated or ex.error:
+                p.attach_truncated = True
+                if ex.error:
+                    log.debug("첨부 판독 제한 %s: %s", name, ex.error)
+        except Exception as e:                        # noqa: BLE001
+            p.attach_truncated = True
+            log.debug("첨부 다운로드 실패 %s: %s", name, e)
+    if len(links) > MAX_ATTACH:
+        p.attach_truncated = True
 
 
 def _won(v) -> str:
@@ -226,24 +257,10 @@ def enrich_seoul_job_portal(f: Fetcher, p: Posting, cfg: dict) -> None:
     p.body = main.get_text("\n", strip=True)[:60000]
     if not cfg.get("parse_attachments", True):
         return
-    for a in soup.find_all("a", href=True):
-        name = _clean(a.get_text())
-        if not re.search(r"\.(hwpx?|pdf|docx?|xlsx?|zip)$", name, re.I):
-            continue
-        url = urljoin(r.url, a["href"])
-        p.attach_names.append(name)
-        try:
-            fr = f.get(url)
-            ex = extract(fr.content, name)
-            if ex.text:
-                p.attach_text += "\n" + ex.text[:80000]
-            if ex.truncated or ex.error:
-                p.attach_truncated = True
-                if ex.error:
-                    log.debug("첨부 추출 실패 %s: %s", name, ex.error)
-        except Exception as e:                       # noqa: BLE001
-            p.attach_truncated = True
-            log.debug("첨부 다운로드 실패 %s: %s", name, e)
+    links = [(_clean(a.get_text()), urljoin(r.url, a["href"]))
+             for a in soup.find_all("a", href=True)
+             if ATTACH_EXT.search(_clean(a.get_text()))]
+    _pull_attachments(f, p, links, referer=r.url)
 
 
 # ═══════════════════════════════════════════════════════════════════
@@ -305,6 +322,35 @@ def enrich_seoul_notice(f: Fetcher, p: Posting, cfg: dict) -> None:
 # ═══════════════════════════════════════════════════════════════════
 EMINWON_CODES = "01,02,03,04,05,06,07"
 
+# eMinwon 상세는 화면상 POST(searchDetail) 로만 열리지만, 같은 액션을 GET 으로
+# 호출하면 완전한 HTML 문서가 나온다(6개 구 실측 확인). 이걸 쓰지 않으면 링크가
+# 구청 홈페이지로 가서 사용자가 제목으로 다시 검색해야 하고, 그러면 알림의
+# 존재 의미가 없어진다.
+EMINWON_DETAIL = (
+    "{scheme}://{host}/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do"
+    "?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst"
+    "&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no={nid}"
+    "&homepage_pbs_yn=Y&subCheck=Y"
+)
+
+
+def _user_scheme(f: Fetcher, host: str) -> str:
+    """사용자에게 보낼 링크의 스킴.
+
+    eMinwon 호스트는 인증서 상태가 제각각이다(실측: 금천·노원은 호스트명 불일치,
+    강남·동작·도봉·서초는 정상). 인증서가 깨진 호스트에 https 링크를 보내면
+    브라우저가 '이 연결은 비공개가 아닙니다' 경고를 띄워 클릭 경험이 나빠지고,
+    경고를 습관적으로 무시하게 만드는 것도 바람직하지 않다.
+    반대로 서초는 80 포트가 막혀 http 가 안 되므로 https 를 써야 한다.
+    그래서 우리가 수집 중 SSL 검증에 실패한 호스트만 http 로 안내한다
+    (추가 요청 없이 Fetcher 가 이미 기록한 정보를 재사용).
+    """
+    return "http" if host in f.insecure_hosts else "https"
+# 첨부 다운로드: goDownLoad('원본명','저장명','경로') → FileDown.jsp
+EMINWON_FILE = ("https://{host}/emwp/jsp/ofr/FileDown.jsp"
+                "?user_file_nm={user}&sys_file_nm={sys}&file_path={path}")
+GODOWNLOAD_RE = re.compile(r"goDownLoad\('([^']*)','([^']*)','([^']*)'\)")
+
 
 def collect_eminwon(f: Fetcher, cfg: dict, lookback_days: int) -> list[Posting]:
     host = cfg["host"]
@@ -356,15 +402,18 @@ def collect_eminwon(f: Fetcher, cfg: dict, lookback_days: int) -> list[Posting]:
         dates = _all_dates(row_text)
         m = re.search(r"searchDetail\('(\d+)'\)",
                       (a.get("href") or "") + (a.get("onclick") or ""))
+        nid = m.group(1) if m else ""
         out.append(Posting(
             source_id=cfg["id"], org=cfg.get("org", ""),
             title=title, dept=dept,
             reg_date=dates[0] if dates else "",
             # 게재기간의 끝이 실질 마감일
             due_date=dates[-1] if len(dates) > 1 else "",
-            detail_id=m.group(1) if m else "",
-            # 상세가 POST 전용이라 공유 링크가 없다 → 게시판으로 보낸다
-            link=board, link_is_board=True,
+            detail_id=nid,
+            # 공고를 직접 가리키는 GET 링크. id 가 없을 때만 게시판으로 보낸다.
+            link=(EMINWON_DETAIL.format(scheme=_user_scheme(f, host),
+                                        host=host, nid=nid) if nid else board),
+            link_is_board=not nid,
         ))
     return out
 
@@ -404,9 +453,20 @@ def enrich_generic(f: Fetcher, p: Posting, cfg: dict) -> None:
     main = (soup.select_one("#content, #contents, .content, .board_view, .bbs_view")
             or soup.body or soup)
     p.body = main.get_text("\n", strip=True)[:60000]
-    p.attach_names = [_clean(a.get_text()) for a in soup.find_all("a", href=True)
-                      if re.search(r"\.(hwpx?|pdf|docx?|xlsx?|zip)(\?|$)",
-                                   a.get_text() + a["href"], re.I)][:12]
+
+    # 첨부 본문까지 읽는다 (자격 요건이 HWP 안에만 있는 공고가 흔하다)
+    links = []
+    for a in soup.find_all("a", href=True):
+        name = _clean(a.get_text())
+        href = a["href"]
+        if not ATTACH_EXT.search(name) and not ATTACH_EXT.search(href):
+            continue
+        if href.lower().startswith(("javascript", "#")):
+            continue
+        if not name:
+            name = href.rsplit("/", 1)[-1][:80]
+        links.append((name, urljoin(r.url, href)))
+    _pull_attachments(f, p, links, referer=p.link)
 
 
 # ═══════════════════════════════════════════════════════════════════
@@ -576,9 +636,15 @@ def enrich_eminwon(f: Fetcher, p: Posting, cfg: dict) -> None:
                 if stem in ln and len(ln) > len(p.title)]
         if full:
             p.title = _clean(max(full, key=len))[:300]
-    p.attach_names = [_clean(a.get_text()) for a in soup.find_all("a", href=True)
-                      if re.search(r"\.(hwpx?|pdf|docx?|xlsx?|zip)",
-                                   a.get_text() + a["href"], re.I)][:12]
+
+    # 첨부 본문까지 읽어야 '나무의사 자격 소지자' 같은 요건을 잡을 수 있다.
+    # 실측: 금천구 공고의 직무기술서.hwpx 안에 자격 요건이 들어 있었다.
+    links = [
+        (user_nm, EMINWON_FILE.format(host=host, user=quote(user_nm),
+                                      sys=quote(sys_nm), path=quote(path)))
+        for user_nm, sys_nm, path in GODOWNLOAD_RE.findall(f.text_of(r))
+    ]
+    _pull_attachments(f, p, links, referer=referer)
 
 
 COLLECTORS = {

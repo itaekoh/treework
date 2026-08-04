@@ -82,10 +82,17 @@ DEPT_HINT = [
 _TIERS = (("A", TIER_A), ("B", TIER_B), ("C", TIER_C))
 _TIER_ORDER = {"A": 0, "B": 1, "C": 2, None: 9}
 
-# 본문·첨부에서 인정하는 티어. C를 본문에까지 허용하면 '조경/녹지/나무'가
-# 페이지 메뉴·푸터·안내문에 널려 있어 거의 모든 공고가 걸린다(실측 확인).
-# A/B만 본문 근거로 인정하고, C는 제목·부서 전용으로 둔다.
-CONTENT_TIERS = {"A", "B"}
+# 본문·첨부에서 나온 매칭을 어떤 등급으로 인정할지.
+#
+#   A → A : '나무의사', '수목치료기술자' 등은 모호하지 않다. 첨부에서 발견되면
+#           그것이 곧 자격 요건이므로 그대로 확정 등급으로 올린다.
+#   B → C : '산림', '조경', '임업' 같은 말은 공통 제출서류 양식의 '자격증 종류
+#           목록'에 상투적으로 들어 있다. 실측: 중구 SNS홍보 채용 공고의 첨부
+#           양식에 자격증 목록이 있어 유력으로 잘못 올라왔다. 그래서 한 단계 낮춘다.
+#   C → 없음 : 페이지 메뉴·푸터·안내문에 널려 있어 신호가 없다.
+#
+# 제목·부서에서 나온 매칭은 이 표를 거치지 않고 원래 등급을 유지한다.
+CONTENT_TIER_MAP = {"A": "A", "B": "C"}
 
 
 def _norm(s: str) -> str:
@@ -140,12 +147,20 @@ def classify(title: str, body: str = "", attach: str = "",
     - 노이즈 힌트가 제목에 있으면 한 단계 강등. 단 A는 본문/첨부 근거가 있으면
       강등하지 않는다.
     """
+    def content_scan(text: str) -> dict[str, list[str]]:
+        """본문·첨부 매칭을 CONTENT_TIER_MAP 으로 재등급한다."""
+        out: dict[str, list[str]] = {}
+        for tier, words in _scan(text).items():
+            mapped = CONTENT_TIER_MAP.get(tier)
+            if mapped:
+                out.setdefault(mapped, []).extend(words)
+        return out
+
     m = Match()
     per_field = {
         "title": _scan(title),
-        # 본문·첨부는 A/B만 인정 (CONTENT_TIERS)
-        "body": {t: w for t, w in _scan(body).items() if t in CONTENT_TIERS},
-        "attach": {t: w for t, w in _scan(attach).items() if t in CONTENT_TIERS},
+        "body": content_scan(body),
+        "attach": content_scan(attach),
     }
 
     best: str | None = None
