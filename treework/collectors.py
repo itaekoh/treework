@@ -11,7 +11,7 @@ import logging
 import re
 from dataclasses import dataclass, field
 from datetime import date, datetime, timedelta
-from urllib.parse import quote, urljoin
+from urllib.parse import quote, unquote, urljoin
 
 from bs4 import BeautifulSoup
 
@@ -506,13 +506,31 @@ class MissingKey(RuntimeError):
     """API 키 미설정 — 실패가 아니라 '건너뜀'으로 다룬다."""
 
 
+def normalize_service_key(key: str) -> tuple[str, bool]:
+    """공공데이터포털 서비스키를 정리한다. (키, 디코딩했는지) 반환.
+
+    포털은 같은 키를 'Encoding'/'Decoding' 두 형태로 나란히 보여준다.
+    Encoding 키(`%2F`, `%3D` 포함)를 그대로 쓰면 requests 가 한 번 더 인코딩해
+    `%252F` 가 되어 인증에 실패한다 — 이 API 에서 가장 흔한 실수다.
+    Decoding 키는 base64 문자(A-Za-z0-9+/=)만 쓰므로 '%' 가 없다.
+    따라서 URL 인코딩이 보이면 되돌리면 되고, 어느 쪽을 넣어도 동작한다.
+    """
+    key = (key or "").strip().strip('"').strip("'")
+    if re.search(r"%[0-9A-Fa-f]{2}", key):
+        return unquote(key), True
+    return key, False
+
+
 def collect_g2b_bid(f: Fetcher, cfg: dict, lookback_days: int) -> list[Posting]:
     import os
 
-    key = os.environ.get(cfg.get("key_env", "G2B_SERVICE_KEY"), "").strip()
+    env_name = cfg.get("key_env", "G2B_SERVICE_KEY")
+    key, was_encoded = normalize_service_key(os.environ.get(env_name, ""))
     if not key:
-        raise MissingKey(
-            f"{cfg.get('key_env', 'G2B_SERVICE_KEY')} 미설정 — 나라장터 수집 건너뜀")
+        raise MissingKey(f"{env_name} 미설정 — 나라장터 수집 건너뜀")
+    if was_encoded:
+        log.info("[%s] Encoding 키가 감지되어 디코딩했습니다 "
+                 "(Decoding 키를 넣으면 이 과정이 생략됩니다)", cfg["id"])
 
     url = f"{cfg['base_url'].rstrip('/')}/{cfg['operation']}"
     days = int(cfg.get("lookback_days") or lookback_days)
