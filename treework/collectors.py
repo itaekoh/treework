@@ -39,6 +39,7 @@ class Posting:
     attach_names: list[str] = field(default_factory=list)
     attach_truncated: bool = False
     link_is_board: bool = False
+    amount: str = ""            # 용역 입찰의 추정가격 등 규모 정보
     # 필터 결과
     tier: str | None = None
     hits: list[str] = field(default_factory=list)
@@ -67,6 +68,35 @@ def _all_dates(text: str) -> list[str]:
 def _clean(s: str) -> str:
     s = " ".join((s or "").split())
     return re.sub(r"\s*(NEW|new|New|신규|Hot|HOT)\s*$", "", s).strip()
+
+
+def _norm_datetime(text: str) -> str:
+    """'2026-08-04 10:00:00' → '2026-08-04 10:00'.
+
+    용역 입찰은 소액 수의시담이면 공고 당일 오전에 마감되는 경우가 흔하다
+    (실측: 932만원 감리용역이 07:59 공고 → 10:00 마감). 날짜만 보여주면
+    이미 지난 건인지 알 수 없어 시각까지 남긴다.
+    """
+    d = _norm_date(text)
+    if not d:
+        return ""
+    m = re.search(r"(\d{1,2}):(\d{2})", text or "")
+    return f"{d} {int(m.group(1)):02d}:{m.group(2)}" if m else d
+
+
+def _won(v) -> str:
+    """'9324493' → '932만원'. 나무의사가 참여할 규모인지 한눈에 보이게."""
+    try:
+        n = int(float(str(v)))
+    except (TypeError, ValueError):
+        return ""
+    if n <= 0:
+        return ""
+    if n >= 100_000_000:
+        return f"{n / 100_000_000:.1f}억원"
+    if n >= 10_000:
+        return f"{n // 10_000:,}만원"
+    return f"{n:,}원"
 
 
 def _within(reg: str, lookback_days: int) -> bool:
@@ -384,11 +414,17 @@ def enrich_generic(f: Fetcher, p: Posting, cfg: dict) -> None:
 #
 # 나무의사 실수요는 채용보다 용역 발주로 나오는 경우가 많다.
 #   '○○구 생활권 수목 진단 및 진료 용역', '가로수 병해충 예찰방제 용역'
-# 채용공고와 달리 용역은 공고명 자체가 서술적이라 공고명 키워드 검색이 잘 듣는다.
-# 그래서 전국 용역을 전량 끌어오지 않고 키워드별로 질의한다(요청 수가 적고 정확).
 #
-# 엔드포인트 실측(2026-08-04): /1230000/ad/BidPublicInfoService/... 만 유효.
-# 구버전 BidPublicInfoService04~06 은 전부 NO_OPENAPI_SERVICE_ERROR(폐기).
+# 실측(2026-08-04) — 이 API 는 날짜 기준 조회만 지원한다:
+#   · bidNtceNm / srchWord / ntceNm 등 제목 검색 파라미터는 전부 무시된다
+#     (같은 기간에 어떤 키워드를 넣어도 totalCount 8937 로 동일)
+#   · prtcptLmtRgnCd 등 지역 파라미터도 무시된다
+#   · numOfRows 상한은 999 (1000 을 넣으면 기본값 10 으로 떨어진다)
+#   · 정렬은 등록일시 오름차순, 전국 용역 평일 하루 약 700건, 서울 비중 약 9%
+#   · 엔드포인트는 /1230000/ad/BidPublicInfoService/ 만 유효
+#     (구버전 BidPublicInfoService04~06 은 NO_OPENAPI_SERVICE_ERROR)
+#
+# 따라서 날짜 구간을 전량 페이징해서 받고 지역·키워드는 로컬에서 거른다.
 # ═══════════════════════════════════════════════════════════════════
 class MissingKey(RuntimeError):
     """API 키 미설정 — 실패가 아니라 '건너뜀'으로 다룬다."""
@@ -403,24 +439,23 @@ def collect_g2b_bid(f: Fetcher, cfg: dict, lookback_days: int) -> list[Posting]:
             f"{cfg.get('key_env', 'G2B_SERVICE_KEY')} 미설정 — 나라장터 수집 건너뜀")
 
     url = f"{cfg['base_url'].rstrip('/')}/{cfg['operation']}"
+    days = int(cfg.get("lookback_days") or lookback_days)
     end = datetime.now()
-    start = end - timedelta(days=max(lookback_days, 7))
+    start = end - timedelta(days=max(days, 2))
     region_words = cfg.get("region_keywords") or ["서울"]
-    seen_no: set[str] = set()
-    out: list[Posting] = []
-    api_errors: list[str] = []
+    page_size = min(int(cfg.get("page_size", 999)), 999)      # 실측 상한 999
+    max_pages = int(cfg.get("max_pages", 15))
 
-    for kw in cfg.get("query_keywords") or []:
+    def fetch(page: int) -> dict:
         params = {
             # 공공데이터포털은 '디코딩 키'를 넣고 requests 가 인코딩하게 해야 한다.
             # '인코딩 키'를 넣으면 %2B 가 %252B 로 이중 인코딩돼 인증 실패한다.
             "serviceKey": key,
-            "pageNo": "1",
-            "numOfRows": str(cfg.get("page_size", 100)),
+            "pageNo": str(page),
+            "numOfRows": str(page_size),
             "inqryDiv": "1",                       # 1 = 공고게시일시 기준
             "inqryBgnDt": start.strftime("%Y%m%d") + "0000",
             "inqryEndDt": end.strftime("%Y%m%d") + "2359",
-            "bidNtceNm": kw,
             "type": "json",
         }
         # 인증 오류를 403 + 본문 JSON 으로 알려주므로 상태코드로 끊지 않는다
@@ -430,56 +465,81 @@ def collect_g2b_bid(f: Fetcher, cfg: dict, lookback_days: int) -> list[Posting]:
         except ValueError:
             raise RuntimeError(
                 f"HTTP {r.status_code} · JSON 아님 (앞부분: {r.text[:160]})")
-
         # 인증/한도 오류는 공고 0건과 구분해서 즉시 드러내야 한다
         if "OpenAPI_ServiceResponse" in data:
             hdr = data["OpenAPI_ServiceResponse"].get("cmmMsgHeader", {})
             raise RuntimeError(f"API 오류: {hdr.get('errMsg')} / "
                                f"{hdr.get('returnAuthMsg')}")
-        body = (data.get("response") or {}).get("body") or {}
-        header = (data.get("response") or {}).get("header") or {}
+        resp = data.get("response") or {}
+        header = resp.get("header") or {}
         code = str(header.get("resultCode", ""))
         if code not in ("", "00", "0"):
-            api_errors.append(f"{code}:{header.get('resultMsg')}")
-            continue
+            raise RuntimeError(f"API 오류 {code}: {header.get('resultMsg')}")
+        return resp.get("body") or {}
 
+    seen_no: set[str] = set()
+    out: list[Posting] = []
+    total = 0
+    pages_read = 0
+    for page in range(1, max_pages + 1):
+        body = fetch(page)
+        pages_read = page
+        if page == 1:
+            total = int(body.get("totalCount") or 0)
+            want = min(-(-total // page_size), max_pages) if total else 0
+            log.info("[%s] 전국 용역 %d건 (%s~%s) → %d페이지 조회",
+                     cfg["id"], total, start.date(), end.date(), want)
         items = body.get("items") or []
         if isinstance(items, dict):               # 1건일 때 dict 로 오는 경우
-            items = items.get("item") or []
+            items = items.get("item") or items
         if isinstance(items, dict):
             items = [items]
+        if not items:
+            break
 
         for it in items:
-            no = str(it.get("bidNtceNo") or "")
-            ordr = str(it.get("bidNtceOrd") or "")
-            uid = f"{no}-{ordr}"
+            uid = f"{it.get('bidNtceNo')}-{it.get('bidNtceOrd')}"
             if uid in seen_no:
                 continue
             org = str(it.get("ntceInsttNm") or "")
             demand = str(it.get("dminsttNm") or "")
-            # 서울 소재 기관 발주만
+            # 지역 파라미터가 무시되므로 기관명으로 서울 발주만 남긴다
             if not any(w in org or w in demand for w in region_words):
                 continue
             seen_no.add(uid)
             out.append(Posting(
                 source_id=cfg["id"],
                 org=demand or org or "나라장터",
-                dept=org if demand and org != demand else "",
+                # 발주기관명을 부서 자리에 넣어 '녹지 소관' 안전망이 걸리게 한다
+                # (예: 북부공원여가센터, 푸른도시여가국)
+                dept=org,
                 title=_clean(str(it.get("bidNtceNm") or "")),
                 reg_date=_norm_date(str(it.get("bidNtceDt") or "")),
-                due_date=_norm_date(str(it.get("bidClseDt") or "")
-                                    or str(it.get("opengDt") or "")),
+                # 마감은 시각까지 (당일 마감 건이 흔하다)
+                due_date=_norm_datetime(str(it.get("bidClseDt") or "")
+                                        or str(it.get("opengDt") or "")),
+                amount=_won(it.get("presmptPrce") or it.get("asignBdgtAmt")),
                 link=str(it.get("bidNtceDtlUrl") or "") or cfg.get("board_url", ""),
                 detail_id=uid,
-                # 공고명이 곧 사업 내용이라 본문 없이도 판정이 가능하다
+                # 공고명이 곧 사업 내용이라 별도 본문 없이도 판정이 가능하다
                 body=" ".join(filter(None, [
                     str(it.get("ntceKindNm") or ""),
-                    str(it.get("bidMethdNm") or ""),
-                    str(it.get("prtcptPsblRgnNm") or ""),
+                    str(it.get("bidprcPsblIndstrytyNm") or ""),
+                    str(it.get("rgnLmtBidLocplcJdgmBssNm") or ""),
                 ])),
             ))
-    if api_errors and not out:
-        raise RuntimeError("API 응답 오류: " + "; ".join(api_errors[:3]))
+
+        if total and page * page_size >= total:
+            break
+
+    # 상한에 걸려 뒷부분을 못 봤으면 조용히 넘기지 않는다.
+    # 커버리지가 잘렸는데 정상으로 보고되면 '조용한 누락'이 된다.
+    if total > pages_read * page_size:
+        log.warning("[%s] 페이지 상한 도달 — 전체 %d건 중 %d건만 확인. "
+                    "lookback_days 를 줄이거나 max_pages 를 늘리세요.",
+                    cfg["id"], total, pages_read * page_size)
+
+    log.info("[%s] %d페이지에서 서울 발주 %d건 추출", cfg["id"], pages_read, len(out))
     return out
 
 

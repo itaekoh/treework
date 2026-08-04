@@ -69,9 +69,19 @@ C를 본문까지 허용하면 페이지 메뉴·푸터·안내문에 `조경/�
 
 나무의사 실수요는 채용보다 **용역 발주**로 나오는 경우가 많다.
 `○○구 생활권 수목 진단 및 진료 용역`, `가로수 병해충 예찰방제 용역` 처럼.
-채용공고와 달리 용역은 **공고명 자체가 서술적**이라 공고명 키워드 검색이 잘
-듣는다. 그래서 전국 용역을 전량 끌어오지 않고 키워드 15개로 질의한 뒤
-공고기관·수요기관 이름에 '서울'이 있는 건만 남긴다.
+
+**이 API 는 날짜 기준 조회만 지원한다.** `bidNtceNm`·`srchWord`·`ntceNm` 같은
+제목 검색 파라미터와 `prtcptLmtRgnCd`(지역제한)가 **모두 무시된다** — 어떤
+키워드를 넣어도 `totalCount` 가 똑같다(실측). 그래서 날짜 구간을 전량 페이징한
+뒤 지역·키워드를 로컬에서 거른다.
+
+실측 규모(7일 기준): 전국 용역 약 3,600건 → 4페이지 → **서울 발주 286건** →
+키워드 필터 → 5건. 요청은 실행당 4건, 하루 2회 = 8건으로 개발계정 일일 한도
+1,000건에 한참 못 미친다.
+
+용역은 소액 수의시담이면 **공고 당일 오전에 마감**되는 경우가 흔하다(실측: 932만원
+감리용역이 07:59 공고 → 10:00 마감). 그래서 마감은 날짜가 아니라 **시각까지**
+표시하고, 참여 규모 판단을 위해 추정가격도 함께 보낸다.
 
 `G2B_SERVICE_KEY` 가 없으면 이 소스만 **'건너뜀'** 으로 처리되고 경고를 띄우지
 않는다 — 미설정과 고장을 구분하지 않으면 경고 피로가 생겨 진짜 고장을 흘려보게 된다.
@@ -222,15 +232,22 @@ GitHub Actions 러너는 해외 Azure IP를 쓴다. 일부 구청 WAF가 이를 
    > 이중 인코딩되어 인증에 실패한다.
 4. Secret `G2B_SERVICE_KEY` 로 등록
 
-키 발급 후 아래로 즉시 검증할 수 있다.
+키 발급 후 아래로 즉시 검증할 수 있다(PowerShell).
 
-```bash
-G2B_SERVICE_KEY=발급받은키 python main.py --dry-run --source g2b-servc
+```powershell
+$env:G2B_SERVICE_KEY = "발급받은키"
+python main.py --dry-run --source g2b-servc
 ```
 
-- 정상: 서울 소재 기관의 용역 공고가 나오거나 `신규 공고 없음`
-- 키 문제: `API 오류: SERVICE_KEY_IS_NOT_REGISTERED_ERROR` → 승인 대기(최대 1시간)
-  또는 Encoding 키를 잘못 넣은 경우
+정상이면 이런 로그가 나온다.
+
+```
+[g2b-servc] 전국 용역 3600건 (2026-07-28~2026-08-04) → 4페이지 조회
+[g2b-servc] 4페이지에서 서울 발주 286건 추출
+```
+
+`API 오류: SERVICE_KEY_IS_NOT_REGISTERED_ERROR` 가 나면 승인 대기(최대 1시간)
+이거나 Encoding 키를 넣은 경우다.
 
 첫 실행은 최근 21일치를 전부 신규로 보므로 메시지가 여러 건 올 수 있다.
 
@@ -278,16 +295,23 @@ G2B_SERVICE_KEY=발급받은키 python main.py --dry-run --source g2b-servc
 - ⚠️ 번호 셀도 `<a>` 라서 첫 앵커를 쓰면 제목이 `"219"` 가 된다. 가장 긴 앵커를 써야 한다
 - 작동 확인: 강남·강북·금천·노원·도봉·동작·서초·양천 (8/25)
 
-**나라장터 입찰공고 API**
+**나라장터 입찰공고 API** (실데이터로 검증 완료)
 - 유효 엔드포인트는 **`/1230000/ad/BidPublicInfoService/`** 하나뿐이다.
-  구버전 `BidPublicInfoService04` `05` `06` 은 전부 `NO_OPENAPI_SERVICE_ERROR`(폐기)
-- 확인된 오퍼레이션: `getBidPblancListInfoServc`(용역),
-  `getBidPblancListInfoServcPPSSrch`
+  구버전 `BidPublicInfoService04` `05` `06` 은 전부 `NO_OPENAPI_SERVICE_ERROR`(폐기).
+  인터넷 예제 대부분이 폐기된 `04` 를 쓰고 있다
+- ⚠️ **제목 검색이 안 된다.** `bidNtceNm` `bidNtceNmKor` `srchWord` `ntceNm` 전부
+  무시된다 — 같은 기간에 어떤 키워드를 넣어도 `totalCount=8937` 로 동일
+- ⚠️ **지역 파라미터도 무시된다.** `prtcptLmtRgnCd` `rgnLmtBidLocplcJdgmBssCd`
+  모두 결과가 안 바뀐다 → 기관명 문자열로 걸러야 한다
+- `numOfRows` 상한은 **999**. `1000` 을 넣으면 조용히 기본값 10 으로 떨어진다
+- `inqryDiv=1` 공고게시일시 기준(정상), `2`/`4` 는 빈 결과, `3` 은 소량
+- 정렬은 등록일시 **오름차순**. 날짜 파라미터는 `YYYYMMDDHHMM`
+- 볼륨: 전국 용역 평일 하루 약 700건(주말 거의 없음), 서울 비중 약 9%
 - 인증 오류를 **403 + 본문 JSON**으로 알려준다. 그래서 이 소스만
   `check_status=False` 로 호출해 본문의 `errMsg` 를 경고에 실어 보낸다
   (그러지 않으면 `HTTPError: 403` 만 남아 원인을 알 수 없다)
-- 날짜 파라미터는 `YYYYMMDDHHMM` 형식(`inqryBgnDt`/`inqryEndDt`), `inqryDiv=1` 은
-  공고게시일시 기준
+- 검증된 응답 필드: `bidNtceNm` `ntceInsttNm` `dminsttNm` `bidNtceDt`
+  `bidClseDt` `opengDt` `bidNtceDtlUrl` `presmptPrce` `asignBdgtAmt` `ntceKindNm`
 
 **기타**
 - 노원구 도메인 변경: `nowon.go.kr` → **`www.nowon.kr`**
@@ -311,10 +335,8 @@ G2B_SERVICE_KEY=발급받은키 python main.py --dry-run --source g2b-servc
 | 나라일터 | 보류 | `www.gojobs.go.kr/mainIndex.do` 로 이전. 완전 SPA라 정적 스크레이핑 불가 |
 | 성북구 | 보류 | 도메인 불통 |
 
-나라장터는 구현했다. 다만 **서비스키가 있어야 실동작을 확인할 수 있다** —
-엔드포인트 생존과 오류 처리 경로는 검증했지만(아래 검증 기록), 응답 필드명은
-공식 스펙 기준으로 작성했고 실데이터로 확인하지 못했다. 키를 넣고 처음 실행할 때
-0건이 나오면 `-v` 로 응답을 확인해 필드명을 맞춰야 할 수 있다.
+나라장터는 **실데이터로 검증 완료**했다(2026-08-04). 응답 필드명, 페이징 상한,
+무시되는 파라미터, 볼륨까지 실측해 아래 검증 기록에 남겼다.
 
 ## 알려진 한계
 

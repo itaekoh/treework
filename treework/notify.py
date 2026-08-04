@@ -29,16 +29,22 @@ def esc(s: str) -> str:
 def format_posting(p: dict) -> str:
     """공고 1건을 블록으로 만든다."""
     tier = p.get("tier") or "C"
+    org, dept = (p.get("org") or "").strip(), (p.get("dept") or "").strip()
+    # 나라장터는 공고기관과 수요기관이 같은 경우가 많아 그대로 두면 같은 이름이
+    # 두 번 찍힌다. 부서가 기관명에 이미 포함돼 있으면 생략한다.
+    if dept and (dept == org or dept in org or org in dept):
+        dept = ""
     lines = [
         f"{TIER_BADGE.get(tier, tier)}  <b>{esc(p['title'])}</b>",
-        f"🏢 {esc(p.get('org') or '-')}"
-        + (f" · {esc(p['dept'])}" if p.get("dept") else ""),
+        f"🏢 {esc(org or '-')}" + (f" · {esc(dept)}" if dept else ""),
     ]
     reg, due = p.get("reg_date") or "", p.get("due_date") or ""
     if reg or due:
         lines.append(f"📅 등록 {esc(reg or '-')} · 마감 {esc(due or '확인불가')}")
     else:
         lines.append("📅 마감 확인불가")
+    if p.get("amount"):
+        lines.append(f"💰 {esc(p['amount'])}")
 
     hits = p.get("hits") or []
     if hits:

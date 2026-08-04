@@ -224,7 +224,7 @@ def main() -> int:
         "reg_date": p.reg_date, "due_date": p.due_date, "link": p.link,
         "tier": p.tier, "hits": p.hits, "demoted": p.demoted,
         "attach_names": p.attach_names, "attach_truncated": p.attach_truncated,
-        "link_is_board": p.link_is_board,
+        "link_is_board": p.link_is_board, "amount": p.amount,
     } for p in new]
 
     messages = notify.build_messages(payload, health)
