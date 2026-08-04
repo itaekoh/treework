@@ -3,4 +3,6 @@ beautifulsoup4>=4.12
 lxml>=5.2
 PyYAML>=6.0
 pypdf>=4.2
+# pypdf 가 한글 PDF 에서 텍스트를 못 뽑는 경우가 있어 두 번째 시도용
+pdfminer.six>=20240706
 olefile>=0.47
