@@ -53,8 +53,9 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           # 미설정이면 나라장터 소스만 '건너뜀'으로 처리되고 경고는 뜨지 않는다
           G2B_SERVICE_KEY: ${{ secrets.G2B_SERVICE_KEY }}
+        # 나라장터는 마감이 당일인 건이 많아 g2b.yml 에서 평일 매시간 따로 돈다
         run: |
-          python main.py ${{ inputs.dry_run && '--dry-run' || '' }}
+          python main.py --exclude g2b-servc ${{ inputs.dry_run && '--dry-run' || '' }}
 
       - name: seen.json 커밋
         # 발송이 실패하면 main.py 가 상태를 저장하지 않고 종료하므로

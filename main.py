@@ -156,6 +156,8 @@ def main() -> int:
     ap.add_argument("--dry-run", action="store_true", help="발송하지 않고 출력만")
     ap.add_argument("--no-detail", action="store_true", help="상세/첨부 생략")
     ap.add_argument("--source", action="append", help="특정 소스 id만 실행")
+    ap.add_argument("--exclude", action="append", default=[],
+                    help="특정 소스 id 제외 (전용 워크플로우로 분리한 소스 등)")
     ap.add_argument("--config", default=str(ROOT / "sources.yml"))
     ap.add_argument("--state", default=str(ROOT / "seen.json"))
     ap.add_argument("--no-state-write", action="store_true",
@@ -174,9 +176,13 @@ def main() -> int:
     defaults, sources = load_config(Path(args.config))
     if args.source:
         sources = [s for s in sources if s["id"] in set(args.source)]
-        if not sources:
-            log.error("--source 에 해당하는 소스가 없습니다.")
-            return 2
+    if args.exclude:
+        skip = set(args.exclude)
+        sources = [s for s in sources if s["id"] not in skip]
+        log.info("제외된 소스: %s", ", ".join(sorted(skip)))
+    if not sources:
+        log.error("실행할 소스가 없습니다 (--source/--exclude 확인).")
+        return 2
 
     store = SeenStore(args.state)
     f = Fetcher(timeout=int(defaults.get("timeout", 25)),
@@ -242,6 +248,7 @@ def main() -> int:
         "tier": p.tier, "hits": p.hits, "demoted": p.demoted,
         "attach_names": p.attach_names, "attach_truncated": p.attach_truncated,
         "link_is_board": p.link_is_board, "amount": p.amount,
+        "doc_url": p.doc_url, "ref_no": p.ref_no,
     } for p in new]
 
     messages = notify.build_messages(payload, health)

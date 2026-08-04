@@ -40,6 +40,8 @@ class Posting:
     attach_truncated: bool = False
     link_is_board: bool = False
     amount: str = ""            # 용역 입찰의 추정가격 등 규모 정보
+    doc_url: str = ""           # 공고문 직접 다운로드 (브라우저 무관하게 열린다)
+    ref_no: str = ""            # 공고번호 — 수동 검색용
     # 필터 결과
     tier: str | None = None
     hits: list[str] = field(default_factory=list)
@@ -614,6 +616,12 @@ def collect_g2b_bid(f: Fetcher, cfg: dict, lookback_days: int) -> list[Posting]:
                                         or str(it.get("opengDt") or "")),
                 amount=_won(it.get("presmptPrce") or it.get("asignBdgtAmt")),
                 link=str(it.get("bidNtceDtlUrl") or "") or cfg.get("board_url", ""),
+                # 상세 화면은 WebSquare SPA 라 렌더에 수 초가 걸리고 임베디드
+                # 웹뷰(텔레그램 내장 브라우저 등)에서 실패할 수 있다. 공고문
+                # 직접 다운로드는 평범한 HTTP 파일 응답이라 어디서든 열린다.
+                doc_url=str(it.get("stdNtceDocUrl")
+                            or it.get("ntceSpecDocUrl1") or ""),
+                ref_no=f"{it.get('bidNtceNo')}-{it.get('bidNtceOrd')}",
                 detail_id=uid,
                 # 공고명이 곧 사업 내용이라 별도 본문 없이도 판정이 가능하다
                 body=" ".join(filter(None, [

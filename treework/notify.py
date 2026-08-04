@@ -62,9 +62,19 @@ def format_posting(p: dict) -> str:
     if notes:
         lines.append(f"ℹ️ {esc(' / '.join(notes))}")
 
-    link = p.get("link") or ""
-    if link:
+    link, doc = p.get("link") or "", p.get("doc_url") or ""
+    if link and doc:
+        # 나라장터 상세는 WebSquare SPA 라 임베디드 웹뷰에서 실패할 수 있어
+        # 공고문 직접 다운로드를 나란히 준다.
+        lines.append(f'🔗 <a href="{esc(link)}">공고 상세</a>'
+                     f' · <a href="{esc(doc)}">📄 공고문</a>')
+    elif link:
         lines.append(f'🔗 <a href="{esc(link)}">공고 보기</a>')
+    elif doc:
+        lines.append(f'📄 <a href="{esc(doc)}">공고문</a>')
+    if p.get("ref_no"):
+        # 링크가 안 열릴 때 나라장터에서 직접 검색할 수 있게
+        lines.append(f"🔢 <code>{esc(p['ref_no'])}</code>")
     return "\n".join(lines)
 
 
