@@ -1,6 +1,297 @@
 {
-  "updated_at": null,
-  "count": 0,
-  "health": {},
-  "seen": {}
+"count": 4,
+"health": {
+"gu-ddm-n": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+10
+]
+},
+"gu-ddm-r": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+10
+]
+},
+"gu-dobong": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+51
+]
+},
+"gu-dongjak": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+50
+]
+},
+"gu-ep-n": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+10
+]
+},
+"gu-ep-r": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+10
+]
+},
+"gu-gangbuk": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+51
+]
+},
+"gu-gangdong-n": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+10
+]
+},
+"gu-gangdong-r": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+10
+]
+},
+"gu-gangnam": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+50
+]
+},
+"gu-gangseo-n": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+10
+]
+},
+"gu-gangseo-r": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+10
+]
+},
+"gu-geumcheon": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+51
+]
+},
+"gu-guro-n": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+10
+]
+},
+"gu-guro-r": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+10
+]
+},
+"gu-gwanak-n": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+10
+]
+},
+"gu-gwanak-r": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+10
+]
+},
+"gu-gwangjin-n": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+10
+]
+},
+"gu-gwangjin-r": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+10
+]
+},
+"gu-jongno-n": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+20
+]
+},
+"gu-jongno-r": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+10
+]
+},
+"gu-junggu-n": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+10
+]
+},
+"gu-junggu-r": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+10
+]
+},
+"gu-jungnang-r": {
+"fails": 1,
+"ok": "",
+"rows": []
+},
+"gu-mapo-n": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+10
+]
+},
+"gu-nowon": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+51
+]
+},
+"gu-sdm-n": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+10
+]
+},
+"gu-sdm-r": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+10
+]
+},
+"gu-seocho": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+50
+]
+},
+"gu-seongdong-n": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+10
+]
+},
+"gu-seongdong-r": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+10
+]
+},
+"gu-songpa-n": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+10
+]
+},
+"gu-songpa-r": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+10
+]
+},
+"gu-yangcheon": {
+"fails": 1,
+"ok": "",
+"rows": []
+},
+"gu-ydp-n": {
+"fails": 1,
+"ok": "",
+"rows": []
+},
+"gu-ydp-r": {
+"fails": 1,
+"ok": "",
+"rows": []
+},
+"gu-yongsan-n": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+10
+]
+},
+"seoul-job-public": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+91
+]
+},
+"seoul-notice": {
+"fails": 0,
+"ok": "2026-08-04",
+"rows": [
+100
+]
+}
+},
+"seen": {
+"a3c64250c1a8d4fd62b5": {
+"d": "2026-08-04",
+"l": "https://www.nowon.kr/www/user/bbs/BD_selectBbsList.do?q_bbsCode=1003",
+"s": "gu-nowon",
+"t": "서울특별시 노원구 시간선택제 임기제공무원(산림재난 대응단 운용 분야) 채용 계획 공고"
+},
+"a5a73365802d6df00c9f": {
+"d": "2026-08-04",
+"l": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=94&nttNo=19278159&&pageUnit=10&key=5140&nttShowPd=100&pageIndex=1",
+"s": "gu-songpa-r",
+"t": "2026 송파 정원지원센터 유지관리 분야 기간제근로자(현장) 추가채용"
+},
+"b708c0bfaf9aeda80ac3": {
+"d": "2026-08-04",
+"l": "https://www.geumcheon.go.kr/",
+"s": "gu-geumcheon",
+"t": "시간선택제 임기제공무원(라급, 공원녹지분야) 신규채용 면접 심사위원 모집"
+},
+"c0a5f18f68d793ffb1de": {
+"d": "2026-08-04",
+"l": "https://www.geumcheon.go.kr/",
+"s": "gu-geumcheon",
+"t": "서울특별시 금천구 시간선택제 임기제공무원(라급,공원녹지분야) 경력경쟁임용시험 시행계획 공고"
+}
+},
+"updated_at": "2026-08-04T08:36:10+00:00"
 }
