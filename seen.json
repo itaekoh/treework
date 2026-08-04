@@ -1,10 +1,18 @@
 {
-"count": 5,
+"count": 7,
 "health": {
+"g2b-servc": {
+"err": "RuntimeError: API 오류: SERVICE_KEY_IS_NOT_REGISTERED_ERROR / 등록되지 않은 서비스키",
+"err_at": "2026-08-04",
+"fails": 1,
+"ok": "",
+"rows": []
+},
 "gu-ddm-n": {
 "fails": 0,
 "ok": "2026-08-04",
 "rows": [
+10,
 10,
 10
 ]
@@ -14,6 +22,7 @@
 "ok": "2026-08-04",
 "rows": [
 10,
+10,
 10
 ]
 },
@@ -21,6 +30,7 @@
 "fails": 0,
 "ok": "2026-08-04",
 "rows": [
+51,
 51,
 51
 ]
@@ -30,6 +40,7 @@
 "ok": "2026-08-04",
 "rows": [
 50,
+50,
 50
 ]
 },
@@ -37,6 +48,7 @@
 "fails": 0,
 "ok": "2026-08-04",
 "rows": [
+10,
 10,
 10
 ]
@@ -46,6 +58,7 @@
 "ok": "2026-08-04",
 "rows": [
 10,
+10,
 10
 ]
 },
@@ -53,6 +66,7 @@
 "fails": 0,
 "ok": "2026-08-04",
 "rows": [
+51,
 51,
 51
 ]
@@ -62,6 +76,7 @@
 "ok": "2026-08-04",
 "rows": [
 10,
+10,
 10
 ]
 },
@@ -69,6 +84,7 @@
 "fails": 0,
 "ok": "2026-08-04",
 "rows": [
+10,
 10,
 10
 ]
@@ -78,6 +94,7 @@
 "ok": "2026-08-04",
 "rows": [
 50,
+50,
 50
 ]
 },
@@ -85,6 +102,7 @@
 "fails": 0,
 "ok": "2026-08-04",
 "rows": [
+10,
 10,
 10
 ]
@@ -94,6 +112,7 @@
 "ok": "2026-08-04",
 "rows": [
 10,
+10,
 10
 ]
 },
@@ -101,6 +120,7 @@
 "fails": 0,
 "ok": "2026-08-04",
 "rows": [
+51,
 51,
 51
 ]
@@ -110,6 +130,7 @@
 "ok": "2026-08-04",
 "rows": [
 10,
+10,
 10
 ]
 },
@@ -117,6 +138,7 @@
 "fails": 0,
 "ok": "2026-08-04",
 "rows": [
+10,
 10,
 10
 ]
@@ -126,6 +148,7 @@
 "ok": "2026-08-04",
 "rows": [
 10,
+10,
 10
 ]
 },
@@ -133,6 +156,7 @@
 "fails": 0,
 "ok": "2026-08-04",
 "rows": [
+10,
 10,
 10
 ]
@@ -142,6 +166,7 @@
 "ok": "2026-08-04",
 "rows": [
 10,
+10,
 10
 ]
 },
@@ -149,6 +174,7 @@
 "fails": 0,
 "ok": "2026-08-04",
 "rows": [
+10,
 10,
 10
 ]
@@ -158,6 +184,7 @@
 "ok": "2026-08-04",
 "rows": [
 20,
+20,
 20
 ]
 },
@@ -165,6 +192,7 @@
 "fails": 0,
 "ok": "2026-08-04",
 "rows": [
+10,
 10,
 10
 ]
@@ -174,6 +202,7 @@
 "ok": "2026-08-04",
 "rows": [
 10,
+10,
 10
 ]
 },
@@ -182,13 +211,14 @@
 "ok": "2026-08-04",
 "rows": [
 10,
+10,
 10
 ]
 },
 "gu-jungnang-r": {
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.jungnang.go.kr', port=443): Max retries exceeded with url: /portal/bbs/list/B0000118.do?menuNo=200476 (Caused by ConnectTimeoutError(<",
 "err_at": "2026-08-04",
-"fails": 2,
+"fails": 3,
 "ok": "",
 "rows": []
 },
@@ -196,6 +226,7 @@
 "fails": 0,
 "ok": "2026-08-04",
 "rows": [
+10,
 10,
 10
 ]
@@ -205,6 +236,7 @@
 "ok": "2026-08-04",
 "rows": [
 51,
+51,
 51
 ]
 },
@@ -212,6 +244,7 @@
 "fails": 0,
 "ok": "2026-08-04",
 "rows": [
+10,
 10,
 10
 ]
@@ -221,6 +254,7 @@
 "ok": "2026-08-04",
 "rows": [
 10,
+10,
 10
 ]
 },
@@ -228,6 +262,7 @@
 "fails": 0,
 "ok": "2026-08-04",
 "rows": [
+50,
 50,
 50
 ]
@@ -237,6 +272,7 @@
 "ok": "2026-08-04",
 "rows": [
 10,
+10,
 10
 ]
 },
@@ -244,6 +280,7 @@
 "fails": 0,
 "ok": "2026-08-04",
 "rows": [
+10,
 10,
 10
 ]
@@ -253,6 +290,7 @@
 "ok": "2026-08-04",
 "rows": [
 10,
+10,
 10
 ]
 },
@@ -261,25 +299,32 @@
 "ok": "2026-08-04",
 "rows": [
 10,
+10,
 10
 ]
 },
 "gu-yangcheon": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
+"err_at": "2026-08-04",
+"fails": 1,
 "ok": "2026-08-04",
 "rows": [
 50
 ]
 },
 "gu-ydp-n": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
+"err_at": "2026-08-04",
+"fails": 1,
 "ok": "2026-08-04",
 "rows": [
 10
 ]
 },
 "gu-ydp-r": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
+"err_at": "2026-08-04",
+"fails": 1,
 "ok": "2026-08-04",
 "rows": [
 9
@@ -290,6 +335,7 @@
 "ok": "2026-08-04",
 "rows": [
 10,
+10,
 10
 ]
 },
@@ -298,7 +344,8 @@
 "ok": "2026-08-04",
 "rows": [
 91,
-92
+92,
+94
 ]
 },
 "seoul-notice": {
@@ -306,11 +353,18 @@
 "ok": "2026-08-04",
 "rows": [
 100,
+100,
 100
 ]
 }
 },
 "seen": {
+"3aad29b4207b249b03b4": {
+"d": "2026-08-04",
+"l": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=94&nttNo=19278161&&pageUnit=10&key=5140&nttShowPd=100&pageIndex=1",
+"s": "gu-songpa-r",
+"t": "송파책박물관 단시간 근로자(어린이 전시실, 도서보조) 채용 공고"
+},
 "a3c64250c1a8d4fd62b5": {
 "d": "2026-08-04",
 "l": "https://www.nowon.kr/www/user/bbs/BD_selectBbsList.do?q_bbsCode=1003",
@@ -322,6 +376,12 @@
 "l": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=94&nttNo=19278159&&pageUnit=10&key=5140&nttShowPd=100&pageIndex=1",
 "s": "gu-songpa-r",
 "t": "2026 송파 정원지원센터 유지관리 분야 기간제근로자(현장) 추가채용"
+},
+"b3db7c51c24e0f514565": {
+"d": "2026-08-04",
+"l": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=94&nttNo=19278119&&pageUnit=10&key=5140&nttShowPd=100&pageIndex=1",
+"s": "gu-songpa-r",
+"t": "2026년 송파구보건소 구강보건사업 기간제근로자(치위생사) 채용 공고"
 },
 "b708c0bfaf9aeda80ac3": {
 "d": "2026-08-04",
@@ -342,5 +402,5 @@
 "t": "서울특별시 중구 임기제공무원 채용시험 최종합격자 공고(SNS구정홍보 전문요원, 언론홍보, 정책홍보, 주민소통활성화, 법무행정, 도시계획, 운동처방사)"
 }
 },
-"updated_at": "2026-08-04T10:06:33+00:00"
+"updated_at": "2026-08-04T10:44:38+00:00"
 }
