@@ -93,19 +93,45 @@ RESULT_NOTICE = re.compile(
     r"|서류\s*전형\s*결과|심사\s*결과|선정\s*결과|전형\s*결과|채용\s*결과"
     r"|면접\s*(시험|심사)\s*(일정|계획|안내|대상)"
     r"|응시\s*번호|필기시험\s*장소"
-    # 각종 위원 모집·위촉은 채용이 아니다(단발성 위촉).
-    # 실측: '제25회 서울억새축제 대행 용역 제안서 평가위원(후보자) 모집' 이
-    # 공원여가과 부서 안전망에 걸려 발송됐다.
-    r"|(?:심사|평가|심의|자문|선정|평가심의)\s*위원"
-    r"|위원\s*(?:모집|위촉|공모|추천|선정)"
     # 취소는 '공고 취소'와 '취소공고' 두 어순으로 모두 쓰인다
     r"|(?:채용|모집|공고|입찰|용역|시험)\s*취소|취소\s*(?:공고|알림)"
 )
 
+# 각종 위원 모집·위촉. 통상은 채용이 아니지만 **아직 모집 중**이므로
+# 결과공고와 달리 무조건 버리면 안 된다.
+#   버려야 할 것 : '제25회 서울억새축제 대행 용역 제안서 평가위원 모집'
+#                  (공원여가과 부서 안전망에만 걸린 무관 건 — 실측 오탐)
+#   남겨야 할 것 : '수목진료 심의위원 위촉' 처럼 나무의사에게 실제 기회인 건
+# → A티어(나무의사·수목치료기술자 등 모호하지 않은 용어)가 있을 때만 통과시킨다.
+COMMITTEE_NOTICE = re.compile(
+    r"(?:심사|평가|심의|자문|선정|평가심의)\s*위원"
+    r"|위원\s*(?:모집|위촉|공모|추천|선정)"
+)
+
 
 def is_result_notice(title: str) -> bool:
-    """결과 발표·경과 안내처럼 지원이 불가능한 공고인가."""
+    """이미 끝난 절차인가. A티어가 있어도 지원할 수 없으므로 무조건 제외한다."""
     return bool(RESULT_NOTICE.search(title or ""))
+
+
+def is_committee_notice(title: str) -> bool:
+    """위원 모집·위촉인가. A티어 근거가 없을 때만 버린다."""
+    return bool(COMMITTEE_NOTICE.search(title or ""))
+
+
+def is_actionable(title: str, tier: str | None) -> bool:
+    """등급 판정까지 마친 뒤의 최종 관문 — 알림을 보낼 가치가 있는가.
+
+    is_result_notice 는 성능을 위해 수집 직후(상세 조회 전)에도 한 번 적용하지만,
+    규칙의 authoritative 위치는 여기다.
+    """
+    if not tier:
+        return False
+    if is_result_notice(title):
+        return False                       # 이미 끝난 절차
+    if is_committee_notice(title) and tier != "A":
+        return False                       # 위원 위촉은 확실한 근거가 있을 때만
+    return True
 
 
 def is_closed(due: str, now: datetime | None = None) -> bool:

@@ -216,6 +216,14 @@ def main() -> int:
             m = filters.classify(p.title, p.body, p.attach_text, p.dept)
             if not m.matched:
                 continue
+            # 등급까지 정해진 뒤의 최종 관문. 위원 모집·위촉은 A티어 근거가
+            # 있을 때만 남는다 — '수목진료 심의위원 위촉' 은 실제 기회지만
+            # 부서 안전망에만 걸린 '억새축제 평가위원 모집' 은 무관하다.
+            # 상세·첨부까지 본 뒤 판정하므로 첨부에만 요건이 있어도 잡힌다.
+            if not filters.is_actionable(p.title, m.tier):
+                log.debug("[%s] 최종 관문 제외(%s): %r",
+                          src["id"], m.tier, p.title[:50])
+                continue
             p.tier, p.hits, p.demoted = m.tier, m.hits, m.demoted
             candidates.append(p)
 

@@ -81,13 +81,8 @@ RESULT_NOTICES = [
     "서울특별시 중구 임기제공무원 채용시험 최종합격자 공고(SNS구정홍보 전문요원)",
     "시간선택제임기제공무원 라급(환경분야) 채용 서류전형 합격자 발표 및 면접시험 안내",
     "2026년 드림스타트 아동통합사례관리사 공무직 서류합격자 및 면접심사 계획 공고",
-    "시간선택제 임기제공무원(라급, 공원녹지분야) 신규채용 면접 심사위원 모집",
     "서울특별시 노원구 공공디자인 분야 임기제공무원 6급 서류심사 결과 공고",
     "2026년도 공무용차량 보험가입 용역 취소공고",
-    # 각종 위원 위촉은 채용이 아니다 (실제 발송된 오탐)
-    "제25회 서울억새축제 대행 용역 제안서 평가위원(후보자) 모집 공고",
-    "2026년 조경분야 자문위원 위촉 공고",
-    "공원녹지사업 심의위원 공개모집",
 ]
 # 이건 진짜 채용이므로 제외되면 안 된다
 REAL_POSTINGS = [
@@ -140,8 +135,46 @@ def check_closed() -> int:
     return fails
 
 
+def check_committee() -> int:
+    """위원 모집·위촉은 '무조건 제외'가 아니라 'A티어 근거가 있으면 통과'다.
+
+    결과공고(이미 끝난 절차)와 달리 위원 모집은 아직 모집 중이므로,
+    나무의사에게 실제 기회인 건을 통째로 버리면 과잘림이 된다.
+    """
+    cases = [
+        # (제목, 등급, 통과해야 하나)
+        ("제25회 서울억새축제 대행 용역 제안서 평가위원(후보자) 모집 공고",
+         "C", False),                       # 실측 오탐 — 부서 안전망에만 걸림
+        ("2026년 서울시 수목진료 심의위원 위촉 공고",
+         "A", True),                        # 나무의사에게 실제 기회
+        ("생활권 수목 예찰방제 자문위원 공개모집", "A", True),
+        ("공원녹지사업 심의위원 공개모집", "B", False),   # 근거가 약하다
+        # 실측: 금천구 건. 채용 자체가 아니라 그 채용의 면접위원을 뽑는 공고다
+        ("시간선택제 임기제공무원(라급, 공원녹지분야) 신규채용 면접 심사위원 모집",
+         "B", False),
+        # 위원 공고가 아닌 일반 채용은 영향 없어야 한다
+        ("노원구 시간선택제 임기제공무원(산림재난 대응단) 채용 계획 공고",
+         "A", True),
+        ("금천구 시간선택제 임기제공무원(공원녹지분야) 시행계획 공고", "B", True),
+        # 결과공고는 A티어여도 제외 (이미 끝났다)
+        ("나무의사 채용시험 최종합격자 공고", "A", False),
+        # 등급이 없으면 당연히 제외
+        ("지방세 체납 공시송달", None, False),
+    ]
+    fails = 0
+    for title, tier, want in cases:
+        got = filters.is_actionable(title, tier)
+        if got != want:
+            print(f"FAIL  최종관문: {title[:46]!r} tier={tier} "
+                  f"기대={want} 실제={got}")
+            fails += 1
+    print(f"{'PASS' if not fails else 'FAIL'}  위원 모집/최종 관문 "
+          f"{len(cases) - fails}/{len(cases)}")
+    return fails
+
+
 def main() -> int:
-    fails = check_result_notice() + check_closed()
+    fails = check_result_notice() + check_closed() + check_committee()
     for desc, title, body, attach, dept, want in CASES:
         m = filters.classify(title, body, attach, dept)
         ok = m.tier == want
