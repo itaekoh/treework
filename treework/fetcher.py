@@ -22,7 +22,12 @@ UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
 
 class Fetcher:
     def __init__(self, *, timeout: int = 25, rate_limit_sec: float = 1.2,
-                 retries: int = 2):
+                 retries: int = 2, connect_timeout: int = 15):
+        # GitHub Actions 러너는 해외(Azure)에 있어 국내 호스트까지 왕복이 길다.
+        # 연결 타임아웃을 읽기 타임아웃과 분리해 넉넉히 준다 — 연결만 느린
+        # 경우에 ConnectTimeout 으로 조기 실패하는 것을 막는다.
+        # (실측: apis.data.go.kr 이 로컬 13초 작업인데 Actions 에서 ConnectTimeout)
+        self.connect_timeout = connect_timeout
         self.timeout = timeout
         self.rate_limit_sec = rate_limit_sec
         self.retries = retries
@@ -50,7 +55,8 @@ class Fetcher:
         check_status=False 는 4xx/5xx 응답도 그대로 돌려준다. 공공데이터포털처럼
         오류를 403 + 본문 JSON으로 알려주는 API 는 본문을 읽어야 원인을 알 수 있다.
         """
-        kw.setdefault("timeout", self.timeout)
+        # (연결, 읽기) 튜플로 준다 — 연결은 넉넉히, 읽기는 기존대로
+        kw.setdefault("timeout", (self.connect_timeout, self.timeout))
         # 이 호스트가 이미 SSL 검증에 실패한 적 있으면 처음부터 낮춰서 부른다.
         # 그러지 않으면 요청마다 실패 1회를 반복해 요청 수가 두 배가 된다.
         if requests.utils.urlparse(url).netloc in self.insecure_hosts:
@@ -80,7 +86,9 @@ class Fetcher:
                 if status and 400 <= status < 500 and status != 429:
                     break          # 클라이언트 오류는 재시도 무의미
             if attempt < self.retries:
-                time.sleep(1.5 * (attempt + 1))
+                # 연결 타임아웃은 일시적 네트워크 문제인 경우가 많아 더 기다린다
+                backoff = 4.0 if isinstance(last, requests.ConnectTimeout) else 1.5
+                time.sleep(backoff * (attempt + 1))
         raise last                  # type: ignore[misc]
 
     def get(self, url: str, **kw) -> requests.Response:
