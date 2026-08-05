@@ -14,8 +14,11 @@ import hashlib
 import json
 import logging
 import re
-from datetime import date, datetime, timedelta
+from datetime import datetime, timedelta
+
 from pathlib import Path
+
+from .timeutil import KST, today_kst
 
 log = logging.getLogger(__name__)
 
@@ -62,7 +65,7 @@ class SeenStore:
             "t": (title or "")[:160],
             "s": source_id,
             "l": link[:400],
-            "d": date.today().isoformat(),
+            "d": today_kst().isoformat(),
         }
 
     # ── 소스 건강 이력 ────────────────────────────────────────────────
@@ -86,8 +89,9 @@ class SeenStore:
 
         if ok:
             h["fails"] = 0
-            h["ok"] = date.today().isoformat()
+            h["ok"] = today_kst().isoformat()
             h.pop("err", None)
+            h.pop("err_at", None)
             # 급감 판정은 과거 이력이 충분할 때만
             if len(prev_rows) >= 4:
                 baseline = sorted(prev_rows)[len(prev_rows) // 2]   # 중간값
@@ -98,18 +102,18 @@ class SeenStore:
         else:
             h["fails"] = int(h.get("fails", 0)) + 1
             h["err"] = (error or "")[:180]
-            h["err_at"] = date.today().isoformat()
+            h["err_at"] = today_kst().isoformat()
             diag["consecutive_failures"] = h["fails"]
             if h.get("ok"):
                 try:
                     last = datetime.strptime(h["ok"], "%Y-%m-%d").date()
-                    diag["days_since_ok"] = (date.today() - last).days
+                    diag["days_since_ok"] = (today_kst() - last).days
                 except ValueError:
                     pass
         return diag
 
     def prune(self) -> int:
-        cutoff = (date.today() - timedelta(days=TTL_DAYS)).isoformat()
+        cutoff = (today_kst() - timedelta(days=TTL_DAYS)).isoformat()
         stale = [k for k, v in self.data.items()
                  if isinstance(v, dict) and v.get("d", "9999") < cutoff]
         for k in stale:
@@ -121,7 +125,7 @@ class SeenStore:
     def save(self) -> None:
         self.path.parent.mkdir(parents=True, exist_ok=True)
         payload = {
-            "updated_at": datetime.now().astimezone().isoformat(timespec="seconds"),
+            "updated_at": datetime.now(KST).isoformat(timespec="seconds"),
             "count": len(self.data),
             "health": self.health,
             "seen": self.data,

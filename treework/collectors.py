@@ -17,6 +17,7 @@ from bs4 import BeautifulSoup
 
 from .attach import extract
 from .fetcher import Fetcher
+from .timeutil import now_kst, today_kst
 
 log = logging.getLogger(__name__)
 
@@ -133,14 +134,14 @@ def _won(v) -> str:
 
 
 def _within(reg: str, lookback_days: int) -> bool:
-    """등록일이 lookback 안이거나 날짜를 모르면 통과."""
+    """등록일이 lookback 안이거나 날짜를 모르면 통과. 기준은 KST."""
     if not reg:
         return True
     try:
         d = datetime.strptime(reg, "%Y-%m-%d").date()
     except ValueError:
         return True
-    return d >= date.today() - timedelta(days=lookback_days)
+    return d >= today_kst() - timedelta(days=lookback_days)
 
 
 # ═══════════════════════════════════════════════════════════════════
@@ -212,7 +213,7 @@ def parse_table(html: str, base_url: str) -> list[dict]:
 # 1. 서울시 일자리포털 공공일자리  (최우선 소스)
 # ═══════════════════════════════════════════════════════════════════
 def collect_seoul_job_portal(f: Fetcher, cfg: dict, lookback_days: int) -> list[Posting]:
-    end = date.today()
+    end = today_kst()
     start = end - timedelta(days=max(lookback_days, 14))
     data = {
         "miv_pageNo": "1",
@@ -536,7 +537,7 @@ def collect_g2b_bid(f: Fetcher, cfg: dict, lookback_days: int) -> list[Posting]:
 
     url = f"{cfg['base_url'].rstrip('/')}/{cfg['operation']}"
     days = int(cfg.get("lookback_days") or lookback_days)
-    end = datetime.now()
+    end = now_kst()
     start = end - timedelta(days=max(days, 2))
     region_words = cfg.get("region_keywords") or ["서울"]
     page_size = min(int(cfg.get("page_size", 999)), 999)      # 실측 상한 999

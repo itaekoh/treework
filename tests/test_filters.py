@@ -130,8 +130,20 @@ def check_closed() -> int:
         if got != want:
             print(f"FAIL  마감판정: {desc} ({due!r}) 기대={want} 실제={got}")
             fails += 1
+
+    # 기본 인자(now 생략)는 반드시 KST 여야 한다.
+    # Actions 러너는 UTC 로 돌아서 naive now() 를 쓰면 9시간 이르게 판단하고,
+    # 이미 마감된 공고가 통과한다(실측: 마감 10:00 건이 12:31 KST 실행에서 발송).
+    from datetime import timezone as _tz
+    from treework.timeutil import now_kst
+    gap = round((now_kst() - datetime.now(_tz.utc).replace(tzinfo=None))
+                .total_seconds() / 3600)
+    if gap != 9:
+        print(f"FAIL  마감판정 기준 시간대: now_kst()-UTC={gap}시간 (기대 9)")
+        fails += 1
+
     print(f"{'PASS' if not fails else 'FAIL'}  마감 판정 "
-          f"{len(cases) - fails}/{len(cases)}")
+          f"{len(cases) + 1 - fails}/{len(cases) + 1}")
     return fails
 
 

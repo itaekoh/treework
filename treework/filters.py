@@ -29,6 +29,8 @@ import re
 from dataclasses import dataclass, field
 from datetime import datetime
 
+from .timeutil import now_kst
+
 # ── TIER A: 수목진료 법정·전문 용어. 걸리면 사실상 확정. ──────────────────
 TIER_A = [
     "나무의사", "수목치료기술자", "수목진료", "수목진단", "수목치료",
@@ -142,11 +144,15 @@ def is_closed(due: str, now: datetime | None = None) -> bool:
     시각까지 있으면 시각으로 비교한다 — 나라장터 소액 수의시담은 공고 당일
     오전에 마감되는 일이 흔해서(실측: 07:59 공고 → 10:00 마감) 날짜만으로는
     이미 끝난 건을 걸러내지 못한다.
+
+    ⚠️ 비교 기준은 반드시 KST 다. 공고의 시각 표기가 KST 인데 Actions 러너는
+    UTC 로 돌아서 `datetime.now()` 를 쓰면 9시간 이르게 판단한다
+    (실측: 마감 10:00 건이 12:31 KST 실행에서 유효로 잘못 판정돼 발송됐다).
     """
     due = (due or "").strip()
     if not due:
         return False
-    now = now or datetime.now()
+    now = now or now_kst()
     try:
         if len(due) > 10:                      # 'YYYY-MM-DD HH:MM'
             return datetime.strptime(due[:16], "%Y-%m-%d %H:%M") < now

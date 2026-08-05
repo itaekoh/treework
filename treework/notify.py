@@ -116,8 +116,17 @@ def build_messages(postings: list[dict], health: dict) -> list[str]:
     srcs = health["sources"]
     # 'skipped' 는 아직 설정하지 않은 소스(예: API 키 미발급)로 고장이 아니다.
     # 경고에 섞으면 경고 피로가 생겨 진짜 고장을 흘려보게 된다.
-    failed = [h for h in srcs if h["status"] not in ("ok", "skipped")]
     skipped = [h for h in srcs if h["status"] == "skipped"]
+    broken = [h for h in srcs if h["status"] not in ("ok", "skipped")]
+
+    # 1회 실패는 알리지 않는다.
+    #   · 데이터 손실이 없다 — 하루 4~9회 돌고 lookback 이 겹치므로 다음 실행이 메운다
+    #   · 실측: apis.data.go.kr 이 해외 러너에서 간헐적으로 ConnectTimeout 을 낸다
+    #     (성공/실패가 섞임). 매번 알리면 경고가 일상이 되어 진짜 고장을 놓친다
+    # 연속 2회 이상이면 일시 장애가 아니므로 알린다.
+    transient = [h for h in broken
+                 if h.get("diag", {}).get("consecutive_failures", 0) <= 1]
+    failed = [h for h in broken if h not in transient]
     empty = [h for h in srcs if h["status"] == "ok" and h["rows"] == 0]
     # 0건은 이미 위에서 잡히므로 급감 목록에서는 뺀다
     dropped = [h for h in srcs
@@ -155,6 +164,9 @@ def build_messages(postings: list[dict], health: dict) -> list[str]:
         msgs.append("\n".join(parts))
     elif not postings:
         tail = f" · 미설정 {len(skipped)}개" if skipped else ""
+        # 일시 실패는 조용히 알리되 숨기지는 않는다
+        tail += (f" · 일시 실패 {len(transient)}개(다음 실행에서 재시도)"
+                 if transient else "")
         msgs.append(f"✅ 정상 동작 · 신규 공고 없음 "
                     f"({health['ok']}/{health['total']} 소스, "
                     f"{health['scanned']}건 확인){tail}")
