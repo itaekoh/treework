@@ -1,18 +1,17 @@
 {
-"count": 13,
+"count": 14,
 "health": {
 "g2b-servc": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='apis.data.go.kr', port=443): Max retries exceeded with url: /1230000/ad/BidPublicInfoService/getBidPblancListInfoServc?serviceKey=5%2FkxQg",
-"err_at": "2026-08-07",
-"fails": 2,
-"ok": "2026-08-06",
+"fails": 0,
+"ok": "2026-08-07",
 "rows": [
 302,
 287,
 313,
 261,
 274,
-281
+281,
+266
 ]
 },
 "gu-ddm-n": {
@@ -650,6 +649,12 @@
 "s": "g2b-servc",
 "t": "2026년 산림복원지 유지·관리사업(볼음도) 실시설계 용역"
 },
+"955a5962a67e12b74e42": {
+"d": "2026-08-07",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01671691&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 하반기 소나무재선충병 방제사업(나무주사) 실시설계용역"
+},
 "a3c64250c1a8d4fd62b5": {
 "d": "2026-08-04",
 "l": "https://www.nowon.kr/www/user/bbs/BD_selectBbsList.do?q_bbsCode=1003",
@@ -699,5 +704,5 @@
 "t": "서울특별시 중구 임기제공무원 채용시험 최종합격자 공고(SNS구정홍보 전문요원, 언론홍보, 정책홍보, 주민소통활성화, 법무행정, 도시계획, 운동처방사)"
 }
 },
-"updated_at": "2026-08-07T14:04:10+09:00"
+"updated_at": "2026-08-07T15:19:46+09:00"
 }
