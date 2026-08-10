@@ -1,5 +1,5 @@
 {
-"count": 15,
+"count": 16,
 "health": {
 "g2b-servc": {
 "fails": 0,
@@ -17,7 +17,7 @@
 },
 "gu-ddm-n": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 10,
 10,
@@ -33,7 +33,7 @@
 },
 "gu-ddm-r": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 10,
 10,
@@ -49,7 +49,7 @@
 },
 "gu-dobong": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 51,
 51,
@@ -65,7 +65,7 @@
 },
 "gu-dongjak": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 50,
 50,
@@ -81,7 +81,7 @@
 },
 "gu-ep-n": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 10,
 10,
@@ -97,7 +97,7 @@
 },
 "gu-ep-r": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 10,
 10,
@@ -113,7 +113,7 @@
 },
 "gu-gangbuk": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 51,
 51,
@@ -129,7 +129,7 @@
 },
 "gu-gangdong-n": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 10,
 10,
@@ -145,7 +145,7 @@
 },
 "gu-gangdong-r": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 10,
 10,
@@ -161,7 +161,7 @@
 },
 "gu-gangnam": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 50,
 50,
@@ -177,7 +177,7 @@
 },
 "gu-gangseo-n": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 10,
 10,
@@ -193,7 +193,7 @@
 },
 "gu-gangseo-r": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 10,
 10,
@@ -209,7 +209,7 @@
 },
 "gu-geumcheon": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 51,
 51,
@@ -225,7 +225,7 @@
 },
 "gu-guro-n": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 10,
 10,
@@ -241,7 +241,7 @@
 },
 "gu-guro-r": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 10,
 10,
@@ -257,7 +257,7 @@
 },
 "gu-gwanak-n": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 10,
 10,
@@ -273,7 +273,7 @@
 },
 "gu-gwanak-r": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 10,
 10,
@@ -289,7 +289,7 @@
 },
 "gu-gwangjin-n": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 10,
 10,
@@ -305,7 +305,7 @@
 },
 "gu-gwangjin-r": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 10,
 10,
@@ -321,7 +321,7 @@
 },
 "gu-jongno-n": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 20,
 20,
@@ -337,7 +337,7 @@
 },
 "gu-jongno-r": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 10,
 10,
@@ -353,7 +353,7 @@
 },
 "gu-junggu-n": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 10,
 10,
@@ -369,7 +369,7 @@
 },
 "gu-junggu-r": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 10,
 10,
@@ -385,14 +385,14 @@
 },
 "gu-jungnang-r": {
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.jungnang.go.kr', port=443): Max retries exceeded with url: /portal/bbs/list/B0000118.do?menuNo=200476 (Caused by ConnectTimeoutError(<",
-"err_at": "2026-08-09",
-"fails": 22,
+"err_at": "2026-08-10",
+"fails": 23,
 "ok": "",
 "rows": []
 },
 "gu-mapo-n": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 10,
 10,
@@ -408,7 +408,7 @@
 },
 "gu-nowon": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 51,
 51,
@@ -424,7 +424,7 @@
 },
 "gu-sdm-n": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 10,
 10,
@@ -440,7 +440,7 @@
 },
 "gu-sdm-r": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 10,
 10,
@@ -456,7 +456,7 @@
 },
 "gu-seocho": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 50,
 50,
@@ -472,7 +472,7 @@
 },
 "gu-seongdong-n": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 10,
 10,
@@ -488,7 +488,7 @@
 },
 "gu-seongdong-r": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 10,
 10,
@@ -504,7 +504,7 @@
 },
 "gu-songpa-n": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 10,
 10,
@@ -520,11 +520,11 @@
 },
 "gu-songpa-r": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 10,
 10,
-10,
+9,
 9,
 9,
 9,
@@ -535,11 +535,10 @@
 ]
 },
 "gu-yangcheon": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
-"err_at": "2026-08-09",
-"fails": 7,
-"ok": "2026-08-08",
+"fails": 0,
+"ok": "2026-08-10",
 "rows": [
+50,
 50,
 50,
 50,
@@ -548,11 +547,10 @@
 ]
 },
 "gu-ydp-n": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-08-09",
-"fails": 7,
-"ok": "2026-08-08",
+"fails": 0,
+"ok": "2026-08-10",
 "rows": [
+10,
 10,
 10,
 10,
@@ -561,21 +559,20 @@
 ]
 },
 "gu-ydp-r": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-08-09",
-"fails": 7,
-"ok": "2026-08-08",
+"fails": 0,
+"ok": "2026-08-10",
 "rows": [
 9,
 8,
 6,
 7,
+8,
 8
 ]
 },
 "gu-yongsan-n": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 10,
 10,
@@ -591,9 +588,9 @@
 },
 "seoul-job-public": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
-81,
+80,
 80,
 80,
 80,
@@ -607,7 +604,7 @@
 },
 "seoul-notice": {
 "fails": 0,
-"ok": "2026-08-09",
+"ok": "2026-08-10",
 "rows": [
 100,
 100,
@@ -707,6 +704,12 @@
 "s": "gu-gwanak-n",
 "t": "관악산 숲길 범죄예방 CCTV 설치 행정예고"
 },
+"e3fa257ac1d2a27c8d86": {
+"d": "2026-08-10",
+"l": "https://www.seoul.go.kr/news/news_notice.do?bbsNo=277&nttNo=463600",
+"s": "seoul-notice",
+"t": "2026년 하반기 시민정원사 양성교육(기본과정) 교육생 모집 공고"
+},
 "fd23e3ff3863cf48c370": {
 "d": "2026-08-04",
 "l": "https://www.junggu.seoul.kr/content.do?cmsid=15450&mode=view&cid=1463791433",
@@ -714,5 +717,5 @@
 "t": "서울특별시 중구 임기제공무원 채용시험 최종합격자 공고(SNS구정홍보 전문요원, 언론홍보, 정책홍보, 주민소통활성화, 법무행정, 도시계획, 운동처방사)"
 }
 },
-"updated_at": "2026-08-10T11:34:45+09:00"
+"updated_at": "2026-08-10T11:44:58+09:00"
 }
