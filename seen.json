@@ -1,5 +1,5 @@
 {
-"count": 17,
+"count": 18,
 "health": {
 "g2b-servc": {
 "fails": 0,
@@ -20,7 +20,7 @@
 "gu-ddm-n": {
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonWebList.do?key=3291 (Caused by ConnectTimeoutError(<HTTPSConne",
 "err_at": "2026-08-12",
-"fails": 1,
+"fails": 2,
 "ok": "2026-08-12",
 "rows": [
 10,
@@ -38,7 +38,7 @@
 "gu-ddm-r": {
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectBbsNttList.do?bbsNo=42&key=208 (Caused by ConnectTimeoutError(<HTTPSC",
 "err_at": "2026-08-12",
-"fails": 1,
+"fails": 2,
 "ok": "2026-08-12",
 "rows": [
 10,
@@ -294,10 +294,8 @@
 ]
 },
 "gu-gwangjin-n": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000378/list.do?menuNo=200192 (Caused by ConnectTimeoutError(<",
-"err_at": "2026-08-12",
-"fails": 2,
-"ok": "2026-08-11",
+"fails": 0,
+"ok": "2026-08-12",
 "rows": [
 10,
 10,
@@ -312,10 +310,8 @@
 ]
 },
 "gu-gwangjin-r": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000004/list.do?menuNo=200193 (Caused by ConnectTimeoutError(<",
-"err_at": "2026-08-12",
-"fails": 2,
-"ok": "2026-08-11",
+"fails": 0,
+"ok": "2026-08-12",
 "rows": [
 10,
 10,
@@ -396,7 +392,7 @@
 "gu-jungnang-r": {
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.jungnang.go.kr', port=443): Max retries exceeded with url: /portal/bbs/list/B0000118.do?menuNo=200476 (Caused by ConnectTimeoutError(<",
 "err_at": "2026-08-12",
-"fails": 32,
+"fails": 33,
 "ok": "",
 "rows": []
 },
@@ -533,7 +529,7 @@
 "ok": "2026-08-12",
 "rows": [
 9,
-9,
+10,
 10,
 10,
 10,
@@ -545,7 +541,9 @@
 ]
 },
 "gu-yangcheon": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
+"err_at": "2026-08-12",
+"fails": 1,
 "ok": "2026-08-12",
 "rows": [
 50,
@@ -580,7 +578,6 @@
 "fails": 0,
 "ok": "2026-08-12",
 "rows": [
-8,
 6,
 7,
 8,
@@ -588,6 +585,7 @@
 8,
 8,
 5,
+7,
 7,
 7
 ]
@@ -613,7 +611,6 @@
 "ok": "2026-08-12",
 "rows": [
 80,
-80,
 82,
 82,
 85,
@@ -621,7 +618,8 @@
 88,
 88,
 89,
-89
+89,
+93
 ]
 },
 "seoul-notice": {
@@ -665,6 +663,12 @@
 "l": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=94&nttNo=19278161&&pageUnit=10&key=5140&nttShowPd=100&pageIndex=1",
 "s": "gu-songpa-r",
 "t": "송파책박물관 단시간 근로자(어린이 전시실, 도서보조) 채용 공고"
+},
+"419fd9a702eb28ea5346": {
+"d": "2026-08-12",
+"l": "https://job.seoul.go.kr/hmpg/rmim/pjmg/pjmgDetail.do?pbc_recmnt_mng_no=58CFE26140DD027EE063C0A8A028EE58",
+"s": "seoul-job-public",
+"t": "서울형 매력일자리「식물원·수목원 큐레이터 양성」사업 참여자 모집 공고 (어린이정원학교 운영 및 행사 지원 분야)"
 },
 "5599e129ba2258ed59c3": {
 "d": "2026-08-05",
@@ -745,5 +749,5 @@
 "t": "서울특별시 중구 임기제공무원 채용시험 최종합격자 공고(SNS구정홍보 전문요원, 언론홍보, 정책홍보, 주민소통활성화, 법무행정, 도시계획, 운동처방사)"
 }
 },
-"updated_at": "2026-08-12T15:42:17+09:00"
+"updated_at": "2026-08-12T17:12:26+09:00"
 }
