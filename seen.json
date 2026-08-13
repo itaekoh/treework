@@ -1,5 +1,5 @@
 {
-"count": 18,
+"count": 19,
 "health": {
 "g2b-servc": {
 "fails": 0,
@@ -19,7 +19,7 @@
 },
 "gu-ddm-n": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 10,
 10,
@@ -35,7 +35,7 @@
 },
 "gu-ddm-r": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 10,
 10,
@@ -51,7 +51,7 @@
 },
 "gu-dobong": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 51,
 51,
@@ -67,7 +67,7 @@
 },
 "gu-dongjak": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 50,
 50,
@@ -83,7 +83,7 @@
 },
 "gu-ep-n": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 10,
 10,
@@ -99,7 +99,7 @@
 },
 "gu-ep-r": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 10,
 10,
@@ -115,7 +115,7 @@
 },
 "gu-gangbuk": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 51,
 51,
@@ -131,7 +131,7 @@
 },
 "gu-gangdong-n": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 10,
 10,
@@ -147,7 +147,7 @@
 },
 "gu-gangdong-r": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 10,
 10,
@@ -163,7 +163,7 @@
 },
 "gu-gangnam": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 50,
 50,
@@ -178,10 +178,8 @@
 ]
 },
 "gu-gangseo-n": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gangseo.seoul.kr', port=443): Max retries exceeded with url: /gs040301 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.gangs",
-"err_at": "2026-08-12",
-"fails": 1,
-"ok": "2026-08-12",
+"fails": 0,
+"ok": "2026-08-13",
 "rows": [
 10,
 10,
@@ -196,10 +194,8 @@
 ]
 },
 "gu-gangseo-r": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gangseo.seoul.kr', port=443): Max retries exceeded with url: /gs040302 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.gangs",
-"err_at": "2026-08-12",
-"fails": 1,
-"ok": "2026-08-12",
+"fails": 0,
+"ok": "2026-08-13",
 "rows": [
 10,
 10,
@@ -215,7 +211,7 @@
 },
 "gu-geumcheon": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 51,
 51,
@@ -231,7 +227,7 @@
 },
 "gu-guro-n": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 10,
 10,
@@ -247,7 +243,7 @@
 },
 "gu-guro-r": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 10,
 10,
@@ -263,7 +259,7 @@
 },
 "gu-gwanak-n": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 10,
 10,
@@ -279,7 +275,7 @@
 },
 "gu-gwanak-r": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 10,
 10,
@@ -294,7 +290,9 @@
 ]
 },
 "gu-gwangjin-n": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000378/list.do?menuNo=200192 (Caused by ConnectTimeoutError(<",
+"err_at": "2026-08-13",
+"fails": 1,
 "ok": "2026-08-12",
 "rows": [
 10,
@@ -310,7 +308,9 @@
 ]
 },
 "gu-gwangjin-r": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000004/list.do?menuNo=200193 (Caused by ConnectTimeoutError(<",
+"err_at": "2026-08-13",
+"fails": 1,
 "ok": "2026-08-12",
 "rows": [
 10,
@@ -327,7 +327,7 @@
 },
 "gu-jongno-n": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 20,
 20,
@@ -343,7 +343,7 @@
 },
 "gu-jongno-r": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 10,
 10,
@@ -359,7 +359,7 @@
 },
 "gu-junggu-n": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 10,
 10,
@@ -375,7 +375,7 @@
 },
 "gu-junggu-r": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 10,
 10,
@@ -391,14 +391,14 @@
 },
 "gu-jungnang-r": {
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.jungnang.go.kr', port=443): Max retries exceeded with url: /portal/bbs/list/B0000118.do?menuNo=200476 (Caused by ConnectTimeoutError(<",
-"err_at": "2026-08-12",
-"fails": 34,
+"err_at": "2026-08-13",
+"fails": 35,
 "ok": "",
 "rows": []
 },
 "gu-mapo-n": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 10,
 10,
@@ -414,7 +414,7 @@
 },
 "gu-nowon": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 51,
 51,
@@ -430,7 +430,7 @@
 },
 "gu-sdm-n": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 10,
 10,
@@ -446,7 +446,7 @@
 },
 "gu-sdm-r": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 10,
 10,
@@ -462,7 +462,7 @@
 },
 "gu-seocho": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 50,
 50,
@@ -478,7 +478,7 @@
 },
 "gu-seongdong-n": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 10,
 10,
@@ -494,7 +494,7 @@
 },
 "gu-seongdong-r": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 10,
 10,
@@ -510,7 +510,7 @@
 },
 "gu-songpa-n": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 10,
 10,
@@ -526,7 +526,7 @@
 },
 "gu-songpa-r": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 10,
 10,
@@ -541,7 +541,9 @@
 ]
 },
 "gu-yangcheon": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
+"err_at": "2026-08-13",
+"fails": 1,
 "ok": "2026-08-12",
 "rows": [
 50,
@@ -557,7 +559,9 @@
 ]
 },
 "gu-ydp-n": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
+"err_at": "2026-08-13",
+"fails": 1,
 "ok": "2026-08-12",
 "rows": [
 10,
@@ -573,7 +577,9 @@
 ]
 },
 "gu-ydp-r": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
+"err_at": "2026-08-13",
+"fails": 1,
 "ok": "2026-08-12",
 "rows": [
 7,
@@ -590,7 +596,7 @@
 },
 "gu-yongsan-n": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 10,
 10,
@@ -606,9 +612,8 @@
 },
 "seoul-job-public": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
-82,
 82,
 85,
 85,
@@ -617,12 +622,13 @@
 89,
 89,
 93,
-93
+93,
+91
 ]
 },
 "seoul-notice": {
 "fails": 0,
-"ok": "2026-08-12",
+"ok": "2026-08-13",
 "rows": [
 100,
 100,
@@ -740,6 +746,12 @@
 "s": "seoul-notice",
 "t": "2026년 하반기 시민정원사 양성교육(기본과정) 교육생 모집 공고"
 },
+"e7794abb54f84da653b9": {
+"d": "2026-08-13",
+"l": "http://gangnam.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=64788&homepage_pbs_yn=Y&subCheck=Y",
+"s": "gu-gangnam",
+"t": "도시계획시설(도로ㆍ녹지)사업 시행자지정 및 실시계획인가(변경: 사업기간연장) 고시"
+},
 "fd23e3ff3863cf48c370": {
 "d": "2026-08-04",
 "l": "https://www.junggu.seoul.kr/content.do?cmsid=15450&mode=view&cid=1463791433",
@@ -747,5 +759,5 @@
 "t": "서울특별시 중구 임기제공무원 채용시험 최종합격자 공고(SNS구정홍보 전문요원, 언론홍보, 정책홍보, 주민소통활성화, 법무행정, 도시계획, 운동처방사)"
 }
 },
-"updated_at": "2026-08-13T11:46:42+09:00"
+"updated_at": "2026-08-13T12:15:27+09:00"
 }
