@@ -1,5 +1,5 @@
 {
-"count": 19,
+"count": 20,
 "health": {
 "g2b-servc": {
 "fails": 0,
@@ -388,7 +388,7 @@
 "gu-jungnang-r": {
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.jungnang.go.kr', port=443): Max retries exceeded with url: /portal/bbs/list/B0000118.do?menuNo=200476 (Caused by ConnectTimeoutError(<",
 "err_at": "2026-08-13",
-"fails": 37,
+"fails": 38,
 "ok": "",
 "rows": []
 },
@@ -537,9 +537,7 @@
 ]
 },
 "gu-yangcheon": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
-"err_at": "2026-08-13",
-"fails": 1,
+"fails": 0,
 "ok": "2026-08-13",
 "rows": [
 50,
@@ -555,9 +553,7 @@
 ]
 },
 "gu-ydp-n": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-08-13",
-"fails": 1,
+"fails": 0,
 "ok": "2026-08-13",
 "rows": [
 10,
@@ -573,12 +569,9 @@
 ]
 },
 "gu-ydp-r": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-08-13",
-"fails": 1,
+"fails": 0,
 "ok": "2026-08-13",
 "rows": [
-8,
 8,
 8,
 8,
@@ -587,6 +580,7 @@
 7,
 7,
 7,
+4,
 4
 ]
 },
@@ -610,7 +604,6 @@
 "fails": 0,
 "ok": "2026-08-13",
 "rows": [
-85,
 88,
 88,
 89,
@@ -619,7 +612,8 @@
 93,
 91,
 91,
-93
+93,
+94
 ]
 },
 "seoul-notice": {
@@ -675,6 +669,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01667155&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 산림복원지 유지·관리사업(볼음도) 실시설계 용역"
+},
+"891683f81166b8f21b53": {
+"d": "2026-08-13",
+"l": "https://job.seoul.go.kr/hmpg/rmim/pjmg/pjmgDetail.do?pbc_recmnt_mng_no=58E6E5A5AD4004B8E063C0A8A02853CA",
+"s": "seoul-job-public",
+"t": "2026년 월드컵공원 파크골프장 기간제노동자 채용 공고"
 },
 "8dd817c93351e7f282ad": {
 "d": "2026-08-04",
@@ -755,5 +755,5 @@
 "t": "서울특별시 중구 임기제공무원 채용시험 최종합격자 공고(SNS구정홍보 전문요원, 언론홍보, 정책홍보, 주민소통활성화, 법무행정, 도시계획, 운동처방사)"
 }
 },
-"updated_at": "2026-08-13T17:44:03+09:00"
+"updated_at": "2026-08-13T18:00:12+09:00"
 }
