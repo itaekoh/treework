@@ -1,5 +1,5 @@
 {
-"count": 21,
+"count": 23,
 "health": {
 "g2b-servc": {
 "fails": 0,
@@ -19,7 +19,7 @@
 },
 "gu-ddm-n": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 10,
 10,
@@ -35,7 +35,7 @@
 },
 "gu-ddm-r": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 10,
 10,
@@ -51,7 +51,7 @@
 },
 "gu-dobong": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 51,
 51,
@@ -67,7 +67,7 @@
 },
 "gu-dongjak": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 50,
 50,
@@ -83,7 +83,7 @@
 },
 "gu-ep-n": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 10,
 10,
@@ -99,7 +99,7 @@
 },
 "gu-ep-r": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 10,
 10,
@@ -115,7 +115,7 @@
 },
 "gu-gangbuk": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 51,
 51,
@@ -131,7 +131,7 @@
 },
 "gu-gangdong-n": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 10,
 10,
@@ -147,7 +147,7 @@
 },
 "gu-gangdong-r": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 10,
 10,
@@ -163,7 +163,7 @@
 },
 "gu-gangnam": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 50,
 50,
@@ -179,7 +179,7 @@
 },
 "gu-gangseo-n": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 10,
 10,
@@ -195,7 +195,7 @@
 },
 "gu-gangseo-r": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 10,
 10,
@@ -211,7 +211,7 @@
 },
 "gu-geumcheon": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 51,
 51,
@@ -227,7 +227,7 @@
 },
 "gu-guro-n": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 10,
 10,
@@ -243,7 +243,7 @@
 },
 "gu-guro-r": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 10,
 10,
@@ -259,7 +259,7 @@
 },
 "gu-gwanak-n": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 10,
 10,
@@ -275,7 +275,7 @@
 },
 "gu-gwanak-r": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 10,
 10,
@@ -290,7 +290,9 @@
 ]
 },
 "gu-gwangjin-n": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000378/list.do?menuNo=200192 (Caused by ConnectTimeoutError(<",
+"err_at": "2026-08-18",
+"fails": 1,
 "ok": "2026-08-17",
 "rows": [
 10,
@@ -306,7 +308,9 @@
 ]
 },
 "gu-gwangjin-r": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000004/list.do?menuNo=200193 (Caused by ConnectTimeoutError(<",
+"err_at": "2026-08-18",
+"fails": 1,
 "ok": "2026-08-17",
 "rows": [
 10,
@@ -323,7 +327,7 @@
 },
 "gu-jongno-n": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 20,
 20,
@@ -339,7 +343,7 @@
 },
 "gu-jongno-r": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 10,
 10,
@@ -355,7 +359,7 @@
 },
 "gu-junggu-n": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 10,
 10,
@@ -371,7 +375,7 @@
 },
 "gu-junggu-r": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 10,
 10,
@@ -387,14 +391,14 @@
 },
 "gu-jungnang-r": {
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.jungnang.go.kr', port=443): Max retries exceeded with url: /portal/bbs/list/B0000118.do?menuNo=200476 (Caused by ConnectTimeoutError(<",
-"err_at": "2026-08-17",
-"fails": 54,
+"err_at": "2026-08-18",
+"fails": 55,
 "ok": "",
 "rows": []
 },
 "gu-mapo-n": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 10,
 10,
@@ -410,7 +414,7 @@
 },
 "gu-nowon": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 51,
 51,
@@ -426,7 +430,7 @@
 },
 "gu-sdm-n": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 10,
 10,
@@ -442,7 +446,7 @@
 },
 "gu-sdm-r": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 10,
 10,
@@ -458,7 +462,7 @@
 },
 "gu-seocho": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 50,
 50,
@@ -474,7 +478,7 @@
 },
 "gu-seongdong-n": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 10,
 10,
@@ -490,7 +494,7 @@
 },
 "gu-seongdong-r": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 10,
 10,
@@ -506,7 +510,7 @@
 },
 "gu-songpa-n": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 10,
 10,
@@ -522,7 +526,7 @@
 },
 "gu-songpa-r": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 10,
 10,
@@ -538,8 +542,8 @@
 },
 "gu-yangcheon": {
 "err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
-"err_at": "2026-08-17",
-"fails": 3,
+"err_at": "2026-08-18",
+"fails": 4,
 "ok": "2026-08-17",
 "rows": [
 50,
@@ -556,8 +560,8 @@
 },
 "gu-ydp-n": {
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-08-17",
-"fails": 3,
+"err_at": "2026-08-18",
+"fails": 4,
 "ok": "2026-08-17",
 "rows": [
 10,
@@ -574,8 +578,8 @@
 },
 "gu-ydp-r": {
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-08-17",
-"fails": 3,
+"err_at": "2026-08-18",
+"fails": 4,
 "ok": "2026-08-17",
 "rows": [
 7,
@@ -592,7 +596,7 @@
 },
 "gu-yongsan-n": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 10,
 10,
@@ -608,7 +612,7 @@
 },
 "seoul-job-public": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 90,
 90,
@@ -624,7 +628,7 @@
 },
 "seoul-notice": {
 "fails": 0,
-"ok": "2026-08-17",
+"ok": "2026-08-18",
 "rows": [
 100,
 100,
@@ -651,6 +655,12 @@
 "l": "https://www.seoul.go.kr/news/news_notice.do?bbsNo=277&nttNo=463352",
 "s": "seoul-notice",
 "t": "제25회 서울억새축제 대행 용역 제안서 평가위원(후보자) 모집 공고"
+},
+"31e63b3b93e4a85214a3": {
+"d": "2026-08-18",
+"l": "https://job.seoul.go.kr/hmpg/rmim/pjmg/pjmgDetail.do?pbc_recmnt_mng_no=58FB30A6D33702F6E063C0A8A0282933",
+"s": "seoul-job-public",
+"t": "[서울대공원] 서울 매력일자리 「정원치유 코디네이터(산림치유분야)」참여자 모집 공고"
 },
 "329182ba3e24c679826f": {
 "d": "2026-08-07",
@@ -681,6 +691,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01667155&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 산림복원지 유지·관리사업(볼음도) 실시설계 용역"
+},
+"80e87a30d8896d383e5f": {
+"d": "2026-08-18",
+"l": "https://job.seoul.go.kr/hmpg/rmim/pjmg/pjmgDetail.do?pbc_recmnt_mng_no=59212D46860102E8E063C0A8A028653A",
+"s": "seoul-job-public",
+"t": "2026년 동부공원여가센터 임기제공무원(프로그램개발운영요원) 경력경쟁임용시험 공고"
 },
 "891683f81166b8f21b53": {
 "d": "2026-08-13",
@@ -767,5 +783,5 @@
 "t": "서울특별시 중구 임기제공무원 채용시험 최종합격자 공고(SNS구정홍보 전문요원, 언론홍보, 정책홍보, 주민소통활성화, 법무행정, 도시계획, 운동처방사)"
 }
 },
-"updated_at": "2026-08-18T10:51:27+09:00"
+"updated_at": "2026-08-18T11:06:30+09:00"
 }
