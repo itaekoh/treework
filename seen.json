@@ -290,9 +290,7 @@
 ]
 },
 "gu-gwangjin-n": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000378/list.do?menuNo=200192 (Caused by ConnectTimeoutError(<",
-"err_at": "2026-08-18",
-"fails": 1,
+"fails": 0,
 "ok": "2026-08-18",
 "rows": [
 10,
@@ -308,9 +306,7 @@
 ]
 },
 "gu-gwangjin-r": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000004/list.do?menuNo=200193 (Caused by ConnectTimeoutError(<",
-"err_at": "2026-08-18",
-"fails": 1,
+"fails": 0,
 "ok": "2026-08-18",
 "rows": [
 10,
@@ -392,7 +388,7 @@
 "gu-jungnang-r": {
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.jungnang.go.kr', port=443): Max retries exceeded with url: /portal/bbs/list/B0000118.do?menuNo=200476 (Caused by ConnectTimeoutError(<",
 "err_at": "2026-08-18",
-"fails": 57,
+"fails": 58,
 "ok": "",
 "rows": []
 },
@@ -541,7 +537,9 @@
 ]
 },
 "gu-yangcheon": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
+"err_at": "2026-08-18",
+"fails": 1,
 "ok": "2026-08-18",
 "rows": [
 50,
@@ -557,7 +555,9 @@
 ]
 },
 "gu-ydp-n": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
+"err_at": "2026-08-18",
+"fails": 1,
 "ok": "2026-08-18",
 "rows": [
 10,
@@ -573,7 +573,9 @@
 ]
 },
 "gu-ydp-r": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
+"err_at": "2026-08-18",
+"fails": 1,
 "ok": "2026-08-18",
 "rows": [
 4,
@@ -777,5 +779,5 @@
 "t": "서울특별시 중구 임기제공무원 채용시험 최종합격자 공고(SNS구정홍보 전문요원, 언론홍보, 정책홍보, 주민소통활성화, 법무행정, 도시계획, 운동처방사)"
 }
 },
-"updated_at": "2026-08-18T16:54:16+09:00"
+"updated_at": "2026-08-18T17:15:30+09:00"
 }
