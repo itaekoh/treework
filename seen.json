@@ -162,7 +162,9 @@
 ]
 },
 "gu-gangnam": {
-"fails": 0,
+"err": "ReadTimeout: HTTPSConnectionPool(host='gangnam.eminwon.seoul.kr', port=443): Read timed out. (read timeout=25)",
+"err_at": "2026-08-20",
+"fails": 1,
 "ok": "2026-08-20",
 "rows": [
 50,
@@ -290,7 +292,9 @@
 ]
 },
 "gu-gwangjin-n": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000378/list.do?menuNo=200192 (Caused by ConnectTimeoutError(<",
+"err_at": "2026-08-20",
+"fails": 1,
 "ok": "2026-08-20",
 "rows": [
 10,
@@ -306,7 +310,9 @@
 ]
 },
 "gu-gwangjin-r": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000004/list.do?menuNo=200193 (Caused by ConnectTimeoutError(<",
+"err_at": "2026-08-20",
+"fails": 1,
 "ok": "2026-08-20",
 "rows": [
 10,
@@ -388,7 +394,7 @@
 "gu-jungnang-r": {
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.jungnang.go.kr', port=443): Max retries exceeded with url: /portal/bbs/list/B0000118.do?menuNo=200476 (Caused by ConnectTimeoutError(<",
 "err_at": "2026-08-20",
-"fails": 65,
+"fails": 66,
 "ok": "",
 "rows": []
 },
@@ -526,21 +532,19 @@
 "rows": [
 10,
 10,
-10,
 9,
 9,
 9,
 9,
+8,
 8,
 8,
 8
 ]
 },
 "gu-yangcheon": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
-"err_at": "2026-08-20",
-"fails": 4,
-"ok": "2026-08-19",
+"fails": 0,
+"ok": "2026-08-20",
 "rows": [
 50,
 50,
@@ -555,9 +559,7 @@
 ]
 },
 "gu-ydp-n": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-08-20",
-"fails": 2,
+"fails": 0,
 "ok": "2026-08-20",
 "rows": [
 10,
@@ -573,12 +575,9 @@
 ]
 },
 "gu-ydp-r": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-08-20",
-"fails": 2,
+"fails": 0,
 "ok": "2026-08-20",
 "rows": [
-3,
 4,
 3,
 3,
@@ -586,6 +585,7 @@
 3,
 5,
 5,
+7,
 7,
 7
 ]
@@ -612,12 +612,12 @@
 "rows": [
 90,
 90,
-90,
 89,
 89,
 89,
 90,
 91,
+92,
 92,
 92
 ]
@@ -785,5 +785,5 @@
 "t": "서울특별시 중구 임기제공무원 채용시험 최종합격자 공고(SNS구정홍보 전문요원, 언론홍보, 정책홍보, 주민소통활성화, 법무행정, 도시계획, 운동처방사)"
 }
 },
-"updated_at": "2026-08-20T16:56:39+09:00"
+"updated_at": "2026-08-20T17:26:17+09:00"
 }
