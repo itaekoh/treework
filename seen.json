@@ -290,9 +290,7 @@
 ]
 },
 "gu-gwangjin-n": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000378/list.do?menuNo=200192 (Caused by ConnectTimeoutError(<",
-"err_at": "2026-08-23",
-"fails": 1,
+"fails": 0,
 "ok": "2026-08-23",
 "rows": [
 10,
@@ -308,9 +306,7 @@
 ]
 },
 "gu-gwangjin-r": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000004/list.do?menuNo=200193 (Caused by ConnectTimeoutError(<",
-"err_at": "2026-08-23",
-"fails": 1,
+"fails": 0,
 "ok": "2026-08-23",
 "rows": [
 10,
@@ -392,7 +388,7 @@
 "gu-jungnang-r": {
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.jungnang.go.kr', port=443): Max retries exceeded with url: /portal/bbs/list/B0000118.do?menuNo=200476 (Caused by ConnectTimeoutError(<",
 "err_at": "2026-08-23",
-"fails": 76,
+"fails": 77,
 "ok": "",
 "rows": []
 },
@@ -528,10 +524,10 @@
 "fails": 0,
 "ok": "2026-08-23",
 "rows": [
-6,
 7,
 9,
 9,
+10,
 10,
 10,
 10,
@@ -577,12 +573,12 @@
 "ok": "2026-08-23",
 "rows": [
 3,
-3,
 5,
 5,
 7,
 7,
 7,
+9,
 9,
 9,
 9
@@ -609,7 +605,6 @@
 "ok": "2026-08-23",
 "rows": [
 85,
-85,
 87,
 87,
 72,
@@ -617,7 +612,8 @@
 72,
 72,
 72,
-72
+72,
+73
 ]
 },
 "seoul-notice": {
@@ -783,5 +779,5 @@
 "t": "서울특별시 중구 임기제공무원 채용시험 최종합격자 공고(SNS구정홍보 전문요원, 언론홍보, 정책홍보, 주민소통활성화, 법무행정, 도시계획, 운동처방사)"
 }
 },
-"updated_at": "2026-08-23T11:59:34+09:00"
+"updated_at": "2026-08-23T16:15:15+09:00"
 }
