@@ -2,12 +2,9 @@
 "count": 24,
 "health": {
 "g2b-servc": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='apis.data.go.kr', port=443): Max retries exceeded with url: /1230000/ad/BidPublicInfoService/getBidPblancListInfoServc?serviceKey=5%2FkxQg",
-"err_at": "2026-08-24",
-"fails": 1,
+"fails": 0,
 "ok": "2026-08-24",
 "rows": [
-235,
 248,
 213,
 214,
@@ -16,7 +13,8 @@
 234,
 238,
 241,
-228
+228,
+232
 ]
 },
 "gu-ddm-n": {
@@ -791,5 +789,5 @@
 "t": "서울특별시 중구 임기제공무원 채용시험 최종합격자 공고(SNS구정홍보 전문요원, 언론홍보, 정책홍보, 주민소통활성화, 법무행정, 도시계획, 운동처방사)"
 }
 },
-"updated_at": "2026-08-24T12:16:42+09:00"
+"updated_at": "2026-08-24T13:08:23+09:00"
 }
