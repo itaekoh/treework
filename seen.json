@@ -18,7 +18,9 @@
 ]
 },
 "gu-ddm-n": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonWebList.do?key=3291 (Caused by ConnectTimeoutError(<HTTPSConne",
+"err_at": "2026-08-25",
+"fails": 1,
 "ok": "2026-08-25",
 "rows": [
 10,
@@ -34,7 +36,9 @@
 ]
 },
 "gu-ddm-r": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectBbsNttList.do?bbsNo=42&key=208 (Caused by ConnectTimeoutError(<HTTPSC",
+"err_at": "2026-08-25",
+"fails": 1,
 "ok": "2026-08-25",
 "rows": [
 10,
@@ -388,7 +392,7 @@
 "gu-jungnang-r": {
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.jungnang.go.kr', port=443): Max retries exceeded with url: /portal/bbs/list/B0000118.do?menuNo=200476 (Caused by ConnectTimeoutError(<",
 "err_at": "2026-08-25",
-"fails": 84,
+"fails": 85,
 "ok": "",
 "rows": []
 },
@@ -539,7 +543,7 @@
 "gu-yangcheon": {
 "err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
 "err_at": "2026-08-25",
-"fails": 2,
+"fails": 3,
 "ok": "2026-08-24",
 "rows": [
 50,
@@ -555,10 +559,8 @@
 ]
 },
 "gu-ydp-n": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-08-25",
-"fails": 2,
-"ok": "2026-08-24",
+"fails": 0,
+"ok": "2026-08-25",
 "rows": [
 10,
 10,
@@ -573,19 +575,17 @@
 ]
 },
 "gu-ydp-r": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-08-25",
-"fails": 2,
-"ok": "2026-08-24",
+"fails": 0,
+"ok": "2026-08-25",
 "rows": [
 7,
 7,
-7,
 9,
 9,
 9,
 9,
 9,
+10,
 10,
 10
 ]
@@ -611,7 +611,6 @@
 "ok": "2026-08-25",
 "rows": [
 72,
-72,
 73,
 73,
 74,
@@ -619,7 +618,8 @@
 74,
 77,
 74,
-74
+74,
+77
 ]
 },
 "seoul-notice": {
@@ -791,5 +791,5 @@
 "t": "서울특별시 중구 임기제공무원 채용시험 최종합격자 공고(SNS구정홍보 전문요원, 언론홍보, 정책홍보, 주민소통활성화, 법무행정, 도시계획, 운동처방사)"
 }
 },
-"updated_at": "2026-08-25T16:08:12+09:00"
+"updated_at": "2026-08-25T16:27:35+09:00"
 }
