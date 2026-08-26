@@ -1,13 +1,10 @@
 {
-"count": 26,
+"count": 27,
 "health": {
 "g2b-servc": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='apis.data.go.kr', port=443): Max retries exceeded with url: /1230000/ad/BidPublicInfoService/getBidPblancListInfoServc?serviceKey=5%2FkxQg",
-"err_at": "2026-08-26",
-"fails": 1,
+"fails": 0,
 "ok": "2026-08-26",
 "rows": [
-247,
 254,
 267,
 274,
@@ -16,7 +13,8 @@
 283,
 290,
 296,
-245
+245,
+251
 ]
 },
 "gu-ddm-n": {
@@ -734,6 +732,12 @@
 "s": "g2b-servc",
 "t": "2026년 하반기 소나무재선충병 방제사업(나무주사) 실시설계용역"
 },
+"994ed629ab28c2d70799": {
+"d": "2026-08-26",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01699146&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026 남대문쪽방촌 감염병 방역 및 해충방역"
+},
 "9994d62267fba4a005c6": {
 "d": "2026-08-12",
 "l": "https://www.sdm.go.kr/news/notice/notice.do",
@@ -807,5 +811,5 @@
 "t": "서울특별시 중구 임기제공무원 채용시험 최종합격자 공고(SNS구정홍보 전문요원, 언론홍보, 정책홍보, 주민소통활성화, 법무행정, 도시계획, 운동처방사)"
 }
 },
-"updated_at": "2026-08-26T12:18:21+09:00"
+"updated_at": "2026-08-26T13:55:53+09:00"
 }
