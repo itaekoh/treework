@@ -1,5 +1,5 @@
 {
-"count": 29,
+"count": 31,
 "health": {
 "g2b-servc": {
 "err": "ConnectTimeout: HTTPSConnectionPool(host='apis.data.go.kr', port=443): Max retries exceeded with url: /1230000/ad/BidPublicInfoService/getBidPblancListInfoServc?serviceKey=5%2FkxQg",
@@ -390,7 +390,7 @@
 "gu-jungnang-r": {
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.jungnang.go.kr', port=443): Max retries exceeded with url: /portal/bbs/list/B0000118.do?menuNo=200476 (Caused by ConnectTimeoutError(<",
 "err_at": "2026-08-28",
-"fails": 94,
+"fails": 95,
 "ok": "",
 "rows": []
 },
@@ -541,7 +541,7 @@
 "gu-yangcheon": {
 "err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
 "err_at": "2026-08-28",
-"fails": 4,
+"fails": 5,
 "ok": "2026-08-26",
 "rows": [
 50,
@@ -559,7 +559,7 @@
 "gu-ydp-n": {
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-08-28",
-"fails": 4,
+"fails": 5,
 "ok": "2026-08-26",
 "rows": [
 10,
@@ -577,7 +577,7 @@
 "gu-ydp-r": {
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-08-28",
-"fails": 4,
+"fails": 5,
 "ok": "2026-08-26",
 "rows": [
 9,
@@ -612,7 +612,6 @@
 "fails": 0,
 "ok": "2026-08-28",
 "rows": [
-77,
 76,
 67,
 67,
@@ -621,7 +620,8 @@
 68,
 69,
 64,
-64
+64,
+71
 ]
 },
 "seoul-notice": {
@@ -642,6 +642,12 @@
 }
 },
 "seen": {
+"07305a437add5d552780": {
+"d": "2026-08-28",
+"l": "https://www.gangseo.seoul.kr/gs040302/view?srchPage=&curPage=1&srchKey=&srchText=&mgtNo=68055",
+"s": "gu-gangseo-r",
+"t": "강서구 공원관리분야 기간제근로자 추가채용 공고"
+},
 "1caeeea8978962845f63": {
 "d": "2026-08-05",
 "l": "http://gangnam.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=64733&homepage_pbs_yn=Y&subCheck=Y",
@@ -792,6 +798,12 @@
 "s": "gu-geumcheon",
 "t": "서울특별시 금천구 시간선택제 임기제공무원(라급,공원녹지분야) 경력경쟁임용시험 시행계획 공고"
 },
+"c1c2c778e51cf03d0629": {
+"d": "2026-08-28",
+"l": "https://dongjak.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=29298&homepage_pbs_yn=Y&subCheck=Y",
+"s": "gu-dongjak",
+"t": "서울특별시 동작구 소나무류 반출금지구역 지정 공고"
+},
 "d2fe4ecd7c053228b680": {
 "d": "2026-08-06",
 "l": "https://www.gwanak.go.kr/site/gwanak/ex/bbsNew/List.do?typeCode=1",
@@ -817,5 +829,5 @@
 "t": "서울특별시 중구 임기제공무원 채용시험 최종합격자 공고(SNS구정홍보 전문요원, 언론홍보, 정책홍보, 주민소통활성화, 법무행정, 도시계획, 운동처방사)"
 }
 },
-"updated_at": "2026-08-28T20:22:53+09:00"
+"updated_at": "2026-08-28T20:41:30+09:00"
 }
