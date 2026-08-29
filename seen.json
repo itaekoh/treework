@@ -390,7 +390,7 @@
 "gu-jungnang-r": {
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.jungnang.go.kr', port=443): Max retries exceeded with url: /portal/bbs/list/B0000118.do?menuNo=200476 (Caused by ConnectTimeoutError(<",
 "err_at": "2026-08-29",
-"fails": 99,
+"fails": 100,
 "ok": "",
 "rows": []
 },
@@ -577,7 +577,7 @@
 9,
 9,
 9,
-9,
+10,
 10,
 10,
 10,
@@ -606,13 +606,13 @@
 "fails": 0,
 "ok": "2026-08-29",
 "rows": [
-67,
 68,
 69,
 64,
 64,
 71,
 71,
+68,
 68,
 68,
 68
@@ -823,5 +823,5 @@
 "t": "서울특별시 중구 임기제공무원 채용시험 최종합격자 공고(SNS구정홍보 전문요원, 언론홍보, 정책홍보, 주민소통활성화, 법무행정, 도시계획, 운동처방사)"
 }
 },
-"updated_at": "2026-08-29T16:18:49+09:00"
+"updated_at": "2026-08-29T17:24:23+09:00"
 }
