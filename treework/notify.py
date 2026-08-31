@@ -34,8 +34,13 @@ def format_posting(p: dict) -> str:
     # 두 번 찍힌다. 부서가 기관명에 이미 포함돼 있으면 생략한다.
     if dept and (dept == org or dept in org or org in dept):
         dept = ""
+    # 전국 수집이라 지역이 한눈에 보여야 추려낼 수 있다
+    region = (p.get("region") or "").strip()
+    badge = f"{TIER_BADGE.get(tier, tier)}"
+    if region:
+        badge += f" · <b>{esc(region)}</b>"
     lines = [
-        f"{TIER_BADGE.get(tier, tier)}  <b>{esc(p['title'])}</b>",
+        f"{badge}  <b>{esc(p['title'])}</b>",
         f"🏢 {esc(org or '-')}" + (f" · {esc(dept)}" if dept else ""),
     ]
     reg, due = p.get("reg_date") or "", p.get("due_date") or ""

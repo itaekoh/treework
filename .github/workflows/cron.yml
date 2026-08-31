@@ -53,6 +53,7 @@ jobs:
           python tests/test_filters.py
           python tests/test_service_key.py
           python tests/test_notify.py
+          python tests/test_region.py
 
       - name: 수집 및 발송
         id: run

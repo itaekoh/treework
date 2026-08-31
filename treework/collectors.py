@@ -43,6 +43,7 @@ class Posting:
     amount: str = ""            # 용역 입찰의 추정가격 등 규모 정보
     doc_url: str = ""           # 공고문 직접 다운로드 (브라우저 무관하게 열린다)
     ref_no: str = ""            # 공고번호 — 수동 검색용
+    region: str = ""            # 시도 (전국 수집 시 추려내기 위한 표시)
     # 필터 결과
     tier: str | None = None
     hits: list[str] = field(default_factory=list)
@@ -116,6 +117,31 @@ def _pull_attachments(f: Fetcher, p: Posting,
             log.debug("첨부 다운로드 실패 %s: %s", name, e)
     if len(links) > MAX_ATTACH:
         p.attach_truncated = True
+
+
+SIDO = [
+    ("서울", "서울"), ("부산", "부산"), ("대구", "대구"), ("인천", "인천"),
+    ("광주", "광주"), ("대전", "대전"), ("울산", "울산"), ("세종", "세종"),
+    ("경기", "경기"), ("강원", "강원"),
+    ("충청북도", "충북"), ("충북", "충북"), ("충청남도", "충남"), ("충남", "충남"),
+    ("전라북도", "전북"), ("전북", "전북"), ("전라남도", "전남"), ("전남", "전남"),
+    ("경상북도", "경북"), ("경북", "경북"), ("경상남도", "경남"), ("경남", "경남"),
+    ("제주", "제주"),
+]
+
+
+def _sido(*names: str) -> str:
+    """기관명에서 시도를 뽑는다.
+
+    전국으로 넓히면 '어느 지역 건인지'가 한눈에 보여야 추려낼 수 있다.
+    다만 중앙부처·공공기관은 이름에 지역이 없다(실측: 기관명으로 시도를
+    판별할 수 있는 비율은 약 49%). 못 찾으면 빈 문자열을 준다.
+    """
+    for nm in names:
+        for needle, label in SIDO:
+            if needle in (nm or ""):
+                return label
+    return ""
 
 
 def _won(v) -> str:
@@ -539,7 +565,12 @@ def collect_g2b_bid(f: Fetcher, cfg: dict, lookback_days: int) -> list[Posting]:
     days = int(cfg.get("lookback_days") or lookback_days)
     end = now_kst()
     start = end - timedelta(days=max(days, 2))
-    region_words = cfg.get("region_keywords") or ["서울"]
+    # region_keywords 를 **명시적으로 빈 리스트**로 두면 전국을 받는다.
+    # (`or` 로 기본값을 주면 빈 리스트가 기본값으로 바뀌어 버리므로 is None 으로 본다)
+    region_words = cfg.get("region_keywords")
+    if region_words is None:
+        region_words = ["서울"]
+    min_amount = int(cfg.get("min_amount") or 0)   # 추정가격 하한 (볼륨 조절용)
     page_size = min(int(cfg.get("page_size", 999)), 999)      # 실측 상한 999
     max_pages = int(cfg.get("max_pages", 15))
 
@@ -600,9 +631,19 @@ def collect_g2b_bid(f: Fetcher, cfg: dict, lookback_days: int) -> list[Posting]:
                 continue
             org = str(it.get("ntceInsttNm") or "")
             demand = str(it.get("dminsttNm") or "")
-            # 지역 파라미터가 무시되므로 기관명으로 서울 발주만 남긴다
-            if not any(w in org or w in demand for w in region_words):
+            # 지역 파라미터가 무시되므로 기관명 문자열로 거른다.
+            # region_words 가 비어 있으면 전국을 그대로 받는다.
+            if region_words and not any(w in org or w in demand
+                                        for w in region_words):
                 continue
+            # 전국으로 넓히면 소액 건이 대량으로 들어온다. 필요할 때만 쓰는
+            # 볼륨 조절 장치 (0 이면 제한 없음).
+            if min_amount:
+                try:
+                    if int(float(it.get("presmptPrce") or 0)) < min_amount:
+                        continue
+                except (TypeError, ValueError):
+                    pass
             seen_no.add(uid)
             out.append(Posting(
                 source_id=cfg["id"],
@@ -623,6 +664,7 @@ def collect_g2b_bid(f: Fetcher, cfg: dict, lookback_days: int) -> list[Posting]:
                 doc_url=str(it.get("stdNtceDocUrl")
                             or it.get("ntceSpecDocUrl1") or ""),
                 ref_no=f"{it.get('bidNtceNo')}-{it.get('bidNtceOrd')}",
+                region=_sido(demand, org),
                 detail_id=uid,
                 # 공고명이 곧 사업 내용이라 별도 본문 없이도 판정이 가능하다
                 body=" ".join(filter(None, [

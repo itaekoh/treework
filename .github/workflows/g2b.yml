@@ -54,6 +54,7 @@ jobs:
           python tests/test_filters.py
           python tests/test_service_key.py
           python tests/test_notify.py
+          python tests/test_region.py
 
       - name: 나라장터만 수집
         id: run

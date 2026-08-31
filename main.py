@@ -198,7 +198,9 @@ def main() -> int:
         # 'skipped'(키 미설정 등)는 고장이 아니므로 이력에 넣지 않는다.
         if health["status"] == "skipped":
             health["diag"] = {"consecutive_failures": 0, "days_since_ok": None,
-                              "volume_drop": False, "baseline": None}
+                              "volume_drop": False, "baseline": None,
+                              "alert": False, "recovered": False,
+                              "chronic": False}
         else:
             health["diag"] = store.record_health(
                 src["id"], ok=health["status"] == "ok", rows=health["rows"],
@@ -256,7 +258,7 @@ def main() -> int:
         "tier": p.tier, "hits": p.hits, "demoted": p.demoted,
         "attach_names": p.attach_names, "attach_truncated": p.attach_truncated,
         "link_is_board": p.link_is_board, "amount": p.amount,
-        "doc_url": p.doc_url, "ref_no": p.ref_no,
+        "doc_url": p.doc_url, "ref_no": p.ref_no, "region": p.region,
     } for p in new]
 
     messages = notify.build_messages(payload, health)
