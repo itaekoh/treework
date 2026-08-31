@@ -135,8 +135,13 @@ sources:
      list_url: "https://www.junggu.seoul.kr/content.do?cmsid=14232"}
   - {id: gu-junggu-r,    name: 중구 채용정보,    org: 중구,   kind: generic_table, enabled: true,
      list_url: "https://www.junggu.seoul.kr/content.do?cmsid=15450"}
-  - {id: gu-jungnang-r,  name: 중랑구 채용공고,  org: 중랑구, kind: generic_table, enabled: true,
-     list_url: "https://www.jungnang.go.kr/portal/bbs/list/B0000118.do?menuNo=200476"}
+  # ⚠️ 중랑구: 해외 IP 차단 확정. GitHub Actions(해외 Azure)에서 83회 연속
+  #    ConnectTimeout, 성공 이력 0회. 국내 IP 에서는 정상 파싱된다(실측 10건).
+  #    eMinwon 경로도 없다(jungnang.eminwon.seoul.kr 연결 불가).
+  #    국내에서 실행하게 되면 enabled: true 로 되돌린다.
+  - {id: gu-jungnang-r,  name: 중랑구 채용공고,  org: 중랑구, kind: generic_table, enabled: false,
+     list_url: "https://www.jungnang.go.kr/portal/bbs/list/B0000118.do?menuNo=200476",
+     note: "해외 IP 차단 — 국내 실행 시 활성화"}
 
   # ─────────────────────────────────────────────────────────────
   # 5. 나라장터 입찰공고 (용역)

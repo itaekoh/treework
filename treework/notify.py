@@ -119,23 +119,27 @@ def build_messages(postings: list[dict], health: dict) -> list[str]:
     skipped = [h for h in srcs if h["status"] == "skipped"]
     broken = [h for h in srcs if h["status"] not in ("ok", "skipped")]
 
-    # 1회 실패는 알리지 않는다.
-    #   · 데이터 손실이 없다 — 하루 4~9회 돌고 lookback 이 겹치므로 다음 실행이 메운다
-    #   · 실측: apis.data.go.kr 이 해외 러너에서 간헐적으로 ConnectTimeout 을 낸다
-    #     (성공/실패가 섞임). 매번 알리면 경고가 일상이 되어 진짜 고장을 놓친다
-    # 연속 2회 이상이면 일시 장애가 아니므로 알린다.
-    transient = [h for h in broken
-                 if h.get("diag", {}).get("consecutive_failures", 0) <= 1]
-    failed = [h for h in broken if h not in transient]
+    # 언제 알릴지는 state.record_health 가 diag["alert"] 로 정한다.
+    #   1회      : 알리지 않는다(일시 장애, 다음 실행이 메운다)
+    #   2~4회    : 알린다(새로 생긴 고장)
+    #   5회 이상 : 하루 1회만 알린다(만성 고장)
+    # 실측: 중랑구가 83회 연속 실패하는 동안 경고를 83번 보냈고, 그 사이 다른
+    # 소스의 고장이 그 안에 묻혔다. 만성 고장은 이미 아는 사실이니 반복하지
+    # 않되 하루 1회는 남겨 잊히지 않게 한다.
+    failed = [h for h in broken if h.get("diag", {}).get("alert")]
+    muted = [h for h in broken if h not in failed]
+    recovered = [h for h in srcs if h.get("diag", {}).get("recovered")]
     empty = [h for h in srcs if h["status"] == "ok" and h["rows"] == 0]
     # 0건은 이미 위에서 잡히므로 급감 목록에서는 뺀다
     dropped = [h for h in srcs
                if h.get("diag", {}).get("volume_drop") and h["rows"] > 0]
 
-    if failed or empty or dropped:
+    if failed or empty or dropped or recovered:
         chronic = [h for h in failed
                    if h.get("diag", {}).get("consecutive_failures", 0) >= 3]
         icon = "🚨" if (chronic or empty) else "⚠️"
+        if recovered and not (failed or empty or dropped):
+            icon = "✅"
         parts = [f"{icon} <b>수집 상태 경고</b>",
                  f"정상 {health['ok']} / 전체 {health['total']} 소스"]
         if failed:
@@ -144,6 +148,8 @@ def build_messages(postings: list[dict], health: dict) -> list[str]:
                 d = h.get("diag", {})
                 n = d.get("consecutive_failures", 0)
                 tag = f" · <b>{n}회 연속</b>" if n >= 3 else ""
+                if d.get("chronic"):
+                    tag += " · 만성(하루 1회만 알림)"
                 if d.get("days_since_ok") is not None:
                     tag += f" · 마지막 정상 {d['days_since_ok']}일 전"
                 parts.append(f"· {esc(h['name'])}{tag}\n  ↳ "
@@ -158,15 +164,20 @@ def build_messages(postings: list[dict], health: dict) -> list[str]:
                 d = h["diag"]
                 parts.append(f"· {esc(h['name'])}: {h['rows']}건 "
                              f"(평소 {d.get('baseline')}건)")
+        if recovered:
+            parts.append("\n<b>복구됨</b>")
+            for h in recovered[:10]:
+                k = h.get("diag", {}).get("consecutive_failures", 0)
+                parts.append(f"· {esc(h['name'])} ({k}회 실패 후 정상)")
         if chronic or empty:
             parts.append("\n<i>sources.yml 의 해당 URL을 직접 열어 확인하세요. "
                          "403/429 가 반복되면 IP 차단일 수 있습니다.</i>")
         msgs.append("\n".join(parts))
     elif not postings:
         tail = f" · 미설정 {len(skipped)}개" if skipped else ""
-        # 일시 실패는 조용히 알리되 숨기지는 않는다
-        tail += (f" · 일시 실패 {len(transient)}개(다음 실행에서 재시도)"
-                 if transient else "")
+        # 알림을 억제한 실패도 숨기지는 않는다 (건수만 표기)
+        tail += (f" · 실패 {len(muted)}개(일시/만성 — 알림 억제)"
+                 if muted else "")
         msgs.append(f"✅ 정상 동작 · 신규 공고 없음 "
                     f"({health['ok']}/{health['total']} 소스, "
                     f"{health['scanned']}건 확인){tail}")

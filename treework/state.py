@@ -74,6 +74,8 @@ class SeenStore:
     #  '조용한 부분 실패'라서 예외도 0건 경고도 뜨지 않는다.
     ROWS_WINDOW = 10          # 최근 몇 회분 수집량을 기억할지
     DROP_RATIO = 0.4          # 과거 중간값의 이 비율 미만이면 급감으로 본다
+    ALERT_AFTER = 2           # 연속 이 횟수부터 알린다 (1회는 일시 장애로 본다)
+    CHRONIC_AFTER = 5         # 연속 이 횟수부터는 만성으로 보고 하루 1회만 알린다
 
     def record_health(self, source_id: str, *, ok: bool, rows: int,
                       error: str = "") -> dict:
@@ -84,14 +86,22 @@ class SeenStore:
         """
         h = self.health.setdefault(source_id, {"ok": "", "fails": 0, "rows": []})
         prev_rows = list(h.get("rows") or [])
+        was_failing = int(h.get("fails", 0))
         diag = {"consecutive_failures": 0, "days_since_ok": None,
-                "volume_drop": False, "baseline": None}
+                "volume_drop": False, "baseline": None,
+                "alert": False, "recovered": False, "chronic": False}
 
         if ok:
             h["fails"] = 0
             h["ok"] = today_kst().isoformat()
             h.pop("err", None)
             h.pop("err_at", None)
+            h.pop("alerted", None)
+            # 경고를 보냈던 소스가 살아나면 한 번 알린다. 그래야 사용자가
+            # '아직 고장인가'를 매번 확인하지 않아도 된다.
+            if was_failing >= self.ALERT_AFTER:
+                diag["recovered"] = True
+                diag["consecutive_failures"] = was_failing
             # 급감 판정은 과거 이력이 충분할 때만
             if len(prev_rows) >= 4:
                 baseline = sorted(prev_rows)[len(prev_rows) // 2]   # 중간값
@@ -100,16 +110,34 @@ class SeenStore:
                     diag["volume_drop"] = True
             h["rows"] = (prev_rows + [rows])[-self.ROWS_WINDOW:]
         else:
-            h["fails"] = int(h.get("fails", 0)) + 1
+            n = h["fails"] = int(h.get("fails", 0)) + 1
             h["err"] = (error or "")[:180]
             h["err_at"] = today_kst().isoformat()
-            diag["consecutive_failures"] = h["fails"]
+            diag["consecutive_failures"] = n
+            diag["chronic"] = n >= self.CHRONIC_AFTER
             if h.get("ok"):
                 try:
                     last = datetime.strptime(h["ok"], "%Y-%m-%d").date()
                     diag["days_since_ok"] = (today_kst() - last).days
                 except ValueError:
                     pass
+
+            # 언제 알릴지.
+            #   1회        : 알리지 않는다(일시 장애, 다음 실행이 메운다)
+            #   2~4회      : 알린다(새로 생긴 고장)
+            #   5회 이상   : **하루 1회만** 알린다
+            # 만성 고장을 매 실행 알리면 경고가 일상이 되어 진짜 고장을 놓친다.
+            # 실측: 중랑구가 83회 연속 실패하는 동안 경고를 83번 보냈고,
+            # 그 사이 다른 소스의 고장이 그 안에 묻혔다.
+            today = today_kst().isoformat()
+            if n < self.ALERT_AFTER:
+                diag["alert"] = False
+            elif not diag["chronic"]:
+                diag["alert"] = True
+            else:
+                diag["alert"] = h.get("alerted") != today
+            if diag["alert"]:
+                h["alerted"] = today
         return diag
 
     def prune(self) -> int:
