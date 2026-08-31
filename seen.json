@@ -1,5 +1,5 @@
 {
-"count": 35,
+"count": 36,
 "health": {
 "g2b-servc": {
 "err": "ConnectTimeout: HTTPSConnectionPool(host='apis.data.go.kr', port=443): Max retries exceeded with url: /1230000/ad/BidPublicInfoService/getBidPblancListInfoServc?serviceKey=5%2FkxQg",
@@ -20,7 +20,9 @@
 ]
 },
 "gu-ddm-n": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonWebList.do?key=3291 (Caused by ConnectTimeoutError(<HTTPSConne",
+"err_at": "2026-08-31",
+"fails": 1,
 "ok": "2026-08-31",
 "rows": [
 10,
@@ -36,7 +38,9 @@
 ]
 },
 "gu-ddm-r": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectBbsNttList.do?bbsNo=42&key=208 (Caused by ConnectTimeoutError(<HTTPSC",
+"err_at": "2026-08-31",
+"fails": 1,
 "ok": "2026-08-31",
 "rows": [
 10,
@@ -164,7 +168,9 @@
 ]
 },
 "gu-gangnam": {
-"fails": 0,
+"err": "ReadTimeout: HTTPSConnectionPool(host='gangnam.eminwon.seoul.kr', port=443): Read timed out. (read timeout=25)",
+"err_at": "2026-08-31",
+"fails": 1,
 "ok": "2026-08-31",
 "rows": [
 50,
@@ -180,9 +186,10 @@
 ]
 },
 "gu-gangseo-n": {
+"alerted": "2026-08-31",
 "err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
 "err_at": "2026-08-31",
-"fails": 1,
+"fails": 2,
 "ok": "2026-08-31",
 "rows": [
 10,
@@ -198,9 +205,10 @@
 ]
 },
 "gu-gangseo-r": {
+"alerted": "2026-08-31",
 "err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
 "err_at": "2026-08-31",
-"fails": 1,
+"fails": 2,
 "ok": "2026-08-31",
 "rows": [
 10,
@@ -264,9 +272,7 @@
 ]
 },
 "gu-gwanak-n": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwanak.go.kr', port=443): Max retries exceeded with url: /site/gwanak/ex/bbsNew/List.do?typeCode=1 (Caused by ConnectTimeoutError(<HTT",
-"err_at": "2026-08-31",
-"fails": 1,
+"fails": 0,
 "ok": "2026-08-31",
 "rows": [
 10,
@@ -282,9 +288,7 @@
 ]
 },
 "gu-gwanak-r": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwanak.go.kr', port=443): Max retries exceeded with url: /site/gwanak/ex/bbsNew/List.do?typeCode=4 (Caused by ConnectTimeoutError(<HTT",
-"err_at": "2026-08-31",
-"fails": 1,
+"fails": 0,
 "ok": "2026-08-31",
 "rows": [
 10,
@@ -390,7 +394,7 @@
 10,
 10,
 10,
-10,
+11,
 11,
 11
 ]
@@ -515,7 +519,9 @@
 ]
 },
 "gu-songpa-n": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.songpa.go.kr', port=443): Max retries exceeded with url: /www/selectGosiList.do?key=2776 (Caused by ConnectTimeoutError(<HTTPSConnecti",
+"err_at": "2026-08-31",
+"fails": 1,
 "ok": "2026-08-31",
 "rows": [
 10,
@@ -531,7 +537,9 @@
 ]
 },
 "gu-songpa-r": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.songpa.go.kr', port=443): Max retries exceeded with url: /www/selectBbsNttList.do?bbsNo=94&key=5140 (Caused by ConnectTimeoutError(<HT",
+"err_at": "2026-08-31",
+"fails": 1,
 "ok": "2026-08-31",
 "rows": [
 10,
@@ -550,7 +558,7 @@
 "alerted": "2026-08-31",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
 "err_at": "2026-08-31",
-"fails": 8,
+"fails": 9,
 "ok": "2026-08-29",
 "rows": [
 50,
@@ -569,7 +577,7 @@
 "alerted": "2026-08-31",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-08-31",
-"fails": 8,
+"fails": 9,
 "ok": "2026-08-29",
 "rows": [
 10,
@@ -588,7 +596,7 @@
 "alerted": "2026-08-31",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-08-31",
-"fails": 8,
+"fails": 9,
 "ok": "2026-08-29",
 "rows": [
 9,
@@ -630,9 +638,9 @@
 68,
 68,
 68,
-68,
 69,
-69
+69,
+71
 ]
 },
 "seoul-notice": {
@@ -670,6 +678,12 @@
 "l": "https://www.seoul.go.kr/news/news_notice.do?bbsNo=277&nttNo=463352",
 "s": "seoul-notice",
 "t": "제25회 서울억새축제 대행 용역 제안서 평가위원(후보자) 모집 공고"
+},
+"3071a50e797cd4707f8a": {
+"d": "2026-08-31",
+"l": "https://www.guro.go.kr/www/selectBbsNttGosiView.do?bbsNo=663&nttNo=51238&rowNum=3&&pageUnit=10&key=1791&pageIndex=1",
+"s": "gu-guro-n",
+"t": "구로구 국공립어린이집 변경 위탁운영체 모집 재공고(푸른숲어린이집)"
 },
 "31e63b3b93e4a85214a3": {
 "d": "2026-08-18",
@@ -864,5 +878,5 @@
 "t": "서울특별시 중구 임기제공무원 채용시험 최종합격자 공고(SNS구정홍보 전문요원, 언론홍보, 정책홍보, 주민소통활성화, 법무행정, 도시계획, 운동처방사)"
 }
 },
-"updated_at": "2026-08-31T22:48:02+09:00"
+"updated_at": "2026-08-31T23:26:00+09:00"
 }
