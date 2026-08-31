@@ -1,13 +1,10 @@
 {
-"count": 31,
+"count": 32,
 "health": {
 "g2b-servc": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='apis.data.go.kr', port=443): Max retries exceeded with url: /1230000/ad/BidPublicInfoService/getBidPblancListInfoServc?serviceKey=5%2FkxQg",
-"err_at": "2026-08-28",
-"fails": 1,
-"ok": "2026-08-27",
+"fails": 0,
+"ok": "2026-08-31",
 "rows": [
-278,
 283,
 290,
 296,
@@ -16,7 +13,8 @@
 255,
 260,
 267,
-252
+252,
+231
 ]
 },
 "gu-ddm-n": {
@@ -814,6 +812,12 @@
 "s": "gu-gwanak-n",
 "t": "관악산 숲길 범죄예방 CCTV 설치 행정예고"
 },
+"d5ba47f9b9367668cbe5": {
+"d": "2026-08-31",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01702928&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "북서울꿈의숲 가을 음악회 행사 용역"
+},
 "e3fa257ac1d2a27c8d86": {
 "d": "2026-08-10",
 "l": "https://www.seoul.go.kr/news/news_notice.do?bbsNo=277&nttNo=463600",
@@ -833,5 +837,5 @@
 "t": "서울특별시 중구 임기제공무원 채용시험 최종합격자 공고(SNS구정홍보 전문요원, 언론홍보, 정책홍보, 주민소통활성화, 법무행정, 도시계획, 운동처방사)"
 }
 },
-"updated_at": "2026-08-30T22:29:19+09:00"
+"updated_at": "2026-08-31T14:33:23+09:00"
 }
