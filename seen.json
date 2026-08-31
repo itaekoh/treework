@@ -1,5 +1,5 @@
 {
-"count": 33,
+"count": 35,
 "health": {
 "g2b-servc": {
 "fails": 0,
@@ -18,10 +18,8 @@
 ]
 },
 "gu-ddm-n": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonWebList.do?key=3291 (Caused by ConnectTimeoutError(<HTTPSConne",
-"err_at": "2026-08-31",
-"fails": 1,
-"ok": "2026-08-30",
+"fails": 0,
+"ok": "2026-08-31",
 "rows": [
 10,
 10,
@@ -36,10 +34,8 @@
 ]
 },
 "gu-ddm-r": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectBbsNttList.do?bbsNo=42&key=208 (Caused by ConnectTimeoutError(<HTTPSC",
-"err_at": "2026-08-31",
-"fails": 1,
-"ok": "2026-08-30",
+"fails": 0,
+"ok": "2026-08-31",
 "rows": [
 10,
 10,
@@ -182,7 +178,9 @@
 ]
 },
 "gu-gangseo-n": {
-"fails": 0,
+"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+"err_at": "2026-08-31",
+"fails": 1,
 "ok": "2026-08-31",
 "rows": [
 10,
@@ -198,7 +196,9 @@
 ]
 },
 "gu-gangseo-r": {
-"fails": 0,
+"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+"err_at": "2026-08-31",
+"fails": 1,
 "ok": "2026-08-31",
 "rows": [
 10,
@@ -262,7 +262,9 @@
 ]
 },
 "gu-gwanak-n": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwanak.go.kr', port=443): Max retries exceeded with url: /site/gwanak/ex/bbsNew/List.do?typeCode=1 (Caused by ConnectTimeoutError(<HTT",
+"err_at": "2026-08-31",
+"fails": 1,
 "ok": "2026-08-31",
 "rows": [
 10,
@@ -278,7 +280,9 @@
 ]
 },
 "gu-gwanak-r": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwanak.go.kr', port=443): Max retries exceeded with url: /site/gwanak/ex/bbsNew/List.do?typeCode=4 (Caused by ConnectTimeoutError(<HTT",
+"err_at": "2026-08-31",
+"fails": 1,
 "ok": "2026-08-31",
 "rows": [
 10,
@@ -385,7 +389,7 @@
 10,
 10,
 10,
-10,
+11,
 11
 ]
 },
@@ -541,9 +545,10 @@
 ]
 },
 "gu-yangcheon": {
+"alerted": "2026-08-31",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
 "err_at": "2026-08-31",
-"fails": 7,
+"fails": 8,
 "ok": "2026-08-29",
 "rows": [
 50,
@@ -559,9 +564,10 @@
 ]
 },
 "gu-ydp-n": {
+"alerted": "2026-08-31",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-08-31",
-"fails": 7,
+"fails": 8,
 "ok": "2026-08-29",
 "rows": [
 10,
@@ -577,9 +583,10 @@
 ]
 },
 "gu-ydp-r": {
+"alerted": "2026-08-31",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-08-31",
-"fails": 7,
+"fails": 8,
 "ok": "2026-08-29",
 "rows": [
 9,
@@ -622,7 +629,7 @@
 68,
 68,
 68,
-68,
+69,
 69
 ]
 },
@@ -788,6 +795,12 @@
 "s": "gu-geumcheon",
 "t": "시간선택제 임기제공무원(라급, 공원녹지분야) 신규채용 면접 심사위원 모집"
 },
+"b8bcbdf75f16523bbc8a": {
+"d": "2026-08-31",
+"l": "http://geumcheon.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=39316&homepage_pbs_yn=Y&subCheck=Y",
+"s": "gu-geumcheon",
+"t": "서울특별시 금천구 시간선택제 임기제공무원(라급, 공원녹지분야) 경력경쟁임용 면접시험 시행결과 공고"
+},
 "bb073e8bfe786682598f": {
 "d": "2026-08-19",
 "l": "https://eminwon.seocho.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=45656&homepage_pbs_yn=Y&subCheck=Y",
@@ -824,6 +837,12 @@
 "s": "g2b-servc",
 "t": "북서울꿈의숲 가을 음악회 행사 용역"
 },
+"d96e01a9a817faaf71c4": {
+"d": "2026-08-31",
+"l": "https://www.gangdong.go.kr/web/newportal/notice/02/58548",
+"s": "gu-gangdong-r",
+"t": "우리구 2026년 푸른도시과 기간제근로자 3차 추가채용과 관련해 다음과 같이 공고합니다."
+},
 "e3fa257ac1d2a27c8d86": {
 "d": "2026-08-10",
 "l": "https://www.seoul.go.kr/news/news_notice.do?bbsNo=277&nttNo=463600",
@@ -843,5 +862,5 @@
 "t": "서울특별시 중구 임기제공무원 채용시험 최종합격자 공고(SNS구정홍보 전문요원, 언론홍보, 정책홍보, 주민소통활성화, 법무행정, 도시계획, 운동처방사)"
 }
 },
-"updated_at": "2026-08-31T14:59:18+09:00"
+"updated_at": "2026-08-31T16:47:06+09:00"
 }
