@@ -1,11 +1,10 @@
 {
-"count": 67,
+"count": 69,
 "health": {
 "g2b-servc": {
 "fails": 0,
 "ok": "2026-09-01",
 "rows": [
-290,
 296,
 245,
 251,
@@ -14,7 +13,8 @@
 267,
 252,
 231,
-3015
+3015,
+3317
 ]
 },
 "gu-ddm-n": {
@@ -757,6 +757,12 @@
 "s": "g2b-servc",
 "t": "2026년 산불예방숲가꾸기(2차) 감리용역"
 },
+"5ef90220aa5eb36e74e0": {
+"d": "2026-09-01",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01708103&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 하반기 용인지사 조경관리 용역"
+},
 "643893e379455cc164fe": {
 "d": "2026-09-01",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01703977&bidPbancOrd=000",
@@ -1015,6 +1021,12 @@
 "s": "gu-gangnam",
 "t": "도시계획시설(도로ㆍ녹지)사업 시행자지정 및 실시계획인가(변경: 사업기간연장) 고시"
 },
+"eb6166548b8b66379fb6": {
+"d": "2026-09-01",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01708222&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 산림재해방지조림사업감리용역(봉양읍 옥전리 산58 외)"
+},
 "ed7f0a0fc15a9c2425ca": {
 "d": "2026-09-01",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01707124&bidPbancOrd=000",
@@ -1046,5 +1058,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-01T15:53:14+09:00"
+"updated_at": "2026-09-01T19:05:58+09:00"
 }
