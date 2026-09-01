@@ -377,7 +377,7 @@
 10,
 10,
 10,
-10,
+11,
 11,
 11,
 11,
@@ -540,7 +540,7 @@
 "alerted": "2026-09-01",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
 "err_at": "2026-09-01",
-"fails": 11,
+"fails": 12,
 "ok": "2026-08-29",
 "rows": [
 50,
@@ -559,7 +559,7 @@
 "alerted": "2026-09-01",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-09-01",
-"fails": 11,
+"fails": 12,
 "ok": "2026-08-29",
 "rows": [
 10,
@@ -578,7 +578,7 @@
 "alerted": "2026-09-01",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-09-01",
-"fails": 11,
+"fails": 12,
 "ok": "2026-08-29",
 "rows": [
 9,
@@ -617,12 +617,12 @@
 68,
 68,
 68,
-68,
 69,
 69,
 71,
 68,
-74
+74,
+76
 ]
 },
 "seoul-notice": {
@@ -1046,5 +1046,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-01T14:29:27+09:00"
+"updated_at": "2026-09-01T15:53:14+09:00"
 }
