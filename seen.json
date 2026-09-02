@@ -1,11 +1,10 @@
 {
-"count": 70,
+"count": 74,
 "health": {
 "g2b-servc": {
 "fails": 0,
 "ok": "2026-09-02",
 "rows": [
-245,
 251,
 255,
 260,
@@ -14,7 +13,8 @@
 231,
 3015,
 3317,
-2980
+2980,
+3327
 ]
 },
 "gu-ddm-n": {
@@ -745,6 +745,12 @@
 "s": "gu-gangnam",
 "t": "2026년 생태하천 유지관리분야 기간제근로자 추가채용 계획"
 },
+"47f70084fa33c81eda57": {
+"d": "2026-09-02",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01709941&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "(용역)국립산림과학원 숲푸드 팝업스토어"
+},
 "4b4b487ddf960569cef1": {
 "d": "2026-09-02",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01709228&bidPbancOrd=000",
@@ -931,6 +937,12 @@
 "s": "g2b-servc",
 "t": "2026년 산림재해방지조림사업 실시설계용역(봉양읍 옥전리 산58 외)"
 },
+"af20864f9f418e0e02f6": {
+"d": "2026-09-02",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01710645&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 바다숲 조성사업 통합관리용역"
+},
 "b3db7c51c24e0f514565": {
 "d": "2026-08-04",
 "l": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=94&nttNo=19278119&&pageUnit=10&key=5140&nttShowPd=100&pageIndex=1",
@@ -960,6 +972,12 @@
 "l": "https://www.ep.go.kr/www/selectEminwonView.do?pageUnit=10&pageIndex=1&searchCnd=all&key=748&notAncmtMgtNo=50212&notAncmtSeCode=02",
 "s": "gu-ep-r",
 "t": "서울특별시 은평구 시간선택제임기제공무원 임용시험계획 재공고(공원녹지)"
+},
+"be927ffdda2d493f3984": {
+"d": "2026-09-02",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01711027&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "동천~황성 도시숲 조성사업(우선사업구간) 실시설계 용역"
 },
 "c0a5f18f68d793ffb1de": {
 "d": "2026-08-04",
@@ -1039,6 +1057,12 @@
 "s": "gu-gangnam",
 "t": "도시계획시설(도로ㆍ녹지)사업 시행자지정 및 실시계획인가(변경: 사업기간연장) 고시"
 },
+"e7fa38580af577553ade": {
+"d": "2026-09-02",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01709963&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "수안보연수원 솔숲관 객실 환경개선공사 폐기물 처리용역"
+},
 "eb6166548b8b66379fb6": {
 "d": "2026-09-01",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01708222&bidPbancOrd=000",
@@ -1076,5 +1100,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-02T15:36:58+09:00"
+"updated_at": "2026-09-02T18:37:23+09:00"
 }
