@@ -1,11 +1,10 @@
 {
-"count": 74,
+"count": 80,
 "health": {
 "g2b-servc": {
 "fails": 0,
-"ok": "2026-09-02",
+"ok": "2026-09-03",
 "rows": [
-251,
 255,
 260,
 267,
@@ -14,7 +13,8 @@
 3015,
 3317,
 2980,
-3327
+3327,
+3045
 ]
 },
 "gu-ddm-n": {
@@ -637,6 +637,12 @@
 }
 },
 "seen": {
+"00761dd4c956969edbb8": {
+"d": "2026-09-03",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01711319&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "제7회 임업인의 날 행사대행"
+},
 "07305a437add5d552780": {
 "d": "2026-08-28",
 "l": "https://www.gangseo.seoul.kr/gs040302/view?srchPage=&curPage=1&srchKey=&srchText=&mgtNo=68055",
@@ -991,6 +997,12 @@
 "s": "g2b-servc",
 "t": "(용역)산림과학 연구데이터 표준화 시범사업"
 },
+"d0d7d8feab9a86319cb6": {
+"d": "2026-09-03",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01711122&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 제주 바다숲(제주시 금능리)1년차 해조류 확산단지 조성"
+},
 "d2fe4ecd7c053228b680": {
 "d": "2026-08-06",
 "l": "https://www.gwanak.go.kr/site/gwanak/ex/bbsNew/List.do?typeCode=1",
@@ -1021,6 +1033,12 @@
 "s": "gu-gangdong-r",
 "t": "우리구 2026년 푸른도시과 기간제근로자 3차 추가채용과 관련해 다음과 같이 공고합니다."
 },
+"ddee79a69b9ec5933f4e": {
+"d": "2026-09-03",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01711443&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 남해바다숲 신규지(거제시 외포) 하반기 해조류 확산단지 조성 및 표시부이 설치"
+},
 "e3fa257ac1d2a27c8d86": {
 "d": "2026-08-10",
 "l": "https://www.seoul.go.kr/news/news_notice.do?bbsNo=277&nttNo=463600",
@@ -1044,6 +1062,18 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01709963&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "수안보연수원 솔숲관 객실 환경개선공사 폐기물 처리용역"
+},
+"e96e912a69e945d7e3f8": {
+"d": "2026-09-03",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01711120&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 제주 바다숲(제주시 용수리)1년차 해조류 확산단지 조성"
+},
+"e99da6b5c5f53e6165eb": {
+"d": "2026-09-03",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01711328&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 하반기 산불예방 숲가꾸기사업(1지구) 감리용역"
 },
 "eb6166548b8b66379fb6": {
 "d": "2026-09-01",
@@ -1075,6 +1105,12 @@
 "s": "g2b-servc",
 "t": "광주 신창동 유적 식생정비 기본 및 실시설계 용역"
 },
+"fec48e04c130b6fe8cdd": {
+"d": "2026-09-03",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01711338&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 하반기 산불예방 숲가꾸기사업(2지구) 감리용역"
+},
 "feec0c12c2d286f26810": {
 "d": "2026-09-01",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01707604&bidPbancOrd=001",
@@ -1082,5 +1118,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-02T21:24:32+09:00"
+"updated_at": "2026-09-03T13:23:15+09:00"
 }
