@@ -1,11 +1,10 @@
 {
-"count": 85,
+"count": 91,
 "health": {
 "g2b-servc": {
 "fails": 0,
 "ok": "2026-09-04",
 "rows": [
-260,
 267,
 252,
 231,
@@ -14,7 +13,8 @@
 2980,
 3327,
 3045,
-3060
+3060,
+3307
 ]
 },
 "gu-ddm-n": {
@@ -646,6 +646,12 @@
 "s": "g2b-servc",
 "t": "제7회 임업인의 날 행사대행"
 },
+"00c43332160170c09f38": {
+"d": "2026-09-04",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01714383&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "광명5동 도시숲 조성사업 폐기물처리용역"
+},
 "07305a437add5d552780": {
 "d": "2026-08-28",
 "l": "https://www.gangseo.seoul.kr/gs040302/view?srchPage=&curPage=1&srchKey=&srchText=&mgtNo=68055",
@@ -850,6 +856,12 @@
 "s": "g2b-servc",
 "t": "2026년 삼호대숲 대나무 생육환경 개선사업 임목폐기물 처리 용역"
 },
+"846e1199deb6e2a3ab92": {
+"d": "2026-09-04",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01713551&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "특수교량.의결서.산림유량 데이터 개방과제 위탁감리"
+},
 "878dbb96e8ed1b273d68": {
 "d": "2026-08-27",
 "l": "https://www.yongsan.go.kr/portal/cmmn/file/fileDown.do?menuNo=200233&atchFileId=42f1318331d94edaacb6af9fbd86c2bc&fileSn=1",
@@ -976,6 +988,12 @@
 "s": "gu-geumcheon",
 "t": "서울특별시 금천구 시간선택제 임기제공무원(라급, 공원녹지분야) 경력경쟁임용 면접시험 시행결과 공고"
 },
+"b9b623e71ae095becd6a": {
+"d": "2026-09-04",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01714714&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 산불예방 숲가꾸기 사업 감리 용역"
+},
 "bb073e8bfe786682598f": {
 "d": "2026-08-19",
 "l": "https://eminwon.seocho.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=45656&homepage_pbs_yn=Y&subCheck=Y",
@@ -1060,6 +1078,12 @@
 "s": "gu-gangdong-r",
 "t": "우리구 2026년 푸른도시과 기간제근로자 3차 추가채용과 관련해 다음과 같이 공고합니다."
 },
+"d9cd04418c6e5f5c0a0a": {
+"d": "2026-09-04",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01714741&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 건설폐기물 처리용역"
+},
 "ddee79a69b9ec5933f4e": {
 "d": "2026-09-03",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01711443&bidPbancOrd=000",
@@ -1071,6 +1095,12 @@
 "l": "https://www.seoul.go.kr/news/news_notice.do?bbsNo=277&nttNo=463600",
 "s": "seoul-notice",
 "t": "2026년 하반기 시민정원사 양성교육(기본과정) 교육생 모집 공고"
+},
+"e526f6adbf31140b3d4c": {
+"d": "2026-09-04",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01714271&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "농작물병해충·AI 국악·신재생에너지 데이터 통합 위탁감리"
 },
 "e6de2ca510e454cbe826": {
 "d": "2026-09-01",
@@ -1126,6 +1156,12 @@
 "s": "g2b-servc",
 "t": "2026년 포항시 소나무재선충병 스마트 예찰 및 기본설계용역"
 },
+"f2a27a3a859086ef989e": {
+"d": "2026-09-04",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01714640&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 부산광역시 어초어장 바다숲 통합관리"
+},
 "fd23e3ff3863cf48c370": {
 "d": "2026-08-04",
 "l": "https://www.junggu.seoul.kr/content.do?cmsid=15450&mode=view&cid=1463791433",
@@ -1151,5 +1187,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-04T15:46:28+09:00"
+"updated_at": "2026-09-04T18:38:48+09:00"
 }
