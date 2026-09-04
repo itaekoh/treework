@@ -1,13 +1,10 @@
 {
-"count": 81,
+"count": 85,
 "health": {
 "g2b-servc": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='apis.data.go.kr', port=443): Max retries exceeded with url: /1230000/ad/BidPublicInfoService/getBidPblancListInfoServc?serviceKey=5%2FkxQg",
-"err_at": "2026-09-03",
-"fails": 1,
-"ok": "2026-09-03",
+"fails": 0,
+"ok": "2026-09-04",
 "rows": [
-255,
 260,
 267,
 252,
@@ -16,7 +13,8 @@
 3317,
 2980,
 3327,
-3045
+3045,
+3060
 ]
 },
 "gu-ddm-n": {
@@ -698,6 +696,12 @@
 "s": "gu-guro-n",
 "t": "구로구 국공립어린이집 변경 위탁운영체 모집 재공고(푸른숲어린이집)"
 },
+"31b54ec11c4a57cff4c4": {
+"d": "2026-09-04",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01713592&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "낙동강 합강 색채 관광정원 조성사업 기본계획 수립 및 타당성 조사 용역(가격입찰 후 사업수행능력평가)"
+},
 "31e63b3b93e4a85214a3": {
 "d": "2026-08-18",
 "l": "https://job.seoul.go.kr/hmpg/rmim/pjmg/pjmgDetail.do?pbc_recmnt_mng_no=58FB30A6D33702F6E063C0A8A0282933",
@@ -709,6 +713,12 @@
 "l": "http://gangnam.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=64757&homepage_pbs_yn=Y&subCheck=Y",
 "s": "gu-gangnam",
 "t": "전문건설업 신규등록 공고[세인조경(주)]"
+},
+"3945330c29b0eabdf749": {
+"d": "2026-09-04",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01713797&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "(위탁)원격탐사와 현장 실측을 통한 기존 산림 재적식 재평가 및 개선방안 도출"
 },
 "3a87e966845dbb24d67e": {
 "d": "2026-08-25",
@@ -799,6 +809,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01706343&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "도시숲 달빛거리 범죄예방디자인사업 용역 입찰공고(협상에 의한 계약)"
+},
+"772b71d13870dd07a118": {
+"d": "2026-09-04",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01711016&bidPbancOrd=001",
+"s": "g2b-servc",
+"t": "낙동강 합강 색채 관광정원 조성사업 기본계획 수립 및 타당성 조사 용역(가격입찰 후 사업수행능력평가)"
 },
 "78356c0072f76edd22af": {
 "d": "2026-08-26",
@@ -949,6 +965,12 @@
 "l": "https://www.geumcheon.go.kr/",
 "s": "gu-geumcheon",
 "t": "시간선택제 임기제공무원(라급, 공원녹지분야) 신규채용 면접 심사위원 모집"
+},
+"b88163d3ba54b3dde6de": {
+"d": "2026-09-04",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01712800&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 제주 바다숲 4년차 조성해역 해조류 보식"
 },
 "b8bcbdf75f16523bbc8a": {
 "d": "2026-08-31",
@@ -1131,5 +1153,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-03T21:24:51+09:00"
+"updated_at": "2026-09-04T13:31:40+09:00"
 }
