@@ -178,7 +178,9 @@
 ]
 },
 "gu-gangseo-n": {
-"fails": 0,
+"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+"err_at": "2026-09-05",
+"fails": 1,
 "ok": "2026-09-05",
 "rows": [
 10,
@@ -194,7 +196,9 @@
 ]
 },
 "gu-gangseo-r": {
-"fails": 0,
+"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+"err_at": "2026-09-05",
+"fails": 1,
 "ok": "2026-09-05",
 "rows": [
 10,
@@ -355,9 +359,9 @@
 },
 "gu-junggu-n": {
 "alerted": "2026-09-05",
-"err": "ConnectionError: HTTPSConnectionPool(host='www.junggu.seoul.kr', port=443): Max retries exceeded with url: /content.do?cmsid=14232 (Caused by NameResolutionError(\"HTTPSConnection(h",
+"err": "HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://www.junggu.seoul.kr/error.jsp",
 "err_at": "2026-09-05",
-"fails": 3,
+"fails": 4,
 "ok": "2026-09-04",
 "rows": [
 10,
@@ -374,9 +378,9 @@
 },
 "gu-junggu-r": {
 "alerted": "2026-09-05",
-"err": "ConnectionError: HTTPSConnectionPool(host='www.junggu.seoul.kr', port=443): Max retries exceeded with url: /content.do?cmsid=15450 (Caused by NameResolutionError(\"HTTPSConnection(h",
+"err": "HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://www.junggu.seoul.kr/error.jsp",
 "err_at": "2026-09-05",
-"fails": 3,
+"fails": 4,
 "ok": "2026-09-04",
 "rows": [
 11,
@@ -538,16 +542,13 @@
 10,
 10,
 10,
-10,
+8,
 8
 ]
 },
 "gu-yangcheon": {
-"alerted": "2026-09-05",
-"err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
-"err_at": "2026-09-05",
-"fails": 4,
-"ok": "2026-09-04",
+"fails": 0,
+"ok": "2026-09-05",
 "rows": [
 50,
 50,
@@ -562,10 +563,8 @@
 ]
 },
 "gu-ydp-n": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-09-05",
-"fails": 1,
-"ok": "2026-09-04",
+"fails": 0,
+"ok": "2026-09-05",
 "rows": [
 10,
 10,
@@ -580,17 +579,15 @@
 ]
 },
 "gu-ydp-r": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-09-05",
-"fails": 1,
-"ok": "2026-09-04",
+"fails": 0,
+"ok": "2026-09-05",
 "rows": [
 10,
 10,
 10,
+8,
+8,
 10,
-8,
-8,
 10,
 10,
 10,
@@ -617,7 +614,6 @@
 "fails": 0,
 "ok": "2026-09-05",
 "rows": [
-82,
 78,
 79,
 81,
@@ -626,6 +622,7 @@
 75,
 74,
 74,
+71,
 71
 ]
 },
@@ -1194,5 +1191,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-05T13:49:39+09:00"
+"updated_at": "2026-09-05T15:23:08+09:00"
 }
