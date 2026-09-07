@@ -18,9 +18,7 @@
 ]
 },
 "gu-ddm-n": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonWebList.do?key=3291 (Caused by ConnectTimeoutError(<HTTPSConne",
-"err_at": "2026-09-07",
-"fails": 1,
+"fails": 0,
 "ok": "2026-09-07",
 "rows": [
 10,
@@ -36,9 +34,7 @@
 ]
 },
 "gu-ddm-r": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectBbsNttList.do?bbsNo=42&key=208 (Caused by ConnectTimeoutError(<HTTPSC",
-"err_at": "2026-09-07",
-"fails": 1,
+"fails": 0,
 "ok": "2026-09-07",
 "rows": [
 10,
@@ -166,9 +162,7 @@
 ]
 },
 "gu-gangnam": {
-"err": "ReadTimeout: HTTPSConnectionPool(host='gangnam.eminwon.seoul.kr', port=443): Read timed out. (read timeout=25)",
-"err_at": "2026-09-07",
-"fails": 1,
+"fails": 0,
 "ok": "2026-09-07",
 "rows": [
 50,
@@ -184,9 +178,7 @@
 ]
 },
 "gu-gangseo-n": {
-"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
-"err_at": "2026-09-07",
-"fails": 1,
+"fails": 0,
 "ok": "2026-09-07",
 "rows": [
 10,
@@ -202,9 +194,7 @@
 ]
 },
 "gu-gangseo-r": {
-"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
-"err_at": "2026-09-07",
-"fails": 1,
+"fails": 0,
 "ok": "2026-09-07",
 "rows": [
 10,
@@ -540,7 +530,7 @@
 8,
 8,
 8,
-8,
+7,
 7,
 7,
 7
@@ -583,7 +573,7 @@
 "ok": "2026-09-07",
 "rows": [
 8,
-8,
+10,
 10,
 10,
 10,
@@ -620,9 +610,9 @@
 71,
 71,
 71,
-71,
 70,
 70,
+68,
 68
 ]
 },
@@ -1281,5 +1271,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-07T21:58:19+09:00"
+"updated_at": "2026-09-07T22:49:20+09:00"
 }
