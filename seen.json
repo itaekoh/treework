@@ -165,7 +165,9 @@
 ]
 },
 "gu-gangnam": {
-"fails": 0,
+"err": "ReadTimeout: HTTPSConnectionPool(host='gangnam.eminwon.seoul.kr', port=443): Read timed out. (read timeout=25)",
+"err_at": "2026-09-08",
+"fails": 1,
 "ok": "2026-09-08",
 "rows": [
 50,
@@ -181,9 +183,7 @@
 ]
 },
 "gu-gangseo-n": {
-"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
-"err_at": "2026-09-08",
-"fails": 1,
+"fails": 0,
 "ok": "2026-09-08",
 "rows": [
 10,
@@ -199,9 +199,7 @@
 ]
 },
 "gu-gangseo-r": {
-"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
-"err_at": "2026-09-08",
-"fails": 1,
+"fails": 0,
 "ok": "2026-09-08",
 "rows": [
 10,
@@ -533,18 +531,20 @@
 "rows": [
 8,
 8,
-8,
 7,
 7,
 7,
 7,
 9,
 10,
+10,
 10
 ]
 },
 "gu-yangcheon": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
+"err_at": "2026-09-08",
+"fails": 1,
 "ok": "2026-09-08",
 "rows": [
 50,
@@ -560,7 +560,9 @@
 ]
 },
 "gu-ydp-n": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
+"err_at": "2026-09-08",
+"fails": 1,
 "ok": "2026-09-08",
 "rows": [
 10,
@@ -576,7 +578,9 @@
 ]
 },
 "gu-ydp-r": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
+"err_at": "2026-09-08",
+"fails": 1,
 "ok": "2026-09-08",
 "rows": [
 10,
@@ -613,13 +617,13 @@
 "rows": [
 71,
 71,
-71,
 70,
 70,
 68,
 68,
 70,
 73,
+75,
 75
 ]
 },
@@ -1284,5 +1288,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-08T20:37:05+09:00"
+"updated_at": "2026-09-08T21:26:48+09:00"
 }
