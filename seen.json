@@ -1,5 +1,5 @@
 {
-"count": 106,
+"count": 107,
 "health": {
 "g2b-servc": {
 "err": "ConnectTimeout: HTTPSConnectionPool(host='apis.data.go.kr', port=443): Max retries exceeded with url: /1230000/ad/BidPublicInfoService/getBidPblancListInfoServc?serviceKey=5%2FkxQg",
@@ -20,10 +20,8 @@
 ]
 },
 "gu-ddm-n": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonWebList.do?key=3291 (Caused by ConnectTimeoutError(<HTTPSConne",
-"err_at": "2026-09-08",
-"fails": 1,
-"ok": "2026-09-07",
+"fails": 0,
+"ok": "2026-09-08",
 "rows": [
 10,
 10,
@@ -38,10 +36,8 @@
 ]
 },
 "gu-ddm-r": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectBbsNttList.do?bbsNo=42&key=208 (Caused by ConnectTimeoutError(<HTTPSC",
-"err_at": "2026-09-08",
-"fails": 1,
-"ok": "2026-09-07",
+"fails": 0,
+"ok": "2026-09-08",
 "rows": [
 10,
 10,
@@ -534,12 +530,12 @@
 8,
 8,
 8,
-8,
 7,
 7,
 7,
 7,
-9
+9,
+10
 ]
 },
 "gu-yangcheon": {
@@ -586,7 +582,7 @@
 10,
 10,
 10,
-10,
+8,
 8
 ]
 },
@@ -614,12 +610,12 @@
 71,
 71,
 71,
-71,
 70,
 70,
 68,
 68,
-70
+70,
+73
 ]
 },
 "seoul-notice": {
@@ -843,6 +839,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01706343&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "도시숲 달빛거리 범죄예방디자인사업 용역 입찰공고(협상에 의한 계약)"
+},
+"768b794c9064d876a1f6": {
+"d": "2026-09-08",
+"l": "http://nowon.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=23588&homepage_pbs_yn=Y&subCheck=Y",
+"s": "gu-nowon",
+"t": "서울특별시 노원구 시간선택제 임기제공무원(초안산 수국동산 정원조성 및 관리 분야) 채용 계획 공고"
 },
 "772b71d13870dd07a118": {
 "d": "2026-09-04",
@@ -1277,5 +1279,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-08T13:59:28+09:00"
+"updated_at": "2026-09-08T15:37:34+09:00"
 }
