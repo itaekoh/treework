@@ -1,11 +1,10 @@
 {
-"count": 124,
+"count": 126,
 "health": {
 "g2b-servc": {
 "fails": 0,
 "ok": "2026-09-09",
 "rows": [
-231,
 3015,
 3317,
 2980,
@@ -14,7 +13,8 @@
 3060,
 3307,
 3556,
-3148
+3148,
+3476
 ]
 },
 "gu-ddm-n": {
@@ -668,6 +668,12 @@
 "s": "g2b-servc",
 "t": "경주시 도시바람길숲(황성공원) 조성사업(2단계) 건설폐기물 처리용역(운반)"
 },
+"0bcb12f00db7b8e37154": {
+"d": "2026-09-09",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01720634&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 태화강그라스정원 조성사업(2구간) 폐기물 처리용역"
+},
 "0d358e6a4dc22f3e43b5": {
 "d": "2026-09-01",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01704265&bidPbancOrd=000",
@@ -1196,6 +1202,12 @@
 "s": "g2b-servc",
 "t": "2026년 산불예방 숲가꾸기 및 선목사업(3차) 실시설계용역"
 },
+"c443906bd869762e20f2": {
+"d": "2026-09-09",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01721205&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "신흥공원 도시숲 조성사업 부지 내 매장유산 시굴조사 용역"
+},
 "c607dc00720ac272e97d": {
 "d": "2026-09-01",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01706620&bidPbancOrd=000",
@@ -1389,5 +1401,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-09T15:48:44+09:00"
+"updated_at": "2026-09-09T18:45:05+09:00"
 }
