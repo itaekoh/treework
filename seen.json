@@ -1,5 +1,5 @@
 {
-"count": 126,
+"count": 127,
 "health": {
 "g2b-servc": {
 "fails": 0,
@@ -18,9 +18,7 @@
 ]
 },
 "gu-ddm-n": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonWebList.do?key=3291 (Caused by ConnectTimeoutError(<HTTPSConne",
-"err_at": "2026-09-09",
-"fails": 1,
+"fails": 0,
 "ok": "2026-09-09",
 "rows": [
 10,
@@ -36,9 +34,7 @@
 ]
 },
 "gu-ddm-r": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectBbsNttList.do?bbsNo=42&key=208 (Caused by ConnectTimeoutError(<HTTPSC",
-"err_at": "2026-09-09",
-"fails": 1,
+"fails": 0,
 "ok": "2026-09-09",
 "rows": [
 10,
@@ -531,8 +527,8 @@
 7,
 7,
 7,
-7,
 9,
+10,
 10,
 10,
 10,
@@ -541,9 +537,10 @@
 ]
 },
 "gu-yangcheon": {
+"alerted": "2026-09-09",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
 "err_at": "2026-09-09",
-"fails": 1,
+"fails": 2,
 "ok": "2026-09-09",
 "rows": [
 50,
@@ -559,9 +556,10 @@
 ]
 },
 "gu-ydp-n": {
+"alerted": "2026-09-09",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-09-09",
-"fails": 1,
+"fails": 2,
 "ok": "2026-09-09",
 "rows": [
 10,
@@ -577,9 +575,10 @@
 ]
 },
 "gu-ydp-r": {
+"alerted": "2026-09-09",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-09-09",
-"fails": 1,
+"fails": 2,
 "ok": "2026-09-09",
 "rows": [
 10,
@@ -615,7 +614,6 @@
 "ok": "2026-09-09",
 "rows": [
 70,
-70,
 68,
 68,
 70,
@@ -623,7 +621,8 @@
 75,
 75,
 69,
-69
+69,
+71
 ]
 },
 "seoul-notice": {
@@ -1076,6 +1075,12 @@
 "s": "gu-songpa-r",
 "t": "2026 송파 정원지원센터 유지관리 분야 기간제근로자(현장) 추가채용"
 },
+"a8a441adca410ff42e42": {
+"d": "2026-09-09",
+"l": "https://www.sd.go.kr/main/selectBbsNttView.do?bbsNo=185&nttNo=361272&&pageUnit=10&key=1474&nttShowPd=24&pageIndex=1",
+"s": "gu-seongdong-r",
+"t": "2026년 응봉근린공원(대현산) 숲속책쉼터 유지관리 기간제근로자 채용 공고"
+},
 "aab7d89d3054db531efd": {
 "d": "2026-09-07",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01715726&bidPbancOrd=000",
@@ -1401,5 +1406,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-09T18:45:05+09:00"
+"updated_at": "2026-09-09T20:45:04+09:00"
 }
