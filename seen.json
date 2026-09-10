@@ -20,7 +20,9 @@
 ]
 },
 "gu-ddm-n": {
-"fails": 0,
+"err": "RuntimeError: 날짜 있는 목록 테이블을 찾지 못함 (구조 변경/AJAX 의심)",
+"err_at": "2026-09-10",
+"fails": 1,
 "ok": "2026-09-10",
 "rows": [
 10,
@@ -526,8 +528,8 @@
 "fails": 0,
 "ok": "2026-09-10",
 "rows": [
-7,
 9,
+10,
 10,
 10,
 10,
@@ -539,10 +541,8 @@
 ]
 },
 "gu-yangcheon": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
-"err_at": "2026-09-10",
-"fails": 1,
-"ok": "2026-09-09",
+"fails": 0,
+"ok": "2026-09-10",
 "rows": [
 50,
 50,
@@ -557,10 +557,8 @@
 ]
 },
 "gu-ydp-n": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-09-10",
-"fails": 1,
-"ok": "2026-09-09",
+"fails": 0,
+"ok": "2026-09-10",
 "rows": [
 10,
 10,
@@ -575,12 +573,9 @@
 ]
 },
 "gu-ydp-r": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-09-10",
-"fails": 1,
-"ok": "2026-09-09",
+"fails": 0,
+"ok": "2026-09-10",
 "rows": [
-10,
 10,
 10,
 10,
@@ -589,7 +584,8 @@
 8,
 8,
 7,
-9
+9,
+6
 ]
 },
 "gu-yongsan-n": {
@@ -612,7 +608,6 @@
 "fails": 0,
 "ok": "2026-09-10",
 "rows": [
-68,
 70,
 73,
 75,
@@ -621,6 +616,7 @@
 69,
 71,
 71,
+69,
 69
 ]
 },
@@ -1411,5 +1407,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-10T14:03:26+09:00"
+"updated_at": "2026-09-10T15:42:30+09:00"
 }
