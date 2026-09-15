@@ -1,5 +1,5 @@
 {
-"count": 160,
+"count": 161,
 "health": {
 "g2b-servc": {
 "err": "ConnectTimeout: HTTPSConnectionPool(host='apis.data.go.kr', port=443): Max retries exceeded with url: /1230000/ad/BidPublicInfoService/getBidPblancListInfoServc?serviceKey=5%2FkxQg",
@@ -292,7 +292,9 @@
 ]
 },
 "gu-gwangjin-n": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000378/list.do?menuNo=200192 (Caused by ConnectTimeoutError(<",
+"err_at": "2026-09-15",
+"fails": 1,
 "ok": "2026-09-15",
 "rows": [
 10,
@@ -308,7 +310,9 @@
 ]
 },
 "gu-gwangjin-r": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000004/list.do?menuNo=200193 (Caused by ConnectTimeoutError(<",
+"err_at": "2026-09-15",
+"fails": 1,
 "ok": "2026-09-15",
 "rows": [
 10,
@@ -395,7 +399,9 @@
 "rows": []
 },
 "gu-mapo-n": {
-"fails": 0,
+"err": "ConnectionError: HTTPSConnectionPool(host='www.mapo.go.kr', port=443): Max retries exceeded with url: /site/main/nPortal/list (Caused by NameResolutionError(\"HTTPSConnection(host='",
+"err_at": "2026-09-15",
+"fails": 1,
 "ok": "2026-09-15",
 "rows": [
 10,
@@ -540,9 +546,9 @@
 },
 "gu-yangcheon": {
 "alerted": "2026-09-15",
-"err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
+"err": "ReadTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Read timed out. (read timeout=25)",
 "err_at": "2026-09-15",
-"fails": 2,
+"fails": 3,
 "ok": "2026-09-14",
 "rows": [
 50,
@@ -561,7 +567,7 @@
 "alerted": "2026-09-15",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-09-15",
-"fails": 2,
+"fails": 3,
 "ok": "2026-09-14",
 "rows": [
 10,
@@ -580,7 +586,7 @@
 "alerted": "2026-09-15",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-09-15",
-"fails": 2,
+"fails": 3,
 "ok": "2026-09-14",
 "rows": [
 8,
@@ -618,7 +624,7 @@
 70,
 70,
 70,
-70,
+74,
 74,
 74,
 74,
@@ -1515,6 +1521,12 @@
 "s": "g2b-servc",
 "t": "수안보연수원 솔숲관 객실 환경개선공사 폐기물 처리용역"
 },
+"e8a8885a16e904ad7cd2": {
+"d": "2026-09-15",
+"l": "https://www.seoul.go.kr/news/news_notice.do?bbsNo=277&nttNo=466470",
+"s": "seoul-notice",
+"t": "반환기한이 경과된 세입세출외현금 공시송달 공고(창원시 푸른도시사업소 공고 제2026-57호)"
+},
 "e96e912a69e945d7e3f8": {
 "d": "2026-09-03",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01711120&bidPbancOrd=000",
@@ -1606,5 +1618,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-15T19:04:46+09:00"
+"updated_at": "2026-09-15T21:06:06+09:00"
 }
