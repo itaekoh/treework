@@ -164,7 +164,9 @@
 ]
 },
 "gu-gangnam": {
-"fails": 0,
+"err": "ReadTimeout: HTTPSConnectionPool(host='gangnam.eminwon.seoul.kr', port=443): Read timed out. (read timeout=25)",
+"err_at": "2026-09-15",
+"fails": 1,
 "ok": "2026-09-15",
 "rows": [
 50,
@@ -292,9 +294,7 @@
 ]
 },
 "gu-gwangjin-n": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000378/list.do?menuNo=200192 (Caused by ConnectTimeoutError(<",
-"err_at": "2026-09-15",
-"fails": 1,
+"fails": 0,
 "ok": "2026-09-15",
 "rows": [
 10,
@@ -310,9 +310,7 @@
 ]
 },
 "gu-gwangjin-r": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000004/list.do?menuNo=200193 (Caused by ConnectTimeoutError(<",
-"err_at": "2026-09-15",
-"fails": 1,
+"fails": 0,
 "ok": "2026-09-15",
 "rows": [
 10,
@@ -399,9 +397,7 @@
 "rows": []
 },
 "gu-mapo-n": {
-"err": "ConnectionError: HTTPSConnectionPool(host='www.mapo.go.kr', port=443): Max retries exceeded with url: /site/main/nPortal/list (Caused by NameResolutionError(\"HTTPSConnection(host='",
-"err_at": "2026-09-15",
-"fails": 1,
+"fails": 0,
 "ok": "2026-09-15",
 "rows": [
 10,
@@ -548,7 +544,7 @@
 "alerted": "2026-09-15",
 "err": "ReadTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Read timed out. (read timeout=25)",
 "err_at": "2026-09-15",
-"fails": 3,
+"fails": 4,
 "ok": "2026-09-14",
 "rows": [
 50,
@@ -564,11 +560,8 @@
 ]
 },
 "gu-ydp-n": {
-"alerted": "2026-09-15",
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-09-15",
-"fails": 3,
-"ok": "2026-09-14",
+"fails": 0,
+"ok": "2026-09-15",
 "rows": [
 10,
 10,
@@ -583,13 +576,9 @@
 ]
 },
 "gu-ydp-r": {
-"alerted": "2026-09-15",
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-09-15",
-"fails": 3,
-"ok": "2026-09-14",
+"fails": 0,
+"ok": "2026-09-15",
 "rows": [
-8,
 7,
 9,
 6,
@@ -598,7 +587,8 @@
 10,
 10,
 10,
-10
+10,
+6
 ]
 },
 "gu-yongsan-n": {
@@ -623,7 +613,7 @@
 "rows": [
 70,
 70,
-70,
+74,
 74,
 74,
 74,
@@ -1618,5 +1608,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-15T21:06:06+09:00"
+"updated_at": "2026-09-15T21:59:51+09:00"
 }
