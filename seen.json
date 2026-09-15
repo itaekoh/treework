@@ -1,5 +1,5 @@
 {
-"count": 159,
+"count": 160,
 "health": {
 "g2b-servc": {
 "fails": 0,
@@ -537,9 +537,10 @@
 ]
 },
 "gu-yangcheon": {
+"alerted": "2026-09-15",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
 "err_at": "2026-09-15",
-"fails": 1,
+"fails": 2,
 "ok": "2026-09-14",
 "rows": [
 50,
@@ -555,9 +556,10 @@
 ]
 },
 "gu-ydp-n": {
+"alerted": "2026-09-15",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-09-15",
-"fails": 1,
+"fails": 2,
 "ok": "2026-09-14",
 "rows": [
 10,
@@ -573,9 +575,10 @@
 ]
 },
 "gu-ydp-r": {
+"alerted": "2026-09-15",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-09-15",
-"fails": 1,
+"fails": 2,
 "ok": "2026-09-14",
 "rows": [
 8,
@@ -614,7 +617,7 @@
 70,
 70,
 70,
-70,
+74,
 74,
 74,
 74,
@@ -933,6 +936,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01717223&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 제주 바다숲 4년차 조성해역 해조류 확산단지 조성(모조주머니)"
+},
+"72c66b0b8dac48433dc1": {
+"d": "2026-09-15",
+"l": "https://dongjak.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=29397&homepage_pbs_yn=Y&subCheck=Y",
+"s": "gu-dongjak",
+"t": "산림병해충 방제 사업 기간제근로자 채용공고"
 },
 "7359cd6aa2c462db2e76": {
 "d": "2026-09-01",
@@ -1595,5 +1604,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-15T14:11:26+09:00"
+"updated_at": "2026-09-15T15:46:06+09:00"
 }
