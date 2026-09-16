@@ -1,13 +1,10 @@
 {
-"count": 161,
+"count": 171,
 "health": {
 "g2b-servc": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='apis.data.go.kr', port=443): Max retries exceeded with url: /1230000/ad/BidPublicInfoService/getBidPblancListInfoServc?serviceKey=5%2FkxQg",
-"err_at": "2026-09-15",
-"fails": 1,
-"ok": "2026-09-15",
+"fails": 0,
+"ok": "2026-09-16",
 "rows": [
-2980,
 3327,
 3045,
 3060,
@@ -16,7 +13,8 @@
 3148,
 3476,
 3345,
-3119
+3119,
+3077
 ]
 },
 "gu-ddm-n": {
@@ -689,6 +687,12 @@
 "s": "g2b-servc",
 "t": "2026년 제주 바다숲(서귀포시 태흥2리) 1년차 서식환경 개선"
 },
+"193e2a270d07af310555": {
+"d": "2026-09-16",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01732623&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "동진봉곡저수지 외 4개소 제방 예초 및 벌목 용역"
+},
 "1bbb51b45f18efcfbcb7": {
 "d": "2026-09-01",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01703930&bidPbancOrd=000",
@@ -718,6 +722,12 @@
 "l": "https://www.seoul.go.kr/news/news_notice.do?bbsNo=277&nttNo=463352",
 "s": "seoul-notice",
 "t": "제25회 서울억새축제 대행 용역 제안서 평가위원(후보자) 모집 공고"
+},
+"2e942aa66cacc734220f": {
+"d": "2026-09-16",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01731964&bidPbancOrd=001",
+"s": "g2b-servc",
+"t": "2026년 국립무의도자연휴양림 숲속의집 신축공사(건축) 감리용역(변경공고)"
 },
 "2fa24280164debacff23": {
 "d": "2026-09-07",
@@ -808,6 +818,12 @@
 "l": "http://gangnam.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=64996&homepage_pbs_yn=Y&subCheck=Y",
 "s": "gu-gangnam",
 "t": "2026년 생태하천 유지관리분야 기간제근로자 추가채용 계획"
+},
+"424ad91762727e107b0e": {
+"d": "2026-09-16",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01732342&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "[1권역]2026년 운학초 외 21교 수목 및 관목 전정 용역"
 },
 "47694611fb8efac94e97": {
 "d": "2026-09-09",
@@ -1061,6 +1077,12 @@
 "s": "seoul-job-public",
 "t": "2026년 월드컵공원 파크골프장 기간제노동자 채용 공고"
 },
+"8bc3285d2d05819578e5": {
+"d": "2026-09-16",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01731583&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "소나무재선충병 예찰 발전방안 마련"
+},
 "8bd722311f327f5c3489": {
 "d": "2026-09-01",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01703989&bidPbancOrd=000",
@@ -1090,6 +1112,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01715644&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 소나무재선충병 예방나무주사사업(하반기) 1지구 감리용역"
+},
+"924b0f94b94b2c044264": {
+"d": "2026-09-16",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01731464&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "백운산 산림복지단지 레포츠시설 관리동 설치 실시설계 용역"
 },
 "955a5962a67e12b74e42": {
 "d": "2026-08-07",
@@ -1289,6 +1317,12 @@
 "s": "gu-ep-r",
 "t": "서울특별시 은평구 시간선택제임기제공무원 임용시험계획 재공고(공원녹지)"
 },
+"bba886d2183f58d582e8": {
+"d": "2026-09-16",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01731081&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "신종 해외 가축질병 유입차단 예찰(거점센터 운영 2차) 용역"
+},
 "bc7093159ccc6b59ca51": {
 "d": "2026-09-15",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01726847&bidPbancOrd=000",
@@ -1391,6 +1425,12 @@
 "s": "g2b-servc",
 "t": "[경영계획팀] 2026년 산림조사 용역사업(2차)"
 },
+"cdb74b546824a4c3413c": {
+"d": "2026-09-16",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01731128&bidPbancOrd=001",
+"s": "g2b-servc",
+"t": "울진 금강소나무림 소나무재선충병 예찰 및 피해분석 용역"
+},
 "d0d7d8feab9a86319cb6": {
 "d": "2026-09-03",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01711122&bidPbancOrd=000",
@@ -1450,6 +1490,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01714741&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 건설폐기물 처리용역"
+},
+"dc7a362a4f522feb10a5": {
+"d": "2026-09-16",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01731535&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 서산시 소나무재선충병 방제사업 기본계획 수립용역"
 },
 "ddee79a69b9ec5933f4e": {
 "d": "2026-09-03",
@@ -1577,6 +1623,12 @@
 "s": "g2b-servc",
 "t": "건설공사 안전점검 수행기관 지정공고[원통웰컴센터 조성사업(건축, 토목, 조경, 기계)]"
 },
+"fc593542fe80d50ba22d": {
+"d": "2026-09-16",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01732368&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "[2권역]2026년 동백유 외 19교 수목 및 관목 전정 용역"
+},
 "fd23e3ff3863cf48c370": {
 "d": "2026-08-04",
 "l": "https://www.junggu.seoul.kr/content.do?cmsid=15450&mode=view&cid=1463791433",
@@ -1588,6 +1640,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01699227&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "광주 신창동 유적 식생정비 기본 및 실시설계 용역"
+},
+"fde30bdcbcce067a35f8": {
+"d": "2026-09-16",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01730321&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 서부지방산림청 유아숲체험원 정기 위험성평가 컨설팅 용역"
 },
 "fec48e04c130b6fe8cdd": {
 "d": "2026-09-03",
@@ -1608,5 +1666,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-15T21:59:51+09:00"
+"updated_at": "2026-09-16T13:48:41+09:00"
 }
