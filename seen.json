@@ -1,11 +1,10 @@
 {
-"count": 172,
+"count": 176,
 "health": {
 "g2b-servc": {
 "fails": 0,
 "ok": "2026-09-16",
 "rows": [
-3327,
 3045,
 3060,
 3307,
@@ -14,7 +13,8 @@
 3476,
 3345,
 3119,
-3077
+3077,
+3379
 ]
 },
 "gu-ddm-n": {
@@ -838,6 +838,12 @@
 "s": "g2b-servc",
 "t": "(용역)국립산림과학원 숲푸드 팝업스토어"
 },
+"4a70c3c59eb1b328b98d": {
+"d": "2026-09-16",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01733270&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "[용역사업집행계획 및 사업수행능력평가서 제출안내]제천시 도시바람길숲 조성사업 기본 및 실시설계 용역(PQ)"
+},
 "4b4b487ddf960569cef1": {
 "d": "2026-09-02",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01709228&bidPbancOrd=000",
@@ -850,11 +856,23 @@
 "s": "g2b-servc",
 "t": "2026년 제주창조경제혁신센터 제주 지역창업페스티벌 X 스타트업 위크 행사 운영 대행 용역"
 },
+"4de91f6fa3b07c727c8b": {
+"d": "2026-09-16",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01732299&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 선도 산림경영단지 조림사업 감리용역"
+},
 "510de999b0e0c6c13c5c": {
 "d": "2026-09-15",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01726547&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "동티모르 산림복원 및 지속가능한 산림관리 역량강화사업 PMC 용역"
+},
+"5563f9268c74815811ae": {
+"d": "2026-09-16",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01732131&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "서부공원여가센터 직원관사 해체공사 건설폐기물 처리용역"
 },
 "5599e129ba2258ed59c3": {
 "d": "2026-08-05",
@@ -1251,6 +1269,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01703888&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 산림재해방지조림사업 실시설계용역(봉양읍 옥전리 산58 외)"
+},
+"ae47896f0fef6989f8a0": {
+"d": "2026-09-16",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01731128&bidPbancOrd=002",
+"s": "g2b-servc",
+"t": "울진 금강소나무림 소나무재선충병 예찰 및 피해분석 용역"
 },
 "af20864f9f418e0e02f6": {
 "d": "2026-09-02",
@@ -1673,5 +1697,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-16T15:48:29+09:00"
+"updated_at": "2026-09-16T18:57:15+09:00"
 }
