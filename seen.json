@@ -1,11 +1,10 @@
 {
-"count": 186,
+"count": 193,
 "health": {
 "g2b-servc": {
 "fails": 0,
 "ok": "2026-09-17",
 "rows": [
-3060,
 3307,
 3556,
 3148,
@@ -14,7 +13,8 @@
 3119,
 3077,
 3379,
-3085
+3085,
+3439
 ]
 },
 "gu-ddm-n": {
@@ -718,6 +718,12 @@
 "s": "g2b-servc",
 "t": "2026년 산림경영지도원 자격전형 위탁 용역"
 },
+"24d2184b52deb5db5d72": {
+"d": "2026-09-17",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01735414&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 국립자연휴양림 산림문화 행사 휴-문화 Day(in 용인) 추진 용역"
+},
 "2a3aa7b356f1aba76578": {
 "d": "2026-08-05",
 "l": "https://www.seoul.go.kr/news/news_notice.do?bbsNo=277&nttNo=463352",
@@ -765,6 +771,12 @@
 "l": "http://gangnam.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=64757&homepage_pbs_yn=Y&subCheck=Y",
 "s": "gu-gangnam",
 "t": "전문건설업 신규등록 공고[세인조경(주)]"
+},
+"32cd9c0d74f8d72d6e83": {
+"d": "2026-09-17",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01735257&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "건설공사 안전점검 수행기관 지정 공고(평창읍 하리 74-1번지 건축물 해체공사, 산림조합)"
 },
 "34d5c36daa6ba99f630b": {
 "d": "2026-09-10",
@@ -994,6 +1006,12 @@
 "s": "g2b-servc",
 "t": "바다숲 기술 실증 단지(Test bed) 구축을 위한 사전영향조사"
 },
+"6e1f89d4836c31dfb23e": {
+"d": "2026-09-17",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01734293&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "안양매곡 S-1BL 아파트 및 과천지식정보타운 근린공원3 공원관리소 건설공사 시공단계 감독권한대행 등 (통합) 건설사업관리용역"
+},
 "6ef78d3034940d3b39bb": {
 "d": "2026-09-07",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01717223&bidPbancOrd=000",
@@ -1162,6 +1180,12 @@
 "s": "g2b-servc",
 "t": "2026년 소나무재선충병 예방나무주사사업(하반기) 1지구 감리용역"
 },
+"90f2e241e2b0bbade8e8": {
+"d": "2026-09-17",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01735745&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "동천~황성 도시숲(이편한세상후면) 지장물 철거공사 폐기물 처리용역"
+},
 "924b0f94b94b2c044264": {
 "d": "2026-09-16",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01731464&bidPbancOrd=000",
@@ -1288,6 +1312,12 @@
 "s": "g2b-servc",
 "t": "[재공고] 시각장애 아동의 주체적 참여를 통한 무장애 감각정원 조성사업"
 },
+"aa4ff1739e6e364a5ade": {
+"d": "2026-09-17",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01735764&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "동천~황성 도시숲(이편한세상후면) 지장물 철거공사 폐기물 운반용역"
+},
 "aab7d89d3054db531efd": {
 "d": "2026-09-07",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01715726&bidPbancOrd=000",
@@ -1329,6 +1359,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01727639&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "한국산림복지진흥원 개원 10주년 기념 행사 운영"
+},
+"b2ccea0f40ef2216e779": {
+"d": "2026-09-17",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01734241&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026 제22회 임업인한마음대회행사대행 용역(부대시설 및 체험부스 등)"
 },
 "b3db7c51c24e0f514565": {
 "d": "2026-08-04",
@@ -1684,6 +1720,12 @@
 "s": "g2b-servc",
 "t": "2026년 부산광역시 어초어장 바다숲 통합관리"
 },
+"f4632954124619d8ec2b": {
+"d": "2026-09-17",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01733858&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026 제22회 임업인한마음대회행사대행 용역(무대설치 및 행사진행 등)"
+},
 "f588bba9cd019e29c272": {
 "d": "2026-09-17",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01733570&bidPbancOrd=000",
@@ -1751,5 +1793,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-17T15:42:12+09:00"
+"updated_at": "2026-09-17T18:59:25+09:00"
 }
