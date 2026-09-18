@@ -1,11 +1,10 @@
 {
-"count": 193,
+"count": 196,
 "health": {
 "g2b-servc": {
 "fails": 0,
-"ok": "2026-09-17",
+"ok": "2026-09-18",
 "rows": [
-3307,
 3556,
 3148,
 3476,
@@ -14,7 +13,8 @@
 3077,
 3379,
 3085,
-3439
+3439,
+3168
 ]
 },
 "gu-ddm-n": {
@@ -876,6 +876,12 @@
 "s": "g2b-servc",
 "t": "(용역)국립산림과학원 숲푸드 팝업스토어"
 },
+"49bcc71b48ba5802ed38": {
+"d": "2026-09-18",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01736249&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "제20회 산림교육전문가 역량강화 보수교육 및 전국 숲해설 경연대회 운영대행"
+},
 "4a70c3c59eb1b328b98d": {
 "d": "2026-09-16",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01733270&bidPbancOrd=000",
@@ -1128,6 +1134,12 @@
 "s": "g2b-servc",
 "t": "2026년 삼호대숲 대나무 생육환경 개선사업 임목폐기물 처리 용역"
 },
+"83f1362043adda71ddff": {
+"d": "2026-09-18",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01734064&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 하반기 소나무재선충병 방제사업 실시설계용역"
+},
 "846e1199deb6e2a3ab92": {
 "d": "2026-09-04",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01713551&bidPbancOrd=000",
@@ -1343,6 +1355,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01715726&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 산림과학기술 출연연구개발사업 단계평가 지원"
+},
+"aada150f22c3a2fc01e7": {
+"d": "2026-09-18",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01736032&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 하반기 소나무재선충병 방제사업 감리 용역"
 },
 "ab4989c15da6890d6a19": {
 "d": "2026-09-15",
@@ -1813,5 +1831,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-17T21:56:54+09:00"
+"updated_at": "2026-09-18T13:42:30+09:00"
 }
