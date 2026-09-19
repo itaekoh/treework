@@ -180,7 +180,9 @@
 ]
 },
 "gu-gangseo-n": {
-"fails": 0,
+"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+"err_at": "2026-09-19",
+"fails": 1,
 "ok": "2026-09-19",
 "rows": [
 10,
@@ -196,7 +198,9 @@
 ]
 },
 "gu-gangseo-r": {
-"fails": 0,
+"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+"err_at": "2026-09-19",
+"fails": 1,
 "ok": "2026-09-19",
 "rows": [
 10,
@@ -529,7 +533,7 @@
 8,
 8,
 8,
-8,
+10,
 10,
 10,
 10,
@@ -539,11 +543,8 @@
 ]
 },
 "gu-yangcheon": {
-"alerted": "2026-09-19",
-"err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
-"err_at": "2026-09-19",
-"fails": 3,
-"ok": "2026-09-18",
+"fails": 0,
+"ok": "2026-09-19",
 "rows": [
 50,
 50,
@@ -558,11 +559,8 @@
 ]
 },
 "gu-ydp-n": {
-"alerted": "2026-09-19",
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-09-19",
-"fails": 3,
-"ok": "2026-09-18",
+"fails": 0,
+"ok": "2026-09-19",
 "rows": [
 10,
 10,
@@ -577,13 +575,9 @@
 ]
 },
 "gu-ydp-r": {
-"alerted": "2026-09-19",
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-09-19",
-"fails": 3,
-"ok": "2026-09-18",
+"fails": 0,
+"ok": "2026-09-19",
 "rows": [
-10,
 10,
 10,
 10,
@@ -592,7 +586,8 @@
 6,
 5,
 8,
-9
+9,
+8
 ]
 },
 "gu-yongsan-n": {
@@ -615,7 +610,6 @@
 "fails": 0,
 "ok": "2026-09-19",
 "rows": [
-85,
 88,
 89,
 89,
@@ -623,6 +617,7 @@
 87,
 90,
 90,
+84,
 84,
 84
 ]
@@ -1828,5 +1823,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-19T15:40:57+09:00"
+"updated_at": "2026-09-19T20:20:03+09:00"
 }
