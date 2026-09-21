@@ -1,11 +1,10 @@
 {
-"count": 201,
+"count": 205,
 "health": {
 "g2b-servc": {
 "fails": 0,
 "ok": "2026-09-21",
 "rows": [
-3148,
 3476,
 3345,
 3119,
@@ -14,7 +13,8 @@
 3085,
 3439,
 3168,
-3189
+3189,
+3587
 ]
 },
 "gu-ddm-n": {
@@ -1132,6 +1132,12 @@
 "s": "g2b-servc",
 "t": "2026년 삼호대숲 대나무 생육환경 개선사업 임목폐기물 처리 용역"
 },
+"8316e21ca0a65cc71836": {
+"d": "2026-09-21",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01739328&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 경상북도 산림박람회 경주시 홍보관 제작 설치 용역"
+},
 "83f1362043adda71ddff": {
 "d": "2026-09-18",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01734064&bidPbancOrd=000",
@@ -1227,6 +1233,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01671691&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 하반기 소나무재선충병 방제사업(나무주사) 실시설계용역"
+},
+"9655012aafbb0c4ff26a": {
+"d": "2026-09-21",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01740188&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 산림경영지도원 자격전형 위탁 용역"
 },
 "968ec08022f7d2773d34": {
 "d": "2026-09-16",
@@ -1378,6 +1390,12 @@
 "s": "g2b-servc",
 "t": "2026년 숲가꾸기사업 감리용역(청주)"
 },
+"ad46ad485874481171d8": {
+"d": "2026-09-21",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01739710&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "제주창조경제혁신센터 2026년 소상공인 도약지원사업 브랜딩 아카데미 운영 용역"
+},
 "ad4ad16f39d8ba460e83": {
 "d": "2026-09-01",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01703888&bidPbancOrd=000",
@@ -1455,6 +1473,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01717444&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 제주 바다숲(서귀포시 하모리) 1년차 서식환경 개선"
+},
+"ba9c2332c7483bb0cd8a": {
+"d": "2026-09-21",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01739509&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "해보면 농촌중심지활성화사업 건축토목기계조경공사 재해예방기술지도 용역"
 },
 "bb073e8bfe786682598f": {
 "d": "2026-08-19",
@@ -1841,5 +1865,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-21T16:10:13+09:00"
+"updated_at": "2026-09-21T19:43:04+09:00"
 }
