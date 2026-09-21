@@ -1,13 +1,10 @@
 {
-"count": 198,
+"count": 201,
 "health": {
 "g2b-servc": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='apis.data.go.kr', port=443): Max retries exceeded with url: /1230000/ad/BidPublicInfoService/getBidPblancListInfoServc?serviceKey=5%2FkxQg",
-"err_at": "2026-09-18",
-"fails": 1,
-"ok": "2026-09-18",
+"fails": 0,
+"ok": "2026-09-21",
 "rows": [
-3556,
 3148,
 3476,
 3345,
@@ -16,7 +13,8 @@
 3379,
 3085,
 3439,
-3168
+3168,
+3189
 ]
 },
 "gu-ddm-n": {
@@ -652,6 +650,12 @@
 "s": "g2b-servc",
 "t": "광명5동 도시숲 조성사업 폐기물처리용역"
 },
+"04b679bae9d56d8a4893": {
+"d": "2026-09-21",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01736875&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "(용역)2028년도 신규사업 발굴 및 산림과학기술분야 성과분석 연구"
+},
 "05ec5de21945f4f63fe1": {
 "d": "2026-09-17",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01733563&bidPbancOrd=000",
@@ -999,6 +1003,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01724594&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "충남창조경제혁신센터(아산) 회의실 구축 1개소, 사무공간 개선 공사 용역"
+},
+"6856cc6c621bb936bf6e": {
+"d": "2026-09-21",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01731128&bidPbancOrd=003",
+"s": "g2b-servc",
+"t": "울진 금강소나무림 소나무재선충병 예찰 및 피해분석 용역"
 },
 "6bcda2805dba14ccbd48": {
 "d": "2026-09-01",
@@ -1642,6 +1652,12 @@
 "s": "g2b-servc",
 "t": "2026년 서산시 소나무재선충병 방제사업 기본계획 수립용역"
 },
+"dcfec26fb8942cbd8468": {
+"d": "2026-09-21",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01738193&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "서부공원여가센터 직원관사 해체공사 재해예방기술지도 용역"
+},
 "ddee79a69b9ec5933f4e": {
 "d": "2026-09-03",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01711443&bidPbancOrd=000",
@@ -1829,5 +1845,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-20T21:45:21+09:00"
+"updated_at": "2026-09-21T13:54:40+09:00"
 }
