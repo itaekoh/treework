@@ -1,5 +1,5 @@
 {
-"count": 214,
+"count": 216,
 "health": {
 "g2b-servc": {
 "fails": 0,
@@ -376,7 +376,7 @@
 10,
 10,
 10,
-10,
+11,
 11,
 11,
 11,
@@ -537,9 +537,10 @@
 ]
 },
 "gu-yangcheon": {
+"alerted": "2026-09-22",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
 "err_at": "2026-09-22",
-"fails": 1,
+"fails": 2,
 "ok": "2026-09-22",
 "rows": [
 50,
@@ -555,9 +556,10 @@
 ]
 },
 "gu-ydp-n": {
+"alerted": "2026-09-22",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-09-22",
-"fails": 1,
+"fails": 2,
 "ok": "2026-09-22",
 "rows": [
 10,
@@ -573,9 +575,10 @@
 ]
 },
 "gu-ydp-r": {
+"alerted": "2026-09-22",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-09-22",
-"fails": 1,
+"fails": 2,
 "ok": "2026-09-22",
 "rows": [
 8,
@@ -611,7 +614,6 @@
 "ok": "2026-09-22",
 "rows": [
 84,
-84,
 85,
 85,
 90,
@@ -619,7 +621,8 @@
 91,
 91,
 94,
-94
+94,
+95
 ]
 },
 "seoul-notice": {
@@ -747,6 +750,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01731964&bidPbancOrd=001",
 "s": "g2b-servc",
 "t": "2026년 국립무의도자연휴양림 숲속의집 신축공사(건축) 감리용역(변경공고)"
+},
+"2eaeb436ce77f5521524": {
+"d": "2026-09-22",
+"l": "http://nowon.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=23698&homepage_pbs_yn=Y&subCheck=Y",
+"s": "gu-nowon",
+"t": "2026년 노원구 푸른도시과 공원관리팀 기간제근로자 추가 채용 재공고"
 },
 "2ec3de58c27d7e0d5008": {
 "d": "2026-09-22",
@@ -1642,6 +1651,12 @@
 "s": "g2b-servc",
 "t": "[경영계획팀] 2026년 산림조사 용역사업(2차)"
 },
+"ccaa669b329dda8e293b": {
+"d": "2026-09-22",
+"l": "https://www.ddm.go.kr/www/selectBbsNttView.do?key=208&bbsNo=42&nttNo=194861&searchCtgry=&searchCnd=all&searchKrwd=&integrDeptCode=&pageIndex=1",
+"s": "gu-ddm-r",
+"t": "임기제공무원 채용 공고(조경분야전문관리, 주차단속)"
+},
 "cdb74b546824a4c3413c": {
 "d": "2026-09-16",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01731128&bidPbancOrd=001",
@@ -1925,5 +1940,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-22T18:57:19+09:00"
+"updated_at": "2026-09-22T21:02:45+09:00"
 }
