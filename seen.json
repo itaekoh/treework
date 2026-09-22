@@ -1,11 +1,10 @@
 {
-"count": 205,
+"count": 209,
 "health": {
 "g2b-servc": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
-3476,
 3345,
 3119,
 3077,
@@ -14,7 +13,8 @@
 3439,
 3168,
 3189,
-3587
+3587,
+3218
 ]
 },
 "gu-ddm-n": {
@@ -1555,6 +1555,12 @@
 "s": "g2b-servc",
 "t": "2026년 산불예방 숲가꾸기 및 선목사업(3차) 실시설계용역"
 },
+"c20b20796698c127a2bb": {
+"d": "2026-09-22",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01740991&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 강남지사 하반기 조경관리 용역"
+},
 "c443906bd869762e20f2": {
 "d": "2026-09-09",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01721205&bidPbancOrd=000",
@@ -1626,6 +1632,18 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01698695&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "산림생태복원을 위한 시드볼 기술개발Ⅱ"
+},
+"d43b2d0d2fd07a8ba239": {
+"d": "2026-09-22",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01740508&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 산주대회 산림사업 맞춤형 컨설팅 부스 운영 용역"
+},
+"d443aeafda5ba48c193c": {
+"d": "2026-09-22",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01739950&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 통합숲가꾸기사업 실시설계용역(산불예방,가을철큰나무)"
 },
 "d4bca8a935ddcf1cf711": {
 "d": "2026-09-15",
@@ -1777,6 +1795,12 @@
 "s": "g2b-servc",
 "t": "가야지구 농촌공간정비사업(아라가야 숲) 매장유산 시굴조사 용역"
 },
+"ee25b668696c780a70a4": {
+"d": "2026-09-22",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01740790&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 인공식물섬 및 습지 조경관리용역"
+},
 "ef55ddd12e23e7ca0b83": {
 "d": "2026-09-01",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01705098&bidPbancOrd=000",
@@ -1868,5 +1892,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-21T23:39:38+09:00"
+"updated_at": "2026-09-22T13:56:19+09:00"
 }
