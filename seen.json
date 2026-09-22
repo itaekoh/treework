@@ -1,5 +1,5 @@
 {
-"count": 209,
+"count": 210,
 "health": {
 "g2b-servc": {
 "fails": 0,
@@ -19,7 +19,7 @@
 },
 "gu-ddm-n": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 10,
 10,
@@ -35,7 +35,7 @@
 },
 "gu-ddm-r": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 10,
 10,
@@ -51,7 +51,7 @@
 },
 "gu-dobong": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 51,
 51,
@@ -67,7 +67,7 @@
 },
 "gu-dongjak": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 50,
 50,
@@ -83,7 +83,7 @@
 },
 "gu-ep-n": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 10,
 10,
@@ -99,7 +99,7 @@
 },
 "gu-ep-r": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 10,
 10,
@@ -115,7 +115,7 @@
 },
 "gu-gangbuk": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 51,
 51,
@@ -131,7 +131,7 @@
 },
 "gu-gangdong-n": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 10,
 10,
@@ -147,7 +147,7 @@
 },
 "gu-gangdong-r": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 10,
 10,
@@ -162,11 +162,8 @@
 ]
 },
 "gu-gangnam": {
-"alerted": "2026-09-21",
-"err": "ReadTimeout: HTTPSConnectionPool(host='gangnam.eminwon.seoul.kr', port=443): Read timed out. (read timeout=25)",
-"err_at": "2026-09-21",
-"fails": 2,
-"ok": "2026-09-21",
+"fails": 0,
+"ok": "2026-09-22",
 "rows": [
 50,
 50,
@@ -181,7 +178,9 @@
 ]
 },
 "gu-gangseo-n": {
-"fails": 0,
+"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+"err_at": "2026-09-22",
+"fails": 1,
 "ok": "2026-09-21",
 "rows": [
 10,
@@ -197,7 +196,9 @@
 ]
 },
 "gu-gangseo-r": {
-"fails": 0,
+"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+"err_at": "2026-09-22",
+"fails": 1,
 "ok": "2026-09-21",
 "rows": [
 10,
@@ -214,7 +215,7 @@
 },
 "gu-geumcheon": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 51,
 51,
@@ -230,7 +231,7 @@
 },
 "gu-guro-n": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 10,
 10,
@@ -246,7 +247,7 @@
 },
 "gu-guro-r": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 10,
 10,
@@ -262,7 +263,7 @@
 },
 "gu-gwanak-n": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 10,
 10,
@@ -278,7 +279,7 @@
 },
 "gu-gwanak-r": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 10,
 10,
@@ -293,7 +294,9 @@
 ]
 },
 "gu-gwangjin-n": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000378/list.do?menuNo=200192 (Caused by ConnectTimeoutError(<",
+"err_at": "2026-09-22",
+"fails": 1,
 "ok": "2026-09-21",
 "rows": [
 10,
@@ -309,7 +312,9 @@
 ]
 },
 "gu-gwangjin-r": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000004/list.do?menuNo=200193 (Caused by ConnectTimeoutError(<",
+"err_at": "2026-09-22",
+"fails": 1,
 "ok": "2026-09-21",
 "rows": [
 10,
@@ -326,7 +331,7 @@
 },
 "gu-jongno-n": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 20,
 20,
@@ -342,7 +347,7 @@
 },
 "gu-jongno-r": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 10,
 10,
@@ -358,7 +363,7 @@
 },
 "gu-junggu-n": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 10,
 10,
@@ -374,14 +379,14 @@
 },
 "gu-junggu-r": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 10,
 10,
 10,
 10,
 10,
-10,
+11,
 11,
 11,
 11,
@@ -397,7 +402,7 @@
 },
 "gu-mapo-n": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 10,
 10,
@@ -413,7 +418,7 @@
 },
 "gu-nowon": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 51,
 51,
@@ -429,7 +434,7 @@
 },
 "gu-sdm-n": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 10,
 10,
@@ -445,7 +450,7 @@
 },
 "gu-sdm-r": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 10,
 10,
@@ -461,7 +466,7 @@
 },
 "gu-seocho": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 50,
 50,
@@ -477,7 +482,7 @@
 },
 "gu-seongdong-n": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 10,
 10,
@@ -493,7 +498,7 @@
 },
 "gu-seongdong-r": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 10,
 10,
@@ -509,7 +514,7 @@
 },
 "gu-songpa-n": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 10,
 10,
@@ -525,7 +530,7 @@
 },
 "gu-songpa-r": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 10,
 10,
@@ -541,7 +546,7 @@
 },
 "gu-yangcheon": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 50,
 50,
@@ -557,7 +562,7 @@
 },
 "gu-ydp-n": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 10,
 10,
@@ -573,9 +578,8 @@
 },
 "gu-ydp-r": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
-5,
 8,
 9,
 8,
@@ -584,12 +588,13 @@
 8,
 10,
 10,
+10,
 10
 ]
 },
 "gu-yongsan-n": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 10,
 10,
@@ -605,9 +610,8 @@
 },
 "seoul-job-public": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
-84,
 84,
 84,
 84,
@@ -616,12 +620,13 @@
 90,
 90,
 91,
-91
+91,
+94
 ]
 },
 "seoul-notice": {
 "fails": 0,
-"ok": "2026-09-21",
+"ok": "2026-09-22",
 "rows": [
 100,
 100,
@@ -828,6 +833,12 @@
 "l": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=94&nttNo=19278161&&pageUnit=10&key=5140&nttShowPd=100&pageIndex=1",
 "s": "gu-songpa-r",
 "t": "송파책박물관 단시간 근로자(어린이 전시실, 도서보조) 채용 공고"
+},
+"40bd6bc68265fbddbaa4": {
+"d": "2026-09-22",
+"l": "https://job.seoul.go.kr/hmpg/rmim/pjmg/pjmgDetail.do?pbc_recmnt_mng_no=5C08CDA3A0ED01C2E063C0A8A028063C",
+"s": "seoul-job-public",
+"t": "서울형 매력일자리「식물원·수목원 큐레이터 양성」사업 참여자 모집 공고(7차)"
 },
 "40cba99bd77e287d34d3": {
 "d": "2026-08-14",
@@ -1892,5 +1903,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-22T13:56:19+09:00"
+"updated_at": "2026-09-22T14:17:10+09:00"
 }
