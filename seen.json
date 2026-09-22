@@ -1,11 +1,10 @@
 {
-"count": 210,
+"count": 214,
 "health": {
 "g2b-servc": {
 "fails": 0,
 "ok": "2026-09-22",
 "rows": [
-3345,
 3119,
 3077,
 3379,
@@ -14,7 +13,8 @@
 3168,
 3189,
 3587,
-3218
+3218,
+3580
 ]
 },
 "gu-ddm-n": {
@@ -748,6 +748,12 @@
 "s": "g2b-servc",
 "t": "2026년 국립무의도자연휴양림 숲속의집 신축공사(건축) 감리용역(변경공고)"
 },
+"2ec3de58c27d7e0d5008": {
+"d": "2026-09-22",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01741034&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "산림생태복원을 위한 시드볼 기술개발Ⅱ"
+},
 "2fa24280164debacff23": {
 "d": "2026-09-07",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01717450&bidPbancOrd=000",
@@ -759,6 +765,12 @@
 "l": "https://www.guro.go.kr/www/selectBbsNttGosiView.do?bbsNo=663&nttNo=51238&rowNum=3&&pageUnit=10&key=1791&pageIndex=1",
 "s": "gu-guro-n",
 "t": "구로구 국공립어린이집 변경 위탁운영체 모집 재공고(푸른숲어린이집)"
+},
+"30f8c8775c3bd9b0efdd": {
+"d": "2026-09-22",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01742491&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2027년 여주 영릉과 영릉 소나무재선충병 예방나무주사사업 실시설계용역"
 },
 "31b54ec11c4a57cff4c4": {
 "d": "2026-09-04",
@@ -1444,11 +1456,23 @@
 "s": "gu-songpa-r",
 "t": "2026년 송파구보건소 구강보건사업 기간제근로자(치위생사) 채용 공고"
 },
+"b57158991b076ee9dce5": {
+"d": "2026-09-22",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01741793&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 하반기 소나무재선충병 긴급방제사업 감리용역"
+},
 "b6857fb4c33cec2fd3df": {
 "d": "2026-09-09",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01701232&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "환경 최적화 대응을 위한 국내외 토양 모델 기반 스마트 로봇 방제 시스템 최적화 기술 개발"
+},
+"b7024c89d573119bc6b2": {
+"d": "2026-09-22",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01741939&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "경주 낭산 남봉구역 식생 관리계획 연구"
 },
 "b708c0bfaf9aeda80ac3": {
 "d": "2026-08-04",
@@ -1901,5 +1925,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-22T15:53:25+09:00"
+"updated_at": "2026-09-22T18:57:19+09:00"
 }
