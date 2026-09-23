@@ -1,11 +1,10 @@
 {
-"count": 216,
+"count": 223,
 "health": {
 "g2b-servc": {
 "fails": 0,
-"ok": "2026-09-22",
+"ok": "2026-09-23",
 "rows": [
-3119,
 3077,
 3379,
 3085,
@@ -14,7 +13,8 @@
 3189,
 3587,
 3218,
-3580
+3580,
+3350
 ]
 },
 "gu-ddm-n": {
@@ -729,6 +729,12 @@
 "s": "g2b-servc",
 "t": "2026년 산림경영지도원 자격전형 위탁 용역"
 },
+"1fb1c280263001b5e5a9": {
+"d": "2026-09-23",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01743063&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 산불예방 숲가꾸기사업(3차) 실시설계용역"
+},
 "24d2184b52deb5db5d72": {
 "d": "2026-09-17",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01735414&bidPbancOrd=000",
@@ -740,6 +746,12 @@
 "l": "https://www.seoul.go.kr/news/news_notice.do?bbsNo=277&nttNo=463352",
 "s": "seoul-notice",
 "t": "제25회 서울억새축제 대행 용역 제안서 평가위원(후보자) 모집 공고"
+},
+"2b7fffccf8c7953e4912": {
+"d": "2026-09-23",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01742542&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "산림대 공작실 외 1개동 샌드위치 패널 교체 및 환경개선을 위한 설계용역"
 },
 "2e942aa66cacc734220f": {
 "d": "2026-09-16",
@@ -794,6 +806,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01717803&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 서해바다숲(태안군 난도) 조성사업 일반수로측량 및 위치기반 실시간 모니터링 시스템 구축·운용(긴급)"
+},
+"32020117fb21fb965f49": {
+"d": "2026-09-23",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01742642&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "기후대응도시숲 조성사업 건설폐기물 처리용역"
 },
 "329182ba3e24c679826f": {
 "d": "2026-08-07",
@@ -890,6 +908,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01709941&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "(용역)국립산림과학원 숲푸드 팝업스토어"
+},
+"48d528523ec86e483753": {
+"d": "2026-09-23",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01742643&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 소나무재선충병 하반기 방제사업 실시설계 용역"
 },
 "49bcc71b48ba5802ed38": {
 "d": "2026-09-18",
@@ -1623,6 +1647,12 @@
 "s": "g2b-servc",
 "t": "2026년 산불예방 숲가꾸기 3차사업 감리용역"
 },
+"c8f4910c087852ed1f7a": {
+"d": "2026-09-23",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01743089&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "가축전염병 대응 소독자원 임차지원(광역방제기)"
+},
 "c930b4acc344142827f8": {
 "d": "2026-09-09",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01717562&bidPbancOrd=000",
@@ -1821,6 +1851,12 @@
 "s": "g2b-servc",
 "t": "2026년 제주 바다숲(제주시 용수리)1년차 해조류 확산단지 조성"
 },
+"e996db34d5228bae3350": {
+"d": "2026-09-23",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01741953&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "(PQ이후 가격입찰 공고)부산 에코델타시티 친수구역 조경공사(3단계 2공구 등) 감독권한대행 등 건설사업관리용역"
+},
 "e99da6b5c5f53e6165eb": {
 "d": "2026-09-03",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01711328&bidPbancOrd=000",
@@ -1881,6 +1917,12 @@
 "s": "g2b-servc",
 "t": "2026년 남해바다숲 신규(여수시 개도 신흥) 조하대 부착기질 개선작업"
 },
+"f8b2cd7052ad7f1863e0": {
+"d": "2026-09-23",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01743124&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "신종 해외 가축질병 유입차단 예찰(거점센터 운영 2차) 용역"
+},
 "fa1abf568022df113c64": {
 "d": "2026-09-07",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01715321&bidPbancOrd=000",
@@ -1936,5 +1978,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-22T21:56:13+09:00"
+"updated_at": "2026-09-23T13:44:21+09:00"
 }
