@@ -20,7 +20,9 @@
 ]
 },
 "gu-ddm-n": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonWebList.do?key=3291 (Caused by ConnectTimeoutError(<HTTPSConne",
+"err_at": "2026-09-23",
+"fails": 1,
 "ok": "2026-09-23",
 "rows": [
 10,
@@ -36,7 +38,9 @@
 ]
 },
 "gu-ddm-r": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectBbsNttList.do?bbsNo=42&key=208 (Caused by ConnectTimeoutError(<HTTPSC",
+"err_at": "2026-09-23",
+"fails": 1,
 "ok": "2026-09-23",
 "rows": [
 10,
@@ -577,7 +581,7 @@
 8,
 8,
 8,
-8,
+10,
 10,
 10,
 10,
@@ -607,7 +611,6 @@
 "ok": "2026-09-23",
 "rows": [
 90,
-90,
 91,
 91,
 94,
@@ -615,7 +618,8 @@
 95,
 95,
 93,
-94
+94,
+97
 ]
 },
 "seoul-notice": {
@@ -1975,5 +1979,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-23T18:59:09+09:00"
+"updated_at": "2026-09-23T21:00:26+09:00"
 }
