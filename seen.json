@@ -18,10 +18,7 @@
 ]
 },
 "gu-ddm-n": {
-"alerted": "2026-09-25",
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonWebList.do?key=3291 (Caused by ConnectTimeoutError(<HTTPSConne",
-"err_at": "2026-09-25",
-"fails": 2,
+"fails": 0,
 "ok": "2026-09-25",
 "rows": [
 10,
@@ -37,10 +34,7 @@
 ]
 },
 "gu-ddm-r": {
-"alerted": "2026-09-25",
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectBbsNttList.do?bbsNo=42&key=208 (Caused by ConnectTimeoutError(<HTTPSC",
-"err_at": "2026-09-25",
-"fails": 2,
+"fails": 0,
 "ok": "2026-09-25",
 "rows": [
 10,
@@ -88,9 +82,7 @@
 ]
 },
 "gu-ep-n": {
-"err": "ConnectionError: HTTPSConnectionPool(host='www.ep.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?key=754&notAncmtSeCode=01 (Caused by NameResolutionErr",
-"err_at": "2026-09-25",
-"fails": 1,
+"fails": 0,
 "ok": "2026-09-25",
 "rows": [
 10,
@@ -106,9 +98,7 @@
 ]
 },
 "gu-ep-r": {
-"err": "ConnectionError: HTTPSConnectionPool(host='www.ep.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?key=748&notAncmtSeCode=02 (Caused by NameResolutionErr",
-"err_at": "2026-09-25",
-"fails": 1,
+"fails": 0,
 "ok": "2026-09-25",
 "rows": [
 10,
@@ -172,7 +162,9 @@
 ]
 },
 "gu-gangnam": {
-"fails": 0,
+"err": "ReadTimeout: HTTPSConnectionPool(host='gangnam.eminwon.seoul.kr', port=443): Read timed out. (read timeout=25)",
+"err_at": "2026-09-25",
+"fails": 1,
 "ok": "2026-09-25",
 "rows": [
 50,
@@ -268,7 +260,9 @@
 ]
 },
 "gu-gwanak-n": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwanak.go.kr', port=443): Max retries exceeded with url: /site/gwanak/ex/bbsNew/List.do?typeCode=1 (Caused by ConnectTimeoutError(<HTT",
+"err_at": "2026-09-25",
+"fails": 1,
 "ok": "2026-09-25",
 "rows": [
 10,
@@ -284,7 +278,9 @@
 ]
 },
 "gu-gwanak-r": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwanak.go.kr', port=443): Max retries exceeded with url: /site/gwanak/ex/bbsNew/List.do?typeCode=4 (Caused by ConnectTimeoutError(<HTT",
+"err_at": "2026-09-25",
+"fails": 1,
 "ok": "2026-09-25",
 "rows": [
 10,
@@ -547,9 +543,10 @@
 ]
 },
 "gu-yangcheon": {
-"err": "ReadTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Read timed out. (read timeout=25)",
+"alerted": "2026-09-25",
+"err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
 "err_at": "2026-09-25",
-"fails": 1,
+"fails": 2,
 "ok": "2026-09-25",
 "rows": [
 50,
@@ -565,9 +562,10 @@
 ]
 },
 "gu-ydp-n": {
+"alerted": "2026-09-25",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-09-25",
-"fails": 1,
+"fails": 2,
 "ok": "2026-09-25",
 "rows": [
 10,
@@ -583,9 +581,10 @@
 ]
 },
 "gu-ydp-r": {
+"alerted": "2026-09-25",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-09-25",
-"fails": 1,
+"fails": 2,
 "ok": "2026-09-25",
 "rows": [
 10,
@@ -620,13 +619,13 @@
 "fails": 0,
 "ok": "2026-09-25",
 "rows": [
-94,
 97,
 97,
 89,
 89,
 89,
 89,
+82,
 82,
 82,
 82
@@ -2025,5 +2024,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-25T21:12:12+09:00"
+"updated_at": "2026-09-25T22:07:41+09:00"
 }
