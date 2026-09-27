@@ -178,9 +178,7 @@
 ]
 },
 "gu-gangseo-n": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gangseo.seoul.kr', port=443): Max retries exceeded with url: /gs040301 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.gangs",
-"err_at": "2026-09-27",
-"fails": 1,
+"fails": 0,
 "ok": "2026-09-27",
 "rows": [
 10,
@@ -196,9 +194,7 @@
 ]
 },
 "gu-gangseo-r": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gangseo.seoul.kr', port=443): Max retries exceeded with url: /gs040302 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.gangs",
-"err_at": "2026-09-27",
-"fails": 1,
+"fails": 0,
 "ok": "2026-09-27",
 "rows": [
 10,
@@ -544,7 +540,7 @@
 "alerted": "2026-09-27",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
 "err_at": "2026-09-27",
-"fails": 3,
+"fails": 4,
 "ok": "2026-09-26",
 "rows": [
 50,
@@ -560,7 +556,9 @@
 ]
 },
 "gu-ydp-n": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
+"err_at": "2026-09-27",
+"fails": 1,
 "ok": "2026-09-27",
 "rows": [
 10,
@@ -576,7 +574,9 @@
 ]
 },
 "gu-ydp-r": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
+"err_at": "2026-09-27",
+"fails": 1,
 "ok": "2026-09-27",
 "rows": [
 10,
@@ -611,11 +611,11 @@
 "fails": 0,
 "ok": "2026-09-27",
 "rows": [
-89,
 82,
 82,
 82,
 82,
+79,
 79,
 79,
 79,
@@ -2016,5 +2016,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-27T16:14:16+09:00"
+"updated_at": "2026-09-27T21:23:12+09:00"
 }
