@@ -1,11 +1,10 @@
 {
-"count": 229,
+"count": 235,
 "health": {
 "g2b-servc": {
 "fails": 0,
-"ok": "2026-09-25",
+"ok": "2026-09-28",
 "rows": [
-3168,
 3189,
 3587,
 3218,
@@ -14,7 +13,8 @@
 3101,
 3103,
 2434,
-2435
+2435,
+2307
 ]
 },
 "gu-ddm-n": {
@@ -793,6 +793,12 @@
 "s": "g2b-servc",
 "t": "산림생태복원을 위한 시드볼 기술개발Ⅱ"
 },
+"2f3ec3acf96c22a45e97": {
+"d": "2026-09-28",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01745080&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 산불예방 숲가꾸기사업(북방지구) 실시설계용역"
+},
 "2fa24280164debacff23": {
 "d": "2026-09-07",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01717450&bidPbancOrd=000",
@@ -954,6 +960,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01736249&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "제20회 산림교육전문가 역량강화 보수교육 및 전국 숲해설 경연대회 운영대행"
+},
+"4a62af0786088c07e9f1": {
+"d": "2026-09-28",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01745868&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "(위탁)원격탐사와 현장 실측을 통한 기존 산림 재적식 재평가 및 개선방안 도출"
 },
 "4a70c3c59eb1b328b98d": {
 "d": "2026-09-16",
@@ -1345,6 +1357,12 @@
 "s": "g2b-servc",
 "t": "경주시 도시바람길숲(황성공원) 조성사업(2단계) 건설폐기물 처리용역(처리)"
 },
+"9701e4c3f7ab6ea0732d": {
+"d": "2026-09-28",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01744026&bidPbancOrd=001",
+"s": "g2b-servc",
+"t": "홍주종합경기장 종합정비용역(군관리계획 변경, 보조경기장 기본 및 실시설계) 사업수행능력평가서 제출 안내 공고(P.Q)"
+},
 "97ceebf2e82ca0f1cbd9": {
 "d": "2026-09-11",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01724894&bidPbancOrd=000",
@@ -1519,6 +1537,12 @@
 "s": "g2b-servc",
 "t": "한국산림복지진흥원 개원 10주년 기념 행사 운영"
 },
+"b1facd708ba1afcd6fab": {
+"d": "2026-09-28",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01745058&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 산불예방 숲가꾸기사업(내면지구) 실시설계용역"
+},
 "b2ccea0f40ef2216e779": {
 "d": "2026-09-17",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01734241&bidPbancOrd=000",
@@ -1632,6 +1656,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01711027&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "동천~황성 도시숲 조성사업(우선사업구간) 실시설계 용역"
+},
+"bf3b39d8fc29c9e68c98": {
+"d": "2026-09-28",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01745102&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 산불예방 숲가꾸기사업(서면지구) 실시설계용역"
 },
 "c0a5f18f68d793ffb1de": {
 "d": "2026-08-04",
@@ -1849,6 +1879,12 @@
 "s": "g2b-servc",
 "t": "2026년 덕양구 가로수 낙엽(마대포함) 위탁 처리 용역"
 },
+"e3a78e2e7d4887ff6e0a": {
+"d": "2026-09-28",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01744925&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 큰나무 숲가꾸기사업 감리용역"
+},
 "e3fa257ac1d2a27c8d86": {
 "d": "2026-08-10",
 "l": "https://www.seoul.go.kr/news/news_notice.do?bbsNo=277&nttNo=463600",
@@ -2024,5 +2060,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-27T22:28:33+09:00"
+"updated_at": "2026-09-28T14:22:22+09:00"
 }
