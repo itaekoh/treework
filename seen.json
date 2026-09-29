@@ -290,7 +290,9 @@
 ]
 },
 "gu-gwangjin-n": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000378/list.do?menuNo=200192 (Caused by ConnectTimeoutError(<",
+"err_at": "2026-09-29",
+"fails": 1,
 "ok": "2026-09-29",
 "rows": [
 10,
@@ -306,7 +308,9 @@
 ]
 },
 "gu-gwangjin-r": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000004/list.do?menuNo=200193 (Caused by ConnectTimeoutError(<",
+"err_at": "2026-09-29",
+"fails": 1,
 "ok": "2026-09-29",
 "rows": [
 10,
@@ -537,7 +541,9 @@
 ]
 },
 "gu-yangcheon": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
+"err_at": "2026-09-29",
+"fails": 1,
 "ok": "2026-09-29",
 "rows": [
 50,
@@ -572,7 +578,6 @@
 "fails": 0,
 "ok": "2026-09-29",
 "rows": [
-10,
 9,
 9,
 9,
@@ -581,6 +586,7 @@
 9,
 10,
 10,
+9,
 9
 ]
 },
@@ -608,11 +614,11 @@
 79,
 79,
 79,
-79,
 78,
 79,
 78,
 77,
+81,
 81
 ]
 },
@@ -2159,5 +2165,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-29T15:13:36+09:00"
+"updated_at": "2026-09-29T16:44:36+09:00"
 }
