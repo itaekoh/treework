@@ -1,11 +1,10 @@
 {
-"count": 245,
+"count": 254,
 "health": {
 "g2b-servc": {
 "fails": 0,
-"ok": "2026-09-28",
+"ok": "2026-09-29",
 "rows": [
-3587,
 3218,
 3580,
 3350,
@@ -14,7 +13,8 @@
 2434,
 2435,
 2307,
-2693
+2693,
+2354
 ]
 },
 "gu-ddm-n": {
@@ -1000,6 +1000,12 @@
 "s": "g2b-servc",
 "t": "2026년 제주창조경제혁신센터 제주 지역창업페스티벌 X 스타트업 위크 행사 운영 대행 용역"
 },
+"4ddb5abe641899248c15": {
+"d": "2026-09-29",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748256&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "(위탁)원격탐사와 현장 실측을 통한 기존 산림 재적식 재평가 및 개선방안 도출"
+},
 "4de91f6fa3b07c727c8b": {
 "d": "2026-09-16",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01732299&bidPbancOrd=000",
@@ -1054,6 +1060,12 @@
 "s": "g2b-servc",
 "t": "2026년 하반기 산불예방 숲가꾸기(4차) 사업 실시설계 및 선목사업 용역"
 },
+"597f7dee541f075c0df2": {
+"d": "2026-09-29",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747137&bidPbancOrd=001",
+"s": "g2b-servc",
+"t": "2026년 동해바다숲(영덕군 사진2리) 1년차 통합관리사업 관리 용역"
+},
 "5aeab2baa1b6dc231886": {
 "d": "2026-09-01",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01706093&bidPbancOrd=000",
@@ -1077,6 +1089,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01708103&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 하반기 용인지사 조경관리 용역"
+},
+"5f4785c3a323cd3d9728": {
+"d": "2026-09-29",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747902&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 산림사업의 관리업무대행 산불예방 숲가꾸기사업 2차 감리용역"
 },
 "5f773ec843d31b391f41": {
 "d": "2026-09-11",
@@ -1137,6 +1155,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01745728&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 산불예방숲가꾸기사업(부북-초동지구) 실시설계 및 선목용역"
+},
+"69f925d3383141331bef": {
+"d": "2026-09-29",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01740743&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 매헌시민의숲 화장실 등 야간 청소 용역"
 },
 "6bcda2805dba14ccbd48": {
 "d": "2026-09-01",
@@ -1233,6 +1257,12 @@
 "l": "https://job.seoul.go.kr/hmpg/rmim/pjmg/pjmgDetail.do?pbc_recmnt_mng_no=5BE754E66E250342E063C0A8A0284550",
 "s": "seoul-job-public",
 "t": "(서울시청) 서울 매력일자리(정원여가사업 기획 전문가) 사업 참여자 모집 공고"
+},
+"7e5fd1943a1655bb8c03": {
+"d": "2026-09-29",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747456&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 소나무재선충병 수종전환 방제 관리업무대행 용역(협상에 의한 계약)-긴급 재공고"
 },
 "80e87a30d8896d383e5f": {
 "d": "2026-08-18",
@@ -1467,6 +1497,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01715359&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "보성 주월산 산림복지·웰니스 복합단지 기본구상 용역"
+},
+"a54f4e228f89e6fbb71a": {
+"d": "2026-09-29",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747170&bidPbancOrd=001",
+"s": "g2b-servc",
+"t": "2026년 동해바다숲(포항시 계원2리두원리) 1년차 통합관리사업 관리 용역"
 },
 "a5a73365802d6df00c9f": {
 "d": "2026-08-04",
@@ -1743,6 +1779,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01740991&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 강남지사 하반기 조경관리 용역"
+},
+"c22b16e04383bc426e5e": {
+"d": "2026-09-29",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748646&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "국립농업박물관 곤충정원 조성 전시 연출 설계 및 설치 용역(재공고)"
 },
 "c443906bd869762e20f2": {
 "d": "2026-09-09",
@@ -2086,6 +2128,18 @@
 "s": "g2b-servc",
 "t": "광주 신창동 유적 식생정비 기본 및 실시설계 용역"
 },
+"fd944265d83a5993d2dc": {
+"d": "2026-09-29",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748179&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "환경 최적화 대응을 위한 국내외 토양 모델 기반 스마트 로봇 방제 시스템 최적화 기술 개발"
+},
+"fde2ea5f92ef76d32e1d": {
+"d": "2026-09-29",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747369&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "제22회 임업인 한마음대회 행사대행 용역"
+},
 "fde30bdcbcce067a35f8": {
 "d": "2026-09-16",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01730321&bidPbancOrd=000",
@@ -2111,5 +2165,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-29T01:04:43+09:00"
+"updated_at": "2026-09-29T14:42:52+09:00"
 }
