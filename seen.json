@@ -1,11 +1,10 @@
 {
-"count": 255,
+"count": 260,
 "health": {
 "g2b-servc": {
 "fails": 0,
-"ok": "2026-09-29",
+"ok": "2026-09-30",
 "rows": [
-3580,
 3350,
 3101,
 3103,
@@ -14,7 +13,8 @@
 2307,
 2693,
 2354,
-2691
+2691,
+2313
 ]
 },
 "gu-ddm-n": {
@@ -1113,6 +1113,12 @@
 "s": "gu-nowon",
 "t": "2026년 노원구 푸른도시과 공원관리팀 기간제근로자 추가 채용 재공고"
 },
+"6008eeaeee2a24325b09": {
+"d": "2026-09-30",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750127&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 큰나무 숲가꾸기사업 실시설계용역"
+},
 "61a3145ced6c5304e3d9": {
 "d": "2026-09-24",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01744518&bidPbancOrd=000",
@@ -1629,6 +1635,12 @@
 "s": "g2b-servc",
 "t": "2026년 산불예방 숲가꾸기사업(내면지구) 실시설계용역"
 },
+"b255c51e32d464f34d06": {
+"d": "2026-09-30",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751020&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 정책숲가꾸기(산불예방, 큰나무) 감리용역"
+},
 "b2ccea0f40ef2216e779": {
 "d": "2026-09-17",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01734241&bidPbancOrd=000",
@@ -1911,6 +1923,12 @@
 "s": "g2b-servc",
 "t": "북서울꿈의숲 가을 음악회 행사 용역"
 },
+"d6af8342b77a5d9807bd": {
+"d": "2026-09-30",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750099&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 산불예방 숲가꾸기(4차) 감리용역"
+},
 "d791c87bd0c750a9aa58": {
 "d": "2026-09-07",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01717385&bidPbancOrd=000",
@@ -1995,6 +2013,12 @@
 "s": "g2b-servc",
 "t": "농작물병해충·AI 국악·신재생에너지 데이터 통합 위탁감리"
 },
+"e58e6e766736ce921ebd": {
+"d": "2026-09-30",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750068&bidPbancOrd=001",
+"s": "g2b-servc",
+"t": "2026년 산불예방 숲가꾸기사업(3차) 감리용역"
+},
 "e6de2ca510e454cbe826": {
 "d": "2026-09-01",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01705009&bidPbancOrd=000",
@@ -2066,6 +2090,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01705098&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 포항시 소나무재선충병 스마트 예찰 및 기본설계용역"
+},
+"f12e850146541b127e16": {
+"d": "2026-09-30",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748793&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "중랑몽땅 누리숲 조성 공사 폐기물처리용역"
 },
 "f186c929b234dd459df7": {
 "d": "2026-09-11",
@@ -2176,5 +2206,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-29T23:29:17+09:00"
+"updated_at": "2026-09-30T14:31:20+09:00"
 }
