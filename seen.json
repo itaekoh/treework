@@ -1,11 +1,10 @@
 {
-"count": 269,
+"count": 276,
 "health": {
 "g2b-servc": {
 "fails": 0,
-"ok": "2026-09-30",
+"ok": "2026-10-01",
 "rows": [
-3101,
 3103,
 2434,
 2435,
@@ -14,7 +13,8 @@
 2354,
 2691,
 2313,
-2619
+2619,
+2311
 ]
 },
 "gu-ddm-n": {
@@ -784,6 +784,12 @@
 "s": "g2b-servc",
 "t": "2026년 하반기 소나무재선충병 방제사업 감리 용역"
 },
+"264547eb78fc4a8a2cca": {
+"d": "2026-10-01",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01752900&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 동해바다숲(동해시 천곡동) 1년차 통합관리사업 관리 용역"
+},
 "266708e6c056497e6279": {
 "d": "2026-09-28",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01745663&bidPbancOrd=000",
@@ -831,6 +837,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01717450&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 제주 바다숲(서귀포시 태흥2리) 1년차 해조류확산단지 조성"
+},
+"30210c5eb77cca9018e5": {
+"d": "2026-10-01",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01752940&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 동해바다숲(삼척시 임원리) 1년차 통합관리사업 관리 용역"
 },
 "3071a50e797cd4707f8a": {
 "d": "2026-08-31",
@@ -1240,6 +1252,12 @@
 "s": "g2b-servc",
 "t": "2026년 제주 바다숲 4년차 조성해역 해조류 확산단지 조성(모조주머니)"
 },
+"7126f17f1affa4804afb": {
+"d": "2026-10-01",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01753019&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "중랑몽땅 누리숲 조성 공사 폐기물처리용역"
+},
 "72c66b0b8dac48433dc1": {
 "d": "2026-09-15",
 "l": "https://dongjak.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=29397&homepage_pbs_yn=Y&subCheck=Y",
@@ -1293,6 +1311,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01723089&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 제주창조경제혁신센터 「제1회 로컬창업 페스타 in 제주」운영 대행 용역"
+},
+"7b05ba3040c4e3676344": {
+"d": "2026-10-01",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01752675&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2027년 김해시 소나무재선충병 지역방제계획 수립 용역_전자수의시담"
 },
 "7b1034161bf4e6f2c071": {
 "d": "2026-09-07",
@@ -1660,6 +1684,12 @@
 "s": "g2b-servc",
 "t": "2026년 바다숲 조성사업 통합관리용역"
 },
+"af55198b927387e0f3ef": {
+"d": "2026-10-01",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01752223&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "대구 제2수목원 기반시설 조성공사 임목폐기물 운반 및 처리용역"
+},
 "b0e5545ea8f5eaec9ad0": {
 "d": "2026-09-28",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747137&bidPbancOrd=000",
@@ -2020,6 +2050,12 @@
 "s": "g2b-servc",
 "t": "2026년 남해바다숲 신규지(거제시 외포) 하반기 해조류 확산단지 조성 및 표시부이 설치"
 },
+"de96180adda823c69d13": {
+"d": "2026-10-01",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01753068&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 산불예방숲가꾸기사업 실시설계용역"
+},
 "e094d6f4468c221ca0d8": {
 "d": "2026-09-17",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01733460&bidPbancOrd=000",
@@ -2067,6 +2103,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750068&bidPbancOrd=001",
 "s": "g2b-servc",
 "t": "2026년 산불예방 숲가꾸기사업(3차) 감리용역"
+},
+"e606548c0424fb42a987": {
+"d": "2026-10-01",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01752986&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 동해바다숲(강릉시 사근진) 1년차 통합관리 사업관리 용역"
 },
 "e6de2ca510e454cbe826": {
 "d": "2026-09-01",
@@ -2255,5 +2297,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-09-30T23:21:09+09:00"
+"updated_at": "2026-10-01T14:51:10+09:00"
 }
