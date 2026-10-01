@@ -1,11 +1,10 @@
 {
-"count": 276,
+"count": 279,
 "health": {
 "g2b-servc": {
 "fails": 0,
 "ok": "2026-10-01",
 "rows": [
-3103,
 2434,
 2435,
 2307,
@@ -14,7 +13,8 @@
 2691,
 2313,
 2619,
-2311
+2311,
+2591
 ]
 },
 "gu-ddm-n": {
@@ -667,6 +667,12 @@
 "s": "g2b-servc",
 "t": "2026년 산림재해 긴급복구 실시설계용역(2권역)"
 },
+"06ae3a31bc3d47b709f0": {
+"d": "2026-10-01",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01753271&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 동해바다숲(포항시 계원2리두원리) 1년차 통합관리사업 관리 용역"
+},
 "07305a437add5d552780": {
 "d": "2026-08-28",
 "l": "https://www.gangseo.seoul.kr/gs040302/view?srchPage=&curPage=1&srchKey=&srchText=&mgtNo=68055",
@@ -984,6 +990,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01718212&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "산림생태복원을 위한 시드볼 기술개발Ⅱ"
+},
+"478e5f9c30a3cf8615eb": {
+"d": "2026-10-01",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01753216&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 동해바다숲(영덕군 사진2리) 1년차 통합관리사업 관리 용역"
 },
 "47f70084fa33c81eda57": {
 "d": "2026-09-02",
@@ -1675,6 +1687,12 @@
 "s": "g2b-servc",
 "t": "2026년 산림재해방지조림사업 실시설계용역(봉양읍 옥전리 산58 외)"
 },
+"ad7e93477f1578c0be27": {
+"d": "2026-10-01",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01753595&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "용궐산 산림복지단지 조성계획 전략환경영향평가 용역"
+},
 "ae47896f0fef6989f8a0": {
 "d": "2026-09-16",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01731128&bidPbancOrd=002",
@@ -2300,5 +2318,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-01T16:51:30+09:00"
+"updated_at": "2026-10-01T22:11:48+09:00"
 }
