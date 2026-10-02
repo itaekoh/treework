@@ -18,7 +18,9 @@
 ]
 },
 "gu-ddm-n": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonWebList.do?key=3291 (Caused by ConnectTimeoutError(<HTTPSConne",
+"err_at": "2026-10-02",
+"fails": 1,
 "ok": "2026-10-02",
 "rows": [
 10,
@@ -34,7 +36,9 @@
 ]
 },
 "gu-ddm-r": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectBbsNttList.do?bbsNo=42&key=208 (Caused by ConnectTimeoutError(<HTTPSC",
+"err_at": "2026-10-02",
+"fails": 1,
 "ok": "2026-10-02",
 "rows": [
 10,
@@ -162,7 +166,9 @@
 ]
 },
 "gu-gangnam": {
-"fails": 0,
+"err": "ReadTimeout: HTTPSConnectionPool(host='gangnam.eminwon.seoul.kr', port=443): Read timed out. (read timeout=25)",
+"err_at": "2026-10-02",
+"fails": 1,
 "ok": "2026-10-02",
 "rows": [
 50,
@@ -178,7 +184,9 @@
 ]
 },
 "gu-gangseo-n": {
-"fails": 0,
+"err": "ReadTimeout: HTTPSConnectionPool(host='www.gangseo.seoul.kr', port=443): Read timed out. (read timeout=25)",
+"err_at": "2026-10-02",
+"fails": 1,
 "ok": "2026-10-02",
 "rows": [
 10,
@@ -194,7 +202,9 @@
 ]
 },
 "gu-gangseo-r": {
-"fails": 0,
+"err": "ReadTimeout: HTTPSConnectionPool(host='www.gangseo.seoul.kr', port=443): Read timed out. (read timeout=25)",
+"err_at": "2026-10-02",
+"fails": 1,
 "ok": "2026-10-02",
 "rows": [
 10,
@@ -290,11 +300,8 @@
 ]
 },
 "gu-gwangjin-n": {
-"alerted": "2026-10-02",
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000378/list.do?menuNo=200192 (Caused by ConnectTimeoutError(<",
-"err_at": "2026-10-02",
-"fails": 2,
-"ok": "2026-10-01",
+"fails": 0,
+"ok": "2026-10-02",
 "rows": [
 10,
 10,
@@ -309,11 +316,8 @@
 ]
 },
 "gu-gwangjin-r": {
-"alerted": "2026-10-02",
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000004/list.do?menuNo=200193 (Caused by ConnectTimeoutError(<",
-"err_at": "2026-10-02",
-"fails": 2,
-"ok": "2026-10-01",
+"fails": 0,
+"ok": "2026-10-02",
 "rows": [
 10,
 10,
@@ -463,7 +467,9 @@
 ]
 },
 "gu-seocho": {
-"fails": 0,
+"err": "ReadTimeout: HTTPSConnectionPool(host='eminwon.seocho.go.kr', port=443): Read timed out. (read timeout=25)",
+"err_at": "2026-10-02",
+"fails": 1,
 "ok": "2026-10-02",
 "rows": [
 50,
@@ -543,9 +549,10 @@
 ]
 },
 "gu-yangcheon": {
+"alerted": "2026-10-02",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
 "err_at": "2026-10-02",
-"fails": 1,
+"fails": 2,
 "ok": "2026-10-02",
 "rows": [
 50,
@@ -561,9 +568,10 @@
 ]
 },
 "gu-ydp-n": {
+"alerted": "2026-10-02",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-10-02",
-"fails": 1,
+"fails": 2,
 "ok": "2026-10-02",
 "rows": [
 10,
@@ -579,9 +587,10 @@
 ]
 },
 "gu-ydp-r": {
+"alerted": "2026-10-02",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-10-02",
-"fails": 1,
+"fails": 2,
 "ok": "2026-10-02",
 "rows": [
 9,
@@ -616,7 +625,6 @@
 "fails": 0,
 "ok": "2026-10-02",
 "rows": [
-76,
 78,
 78,
 78,
@@ -625,7 +633,8 @@
 87,
 87,
 85,
-86
+86,
+87
 ]
 },
 "seoul-notice": {
@@ -2399,5 +2408,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-02T21:33:04+09:00"
+"updated_at": "2026-10-02T22:08:53+09:00"
 }
