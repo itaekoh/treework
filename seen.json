@@ -1,11 +1,10 @@
 {
-"count": 279,
+"count": 282,
 "health": {
 "g2b-servc": {
 "fails": 0,
-"ok": "2026-10-01",
+"ok": "2026-10-02",
 "rows": [
-2434,
 2435,
 2307,
 2693,
@@ -14,7 +13,8 @@
 2313,
 2619,
 2311,
-2591
+2591,
+2838
 ]
 },
 "gu-ddm-n": {
@@ -986,6 +986,18 @@
 "s": "g2b-servc",
 "t": "[1권역]2026년 운학초 외 21교 수목 및 관목 전정 용역"
 },
+"449b2bf59309a36d9fc1": {
+"d": "2026-10-02",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01755025&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "제18회 시장·군수·구청장 산림연찬회 행사 대행"
+},
+"458c9600d98a473809b3": {
+"d": "2026-10-02",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01755015&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "핵융합 특수목적법인 설립 요건 및 민관협력 기본방향 기획연구"
+},
 "464afb24586e6d2c8708": {
 "d": "2026-09-30",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750477&bidPbancOrd=000",
@@ -1555,6 +1567,12 @@
 "l": "https://www.gangdong.go.kr/web/newportal/notice/02/58749",
 "s": "gu-gangdong-r",
 "t": "2026년 푸른도시과 기간제근로자 3차 추가채용(재공고) 공고"
+},
+"9bfbab7637e7089ac736": {
+"d": "2026-10-02",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01755081&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 도시숲사랑 캠페인(달팽이마라톤)행사 대행"
 },
 "9e9f9e0b87c57ad6dad2": {
 "d": "2026-09-09",
@@ -2325,5 +2343,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-01T23:55:55+09:00"
+"updated_at": "2026-10-02T14:35:38+09:00"
 }
