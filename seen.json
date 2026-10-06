@@ -1,14 +1,10 @@
 {
-"count": 293,
+"count": 303,
 "health": {
 "g2b-servc": {
-"alerted": "2026-10-06",
-"err": "ConnectTimeout: HTTPSConnectionPool(host='apis.data.go.kr', port=443): Max retries exceeded with url: /1230000/ad/BidPublicInfoService/getBidPblancListInfoServc?serviceKey=5%2FkxQg",
-"err_at": "2026-10-06",
-"fails": 2,
-"ok": "2026-10-05",
+"fails": 0,
+"ok": "2026-10-06",
 "rows": [
-2693,
 2354,
 2691,
 2313,
@@ -17,7 +13,8 @@
 2591,
 2838,
 3072,
-3078
+3078,
+3133
 ]
 },
 "gu-ddm-n": {
@@ -719,6 +716,12 @@
 "s": "g2b-servc",
 "t": "2026년 소나무재선충병 수종전환 방제 관리업무대행 용역(협상에 의한 계약)-긴급"
 },
+"0e820f351cb804be57b6": {
+"d": "2026-10-06",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01758051&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2027~2029년 다목적 대형방제선(엔담호) 위탁관리"
+},
 "134db48cd2017e1dafa1": {
 "d": "2026-09-28",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746219&bidPbancOrd=000",
@@ -778,6 +781,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01743063&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 산불예방 숲가꾸기사업(3차) 실시설계용역"
+},
+"2364c127cc824aa77e46": {
+"d": "2026-10-06",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01758946&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 소나무재선충병 예방나무주사(대천5동 일원) 감리용역"
 },
 "24779b46e9545f0768f7": {
 "d": "2026-09-30",
@@ -959,6 +968,12 @@
 "s": "gu-songpa-r",
 "t": "송파책박물관 단시간 근로자(어린이 전시실, 도서보조) 채용 공고"
 },
+"3f7602c472f4a70356e4": {
+"d": "2026-10-06",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01757593&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "천안시 지방정원 조성사업 소규모 환경영향평가 용역"
+},
 "40bd6bc68265fbddbaa4": {
 "d": "2026-09-22",
 "l": "https://job.seoul.go.kr/hmpg/rmim/pjmg/pjmgDetail.do?pbc_recmnt_mng_no=5C08CDA3A0ED01C2E063C0A8A028063C",
@@ -1079,6 +1094,12 @@
 "s": "g2b-servc",
 "t": "2026년 선도 산림경영단지 조림사업 감리용역"
 },
+"4e95f8bfdefcd22871bf": {
+"d": "2026-10-06",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750099&bidPbancOrd=001",
+"s": "g2b-servc",
+"t": "2026년 산불예방 숲가꾸기(4차) 감리용역"
+},
 "50ff35a8ac60c5a59184": {
 "d": "2026-09-17",
 "l": "https://www.songpa.go.kr/www/selectGosiData.do?not_ancmt_mgt_no=33710&searchCnd=all&searchKrwd=&pageIndex=1&key=2776",
@@ -1144,6 +1165,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747137&bidPbancOrd=001",
 "s": "g2b-servc",
 "t": "2026년 동해바다숲(영덕군 사진2리) 1년차 통합관리사업 관리 용역"
+},
+"5a99a996e41586fc425c": {
+"d": "2026-10-06",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01754952&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "(가칭)유아숲 생태놀이 체험장 신축공사 본인증 용역"
 },
 "5aeab2baa1b6dc231886": {
 "d": "2026-09-01",
@@ -1403,6 +1430,12 @@
 "s": "g2b-servc",
 "t": "2027년도 평택시 연차별 가로수 계획 수립 용역"
 },
+"81dd739ae05b971fbe81": {
+"d": "2026-10-06",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01758635&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "바다숲 기술 실증 단지(Test bed) 구축을 위한 사전영향조사"
+},
 "828b27312fc38dc603a6": {
 "d": "2026-09-01",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01703478&bidPbancOrd=000",
@@ -1504,6 +1537,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01715644&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 소나무재선충병 예방나무주사사업(하반기) 1지구 감리용역"
+},
+"90d8a0f48a224de30cb1": {
+"d": "2026-10-06",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01757574&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "경주 낭산 남봉구역 식생 관리계획 연구"
 },
 "90f2e241e2b0bbade8e8": {
 "d": "2026-09-17",
@@ -1667,6 +1706,12 @@
 "s": "g2b-servc",
 "t": "(재공고)도시숲 달빛거리 범죄예방디자인사업 용역 입찰 공고(협상에 의한 계약)"
 },
+"a651bb4263a1080ac247": {
+"d": "2026-10-06",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01758283&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "도시바람길숲 조성사업(공도 가로숲) 폐기물처리 용역"
+},
 "a8a441adca410ff42e42": {
 "d": "2026-09-09",
 "l": "https://www.sd.go.kr/main/selectBbsNttView.do?bbsNo=185&nttNo=361272&&pageUnit=10&key=1474&nttShowPd=24&pageIndex=1",
@@ -1696,6 +1741,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746716&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "『진천군 도시바람길숲 조성사업(2차) 건설폐기물처리용역』에 따른 소액수의 견적제출 안내 공고"
+},
+"a9e51d9205b73c3ac7ac": {
+"d": "2026-10-06",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01758940&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 소나무재선충병 예방나무주사(청소면 일원) 감리용역"
 },
 "aa4ff1739e6e364a5ade": {
 "d": "2026-09-17",
@@ -1852,6 +1903,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01755372&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 4차 산불예방숲가꾸기사업(쾌빈지구)실시설계"
+},
+"b9619ccd9d347c9943c8": {
+"d": "2026-10-06",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01756597&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026 산림문화행사 행사대행용역"
 },
 "b9b623e71ae095becd6a": {
 "d": "2026-09-04",
@@ -2400,5 +2457,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-06T22:36:07+09:00"
+"updated_at": "2026-10-06T23:11:27+09:00"
 }
