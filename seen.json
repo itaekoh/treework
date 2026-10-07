@@ -1,11 +1,10 @@
 {
-"count": 303,
+"count": 308,
 "health": {
 "g2b-servc": {
 "fails": 0,
-"ok": "2026-10-06",
+"ok": "2026-10-07",
 "rows": [
-2354,
 2691,
 2313,
 2619,
@@ -14,7 +13,8 @@
 2838,
 3072,
 3078,
-3133
+3133,
+2834
 ]
 },
 "gu-ddm-n": {
@@ -669,6 +669,12 @@
 "s": "g2b-servc",
 "t": "(용역)2028년도 신규사업 발굴 및 산림과학기술분야 성과분석 연구"
 },
+"05dc30c1568855dc0ef3": {
+"d": "2026-10-07",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750099&bidPbancOrd=002",
+"s": "g2b-servc",
+"t": "2026년 산불예방 숲가꾸기(4차) 감리용역"
+},
 "05ec5de21945f4f63fe1": {
 "d": "2026-09-17",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01733563&bidPbancOrd=000",
@@ -788,6 +794,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01743063&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 산불예방 숲가꾸기사업(3차) 실시설계용역"
+},
+"23105c0626db59bbd8ed": {
+"d": "2026-10-07",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01758977&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "국립산림재난안전교육훈련센터 조성사업 설계용역"
 },
 "2364c127cc824aa77e46": {
 "d": "2026-10-06",
@@ -1119,6 +1131,12 @@
 "s": "g2b-servc",
 "t": "동티모르 산림복원 및 지속가능한 산림관리 역량강화사업 PMC 용역"
 },
+"5125093c18452f7baec3": {
+"d": "2026-10-07",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01757599&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "국도7,36호선 울진관내 수목 정비 용역"
+},
 "5216171ab576973a7c7a": {
 "d": "2026-09-29",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748553&bidPbancOrd=000",
@@ -1142,6 +1160,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01667155&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 산림복원지 유지·관리사업(볼음도) 실시설계 용역"
+},
+"5746462703c4061c9830": {
+"d": "2026-10-07",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01760257&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "진안 지혜의숲 도서관 건립 및 복합플랫폼 구축사업 시공단계의 감독권한대행등 통합건설사업관리용역"
 },
 "578d3c89f36433afaeef": {
 "d": "2026-10-02",
@@ -1869,6 +1893,12 @@
 "s": "g2b-servc",
 "t": "2026년 하반기 소나무재선충병 긴급방제사업 감리용역"
 },
+"b5847ca3d0fbb7cddec2": {
+"d": "2026-10-07",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01758575&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "경기북부어린이박물관 전시고도화사업] 상설전시(공룡숲) 개편 설계 및 체험전시물 제작·설치 용역(재공고)"
+},
 "b6857fb4c33cec2fd3df": {
 "d": "2026-09-09",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01701232&bidPbancOrd=000",
@@ -2464,5 +2494,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-06T23:36:42+09:00"
+"updated_at": "2026-10-07T14:57:48+09:00"
 }
