@@ -1,11 +1,10 @@
 {
-"count": 308,
+"count": 312,
 "health": {
 "g2b-servc": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
-2313,
 2619,
 2311,
 2591,
@@ -14,7 +13,8 @@
 3078,
 3133,
 2834,
-3204
+3204,
+2966
 ]
 },
 "gu-ddm-n": {
@@ -806,6 +806,12 @@
 "s": "g2b-servc",
 "t": "2026년 소나무재선충병 예방나무주사(대천5동 일원) 감리용역"
 },
+"2449ea20c224fbd94294": {
+"d": "2026-10-08",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01761149&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 선도 산림경영단지 임도구조개량사업 감리용역"
+},
 "24779b46e9545f0768f7": {
 "d": "2026-09-30",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751953&bidPbancOrd=000",
@@ -1502,6 +1508,12 @@
 "s": "g2b-servc",
 "t": "특수교량.의결서.산림유량 데이터 개방과제 위탁감리"
 },
+"8482fd939912fc9b8293": {
+"d": "2026-10-08",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01762505&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 숲가꾸기 4차(덩굴류제거)사업"
+},
 "85e97ca94f101c5ee5f0": {
 "d": "2026-09-09",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01717468&bidPbancOrd=000",
@@ -1531,6 +1543,12 @@
 "l": "https://job.seoul.go.kr/hmpg/rmim/pjmg/pjmgDetail.do?pbc_recmnt_mng_no=58E6E5A5AD4004B8E063C0A8A02853CA",
 "s": "seoul-job-public",
 "t": "2026년 월드컵공원 파크골프장 기간제노동자 채용 공고"
+},
+"89e222d4c5d2ce6c1a52": {
+"d": "2026-10-08",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01762012&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "카페인 함유 식품의 식생활 안전 관리 체계 마련 기획연구"
 },
 "8bc3285d2d05819578e5": {
 "d": "2026-09-16",
@@ -2138,6 +2156,12 @@
 "s": "g2b-servc",
 "t": "울진 금강소나무림 소나무재선충병 예찰 및 피해분석 용역"
 },
+"cfc828388be8e418406e": {
+"d": "2026-10-08",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01759129&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 통합숲가꾸기사업 감리용역(산불예방,가을철큰나무)"
+},
 "d0d7d8feab9a86319cb6": {
 "d": "2026-09-03",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01711122&bidPbancOrd=000",
@@ -2493,5 +2517,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-07T23:54:34+09:00"
+"updated_at": "2026-10-08T15:02:23+09:00"
 }
