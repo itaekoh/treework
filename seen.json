@@ -290,10 +290,8 @@
 ]
 },
 "gu-gwangjin-n": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000378/list.do?menuNo=200192 (Caused by ConnectTimeoutError(<",
-"err_at": "2026-10-08",
-"fails": 1,
-"ok": "2026-10-07",
+"fails": 0,
+"ok": "2026-10-08",
 "rows": [
 10,
 10,
@@ -308,10 +306,8 @@
 ]
 },
 "gu-gwangjin-r": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000004/list.do?menuNo=200193 (Caused by ConnectTimeoutError(<",
-"err_at": "2026-10-08",
-"fails": 1,
-"ok": "2026-10-07",
+"fails": 0,
+"ok": "2026-10-08",
 "rows": [
 10,
 10,
@@ -529,7 +525,6 @@
 "ok": "2026-10-08",
 "rows": [
 8,
-8,
 9,
 9,
 9,
@@ -537,6 +532,7 @@
 8,
 9,
 9,
+10,
 10
 ]
 },
@@ -544,7 +540,7 @@
 "alerted": "2026-10-08",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
 "err_at": "2026-10-08",
-"fails": 3,
+"fails": 4,
 "ok": "2026-10-07",
 "rows": [
 50,
@@ -560,7 +556,9 @@
 ]
 },
 "gu-ydp-n": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
+"err_at": "2026-10-08",
+"fails": 1,
 "ok": "2026-10-08",
 "rows": [
 10,
@@ -576,7 +574,9 @@
 ]
 },
 "gu-ydp-r": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
+"err_at": "2026-10-08",
+"fails": 1,
 "ok": "2026-10-08",
 "rows": [
 7,
@@ -611,12 +611,12 @@
 "fails": 0,
 "ok": "2026-10-08",
 "rows": [
-79,
 82,
 82,
 82,
 81,
 78,
+77,
 77,
 77,
 77,
@@ -2526,5 +2526,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-08T15:33:36+09:00"
+"updated_at": "2026-10-08T17:05:52+09:00"
 }
