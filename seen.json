@@ -1,5 +1,5 @@
 {
-"count": 312,
+"count": 314,
 "health": {
 "g2b-servc": {
 "fails": 0,
@@ -19,7 +19,7 @@
 },
 "gu-ddm-n": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 10,
 10,
@@ -35,7 +35,7 @@
 },
 "gu-ddm-r": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 10,
 10,
@@ -51,7 +51,7 @@
 },
 "gu-dobong": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 51,
 51,
@@ -67,7 +67,7 @@
 },
 "gu-dongjak": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 50,
 50,
@@ -83,7 +83,7 @@
 },
 "gu-ep-n": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 10,
 10,
@@ -99,7 +99,7 @@
 },
 "gu-ep-r": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 10,
 10,
@@ -115,7 +115,7 @@
 },
 "gu-gangbuk": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 51,
 51,
@@ -131,7 +131,7 @@
 },
 "gu-gangdong-n": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 10,
 10,
@@ -147,7 +147,7 @@
 },
 "gu-gangdong-r": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 10,
 10,
@@ -162,11 +162,8 @@
 ]
 },
 "gu-gangnam": {
-"alerted": "2026-10-07",
-"err": "ReadTimeout: HTTPSConnectionPool(host='gangnam.eminwon.seoul.kr', port=443): Read timed out. (read timeout=25)",
-"err_at": "2026-10-07",
-"fails": 2,
-"ok": "2026-10-07",
+"fails": 0,
+"ok": "2026-10-08",
 "rows": [
 50,
 50,
@@ -182,7 +179,7 @@
 },
 "gu-gangseo-n": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 10,
 10,
@@ -198,7 +195,7 @@
 },
 "gu-gangseo-r": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 10,
 10,
@@ -214,7 +211,7 @@
 },
 "gu-geumcheon": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 51,
 51,
@@ -230,7 +227,7 @@
 },
 "gu-guro-n": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 10,
 10,
@@ -246,7 +243,7 @@
 },
 "gu-guro-r": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 10,
 10,
@@ -262,7 +259,7 @@
 },
 "gu-gwanak-n": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 10,
 10,
@@ -278,7 +275,7 @@
 },
 "gu-gwanak-r": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 10,
 10,
@@ -293,7 +290,9 @@
 ]
 },
 "gu-gwangjin-n": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000378/list.do?menuNo=200192 (Caused by ConnectTimeoutError(<",
+"err_at": "2026-10-08",
+"fails": 1,
 "ok": "2026-10-07",
 "rows": [
 10,
@@ -309,7 +308,9 @@
 ]
 },
 "gu-gwangjin-r": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000004/list.do?menuNo=200193 (Caused by ConnectTimeoutError(<",
+"err_at": "2026-10-08",
+"fails": 1,
 "ok": "2026-10-07",
 "rows": [
 10,
@@ -326,7 +327,7 @@
 },
 "gu-jongno-n": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 20,
 20,
@@ -342,7 +343,7 @@
 },
 "gu-jongno-r": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 10,
 10,
@@ -358,7 +359,7 @@
 },
 "gu-junggu-n": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 10,
 10,
@@ -374,7 +375,7 @@
 },
 "gu-junggu-r": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 11,
 11,
@@ -397,7 +398,7 @@
 },
 "gu-mapo-n": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 10,
 10,
@@ -413,7 +414,7 @@
 },
 "gu-nowon": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 51,
 51,
@@ -429,7 +430,7 @@
 },
 "gu-sdm-n": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 10,
 10,
@@ -445,7 +446,7 @@
 },
 "gu-sdm-r": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 10,
 10,
@@ -461,7 +462,7 @@
 },
 "gu-seocho": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 50,
 50,
@@ -477,7 +478,7 @@
 },
 "gu-seongdong-n": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 10,
 10,
@@ -493,7 +494,7 @@
 },
 "gu-seongdong-r": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 10,
 10,
@@ -509,7 +510,7 @@
 },
 "gu-songpa-n": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 10,
 10,
@@ -525,25 +526,25 @@
 },
 "gu-songpa-r": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 8,
 8,
-8,
 9,
 9,
 9,
 8,
 8,
 9,
-9
+9,
+10
 ]
 },
 "gu-yangcheon": {
-"alerted": "2026-10-07",
+"alerted": "2026-10-08",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
-"err_at": "2026-10-07",
-"fails": 2,
+"err_at": "2026-10-08",
+"fails": 3,
 "ok": "2026-10-07",
 "rows": [
 50,
@@ -559,10 +560,8 @@
 ]
 },
 "gu-ydp-n": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-10-07",
-"fails": 1,
-"ok": "2026-10-07",
+"fails": 0,
+"ok": "2026-10-08",
 "rows": [
 10,
 10,
@@ -577,12 +576,9 @@
 ]
 },
 "gu-ydp-r": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-10-07",
-"fails": 1,
-"ok": "2026-10-07",
+"fails": 0,
+"ok": "2026-10-08",
 "rows": [
-7,
 7,
 7,
 7,
@@ -591,12 +587,13 @@
 8,
 8,
 6,
+6,
 6
 ]
 },
 "gu-yongsan-n": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 10,
 10,
@@ -612,9 +609,8 @@
 },
 "seoul-job-public": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
-79,
 79,
 82,
 82,
@@ -623,12 +619,13 @@
 78,
 77,
 77,
+77,
 77
 ]
 },
 "seoul-notice": {
 "fails": 0,
-"ok": "2026-10-07",
+"ok": "2026-10-08",
 "rows": [
 100,
 100,
@@ -2042,6 +2039,12 @@
 "s": "g2b-servc",
 "t": "2026년 산불예방 숲가꾸기사업(서면지구) 실시설계용역"
 },
+"c0a5e92c10c8808bb3a1": {
+"d": "2026-10-08",
+"l": "https://eminwon.seocho.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=46118&homepage_pbs_yn=Y&subCheck=Y",
+"s": "gu-seocho",
+"t": "가. 공 고 명: 도시관리계획(도시계획시설 : 도로 및 경관녹지) 실시계획(변경) 인가를 위한 열람공고"
+},
 "c0a5f18f68d793ffb1de": {
 "d": "2026-08-04",
 "l": "https://www.geumcheon.go.kr/",
@@ -2378,6 +2381,12 @@
 "s": "g2b-servc",
 "t": "2026년 산림재해방지조림사업감리용역(봉양읍 옥전리 산58 외)"
 },
+"ecf25ba32c9060c69086": {
+"d": "2026-10-08",
+"l": "https://dobong.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=49262&homepage_pbs_yn=Y&subCheck=Y",
+"s": "gu-dobong",
+"t": "2027년 공원여가과 시설물관리원(공무직) 채용 공고"
+},
 "ed7f0a0fc15a9c2425ca": {
 "d": "2026-09-01",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01707124&bidPbancOrd=000",
@@ -2517,5 +2526,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-08T15:02:23+09:00"
+"updated_at": "2026-10-08T15:33:36+09:00"
 }
