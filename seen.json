@@ -19,7 +19,7 @@
 },
 "gu-ddm-n": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 10,
 10,
@@ -35,7 +35,7 @@
 },
 "gu-ddm-r": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 10,
 10,
@@ -51,7 +51,7 @@
 },
 "gu-dobong": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 51,
 51,
@@ -67,7 +67,7 @@
 },
 "gu-dongjak": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 50,
 50,
@@ -83,7 +83,7 @@
 },
 "gu-ep-n": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 10,
 10,
@@ -99,7 +99,7 @@
 },
 "gu-ep-r": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 10,
 10,
@@ -115,7 +115,7 @@
 },
 "gu-gangbuk": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 51,
 51,
@@ -131,7 +131,7 @@
 },
 "gu-gangdong-n": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 10,
 10,
@@ -147,7 +147,7 @@
 },
 "gu-gangdong-r": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 10,
 10,
@@ -162,10 +162,8 @@
 ]
 },
 "gu-gangnam": {
-"err": "ReadTimeout: HTTPSConnectionPool(host='gangnam.eminwon.seoul.kr', port=443): Read timed out. (read timeout=25)",
-"err_at": "2026-10-09",
-"fails": 1,
-"ok": "2026-10-09",
+"fails": 0,
+"ok": "2026-10-10",
 "rows": [
 50,
 50,
@@ -180,7 +178,9 @@
 ]
 },
 "gu-gangseo-n": {
-"fails": 0,
+"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+"err_at": "2026-10-10",
+"fails": 1,
 "ok": "2026-10-09",
 "rows": [
 10,
@@ -196,7 +196,9 @@
 ]
 },
 "gu-gangseo-r": {
-"fails": 0,
+"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+"err_at": "2026-10-10",
+"fails": 1,
 "ok": "2026-10-09",
 "rows": [
 10,
@@ -213,7 +215,7 @@
 },
 "gu-geumcheon": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 51,
 51,
@@ -229,7 +231,7 @@
 },
 "gu-guro-n": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 10,
 10,
@@ -245,7 +247,7 @@
 },
 "gu-guro-r": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 10,
 10,
@@ -261,7 +263,7 @@
 },
 "gu-gwanak-n": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 10,
 10,
@@ -277,7 +279,7 @@
 },
 "gu-gwanak-r": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 10,
 10,
@@ -292,10 +294,8 @@
 ]
 },
 "gu-gwangjin-n": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000378/list.do?menuNo=200192 (Caused by ConnectTimeoutError(<",
-"err_at": "2026-10-09",
-"fails": 1,
-"ok": "2026-10-09",
+"fails": 0,
+"ok": "2026-10-10",
 "rows": [
 10,
 10,
@@ -310,10 +310,8 @@
 ]
 },
 "gu-gwangjin-r": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000004/list.do?menuNo=200193 (Caused by ConnectTimeoutError(<",
-"err_at": "2026-10-09",
-"fails": 1,
-"ok": "2026-10-09",
+"fails": 0,
+"ok": "2026-10-10",
 "rows": [
 10,
 10,
@@ -329,7 +327,7 @@
 },
 "gu-jongno-n": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 20,
 20,
@@ -345,7 +343,7 @@
 },
 "gu-jongno-r": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 10,
 10,
@@ -361,7 +359,7 @@
 },
 "gu-junggu-n": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 10,
 10,
@@ -377,12 +375,12 @@
 },
 "gu-junggu-r": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 11,
 11,
 11,
-11,
+12,
 12,
 12,
 12,
@@ -400,7 +398,7 @@
 },
 "gu-mapo-n": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 10,
 10,
@@ -416,7 +414,7 @@
 },
 "gu-nowon": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 51,
 51,
@@ -432,7 +430,7 @@
 },
 "gu-sdm-n": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 10,
 10,
@@ -448,7 +446,7 @@
 },
 "gu-sdm-r": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 10,
 10,
@@ -464,7 +462,7 @@
 },
 "gu-seocho": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 50,
 50,
@@ -480,7 +478,7 @@
 },
 "gu-seongdong-n": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 10,
 10,
@@ -496,7 +494,7 @@
 },
 "gu-seongdong-r": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 10,
 10,
@@ -512,7 +510,7 @@
 },
 "gu-songpa-n": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 10,
 10,
@@ -528,14 +526,14 @@
 },
 "gu-songpa-r": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 9,
-9,
 10,
 10,
 10,
 9,
+10,
 10,
 10,
 10,
@@ -543,11 +541,8 @@
 ]
 },
 "gu-yangcheon": {
-"alerted": "2026-10-09",
-"err": "ReadTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Read timed out. (read timeout=25)",
-"err_at": "2026-10-09",
-"fails": 2,
-"ok": "2026-10-09",
+"fails": 0,
+"ok": "2026-10-10",
 "rows": [
 50,
 50,
@@ -563,7 +558,7 @@
 },
 "gu-ydp-n": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 10,
 10,
@@ -579,14 +574,14 @@
 },
 "gu-ydp-r": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 8,
 8,
-8,
 6,
 6,
 6,
+3,
 3,
 3,
 3,
@@ -595,7 +590,7 @@
 },
 "gu-yongsan-n": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 10,
 10,
@@ -611,23 +606,23 @@
 },
 "seoul-job-public": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 77,
 77,
 77,
 77,
 77,
-77,
 72,
 72,
 72,
-72
+72,
+64
 ]
 },
 "seoul-notice": {
 "fails": 0,
-"ok": "2026-10-09",
+"ok": "2026-10-10",
 "rows": [
 100,
 100,
@@ -2606,5 +2601,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-09T23:52:02+09:00"
+"updated_at": "2026-10-10T15:08:38+09:00"
 }
