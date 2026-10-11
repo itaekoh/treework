@@ -178,9 +178,7 @@
 ]
 },
 "gu-gangseo-n": {
-"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
-"err_at": "2026-10-11",
-"fails": 1,
+"fails": 0,
 "ok": "2026-10-11",
 "rows": [
 10,
@@ -196,9 +194,7 @@
 ]
 },
 "gu-gangseo-r": {
-"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
-"err_at": "2026-10-11",
-"fails": 1,
+"fails": 0,
 "ok": "2026-10-11",
 "rows": [
 10,
@@ -576,10 +572,10 @@
 "fails": 0,
 "ok": "2026-10-11",
 "rows": [
-8,
 6,
 6,
 6,
+3,
 3,
 3,
 3,
@@ -611,7 +607,7 @@
 72,
 72,
 72,
-72,
+64,
 64,
 64,
 64,
@@ -2601,5 +2597,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-11T16:52:26+09:00"
+"updated_at": "2026-10-11T22:16:51+09:00"
 }
