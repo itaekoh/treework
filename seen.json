@@ -178,7 +178,9 @@
 ]
 },
 "gu-gangseo-n": {
-"fails": 0,
+"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+"err_at": "2026-10-11",
+"fails": 1,
 "ok": "2026-10-11",
 "rows": [
 10,
@@ -194,7 +196,9 @@
 ]
 },
 "gu-gangseo-r": {
-"fails": 0,
+"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+"err_at": "2026-10-11",
+"fails": 1,
 "ok": "2026-10-11",
 "rows": [
 10,
@@ -524,7 +528,7 @@
 "fails": 0,
 "ok": "2026-10-11",
 "rows": [
-9,
+10,
 10,
 10,
 10,
@@ -553,11 +557,8 @@
 ]
 },
 "gu-ydp-n": {
-"alerted": "2026-10-11",
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-10-11",
-"fails": 4,
-"ok": "2026-10-10",
+"fails": 0,
+"ok": "2026-10-11",
 "rows": [
 10,
 10,
@@ -572,17 +573,14 @@
 ]
 },
 "gu-ydp-r": {
-"alerted": "2026-10-11",
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-10-11",
-"fails": 4,
-"ok": "2026-10-10",
+"fails": 0,
+"ok": "2026-10-11",
 "rows": [
 8,
-8,
 6,
 6,
 6,
+3,
 3,
 3,
 3,
@@ -610,11 +608,11 @@
 "fails": 0,
 "ok": "2026-10-11",
 "rows": [
-77,
 72,
 72,
 72,
 72,
+64,
 64,
 64,
 64,
@@ -2603,5 +2601,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-11T15:09:26+09:00"
+"updated_at": "2026-10-11T16:52:26+09:00"
 }
