@@ -2,7 +2,9 @@
 "count": 327,
 "health": {
 "g2b-servc": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='apis.data.go.kr', port=443): Max retries exceeded with url: /1230000/ad/BidPublicInfoService/getBidPblancListInfoServc?serviceKey=5%2FkxQg",
+"err_at": "2026-10-12",
+"fails": 1,
 "ok": "2026-10-09",
 "rows": [
 2838,
@@ -2601,5 +2603,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-11T23:29:50+09:00"
+"updated_at": "2026-10-12T14:55:54+09:00"
 }
