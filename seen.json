@@ -1,11 +1,10 @@
 {
-"count": 338,
+"count": 342,
 "health": {
 "g2b-servc": {
 "fails": 0,
 "ok": "2026-10-13",
 "rows": [
-3072,
 3078,
 3133,
 2834,
@@ -14,7 +13,8 @@
 3277,
 2698,
 2703,
-3002
+3002,
+3483
 ]
 },
 "gu-ddm-n": {
@@ -1025,6 +1025,12 @@
 "s": "g2b-servc",
 "t": "천안시 지방정원 조성사업 소규모 환경영향평가 용역"
 },
+"409efb4c1801cc523cbb": {
+"d": "2026-10-13",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01768217&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "낙천리 제주다움복원사업 『조경공사』 세부설계 용역"
+},
 "40bd6bc68265fbddbaa4": {
 "d": "2026-09-22",
 "l": "https://job.seoul.go.kr/hmpg/rmim/pjmg/pjmgDetail.do?pbc_recmnt_mng_no=5C08CDA3A0ED01C2E063C0A8A028063C",
@@ -1072,6 +1078,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750477&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 산불예방숲가꾸기사업 실시설계용역(2지구)"
+},
+"46f3c3609c1e7cfab777": {
+"d": "2026-10-13",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01766981&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "월드컵공원 사면 경관숲 유지관리 공사 재해예방 기술지도 용역"
 },
 "47694611fb8efac94e97": {
 "d": "2026-09-09",
@@ -1156,6 +1168,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750099&bidPbancOrd=001",
 "s": "g2b-servc",
 "t": "2026년 산불예방 숲가꾸기(4차) 감리용역"
+},
+"5094b20a7699d8a64b8c": {
+"d": "2026-10-13",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01767849&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 소나무재선충병 수종전환 방제사업(담안지구)감리용역"
 },
 "50ff35a8ac60c5a59184": {
 "d": "2026-09-17",
@@ -1864,6 +1882,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01758283&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "도시바람길숲 조성사업(공도 가로숲) 폐기물처리 용역"
+},
+"a886d7228ea6a00e5cee": {
+"d": "2026-10-13",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01768080&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "(용역)「2026 대한민국 산림박람회」 국립산림과학원 전시부스 설치·제작"
 },
 "a8a441adca410ff42e42": {
 "d": "2026-09-09",
@@ -2676,5 +2700,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-13T02:10:50+09:00"
+"updated_at": "2026-10-13T15:46:38+09:00"
 }
