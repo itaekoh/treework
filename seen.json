@@ -1,11 +1,10 @@
 {
-"count": 344,
+"count": 351,
 "health": {
 "g2b-servc": {
 "fails": 0,
 "ok": "2026-10-14",
 "rows": [
-3133,
 2834,
 3204,
 2966,
@@ -14,7 +13,8 @@
 2703,
 3002,
 3483,
-3004
+3004,
+3325
 ]
 },
 "gu-ddm-n": {
@@ -998,6 +998,12 @@
 "s": "g2b-servc",
 "t": "구미시 공원녹지 플랫폼 구축 사업"
 },
+"37d04fb718aee327ad5e": {
+"d": "2026-10-14",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01769866&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "강남 힐링 숲 조성(2단계) 공사 폐기물처리용역"
+},
 "37d1f47ef242e3ced7f9": {
 "d": "2026-09-11",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01724879&bidPbancOrd=000",
@@ -1466,6 +1472,12 @@
 "s": "g2b-servc",
 "t": "도시숲 달빛거리 범죄예방디자인사업 용역 입찰공고(협상에 의한 계약)"
 },
+"74220cc06ecfe15c3f03": {
+"d": "2026-10-14",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01769792&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "제7회 임업인의 날 영상제작"
+},
 "768b794c9064d876a1f6": {
 "d": "2026-09-08",
 "l": "http://nowon.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=23588&homepage_pbs_yn=Y&subCheck=Y",
@@ -1645,6 +1657,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01762012&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "카페인 함유 식품의 식생활 안전 관리 체계 마련 기획연구"
+},
+"8afee66fac5c33cbed3a": {
+"d": "2026-10-14",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01769769&bidPbancOrd=001",
+"s": "g2b-servc",
+"t": "수목원 교육관리시스템 보안취약점 개선 및 시스템 정비"
 },
 "8bc3285d2d05819578e5": {
 "d": "2026-09-16",
@@ -1891,6 +1909,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01758283&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "도시바람길숲 조성사업(공도 가로숲) 폐기물처리 용역"
+},
+"a6dfdd52e321cdfb6112": {
+"d": "2026-10-14",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01765851&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "동부지방산림청 관사 신축공사 건축기본 및 실시설계공모"
 },
 "a886d7228ea6a00e5cee": {
 "d": "2026-10-13",
@@ -2192,6 +2216,12 @@
 "s": "g2b-servc",
 "t": "2026년 산불예방 숲가꾸기사업(서면지구) 실시설계용역"
 },
+"bffb7221e9c63a70c51c": {
+"d": "2026-10-14",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01769871&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "국유 임업기계장비 대여기준 마련을 위한 용역"
+},
 "c0a5e92c10c8808bb3a1": {
 "d": "2026-10-08",
 "l": "https://eminwon.seocho.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=46118&homepage_pbs_yn=Y&subCheck=Y",
@@ -2245,6 +2275,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01721205&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "신흥공원 도시숲 조성사업 부지 내 매장유산 시굴조사 용역"
+},
+"c536542d6357fe99cfcd": {
+"d": "2026-10-14",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01770311&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "낭산지구 다목적농촌용수개발사업 산림보호구역 지정해제 용역"
 },
 "c5a522821ee1441e21b5": {
 "d": "2026-09-15",
@@ -2606,6 +2642,12 @@
 "s": "g2b-servc",
 "t": "2026년 부산광역시 어초어장 바다숲 통합관리"
 },
+"f3ba0474a5764db7a0dd": {
+"d": "2026-10-14",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01769981&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "정읍 국립숲체원 진입도로 개설공사 토지보상 및 수용지원 용역 수의계약 안내공고"
+},
 "f4632954124619d8ec2b": {
 "d": "2026-09-17",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01733858&bidPbancOrd=000",
@@ -2709,5 +2751,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-14T00:24:32+09:00"
+"updated_at": "2026-10-14T13:52:01+09:00"
 }
