@@ -18,10 +18,7 @@
 ]
 },
 "gu-ddm-n": {
-"alerted": "2026-10-14",
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonWebList.do?key=3291 (Caused by ConnectTimeoutError(<HTTPSConne",
-"err_at": "2026-10-14",
-"fails": 2,
+"fails": 0,
 "ok": "2026-10-14",
 "rows": [
 10,
@@ -37,10 +34,7 @@
 ]
 },
 "gu-ddm-r": {
-"alerted": "2026-10-14",
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectBbsNttList.do?bbsNo=42&key=208 (Caused by ConnectTimeoutError(<HTTPSC",
-"err_at": "2026-10-14",
-"fails": 2,
+"fails": 0,
 "ok": "2026-10-14",
 "rows": [
 10,
@@ -168,9 +162,10 @@
 ]
 },
 "gu-gangnam": {
+"alerted": "2026-10-14",
 "err": "ReadTimeout: HTTPSConnectionPool(host='gangnam.eminwon.seoul.kr', port=443): Read timed out. (read timeout=25)",
 "err_at": "2026-10-14",
-"fails": 1,
+"fails": 2,
 "ok": "2026-10-14",
 "rows": [
 50,
@@ -548,7 +543,7 @@
 "alerted": "2026-10-14",
 "err": "ReadTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Read timed out. (read timeout=25)",
 "err_at": "2026-10-14",
-"fails": 5,
+"fails": 6,
 "ok": "2026-10-13",
 "rows": [
 50,
@@ -583,7 +578,7 @@
 "alerted": "2026-10-14",
 "err": "RuntimeError: 날짜 있는 목록 테이블을 찾지 못함 (구조 변경/AJAX 의심)",
 "err_at": "2026-10-14",
-"fails": 5,
+"fails": 6,
 "ok": "2026-10-13",
 "rows": [
 3,
@@ -599,9 +594,7 @@
 ]
 },
 "gu-yongsan-n": {
-"err": "RuntimeError: 날짜 있는 목록 테이블을 찾지 못함 (구조 변경/AJAX 의심)",
-"err_at": "2026-10-14",
-"fails": 1,
+"fails": 0,
 "ok": "2026-10-14",
 "rows": [
 10,
@@ -620,7 +613,6 @@
 "fails": 0,
 "ok": "2026-10-14",
 "rows": [
-65,
 62,
 62,
 63,
@@ -629,6 +621,7 @@
 61,
 62,
 63,
+65,
 65
 ]
 },
@@ -2799,5 +2792,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-14T21:20:01+09:00"
+"updated_at": "2026-10-14T22:13:07+09:00"
 }
