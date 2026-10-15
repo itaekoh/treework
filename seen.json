@@ -1,11 +1,10 @@
 {
-"count": 364,
+"count": 366,
 "health": {
 "g2b-servc": {
 "fails": 0,
 "ok": "2026-10-15",
 "rows": [
-2966,
 3277,
 2698,
 2703,
@@ -14,7 +13,8 @@
 3004,
 3325,
 3721,
-3229
+3229,
+3589
 ]
 },
 "gu-ddm-n": {
@@ -762,6 +762,12 @@
 "s": "g2b-servc",
 "t": "2026년 남해바다숲 신규(완도군 미라리) 해조류 직접 성체 개체이식"
 },
+"167b389f035bcab0dae3": {
+"d": "2026-10-15",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01773569&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "도시바람길숲 조성사업(공도 가로숲) 폐기물처리 용역"
+},
 "18cd95784d01ac9d410b": {
 "d": "2026-09-07",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01717462&bidPbancOrd=000",
@@ -1265,6 +1271,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01734075&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 광역반려식물병원 진입로 환경개선 용역"
+},
+"53fe99995a2f107afa0c": {
+"d": "2026-10-15",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01773288&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 숲가꾸기 2차사업 감리용역"
 },
 "5563f9268c74815811ae": {
 "d": "2026-09-16",
@@ -2833,5 +2845,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-15T15:33:46+09:00"
+"updated_at": "2026-10-15T18:54:03+09:00"
 }
