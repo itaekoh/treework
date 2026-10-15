@@ -1,11 +1,10 @@
 {
-"count": 358,
+"count": 363,
 "health": {
 "g2b-servc": {
 "fails": 0,
-"ok": "2026-10-14",
+"ok": "2026-10-15",
 "rows": [
-3204,
 2966,
 3277,
 2698,
@@ -14,7 +13,8 @@
 3483,
 3004,
 3325,
-3721
+3721,
+3229
 ]
 },
 "gu-ddm-n": {
@@ -655,6 +655,12 @@
 "s": "g2b-servc",
 "t": "광명5동 도시숲 조성사업 폐기물처리용역"
 },
+"0292a2fccc1fcd8fadcd": {
+"d": "2026-10-15",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01772034&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2027년 해양오염방제통합시스템 유지보수 용역"
+},
 "030b9b9df1f7e85ac0ad": {
 "d": "2026-10-06",
 "l": "https://dongjak.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=29566&homepage_pbs_yn=Y&subCheck=Y",
@@ -876,6 +882,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01742542&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "산림대 공작실 외 1개동 샌드위치 패널 교체 및 환경개선을 위한 설계용역"
+},
+"2beb05a5f385ac6d83a2": {
+"d": "2026-10-15",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01772413&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 숲가꾸기사업 실시설계용역(봉평 2차)"
 },
 "2c64de73a06840628faf": {
 "d": "2026-10-14",
@@ -1110,6 +1122,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750477&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 산불예방숲가꾸기사업 실시설계용역(2지구)"
+},
+"467583dfe56caad6f997": {
+"d": "2026-10-15",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01771902&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 소나무재선충병 긴급방제사업 실시설계 용역"
 },
 "46f3c3609c1e7cfab777": {
 "d": "2026-10-13",
@@ -1861,6 +1879,12 @@
 "s": "g2b-servc",
 "t": "2026년 도시숲사랑 캠페인(달팽이마라톤)행사 대행"
 },
+"9c646b7fbcb250e01b4d": {
+"d": "2026-10-15",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01772584&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "[재공고] 핵융합 특수목적법인 설립 요건 및 민관협력 기본방향 기획연구"
+},
 "9e9f9e0b87c57ad6dad2": {
 "d": "2026-09-09",
 "l": "http://nowon.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=23588&homepage_pbs_yn=Y&subCheck=Y",
@@ -1878,6 +1902,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01728575&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026 숲속야행 운영대행 용역"
+},
+"a282b58756dca44b95ab": {
+"d": "2026-10-15",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01771597&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 산불예방 숲가꾸기 및 산물수집사업 2차(북천,횡천,적량)실시설계용역"
 },
 "a2b87c1312a024878da1": {
 "d": "2026-10-02",
@@ -2792,5 +2822,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-14T22:13:07+09:00"
+"updated_at": "2026-10-15T13:36:48+09:00"
 }
