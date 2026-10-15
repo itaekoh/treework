@@ -162,7 +162,9 @@
 ]
 },
 "gu-gangnam": {
-"fails": 0,
+"err": "ReadTimeout: HTTPSConnectionPool(host='gangnam.eminwon.seoul.kr', port=443): Read timed out. (read timeout=25)",
+"err_at": "2026-10-15",
+"fails": 1,
 "ok": "2026-10-15",
 "rows": [
 50,
@@ -226,9 +228,7 @@
 ]
 },
 "gu-guro-n": {
-"err": "ConnectionError: HTTPSConnectionPool(host='www.guro.go.kr', port=443): Max retries exceeded with url: /www/selectBbsNttList.do?bbsNo=663&key=1791 (Caused by NameResolutionError(\"HT",
-"err_at": "2026-10-15",
-"fails": 1,
+"fails": 0,
 "ok": "2026-10-15",
 "rows": [
 10,
@@ -244,9 +244,7 @@
 ]
 },
 "gu-guro-r": {
-"err": "ConnectionError: HTTPSConnectionPool(host='www.guro.go.kr', port=443): Max retries exceeded with url: /www/selectBbsNttList.do?bbsNo=664&key=1792 (Caused by NameResolutionError(\"HT",
-"err_at": "2026-10-15",
-"fails": 1,
+"fails": 0,
 "ok": "2026-10-15",
 "rows": [
 10,
@@ -544,7 +542,7 @@
 "alerted": "2026-10-15",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
 "err_at": "2026-10-15",
-"fails": 2,
+"fails": 3,
 "ok": "2026-10-15",
 "rows": [
 50,
@@ -563,7 +561,7 @@
 "alerted": "2026-10-15",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-10-15",
-"fails": 2,
+"fails": 3,
 "ok": "2026-10-15",
 "rows": [
 10,
@@ -582,7 +580,7 @@
 "alerted": "2026-10-15",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-10-15",
-"fails": 9,
+"fails": 10,
 "ok": "2026-10-13",
 "rows": [
 3,
@@ -601,7 +599,7 @@
 "alerted": "2026-10-15",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.yongsan.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000095/list.do?menuNo=200233 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-10-15",
-"fails": 3,
+"fails": 4,
 "ok": "2026-10-14",
 "rows": [
 10,
@@ -620,7 +618,6 @@
 "fails": 0,
 "ok": "2026-10-15",
 "rows": [
-63,
 65,
 61,
 62,
@@ -629,7 +626,8 @@
 65,
 56,
 56,
-56
+56,
+57
 ]
 },
 "seoul-notice": {
@@ -2847,5 +2845,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-15T20:57:24+09:00"
+"updated_at": "2026-10-15T22:01:22+09:00"
 }
