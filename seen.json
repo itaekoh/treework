@@ -1,5 +1,5 @@
 {
-"count": 363,
+"count": 364,
 "health": {
 "g2b-servc": {
 "fails": 0,
@@ -178,10 +178,8 @@
 ]
 },
 "gu-gangseo-n": {
-"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
-"err_at": "2026-10-15",
-"fails": 1,
-"ok": "2026-10-14",
+"fails": 0,
+"ok": "2026-10-15",
 "rows": [
 10,
 10,
@@ -196,10 +194,8 @@
 ]
 },
 "gu-gangseo-r": {
-"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
-"err_at": "2026-10-15",
-"fails": 1,
-"ok": "2026-10-14",
+"fails": 0,
+"ok": "2026-10-15",
 "rows": [
 10,
 10,
@@ -294,7 +290,9 @@
 ]
 },
 "gu-gwangjin-n": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000378/list.do?menuNo=200192 (Caused by ConnectTimeoutError(<",
+"err_at": "2026-10-15",
+"fails": 1,
 "ok": "2026-10-15",
 "rows": [
 10,
@@ -310,7 +308,9 @@
 ]
 },
 "gu-gwangjin-r": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000004/list.do?menuNo=200193 (Caused by ConnectTimeoutError(<",
+"err_at": "2026-10-15",
+"fails": 1,
 "ok": "2026-10-15",
 "rows": [
 10,
@@ -541,7 +541,9 @@
 ]
 },
 "gu-yangcheon": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
+"err_at": "2026-10-15",
+"fails": 1,
 "ok": "2026-10-15",
 "rows": [
 50,
@@ -557,7 +559,9 @@
 ]
 },
 "gu-ydp-n": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
+"err_at": "2026-10-15",
+"fails": 1,
 "ok": "2026-10-15",
 "rows": [
 10,
@@ -574,9 +578,9 @@
 },
 "gu-ydp-r": {
 "alerted": "2026-10-15",
-"err": "RuntimeError: 날짜 있는 목록 테이블을 찾지 못함 (구조 변경/AJAX 의심)",
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-10-15",
-"fails": 7,
+"fails": 8,
 "ok": "2026-10-13",
 "rows": [
 3,
@@ -592,9 +596,10 @@
 ]
 },
 "gu-yongsan-n": {
-"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+"alerted": "2026-10-15",
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.yongsan.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000095/list.do?menuNo=200233 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-10-15",
-"fails": 1,
+"fails": 2,
 "ok": "2026-10-14",
 "rows": [
 10,
@@ -613,7 +618,6 @@
 "fails": 0,
 "ok": "2026-10-15",
 "rows": [
-62,
 63,
 63,
 65,
@@ -622,6 +626,7 @@
 63,
 65,
 65,
+56,
 56
 ]
 },
@@ -2767,6 +2772,12 @@
 "s": "g2b-servc",
 "t": "2026년 산불예방숲가꾸기 감리용역"
 },
+"fc1bc36e7d98d1809cc9": {
+"d": "2026-10-15",
+"l": "http://nowon.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=23829&homepage_pbs_yn=Y&subCheck=Y",
+"s": "gu-nowon",
+"t": "서울특별시 노원구 정원지원센터 기간제근로자 채용공고"
+},
 "fc593542fe80d50ba22d": {
 "d": "2026-09-16",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01732368&bidPbancOrd=000",
@@ -2822,5 +2833,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-15T13:58:52+09:00"
+"updated_at": "2026-10-15T15:33:46+09:00"
 }
