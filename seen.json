@@ -1,11 +1,10 @@
 {
-"count": 366,
+"count": 371,
 "health": {
 "g2b-servc": {
 "fails": 0,
-"ok": "2026-10-15",
+"ok": "2026-10-16",
 "rows": [
-3277,
 2698,
 2703,
 3002,
@@ -14,7 +13,8 @@
 3325,
 3721,
 3229,
-3589
+3589,
+3154
 ]
 },
 "gu-ddm-n": {
@@ -678,6 +678,12 @@
 "s": "g2b-servc",
 "t": "(용역)2028년도 신규사업 발굴 및 산림과학기술분야 성과분석 연구"
 },
+"05d1284f1f3052ab5882": {
+"d": "2026-10-16",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01774816&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 하반기 분당사업소 조경관리 용역"
+},
 "05dc30c1568855dc0ef3": {
 "d": "2026-10-07",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750099&bidPbancOrd=002",
@@ -767,6 +773,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01773569&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "도시바람길숲 조성사업(공도 가로숲) 폐기물처리 용역"
+},
+"17a45e43b4b8153953ba": {
+"d": "2026-10-16",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01774749&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "신안북부권역 갯벌식생복원사업 갯벌전망대 감리 용역"
 },
 "18cd95784d01ac9d410b": {
 "d": "2026-09-07",
@@ -1914,6 +1926,12 @@
 "s": "g2b-servc",
 "t": "의림지뜰 자연치유단지 조경 기본 및 실시설계 용역(가격입찰 후 PQ)"
 },
+"a1229e83bf3b14d1ccea": {
+"d": "2026-10-16",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01774222&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "본관 옥외 조경구역 주차장 조성 공사 폐기물 처리용역"
+},
 "a16dc10744075496ad6c": {
 "d": "2026-09-15",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01728575&bidPbancOrd=000",
@@ -2171,6 +2189,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01701232&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "환경 최적화 대응을 위한 국내외 토양 모델 기반 스마트 로봇 방제 시스템 최적화 기술 개발"
+},
+"b68a2e48967173f493a2": {
+"d": "2026-10-16",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01771798&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "양산수목원 조성 매장유산 발굴(정밀)조사 용역"
 },
 "b7024c89d573119bc6b2": {
 "d": "2026-09-22",
@@ -2538,6 +2562,12 @@
 "s": "g2b-servc",
 "t": "서부공원여가센터 직원관사 해체공사 재해예방기술지도 용역"
 },
+"ddd2b420b03058344f04": {
+"d": "2026-10-16",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01774779&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "유역관리부(수질오염방제지원) 업무용차량(소형화물) 임차(리스)"
+},
 "ddee79a69b9ec5933f4e": {
 "d": "2026-09-03",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01711443&bidPbancOrd=000",
@@ -2845,5 +2875,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-15T22:01:22+09:00"
+"updated_at": "2026-10-16T13:30:54+09:00"
 }
