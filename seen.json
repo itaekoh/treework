@@ -540,7 +540,7 @@
 "alerted": "2026-10-16",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
 "err_at": "2026-10-16",
-"fails": 4,
+"fails": 5,
 "ok": "2026-10-15",
 "rows": [
 50,
@@ -559,7 +559,7 @@
 "alerted": "2026-10-16",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-10-16",
-"fails": 4,
+"fails": 5,
 "ok": "2026-10-15",
 "rows": [
 10,
@@ -578,7 +578,7 @@
 "alerted": "2026-10-16",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-10-16",
-"fails": 11,
+"fails": 12,
 "ok": "2026-10-13",
 "rows": [
 3,
@@ -597,7 +597,7 @@
 "alerted": "2026-10-16",
 "err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
 "err_at": "2026-10-16",
-"fails": 5,
+"fails": 6,
 "ok": "2026-10-14",
 "rows": [
 10,
@@ -616,7 +616,6 @@
 "fails": 0,
 "ok": "2026-10-16",
 "rows": [
-61,
 62,
 63,
 65,
@@ -625,6 +624,7 @@
 56,
 56,
 57,
+58,
 58
 ]
 },
@@ -2879,5 +2879,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-16T13:52:49+09:00"
+"updated_at": "2026-10-16T15:28:30+09:00"
 }
