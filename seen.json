@@ -178,7 +178,9 @@
 ]
 },
 "gu-gangseo-n": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gangseo.seoul.kr', port=443): Max retries exceeded with url: /gs040301 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.gangs",
+"err_at": "2026-10-17",
+"fails": 1,
 "ok": "2026-10-17",
 "rows": [
 10,
@@ -194,7 +196,9 @@
 ]
 },
 "gu-gangseo-r": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gangseo.seoul.kr', port=443): Max retries exceeded with url: /gs040302 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.gangs",
+"err_at": "2026-10-17",
+"fails": 1,
 "ok": "2026-10-17",
 "rows": [
 10,
@@ -380,7 +384,7 @@
 12,
 12,
 12,
-12,
+11,
 11,
 11
 ]
@@ -537,11 +541,8 @@
 ]
 },
 "gu-yangcheon": {
-"alerted": "2026-10-17",
-"err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
-"err_at": "2026-10-17",
-"fails": 2,
-"ok": "2026-10-16",
+"fails": 0,
+"ok": "2026-10-17",
 "rows": [
 50,
 50,
@@ -556,11 +557,8 @@
 ]
 },
 "gu-ydp-n": {
-"alerted": "2026-10-17",
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-10-17",
-"fails": 2,
-"ok": "2026-10-16",
+"fails": 0,
+"ok": "2026-10-17",
 "rows": [
 10,
 10,
@@ -575,11 +573,8 @@
 ]
 },
 "gu-ydp-r": {
-"alerted": "2026-10-17",
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-10-17",
-"fails": 2,
-"ok": "2026-10-16",
+"fails": 0,
+"ok": "2026-10-17",
 "rows": [
 3,
 3,
@@ -588,7 +583,7 @@
 3,
 3,
 3,
-3,
+5,
 5,
 5
 ]
@@ -597,7 +592,7 @@
 "alerted": "2026-10-17",
 "err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
 "err_at": "2026-10-17",
-"fails": 10,
+"fails": 11,
 "ok": "2026-10-14",
 "rows": [
 10,
@@ -618,8 +613,8 @@
 "rows": [
 56,
 56,
-56,
 57,
+58,
 58,
 58,
 58,
@@ -2927,5 +2922,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-17T15:14:55+09:00"
+"updated_at": "2026-10-17T20:08:55+09:00"
 }
