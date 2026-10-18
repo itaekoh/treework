@@ -162,9 +162,10 @@
 ]
 },
 "gu-gangnam": {
+"alerted": "2026-10-18",
 "err": "ReadTimeout: HTTPSConnectionPool(host='gangnam.eminwon.seoul.kr', port=443): Read timed out. (read timeout=25)",
 "err_at": "2026-10-18",
-"fails": 1,
+"fails": 2,
 "ok": "2026-10-18",
 "rows": [
 50,
@@ -377,7 +378,7 @@
 "rows": [
 12,
 12,
-12,
+11,
 11,
 11,
 11,
@@ -555,9 +556,7 @@
 ]
 },
 "gu-ydp-n": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-10-18",
-"fails": 1,
+"fails": 0,
 "ok": "2026-10-18",
 "rows": [
 10,
@@ -580,7 +579,7 @@
 3,
 3,
 3,
-3,
+5,
 5,
 5,
 5,
@@ -592,7 +591,7 @@
 "alerted": "2026-10-18",
 "err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
 "err_at": "2026-10-18",
-"fails": 15,
+"fails": 16,
 "ok": "2026-10-14",
 "rows": [
 10,
@@ -2922,5 +2921,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-18T20:35:17+09:00"
+"updated_at": "2026-10-18T21:20:33+09:00"
 }
