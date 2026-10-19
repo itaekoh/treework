@@ -1,11 +1,10 @@
 {
-"count": 387,
+"count": 394,
 "health": {
 "g2b-servc": {
 "fails": 0,
 "ok": "2026-10-19",
 "rows": [
-3002,
 3483,
 3004,
 3325,
@@ -14,7 +13,8 @@
 3589,
 3154,
 3432,
-3737
+3737,
+4176
 ]
 },
 "gu-ddm-n": {
@@ -767,6 +767,12 @@
 "s": "g2b-servc",
 "t": "2027년 상반기 소나무재선충병 방제사업(옥포2지구) 실시설계 용역"
 },
+"0f65b48206dab21ef3b6": {
+"d": "2026-10-19",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778788&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 남해바다숲 스마트 검측"
+},
 "134db48cd2017e1dafa1": {
 "d": "2026-09-28",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746219&bidPbancOrd=000",
@@ -826,6 +832,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01703930&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "동천~황성 도시숲 조성 사업구간 지장물 철거공사(9차) 폐기물 처리용역"
+},
+"1c9777b40e274ffdb099": {
+"d": "2026-10-19",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778405&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "월아산 숲속의 진주 주변 도로확포장공사 실시설계 및 도로구역 결정 용역"
 },
 "1caeeea8978962845f63": {
 "d": "2026-08-05",
@@ -958,6 +970,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01741034&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "산림생태복원을 위한 시드볼 기술개발Ⅱ"
+},
+"2ef9cecad96022853357": {
+"d": "2026-10-19",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01779400&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "산림조합중앙회 스토리지 장비 유지보수"
 },
 "2f3ec3acf96c22a45e97": {
 "d": "2026-09-28",
@@ -1270,6 +1288,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750099&bidPbancOrd=001",
 "s": "g2b-servc",
 "t": "2026년 산불예방 숲가꾸기(4차) 감리용역"
+},
+"4fd3606c2455313783c0": {
+"d": "2026-10-19",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01779295&bidPbancOrd=001",
+"s": "g2b-servc",
+"t": "산림조합중앙회 네트워크 장비 유지보수"
 },
 "5094b20a7699d8a64b8c": {
 "d": "2026-10-13",
@@ -2141,6 +2165,12 @@
 "s": "g2b-servc",
 "t": "(재공고) 한국수목원정원관리원 주거래은행 및 법인카드 사업자 선정"
 },
+"ab82cfa43f4fd5a0b482": {
+"d": "2026-10-19",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01779592&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "대구광역시 소나무재선충병 무인항공기 정사영상 제작 및 분석 용역"
+},
 "acb78ae28389326fed1c": {
 "d": "2026-09-01",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01704398&bidPbancOrd=000",
@@ -2705,6 +2735,12 @@
 "s": "g2b-servc",
 "t": "콩돌해안 명소화 사업 실시설계용역(토목,조경)"
 },
+"e447dbf2c23904c2f63a": {
+"d": "2026-10-19",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01779359&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "산림조합중앙회 서버 장비 유지보수"
+},
 "e526f6adbf31140b3d4c": {
 "d": "2026-09-04",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01714271&bidPbancOrd=000",
@@ -2849,6 +2885,12 @@
 "s": "g2b-servc",
 "t": "2026년 부산광역시 어초어장 바다숲 통합관리"
 },
+"f31de434b0ab90c2eccc": {
+"d": "2026-10-19",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01777196&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "서울보라매초등학교 옥상조경 철거 및 방수공사 건설폐기물처리용역"
+},
 "f3ba0474a5764db7a0dd": {
 "d": "2026-10-14",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01769981&bidPbancOrd=000",
@@ -2964,5 +3006,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-19T15:53:35+09:00"
+"updated_at": "2026-10-19T19:45:51+09:00"
 }
