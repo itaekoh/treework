@@ -1,11 +1,10 @@
 {
-"count": 396,
+"count": 399,
 "health": {
 "g2b-servc": {
 "fails": 0,
 "ok": "2026-10-20",
 "rows": [
-3004,
 3325,
 3721,
 3229,
@@ -14,7 +13,8 @@
 3432,
 3737,
 4176,
-3666
+3666,
+4084
 ]
 },
 "gu-ddm-n": {
@@ -757,6 +757,12 @@
 "s": "g2b-servc",
 "t": "2026년 태화강그라스정원 조성사업(2구간) 폐기물 처리용역"
 },
+"0cb10142cc48cb8ccd4a": {
+"d": "2026-10-20",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01781802&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "문화역사의거리(정읍정원)조성 지역개발사업구역 지정 및 실시설계 용역 수의계약 안내공고"
+},
 "0d358e6a4dc22f3e43b5": {
 "d": "2026-09-01",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01704265&bidPbancOrd=000",
@@ -1476,6 +1482,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750127&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 큰나무 숲가꾸기사업 실시설계용역"
+},
+"6051612c0380c9d8792f": {
+"d": "2026-10-20",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01782311&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "지봉로 완충녹지 지장물 철거공사(금호타이어) 폐타이어 처리 용역"
 },
 "61a3145ced6c5304e3d9": {
 "d": "2026-09-24",
@@ -2977,6 +2989,12 @@
 "s": "g2b-servc",
 "t": "[2권역]2026년 동백유 외 19교 수목 및 관목 전정 용역"
 },
+"fcf52ab72e487dc69dcb": {
+"d": "2026-10-20",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01782180&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2027년 사방사업(산림유역관리) 실시설계용역 수의(2인 이상) 견적제출 안내공고"
+},
 "fd23e3ff3863cf48c370": {
 "d": "2026-08-04",
 "l": "https://www.junggu.seoul.kr/content.do?cmsid=15450&mode=view&cid=1463791433",
@@ -3026,5 +3044,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-20T15:42:48+09:00"
+"updated_at": "2026-10-20T19:03:39+09:00"
 }
