@@ -1,11 +1,10 @@
 {
-"count": 394,
+"count": 396,
 "health": {
 "g2b-servc": {
 "fails": 0,
-"ok": "2026-10-19",
+"ok": "2026-10-20",
 "rows": [
-3483,
 3004,
 3325,
 3721,
@@ -14,7 +13,8 @@
 3154,
 3432,
 3737,
-4176
+4176,
+3666
 ]
 },
 "gu-ddm-n": {
@@ -1894,6 +1894,12 @@
 "s": "g2b-servc",
 "t": "2026년 하반기 소나무재선충병 방제사업(나무주사) 실시설계용역"
 },
+"957a90b72a7b5e9f0de8": {
+"d": "2026-10-20",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778913&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "27~28년도 국립산림과학원 연구정보시스템 통합 운영 및 유지관리"
+},
 "9655012aafbb0c4ff26a": {
 "d": "2026-09-21",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01740188&bidPbancOrd=000",
@@ -2752,6 +2758,12 @@
 "s": "g2b-servc",
 "t": "농작물병해충·AI 국악·신재생에너지 데이터 통합 위탁감리"
 },
+"e53368f294839951d375": {
+"d": "2026-10-20",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01780301&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 제주창조경제혁신센터 제주권 로컬페스타 운영 용역"
+},
 "e58e6e766736ce921ebd": {
 "d": "2026-09-30",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750068&bidPbancOrd=001",
@@ -3011,5 +3023,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-20T00:07:04+09:00"
+"updated_at": "2026-10-20T13:48:52+09:00"
 }
