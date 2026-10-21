@@ -1,11 +1,10 @@
 {
-"count": 406,
+"count": 410,
 "health": {
 "g2b-servc": {
 "fails": 0,
 "ok": "2026-10-21",
 "rows": [
-3721,
 3229,
 3589,
 3154,
@@ -14,7 +13,8 @@
 4176,
 3666,
 4084,
-3663
+3663,
+4041
 ]
 },
 "gu-ddm-n": {
@@ -1249,6 +1249,12 @@
 "s": "g2b-servc",
 "t": "제20회 산림교육전문가 역량강화 보수교육 및 전국 숲해설 경연대회 운영대행"
 },
+"4a52c236548407697416": {
+"d": "2026-10-21",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01784601&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "홍주종합경기장 종합정비용역(군관리계획 변경, 보조경기장 기본 및 실시설계)"
+},
 "4a62af0786088c07e9f1": {
 "d": "2026-09-28",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01745868&bidPbancOrd=000",
@@ -1488,6 +1494,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01782311&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "지봉로 완충녹지 지장물 철거공사(금호타이어) 폐타이어 처리 용역"
+},
+"60eb35b164f8599dd14b": {
+"d": "2026-10-21",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01784071&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "대구광역시 소나무재선충병 무인항공기 정사영상 제작 및 분석 용역"
 },
 "61a3145ced6c5304e3d9": {
 "d": "2026-09-24",
@@ -2401,6 +2413,12 @@
 "s": "g2b-servc",
 "t": "국립농업박물관 곤충정원 조성 전시 연출 설계 및 설치 용역"
 },
+"bd080f4dd1a1981a0583": {
+"d": "2026-10-21",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01784280&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "남도형 문화 생태원림 관광정원 도시관리계획(용도지역, 유원지, 도로) 결정(변경) 용역(총괄 및 1차분)"
+},
 "bd1d44048ba459986333": {
 "d": "2026-09-07",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01716012&bidPbancOrd=000",
@@ -2604,6 +2622,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01711122&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 제주 바다숲(제주시 금능리)1년차 해조류 확산단지 조성"
+},
+"d1a2131259f0c83b149d": {
+"d": "2026-10-21",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01783685&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "정원도시과 임목폐기물장 처리 사업 폐기물처리용역"
 },
 "d2fe4ecd7c053228b680": {
 "d": "2026-08-06",
@@ -3074,5 +3098,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-21T15:36:44+09:00"
+"updated_at": "2026-10-21T19:07:55+09:00"
 }
