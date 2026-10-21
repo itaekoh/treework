@@ -1,11 +1,10 @@
 {
-"count": 399,
+"count": 406,
 "health": {
 "g2b-servc": {
 "fails": 0,
-"ok": "2026-10-20",
+"ok": "2026-10-21",
 "rows": [
-3325,
 3721,
 3229,
 3589,
@@ -14,7 +13,8 @@
 3737,
 4176,
 3666,
-4084
+4084,
+3663
 ]
 },
 "gu-ddm-n": {
@@ -1105,6 +1105,18 @@
 "s": "g2b-servc",
 "t": "김포시추모공원 관리사무소 신축(폐기물처리용역)"
 },
+"3864f8ccfef208198be2": {
+"d": "2026-10-21",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01781093&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 산불예방숲가꾸기사업 감리용역(1지구)"
+},
+"38929d2bb14178b1ce02": {
+"d": "2026-10-21",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01782856&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2027년 상반기 소나무재선충병 긴급방제사업(상면) 실시설계용역"
+},
 "38a8f6263441cf202f26": {
 "d": "2026-09-09",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01718887&bidPbancOrd=000",
@@ -1987,6 +1999,12 @@
 "s": "gu-sdm-n",
 "t": "숲길 도로명 부여에 대한 주민의견 수렴 공고"
 },
+"9a3d42b430bbfead9b93": {
+"d": "2026-10-21",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01780120&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "(연구용역)딥러닝 기반 검역해충 분류동정 플랫폼 개발(정보화)"
+},
 "9abfaa09347c13b82427": {
 "d": "2026-09-09",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01717569&bidPbancOrd=000",
@@ -2485,6 +2503,12 @@
 "s": "g2b-servc",
 "t": "국립농업박물관 곤충정원 조성 전시 연출 설계 및 설치 용역(재공고)"
 },
+"c2e572edca9b03157e56": {
+"d": "2026-10-21",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01782732&bidPbancOrd=001",
+"s": "g2b-servc",
+"t": "2026 매헌시민의숲 가을축제 행사 대행 용역"
+},
 "c443906bd869762e20f2": {
 "d": "2026-09-09",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01721205&bidPbancOrd=000",
@@ -2677,6 +2701,12 @@
 "s": "g2b-servc",
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 건설폐기물 처리용역"
 },
+"da09a395978ff4d783b0": {
+"d": "2026-10-21",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01781306&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 산불예방숲가꾸기사업 감리용역(3지구)"
+},
 "dae4280e853173163862": {
 "d": "2026-10-13",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01766728&bidPbancOrd=000",
@@ -2815,6 +2845,12 @@
 "s": "g2b-servc",
 "t": "수안보연수원 솔숲관 객실 환경개선공사 폐기물 처리용역"
 },
+"e84ce6367bdcd37dacd2": {
+"d": "2026-10-21",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01781173&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 산불예방숲가꾸기사업 감리용역(2지구)"
+},
 "e8a8885a16e904ad7cd2": {
 "d": "2026-09-15",
 "l": "https://www.seoul.go.kr/news/news_notice.do?bbsNo=277&nttNo=466470",
@@ -2928,6 +2964,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01769981&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "정읍 국립숲체원 진입도로 개설공사 토지보상 및 수용지원 용역 수의계약 안내공고"
+},
+"f42dde842efe9938007e": {
+"d": "2026-10-21",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01781434&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 산불예방숲가꾸기사업 감리용역(4지구)"
 },
 "f4632954124619d8ec2b": {
 "d": "2026-09-17",
@@ -3044,5 +3086,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-20T22:08:05+09:00"
+"updated_at": "2026-10-21T13:44:24+09:00"
 }
