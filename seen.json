@@ -375,7 +375,7 @@
 "rows": [
 11,
 11,
-11,
+10,
 10,
 10,
 10,
@@ -526,18 +526,20 @@
 "rows": [
 9,
 9,
-9,
 8,
 8,
 8,
 10,
 10,
 8,
+10,
 10
 ]
 },
 "gu-yangcheon": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
+"err_at": "2026-10-21",
+"fails": 1,
 "ok": "2026-10-21",
 "rows": [
 50,
@@ -577,18 +579,18 @@
 5,
 5,
 5,
-5,
 4,
 4,
 3,
-3
+3,
+5
 ]
 },
 "gu-yongsan-n": {
 "alerted": "2026-10-21",
 "err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
 "err_at": "2026-10-21",
-"fails": 26,
+"fails": 27,
 "ok": "2026-10-14",
 "rows": [
 10,
@@ -607,7 +609,6 @@
 "fails": 0,
 "ok": "2026-10-21",
 "rows": [
-57,
 59,
 61,
 61,
@@ -616,7 +617,8 @@
 60,
 60,
 59,
-62
+62,
+63
 ]
 },
 "seoul-notice": {
@@ -3098,5 +3100,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-21T19:07:55+09:00"
+"updated_at": "2026-10-21T21:18:37+09:00"
 }
