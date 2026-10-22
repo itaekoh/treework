@@ -1,11 +1,10 @@
 {
-"count": 415,
+"count": 420,
 "health": {
 "g2b-servc": {
 "fails": 0,
 "ok": "2026-10-22",
 "rows": [
-3589,
 3154,
 3432,
 3737,
@@ -14,7 +13,8 @@
 4084,
 3663,
 4041,
-3593
+3593,
+3945
 ]
 },
 "gu-ddm-n": {
@@ -929,6 +929,12 @@
 "s": "g2b-servc",
 "t": "2026년 산불예방숲가꾸기사업(무안-초동지구) 실시설계 및 선목용역"
 },
+"26f8c602f1bfe71da2d7": {
+"d": "2026-10-22",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01782180&bidPbancOrd=001",
+"s": "g2b-servc",
+"t": "2027년 사방사업(산림유역관리) 실시설계용역 수의(2인 이상) 견적제출 안내공고"
+},
 "2a3aa7b356f1aba76578": {
 "d": "2026-08-05",
 "l": "https://www.seoul.go.kr/news/news_notice.do?bbsNo=277&nttNo=463352",
@@ -1577,6 +1583,12 @@
 "s": "g2b-servc",
 "t": "2026년 산불예방숲가꾸기사업(부북-초동지구) 실시설계 및 선목용역"
 },
+"69e8c9f49e1c544c9c09": {
+"d": "2026-10-22",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01785609&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "7.16.~20. 집중호우 산림피해(임도) 재해복구사업(북면 이곡·소법리, 가평읍 경반리 권역 추가분) 실시설계용역"
+},
 "69f925d3383141331bef": {
 "d": "2026-09-29",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01740743&bidPbancOrd=000",
@@ -2009,6 +2021,12 @@
 "s": "g2b-servc",
 "t": "국립세종수목원 임직원용 관용차량 임차"
 },
+"9992e0f647a0f7285658": {
+"d": "2026-10-22",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01786088&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "카페인 함유 식품의 식생활 안전 관리 체계 마련 기획연구"
+},
 "9994d62267fba4a005c6": {
 "d": "2026-08-12",
 "l": "https://www.sdm.go.kr/news/notice/notice.do",
@@ -2146,6 +2164,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01758283&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "도시바람길숲 조성사업(공도 가로숲) 폐기물처리 용역"
+},
+"a6c000887c9c0ea1d1b7": {
+"d": "2026-10-22",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01786246&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026 산림과학기술 출연 연구개발사업 성과조사분석"
 },
 "a6dfdd52e321cdfb6112": {
 "d": "2026-10-14",
@@ -2614,6 +2638,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01715361&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "양구수목원 모노레일 조성사업 감리(비상주)용역"
+},
+"cb4ff4836d87b612c226": {
+"d": "2026-10-22",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01785910&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "현충사(묘소포함) 조경 및 시설물 관리를 위한 설계용역"
 },
 "cb7b8710676bd98df657": {
 "d": "2026-09-01",
@@ -3132,5 +3162,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-22T15:40:20+09:00"
+"updated_at": "2026-10-22T19:10:39+09:00"
 }
