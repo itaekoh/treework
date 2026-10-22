@@ -1,11 +1,10 @@
 {
-"count": 410,
+"count": 414,
 "health": {
 "g2b-servc": {
 "fails": 0,
-"ok": "2026-10-21",
+"ok": "2026-10-22",
 "rows": [
-3229,
 3589,
 3154,
 3432,
@@ -14,7 +13,8 @@
 3666,
 4084,
 3663,
-4041
+4041,
+3593
 ]
 },
 "gu-ddm-n": {
@@ -1407,6 +1407,12 @@
 "s": "g2b-servc",
 "t": "화생방 제독작전모의 SW 구현"
 },
+"5803df46d59957fb9a25": {
+"d": "2026-10-22",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01784372&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 산불예방 숲가꾸기 및 산물수집사업 2차(북천,횡천,적량) 감리용역"
+},
 "58362fd5851564c2518c": {
 "d": "2026-09-15",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01727287&bidPbancOrd=000",
@@ -1832,6 +1838,12 @@
 "l": "https://job.seoul.go.kr/hmpg/rmim/pjmg/pjmgDetail.do?pbc_recmnt_mng_no=58E6E5A5AD4004B8E063C0A8A02853CA",
 "s": "seoul-job-public",
 "t": "2026년 월드컵공원 파크골프장 기간제노동자 채용 공고"
+},
+"899726eab83adbd4ae3a": {
+"d": "2026-10-22",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01785721&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2027년 서해바다숲 조성사업 목표치 설정 기초자료 확보"
 },
 "89e222d4c5d2ce6c1a52": {
 "d": "2026-10-08",
@@ -2307,6 +2319,12 @@
 "s": "gu-songpa-r",
 "t": "2026년 송파구보건소 구강보건사업 기간제근로자(치위생사) 채용 공고"
 },
+"b51563f8e5bdf4976e7f": {
+"d": "2026-10-22",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01785768&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 서해바다숲(태안군 우배도) 1년차 해조류 확산단지 조성"
+},
 "b57158991b076ee9dce5": {
 "d": "2026-09-22",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01741793&bidPbancOrd=000",
@@ -2480,6 +2498,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01705521&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 태안군 난도 바다숲 1년차 해조류 확산단지 조성(긴급)"
+},
+"c0fb7862e8205542f2d2": {
+"d": "2026-10-22",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01785629&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2026년 산불예방 숲가꾸기 선목용역(서호청용지구)"
 },
 "c1c2c778e51cf03d0629": {
 "d": "2026-08-28",
@@ -3100,5 +3124,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-21T22:20:53+09:00"
+"updated_at": "2026-10-22T13:42:49+09:00"
 }
