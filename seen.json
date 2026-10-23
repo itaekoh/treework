@@ -21,7 +21,7 @@
 "alerted": "2026-10-23",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonWebList.do?key=3291 (Caused by ConnectTimeoutError(<HTTPSConne",
 "err_at": "2026-10-23",
-"fails": 2,
+"fails": 3,
 "ok": "2026-10-22",
 "rows": [
 10,
@@ -40,7 +40,7 @@
 "alerted": "2026-10-23",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectBbsNttList.do?bbsNo=42&key=208 (Caused by ConnectTimeoutError(<HTTPSC",
 "err_at": "2026-10-23",
-"fails": 2,
+"fails": 3,
 "ok": "2026-10-22",
 "rows": [
 10,
@@ -184,11 +184,8 @@
 ]
 },
 "gu-gangseo-n": {
-"alerted": "2026-10-23",
-"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
-"err_at": "2026-10-23",
-"fails": 2,
-"ok": "2026-10-22",
+"fails": 0,
+"ok": "2026-10-23",
 "rows": [
 10,
 10,
@@ -203,11 +200,8 @@
 ]
 },
 "gu-gangseo-r": {
-"alerted": "2026-10-23",
-"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
-"err_at": "2026-10-23",
-"fails": 2,
-"ok": "2026-10-22",
+"fails": 0,
+"ok": "2026-10-23",
 "rows": [
 10,
 10,
@@ -517,9 +511,7 @@
 ]
 },
 "gu-songpa-n": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.songpa.go.kr', port=443): Max retries exceeded with url: /www/selectGosiList.do?key=2776 (Caused by ConnectTimeoutError(<HTTPSConnecti",
-"err_at": "2026-10-23",
-"fails": 1,
+"fails": 0,
 "ok": "2026-10-23",
 "rows": [
 10,
@@ -535,13 +527,11 @@
 ]
 },
 "gu-songpa-r": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.songpa.go.kr', port=443): Max retries exceeded with url: /www/selectBbsNttList.do?bbsNo=94&key=5140 (Caused by ConnectTimeoutError(<HT",
-"err_at": "2026-10-23",
-"fails": 1,
+"fails": 0,
 "ok": "2026-10-23",
 "rows": [
-10,
 8,
+10,
 10,
 10,
 10,
@@ -553,11 +543,8 @@
 ]
 },
 "gu-yangcheon": {
-"alerted": "2026-10-23",
-"err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
-"err_at": "2026-10-23",
-"fails": 4,
-"ok": "2026-10-22",
+"fails": 0,
+"ok": "2026-10-23",
 "rows": [
 50,
 50,
@@ -572,9 +559,10 @@
 ]
 },
 "gu-ydp-n": {
+"alerted": "2026-10-23",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-10-23",
-"fails": 1,
+"fails": 2,
 "ok": "2026-10-23",
 "rows": [
 10,
@@ -590,9 +578,10 @@
 ]
 },
 "gu-ydp-r": {
+"alerted": "2026-10-23",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
 "err_at": "2026-10-23",
-"fails": 1,
+"fails": 2,
 "ok": "2026-10-23",
 "rows": [
 4,
@@ -611,7 +600,7 @@
 "alerted": "2026-10-23",
 "err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
 "err_at": "2026-10-23",
-"fails": 34,
+"fails": 35,
 "ok": "2026-10-14",
 "rows": [
 10,
@@ -630,7 +619,6 @@
 "fails": 0,
 "ok": "2026-10-23",
 "rows": [
-59,
 62,
 63,
 63,
@@ -639,7 +627,8 @@
 61,
 61,
 53,
-54
+54,
+56
 ]
 },
 "seoul-notice": {
@@ -3283,5 +3272,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-23T19:03:03+09:00"
+"updated_at": "2026-10-23T21:04:32+09:00"
 }
