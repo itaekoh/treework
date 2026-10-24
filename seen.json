@@ -393,7 +393,9 @@
 "rows": []
 },
 "gu-mapo-n": {
-"fails": 0,
+"err": "ConnectionError: HTTPSConnectionPool(host='www.mapo.go.kr', port=443): Max retries exceeded with url: /site/main/nPortal/list (Caused by NameResolutionError(\"HTTPSConnection(host='",
+"err_at": "2026-10-24",
+"fails": 1,
 "ok": "2026-10-24",
 "rows": [
 10,
@@ -537,7 +539,9 @@
 ]
 },
 "gu-yangcheon": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
+"err_at": "2026-10-24",
+"fails": 1,
 "ok": "2026-10-24",
 "rows": [
 50,
@@ -573,12 +577,12 @@
 "ok": "2026-10-24",
 "rows": [
 3,
-3,
 5,
 5,
 6,
 6,
 7,
+10,
 10,
 10,
 10
@@ -588,7 +592,7 @@
 "alerted": "2026-10-24",
 "err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
 "err_at": "2026-10-24",
-"fails": 38,
+"fails": 39,
 "ok": "2026-10-14",
 "rows": [
 10,
@@ -607,7 +611,6 @@
 "fails": 0,
 "ok": "2026-10-24",
 "rows": [
-60,
 61,
 61,
 61,
@@ -616,7 +619,8 @@
 56,
 56,
 54,
-54
+54,
+55
 ]
 },
 "seoul-notice": {
@@ -3260,5 +3264,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-24T15:31:15+09:00"
+"updated_at": "2026-10-24T20:28:07+09:00"
 }
