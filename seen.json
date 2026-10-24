@@ -18,7 +18,9 @@
 ]
 },
 "gu-ddm-n": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonWebList.do?key=3291 (Caused by ConnectTimeoutError(<HTTPSConne",
+"err_at": "2026-10-24",
+"fails": 1,
 "ok": "2026-10-24",
 "rows": [
 10,
@@ -34,7 +36,9 @@
 ]
 },
 "gu-ddm-r": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectBbsNttList.do?bbsNo=42&key=208 (Caused by ConnectTimeoutError(<HTTPSC",
+"err_at": "2026-10-24",
+"fails": 1,
 "ok": "2026-10-24",
 "rows": [
 10,
@@ -178,7 +182,9 @@
 ]
 },
 "gu-gangseo-n": {
-"fails": 0,
+"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+"err_at": "2026-10-24",
+"fails": 1,
 "ok": "2026-10-24",
 "rows": [
 10,
@@ -194,7 +200,9 @@
 ]
 },
 "gu-gangseo-r": {
-"fails": 0,
+"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+"err_at": "2026-10-24",
+"fails": 1,
 "ok": "2026-10-24",
 "rows": [
 10,
@@ -393,9 +401,7 @@
 "rows": []
 },
 "gu-mapo-n": {
-"err": "ConnectionError: HTTPSConnectionPool(host='www.mapo.go.kr', port=443): Max retries exceeded with url: /site/main/nPortal/list (Caused by NameResolutionError(\"HTTPSConnection(host='",
-"err_at": "2026-10-24",
-"fails": 1,
+"fails": 0,
 "ok": "2026-10-24",
 "rows": [
 10,
@@ -539,9 +545,7 @@
 ]
 },
 "gu-yangcheon": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
-"err_at": "2026-10-24",
-"fails": 1,
+"fails": 0,
 "ok": "2026-10-24",
 "rows": [
 50,
@@ -576,12 +580,12 @@
 "fails": 0,
 "ok": "2026-10-24",
 "rows": [
-3,
 5,
 5,
 6,
 6,
 7,
+10,
 10,
 10,
 10,
@@ -592,7 +596,7 @@
 "alerted": "2026-10-24",
 "err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
 "err_at": "2026-10-24",
-"fails": 39,
+"fails": 40,
 "ok": "2026-10-14",
 "rows": [
 10,
@@ -613,13 +617,13 @@
 "rows": [
 61,
 61,
-61,
 53,
 54,
 56,
 56,
 54,
 54,
+55,
 55
 ]
 },
@@ -3264,5 +3268,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-24T20:28:07+09:00"
+"updated_at": "2026-10-24T21:44:01+09:00"
 }
