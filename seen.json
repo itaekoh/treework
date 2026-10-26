@@ -1,5 +1,5 @@
 {
-"count": 446,
+"count": 447,
 "health": {
 "g2b-servc": {
 "fails": 0,
@@ -162,9 +162,7 @@
 ]
 },
 "gu-gangnam": {
-"err": "ReadTimeout: HTTPSConnectionPool(host='gangnam.eminwon.seoul.kr', port=443): Read timed out. (read timeout=25)",
-"err_at": "2026-10-26",
-"fails": 1,
+"fails": 0,
 "ok": "2026-10-26",
 "rows": [
 50,
@@ -180,9 +178,7 @@
 ]
 },
 "gu-gangseo-n": {
-"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
-"err_at": "2026-10-26",
-"fails": 1,
+"fails": 0,
 "ok": "2026-10-26",
 "rows": [
 10,
@@ -198,9 +194,7 @@
 ]
 },
 "gu-gangseo-r": {
-"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
-"err_at": "2026-10-26",
-"fails": 1,
+"fails": 0,
 "ok": "2026-10-26",
 "rows": [
 10,
@@ -296,9 +290,7 @@
 ]
 },
 "gu-gwangjin-n": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000378/list.do?menuNo=200192 (Caused by ConnectTimeoutError(<",
-"err_at": "2026-10-26",
-"fails": 1,
+"fails": 0,
 "ok": "2026-10-26",
 "rows": [
 10,
@@ -314,9 +306,7 @@
 ]
 },
 "gu-gwangjin-r": {
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.gwangjin.go.kr', port=443): Max retries exceeded with url: /portal/bbs/B0000004/list.do?menuNo=200193 (Caused by ConnectTimeoutError(<",
-"err_at": "2026-10-26",
-"fails": 1,
+"fails": 0,
 "ok": "2026-10-26",
 "rows": [
 10,
@@ -598,7 +588,7 @@
 "alerted": "2026-10-26",
 "err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
 "err_at": "2026-10-26",
-"fails": 47,
+"fails": 48,
 "ok": "2026-10-14",
 "rows": [
 10,
@@ -617,13 +607,13 @@
 "fails": 0,
 "ok": "2026-10-26",
 "rows": [
+55,
+55,
+55,
+55,
+55,
+55,
 54,
-55,
-55,
-55,
-55,
-55,
-55,
 54,
 54,
 54
@@ -988,6 +978,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01772413&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 숲가꾸기사업 실시설계용역(봉평 2차)"
+},
+"2c36962bc48d9dec340c": {
+"d": "2026-10-26",
+"l": "http://gangnam.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=65698&homepage_pbs_yn=Y&subCheck=Y",
+"s": "gu-gangnam",
+"t": "전문건설업 신규등록 공고_더숲디자인(주)"
 },
 "2c64de73a06840628faf": {
 "d": "2026-10-14",
@@ -3324,5 +3320,5 @@
 "t": "일산호수공원 작은동물원 철거 및 녹지광장 조성공사 폐기물처리용역"
 }
 },
-"updated_at": "2026-10-26T22:42:55+09:00"
+"updated_at": "2026-10-26T23:44:37+09:00"
 }
