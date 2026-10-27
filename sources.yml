@@ -173,9 +173,32 @@ sources:
     # 전국 수집(2026-08-31). 지역제한 없는 공고가 88%라 서울 업체도 전국
     # 입찰에 참여할 수 있어 서울로 좁힐 이유가 없다. 빈 리스트 = 전국.
     # 볼륨이 과하면 ["서울"] 로 되돌리거나 min_amount 를 올린다.
+    # 전국·대량 소스라 C티어(조경/녹지/산림/숲 한 단어만 걸린 건)는 받지 않는다.
+    # 구청 채용공고에서 '조경'은 신호지만 전국 용역에서 '숲' 하나는 무의미하다.
+    min_tier: B
     region_keywords: []
     # 추정가격 하한(원). 0 이면 제한 없음. 전국으로 넓히면 소액 수의시담이
     # 대량으로 들어오므로 필요할 때 쓰는 조절 장치.
+    min_amount: 0
+
+  # 같은 API·같은 수집기를 쓰되 분류 프로파일만 IT 로 바꾼 소스.
+  # 수목과 업역이 전혀 달라 키워드·제외 규칙을 공유할 수 없으므로 분리했다.
+  # 알림에서도 별도 섹션으로 나간다.
+  - id: g2b-it
+    name: 나라장터 IT용역
+    org: 나라장터
+    kind: g2b_bid
+    enabled: true
+    profile: it
+    key_env: G2B_SERVICE_KEY
+    board_url: https://www.g2b.go.kr/
+    base_url: https://apis.data.go.kr/1230000/ad/BidPublicInfoService
+    operation: getBidPblancListInfoServc
+    page_size: 999
+    max_pages: 15
+    lookback_days: 7
+    min_tier: B          # C티어('시스템'·'데이터' 단독)는 전국 규모에서 소음
+    region_keywords: []
     min_amount: 0
 
   # ─────────────────────────────────────────────────────────────

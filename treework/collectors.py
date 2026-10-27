@@ -43,7 +43,8 @@ class Posting:
     amount: str = ""            # 용역 입찰의 추정가격 등 규모 정보
     doc_url: str = ""           # 공고문 직접 다운로드 (브라우저 무관하게 열린다)
     ref_no: str = ""            # 공고번호 — 수동 검색용
-    region: str = ""            # 시도 (전국 수집 시 추려내기 위한 표시)
+    region: str = ""        # 시도 (전국 수집 시 추려내기 위한 표시)
+    profile: str = "tree"   # 분류 프로파일 (tree / it)
     # 필터 결과
     tier: str | None = None
     hits: list[str] = field(default_factory=list)

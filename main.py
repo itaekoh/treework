@@ -30,10 +30,11 @@ from pathlib import Path
 
 import yaml
 
-from treework import filters, notify
+from treework import ai, filters, notify
 from treework.collectors import COLLECTORS, MissingKey, Posting, _within
 from treework.fetcher import Fetcher
 from treework.state import SeenStore, make_key
+from treework.timeutil import business_status
 
 ROOT = Path(__file__).resolve().parent
 log = logging.getLogger("treework")
@@ -151,6 +152,26 @@ def collect_source(f: Fetcher, src: dict, defaults: dict, *,
     return postings, health
 
 
+def dedupe_profiles(candidates: list[Posting]) -> list[Posting]:
+    """같은 공고가 두 업역에 걸렸을 때 하나만 남긴다.
+
+    나라장터 용역·IT용역은 같은 API 를 프로파일만 바꿔 두 번 읽는다.
+    '가로수 생육환경 전수조사 및 DB구축' 처럼 양쪽 규칙에 모두 걸리는 건은
+    source_id 가 달라 seen 키도 달라지므로 그대로 두면 두 번 발송된다.
+    겹치면 **수목 쪽을 남긴다** — 사용자의 본업이 그쪽이다.
+    """
+    seen: set[tuple[str, str]] = set()
+    out: list[Posting] = []
+    for p in sorted(candidates, key=lambda x: 0 if x.profile == "tree" else 1):
+        sig = (p.title.strip(), p.reg_date or "")
+        if sig in seen:
+            log.debug("업역 중복 제외(%s): %r", p.profile, p.title[:50])
+            continue
+        seen.add(sig)
+        out.append(p)
+    return out
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="서울 수목·나무의사 공고 수집기")
     ap.add_argument("--dry-run", action="store_true", help="발송하지 않고 출력만")
@@ -162,9 +183,20 @@ def main() -> int:
     ap.add_argument("--state", default=str(ROOT / "seen.json"))
     ap.add_argument("--no-state-write", action="store_true",
                     help="상태 파일에 기록하지 않음(테스트용)")
+    ap.add_argument("--force", action="store_true",
+                    help="평일 업무시간이 아니어도 실행")
     ap.add_argument("-v", "--verbose", action="store_true")
     args = ap.parse_args()
     setup_logging(args.verbose)
+
+    # 정부기관은 주말·공휴일·야간에 공고를 올리지 않는다. GitHub cron 은
+    # 실측 4~7시간씩 밀려 업무시간 밖에 깨어나므로 cron 식만으로는 막지
+    # 못한다. 여기서 한 번 더 본다.
+    ok_now, why = business_status()
+    if not ok_now and not (args.force or args.dry_run):
+        log.info("업무시간이 아니라 건너뜁니다 — %s", why)
+        return 0
+    log.info("실행 시각 판정: %s%s", why, " (강제)" if args.force else "")
 
     token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
     chat_id = os.environ.get("TELEGRAM_CHAT_ID", "")
@@ -215,19 +247,29 @@ def main() -> int:
         health_rows.append(health)
         scanned += len(postings)
         for p in postings:
-            m = filters.classify(p.title, p.body, p.attach_text, p.dept)
+            prof = src.get("profile")
+            m = filters.classify(p.title, p.body, p.attach_text, p.dept,
+                                 profile=prof)
             if not m.matched:
                 continue
             # 등급까지 정해진 뒤의 최종 관문. 위원 모집·위촉은 A티어 근거가
             # 있을 때만 남는다 — '수목진료 심의위원 위촉' 은 실제 기회지만
             # 부서 안전망에만 걸린 '억새축제 평가위원 모집' 은 무관하다.
             # 상세·첨부까지 본 뒤 판정하므로 첨부에만 요건이 있어도 잡힌다.
-            if not filters.is_actionable(p.title, m.tier):
+            if not filters.is_actionable(p.title, m.tier,
+                                         src.get("min_tier", "C"),
+                                         profile=prof):
                 log.debug("[%s] 최종 관문 제외(%s): %r",
                           src["id"], m.tier, p.title[:50])
                 continue
             p.tier, p.hits, p.demoted = m.tier, m.hits, m.demoted
+            p.profile = prof or "tree"
             candidates.append(p)
+
+    before_dedupe = len(candidates)
+    candidates = dedupe_profiles(candidates)
+    if len(candidates) != before_dedupe:
+        log.info("업역 중복 %d건 제외", before_dedupe - len(candidates))
 
     # ── 신규만 추린다 ────────────────────────────────────────────────
     #  '발송했다'고 기록하는 것은 실제 발송이 성공한 뒤로 미룬다. 먼저 기록하면
@@ -259,7 +301,15 @@ def main() -> int:
         "attach_names": p.attach_names, "attach_truncated": p.attach_truncated,
         "link_is_board": p.link_is_board, "amount": p.amount,
         "doc_url": p.doc_url, "ref_no": p.ref_no, "region": p.region,
+        "profile": p.profile,
     } for p in new]
+
+    # AI 선별 — 룰을 통과한 소수만 다시 본다. 키가 없거나 실패하면 아무것도
+    # 바뀌지 않고 전부 평소대로 나간다(fail-open). 자세한 이유는 treework/ai.py.
+    used = ai.review(payload)
+    if used:
+        low = sum(1 for p in payload if ai.is_demoted(p))
+        log.info("AI(%s) 선별: %d건 중 %d건을 참고로 내림", used, len(payload), low)
 
     messages = notify.build_messages(payload, health)
     sent, failed = notify.send(token, chat_id, messages, dry_run=args.dry_run)

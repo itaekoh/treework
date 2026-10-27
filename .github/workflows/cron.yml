@@ -11,10 +11,17 @@ on:
     #    → 오전 2회 + 오후 2회로 이중화한다. 하나만 돌아도 그날은 커버된다.
     #
     # 분은 0/15/30/45 처럼 몰리는 값을 피해 흩뿌린다.
-    - cron: "23 0 * * *"    # 09:23 KST
-    - cron: "41 1 * * *"    # 10:41 KST  (오전 백업)
-    - cron: "23 6 * * *"    # 15:23 KST
-    - cron: "41 7 * * *"    # 16:41 KST  (오후 백업)
+    # 평일(UTC 1-5 = KST 월~금, 이 시간대에서는 요일이 어긋나지 않는다)만.
+    # 공휴일과 업무시간은 cron 으로 표현할 수 없어 main.py 가 실행 시점에
+    # 다시 본다(treework/timeutil.business_status).
+    #
+    # 실측: GitHub cron 은 예정보다 4~7시간 늦게 뜬다. 그래서 창 앞쪽에
+    # 촘촘히 걸어 둔다 — 늦게 떠도 어느 하나는 업무시간 안에 들어온다.
+    # 업무시간 밖에 뜬 실행은 20초쯤 쓰고 조용히 끝나므로 비용이 거의 없다.
+    - cron: "10 0 * * 1-5"    # 09:10 KST
+    - cron: "10 2 * * 1-5"    # 11:10 KST
+    - cron: "10 4 * * 1-5"    # 13:10 KST
+    - cron: "10 6 * * 1-5"    # 15:10 KST
   workflow_dispatch:
     inputs:
       dry_run:
@@ -23,8 +30,12 @@ on:
         default: false
 
 # 두 스케줄이 겹쳐 seen.json 커밋이 충돌하는 것을 막는다.
+# g2b.yml 과 **다른** group 을 쓴다. 같은 이름을 쓰면 한쪽이 도는 동안
+# 다른 쪽의 대기 실행이 취소된다(GitHub 은 group 당 pending 을 1개만 유지한다).
+# 실측: 나라장터가 평일 9회 예정 중 2회만 실행됐다. seen.json 동시 커밋은
+# 아래 push 단계의 rebase 재시도가 흡수한다.
 concurrency:
-  group: treework-collect
+  group: treework-collect-tree
   cancel-in-progress: false
 
 permissions:
@@ -52,6 +63,7 @@ jobs:
         run: |
           python tests/test_filters.py
           python tests/test_service_key.py
+          python tests/test_schedule_ai.py
           python tests/test_notify.py
           python tests/test_region.py
 
@@ -63,8 +75,11 @@ jobs:
           # 미설정이면 나라장터 소스만 '건너뜀'으로 처리되고 경고는 뜨지 않는다
           G2B_SERVICE_KEY: ${{ secrets.G2B_SERVICE_KEY }}
         # 나라장터는 마감이 당일인 건이 많아 g2b.yml 에서 평일 매시간 따로 돈다
+          # AI 선별용. 둘 다 없으면 AI 없이 평소대로 동작한다(fail-open).
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         run: |
-          python main.py --exclude g2b-servc ${{ inputs.dry_run && '--dry-run' || '' }}
+          python main.py --exclude g2b-servc --exclude g2b-it ${{ inputs.dry_run && '--dry-run' || '' }}
 
       - name: seen.json 커밋
         # 발송이 실패하면 main.py 가 상태를 저장하지 않고 종료하므로
@@ -123,9 +138,9 @@ jobs:
           # 미설정이면 나라장터 소스만 '건너뜀'으로 처리되고 경고는 뜨지 않는다
           G2B_SERVICE_KEY: ${{ secrets.G2B_SERVICE_KEY }}
         run: |
-          # 월요일 오전 실행에서만. 오전 cron 이 둘(00:23/01:41 UTC)이라 둘 다
+          # 월요일 오전 실행에서만. 오전 cron 이 둘(00:10/02:10 UTC)이라 둘 다
           # 인정한다 — 하나가 스킵돼도 그 주 점검이 비지 않게.
-          if [[ "$(date -u +%u)" != "1" ]] || [[ "$(date -u +%H)" -gt 1 ]]; then
+          if [[ "$(date -u +%u)" != "1" ]] || [[ "$(date -u +%H)" -gt 2 ]]; then
             echo "점검 대상 시각 아님 — 건너뜀"; exit 0
           fi
           python selftest.py

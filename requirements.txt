@@ -6,3 +6,7 @@ pypdf>=4.2
 # fallback: pypdf sometimes fails to extract text from Korean PDFs
 pdfminer.six>=20240706
 olefile>=0.47
+# 공휴일 판정 — 설/추석은 음력이라 직접 계산할 수 없다
+holidays>=0.60
+# AI 선별(선택). ANTHROPIC_API_KEY 가 없으면 import 되지 않는다.
+anthropic>=0.49

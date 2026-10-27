@@ -15,9 +15,12 @@ import time
 
 import requests
 
+from treework import ai
+
 log = logging.getLogger(__name__)
 
 API = "https://api.telegram.org/bot{token}/sendMessage"
+
 LIMIT = 3800          # 4096에서 여유를 둔다
 TIER_BADGE = {"A": "🔴 확정", "B": "🟡 유력", "C": "⚪ 확인필요"}
 
@@ -55,6 +58,12 @@ def format_posting(p: dict) -> str:
     if hits:
         lines.append(f"🔎 {esc(', '.join(hits[:6]))}")
 
+    # AI 가 본 적이 있으면 한 줄 근거를 붙인다. 룰은 '어떤 키워드가 걸렸나'만
+    # 말해 주는데, 그것만으로는 왜 볼 만한지 알 수 없다.
+    if p.get("ai_fit") is not None:
+        lines.append(f"🤖 적합도 {p['ai_fit']}/5"
+                     + (f" · {esc(p.get('ai_why') or '')}" if p.get("ai_why") else ""))
+
     notes = []
     if p.get("attach_names"):
         notes.append(f"첨부 {len(p['attach_names'])}건")
@@ -86,15 +95,31 @@ def format_posting(p: dict) -> str:
 def build_messages(postings: list[dict], health: dict) -> list[str]:
     """발송할 메시지 목록. 신규가 없어도 문제가 있으면 헬스 메시지를 만든다."""
     msgs: list[str] = []
-    by_tier: dict[str, list[dict]] = {"A": [], "B": [], "C": []}
-    for p in postings:
-        by_tier.setdefault(p.get("tier") or "C", []).append(p)
 
-    if postings:
-        head = (f"🌳 <b>서울 공공기관 수목·나무의사 공고</b>\n"
-                f"신규 {len(postings)}건 "
-                f"(확정 {len(by_tier['A'])} · 유력 {len(by_tier['B'])} · "
-                f"확인필요 {len(by_tier['C'])})")
+    # 업역별로 메시지를 나눈다. 수목과 IT 는 판단 기준도 후속 행동도 달라
+    # 한 덩어리로 묶으면 둘 다 흐릿해진다.
+    GROUPS = (("tree", "\U0001F333 <b>서울 공공기관 수목·나무의사 공고</b>"),
+              ("it", "\U0001F4BB <b>나라장터 IT용역 공고</b>"))
+    for prof_name, head_label in GROUPS:
+        group = [p for p in postings if (p.get("profile") or "tree") == prof_name]
+        if not group:
+            continue
+
+        # AI 가 낮게 본 건은 **버리지 않는다**. 본문에서 빼고 끝에 제목만
+        # 한 줄씩 모은다 — 읽는 부담은 줄이되 누락은 만들지 않는다. AI 가
+        # 꺼져 있거나 실패했으면 is_demoted 가 늘 False 라 전부 본문에 남는다.
+        main_items = [p for p in group if not ai.is_demoted(p)]
+        aside = [p for p in group if ai.is_demoted(p)]
+
+        by_tier: dict[str, list[dict]] = {"A": [], "B": [], "C": []}
+        for p in main_items:
+            by_tier.setdefault(p.get("tier") or "C", []).append(p)
+
+        counts = (f"확정 {len(by_tier['A'])} · 유력 {len(by_tier['B'])} · "
+                  f"확인필요 {len(by_tier['C'])}")
+        if aside:
+            counts += f" · AI 보류 {len(aside)}"
+        head = f"{head_label}\n신규 {len(group)}건 ({counts})"
         buf = [head]
         size = len(head)
         for tier in ("A", "B", "C"):
@@ -109,8 +134,22 @@ def build_messages(postings: list[dict], health: dict) -> list[str]:
                 if size + len(block) > LIMIT:
                     msgs.append("\n".join(buf)); buf, size = [], 0
                 buf.append(block); size += len(block)
+        if aside:
+            sec = "\n━━━ 🔅 AI 보류 (관련 낮음 — 제목만) ━━━"
+            if size + len(sec) > LIMIT:
+                msgs.append("\n".join(buf)); buf, size = [], 0
+            buf.append(sec); size += len(sec)
+            for p in aside:
+                why = p.get("ai_why") or ""
+                line = (f'\n· <a href="{esc(p.get("link") or "")}">'
+                        f'{esc((p.get("title") or "")[:60])}</a>'
+                        + (f" — <i>{esc(why)}</i>" if why else ""))
+                if size + len(line) > LIMIT:
+                    msgs.append("\n".join(buf)); buf, size = [], 0
+                buf.append(line); size += len(line)
         if buf:
             msgs.append("\n".join(buf))
+
 
     # ── 헬스 리포트 ────────────────────────────────────────────────
     #  예외를 삼켜서 조용히 0건이 되는 것이 이 시스템 최대의 실패 모드다.
