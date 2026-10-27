@@ -76,7 +76,12 @@ def backend() -> str:
     if os.environ.get("ANTHROPIC_API_KEY"):
         return "api"
     if os.environ.get("CLAUDE_CODE_OAUTH_TOKEN"):
-        return "cli"
+        # 토큰만으로는 부족하다. CI 러너에는 claude CLI 가 기본으로 없어서,
+        # 여기서 확인하지 않으면 매 실행 호출에 실패하고 경고만 쌓인다.
+        if shutil.which("claude"):
+            return "cli"
+        log.warning("CLAUDE_CODE_OAUTH_TOKEN 은 있는데 claude CLI 가 없습니다 "
+                    "— AI 없이 진행합니다 (npm i -g @anthropic-ai/claude-code)")
     return ""
 
 

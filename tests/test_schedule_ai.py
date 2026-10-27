@@ -125,6 +125,41 @@ POSTS = [
 ]
 HEALTH = {"sources": [], "ok": 1, "total": 1, "scanned": 2}
 
+# 백엔드 선택 — API 키가 있으면 CLI 는 쳐다보지도 않는다.
+# (CI 러너에 claude CLI 가 없어도 API 경로는 멀쩡히 돌아야 한다)
+import shutil                                 # noqa: E402
+
+_env_backup = {k: os.environ.get(k) for k in
+               ("ANTHROPIC_API_KEY", "CLAUDE_CODE_OAUTH_TOKEN", "TREEWORK_AI")}
+
+
+def _with_env(**kv) -> str:
+    for k in _env_backup:
+        os.environ.pop(k, None)
+    for k, v in kv.items():
+        if v is not None:
+            os.environ[k] = v
+    try:
+        return ai.backend()
+    finally:
+        for k, v in _env_backup.items():
+            os.environ.pop(k, None)
+            if v is not None:
+                os.environ[k] = v
+
+
+check("[백엔드] API 키가 있으면 api", _with_env(ANTHROPIC_API_KEY="sk-x"), "api")
+check("[백엔드] 둘 다 있으면 api 가 이긴다(싸다)",
+      _with_env(ANTHROPIC_API_KEY="sk-x", CLAUDE_CODE_OAUTH_TOKEN="t"), "api")
+check("[백엔드] 아무것도 없으면 빈 문자열", _with_env(), "")
+check("[백엔드] off 스위치가 모든 것을 이긴다",
+      _with_env(ANTHROPIC_API_KEY="sk-x", TREEWORK_AI="off"), "")
+# 구독 토큰만 있을 때는 CLI 설치 여부가 가른다. 토큰만 믿고 호출하면
+# CI 에서 매 실행 실패하고 경고만 쌓인다.
+check("[백엔드] 구독 토큰만 있을 때는 CLI 유무를 본다",
+      _with_env(CLAUDE_CODE_OAUTH_TOKEN="t"),
+      "cli" if shutil.which("claude") else "")
+
 check("[AI] 백엔드가 없으면 review 는 아무것도 하지 않는다",
       ai.review([dict(p) for p in POSTS]), "")
 check("[AI] 점수가 없으면 보류로 내리지 않는다",
