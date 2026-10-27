@@ -144,7 +144,8 @@ on = "\n".join(notify.build_messages(scored, HEALTH))
 check("[AI] 낮게 본 건도 제목은 반드시 남는다",
       "숲속작은도서관 위탁운영" in on, True)
 check("[AI] 낮게 본 건은 보류 섹션으로 간다", "AI 보류" in on, True)
-check("[AI] 높게 본 건은 근거와 함께 본문에", "적합도 5/5" in on, True)
+check("[AI] 높게 본 건은 점수와 함께 본문에",
+      "<b>5</b>/5" in on and "핵심 업무" in on, True)
 check("[AI] 신규 건수는 보류 포함 전체를 센다", "신규 2건" in on, True)
 
 # 응답이 깨져도 예외를 올리지 않고, 일부만 와도 나머지는 통과시킨다.

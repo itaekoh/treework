@@ -73,14 +73,20 @@ def check_message() -> int:
          "reg_date": "2026-08-31", "due_date": "2026-09-10 10:00",
          "amount": "3,200만원", "ref_no": "R26BK00000001-000"}
     text = notify.format_posting(p)
+    rows = text.split("\n")
     fails = 0
-    if "전남" not in text.split("\n")[0]:
-        print(f"FAIL  첫 줄에 지역이 없다: {text.splitlines()[0]!r}")
+    # 전국 수집이라 지역은 반드시 보여야 한다. 제목 바로 아래 기관 줄에 둔다 —
+    # 첫 줄은 제목 전용이어야 목록을 훑을 수 있다.
+    if "📍전남" not in rows[1]:
+        print(f"FAIL  기관 줄에 지역이 없다: {rows[1]!r}")
         fails += 1
-    # 지역을 모르면 배지가 깨지지 않아야 한다
+    if "전남" in rows[0]:
+        print(f"FAIL  첫 줄은 제목 전용이어야 한다: {rows[0]!r}")
+        fails += 1
+    # 지역을 모르면 구분점이 떠돌지 않아야 한다
     p2 = dict(p, region="")
-    if "·  <b>" in notify.format_posting(p2):
-        print("FAIL  지역이 없을 때 배지가 어색하다")
+    if "· 📍" in notify.format_posting(p2):
+        print("FAIL  지역이 없는데 지역 표시가 남아 있다")
         fails += 1
     print(f"{'PASS' if not fails else 'FAIL'}  메시지 지역 표기")
     return fails

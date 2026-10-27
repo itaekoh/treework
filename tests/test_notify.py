@@ -62,7 +62,7 @@ CASES = [
 
     ("전부 정상이면 ✅ 만 보낸다",
      [src("가"), src("나")],
-     False, "정상 동작"),
+     False, "신규 공고 없음"),
 
     ("미설정(skipped)은 고장이 아니다",
      [src("정상"), src("나라장터", "skipped", 0)],
@@ -93,7 +93,7 @@ def main() -> int:
     for desc, sources, want_warn, must_contain in CASES:
         msgs = notify.build_messages([], health(sources))
         text = "\n".join(msgs)
-        warned = "수집 상태 경고" in text and "정상 동작" not in text
+        warned = "수집 상태 경고" in text and "신규 공고 없음" not in text
         ok = (warned == want_warn) and (must_contain in text)
         fails += 0 if ok else 1
         print(f"{'PASS' if ok else 'FAIL'}  {desc}")

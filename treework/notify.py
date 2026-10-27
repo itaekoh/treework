@@ -11,11 +11,14 @@ from __future__ import annotations
 
 import html
 import logging
+import re
 import time
+from datetime import datetime
 
 import requests
 
 from treework import ai
+from treework.timeutil import now_kst
 
 log = logging.getLogger(__name__)
 
@@ -23,73 +26,128 @@ API = "https://api.telegram.org/bot{token}/sendMessage"
 
 LIMIT = 3800          # 4096에서 여유를 둔다
 TIER_BADGE = {"A": "🔴 확정", "B": "🟡 유력", "C": "⚪ 확인필요"}
+TIER_DOT = {"A": "🔴", "B": "🟡", "C": "⚪"}
 
 
 def esc(s: str) -> str:
     return html.escape(str(s or ""), quote=False)
 
 
+def to_plain(text: str) -> str:
+    """HTML 서식을 벗긴다. 링크 주소는 살린다.
+
+    <a href="X">Y</a> 를 그냥 지우면 주소가 사라져 알림이 쓸모없어진다.
+    이 알림의 핵심은 '어디로 가면 되는가' 다.
+    """
+    text = re.sub(r'<a[^>]*href="([^"]*)"[^>]*>(.*?)</a>', r"\2 \1", text,
+                  flags=re.S)
+    return html.unescape(re.sub(r"<[^>]+>", "", text))
+
+
+def _deadline(due: str, now: datetime | None = None) -> str:
+    """마감을 남은 날짜로 보여 준다.
+
+    '2026-10-30' 만 적혀 있으면 급한 건인지 알 수 없다. 자치구 기간제 공고는
+    접수기간이 3~5일로 짧아서, 알림을 열었을 때 가장 먼저 보여야 하는 것이
+    '며칠 남았나' 다.
+    """
+    due = (due or "").strip()
+    if not due:
+        return "🗓 마감 미표기"
+    now = now or now_kst()
+    try:
+        if len(due) > 10:                       # 'YYYY-MM-DD HH:MM'
+            dt = datetime.strptime(due[:16], "%Y-%m-%d %H:%M")
+            stamp = f"{dt:%m/%d} {dt:%H:%M}"
+        else:
+            dt = datetime.strptime(due, "%Y-%m-%d")
+            stamp = f"{dt:%m/%d}"
+    except ValueError:
+        return f"🗓 {esc(due)} 마감"
+    left = (dt.date() - now.date()).days
+    if left < 0:
+        return f"🗓 {stamp} 마감 (지남)"
+    if left == 0:
+        return f"🔥 <b>오늘 마감</b> · {stamp}"
+    if left == 1:
+        return f"🔥 <b>내일 마감</b> · {stamp}"
+    if left <= 3:
+        return f"⏳ <b>D-{left}</b> · {stamp} 마감"
+    return f"🗓 {stamp} 마감 · D-{left}"
+
+
 def format_posting(p: dict) -> str:
-    """공고 1건을 블록으로 만든다."""
+    """공고 1건을 블록으로 만든다.
+
+    읽는 순서를 눈이 움직이는 순서에 맞춘다.
+        제목 → 누가 → 언제까지·얼마 → 왜 걸렸나 → AI 판단 → 링크
+    제목이 첫 줄 맨 앞에 와야 목록을 훑을 수 있다. 등급 표시는 점 하나로
+    줄였다 — 섹션 머리에 이미 이름이 있고, 긴 이름표가 제목을 밀어낸다.
+    """
     tier = p.get("tier") or "C"
+    out = [f"{TIER_DOT.get(tier, '⚪')} <b>{esc(p['title'])}</b>"]
+
+    # ── 누가 ──
     org, dept = (p.get("org") or "").strip(), (p.get("dept") or "").strip()
     # 나라장터는 공고기관과 수요기관이 같은 경우가 많아 그대로 두면 같은 이름이
     # 두 번 찍힌다. 부서가 기관명에 이미 포함돼 있으면 생략한다.
     if dept and (dept == org or dept in org or org in dept):
         dept = ""
-    # 전국 수집이라 지역이 한눈에 보여야 추려낼 수 있다
+    who = " · ".join(x for x in (esc(org or "-"), esc(dept)) if x)
     region = (p.get("region") or "").strip()
-    badge = f"{TIER_BADGE.get(tier, tier)}"
-    if region:
-        badge += f" · <b>{esc(region)}</b>"
-    lines = [
-        f"{badge}  <b>{esc(p['title'])}</b>",
-        f"🏢 {esc(org or '-')}" + (f" · {esc(dept)}" if dept else ""),
-    ]
-    reg, due = p.get("reg_date") or "", p.get("due_date") or ""
-    if reg or due:
-        lines.append(f"📅 등록 {esc(reg or '-')} · 마감 {esc(due or '확인불가')}")
-    else:
-        lines.append("📅 마감 확인불가")
+    if region:                       # 전국 수집이라 지역이 보여야 추려낼 수 있다
+        who += f" · 📍{esc(region)}"
+    out.append(f"🏢 {who}")
+
+    # ── 언제까지 · 얼마 ──
+    when = _deadline(p.get("due_date"))
     if p.get("amount"):
-        lines.append(f"💰 {esc(p['amount'])}")
+        when += f" · 💰 {esc(p['amount'])}"
+    out.append(when)
 
-    hits = p.get("hits") or []
-    if hits:
-        lines.append(f"🔎 {esc(', '.join(hits[:6]))}")
-
-    # AI 가 본 적이 있으면 한 줄 근거를 붙인다. 룰은 '어떤 키워드가 걸렸나'만
-    # 말해 주는데, 그것만으로는 왜 볼 만한지 알 수 없다.
-    if p.get("ai_fit") is not None:
-        lines.append(f"🤖 적합도 {p['ai_fit']}/5"
-                     + (f" · {esc(p.get('ai_why') or '')}" if p.get("ai_why") else ""))
-
-    notes = []
+    # ── 왜 걸렸나 ──
+    #  '재선충(A)' 의 등급 꼬리표는 떼어 낸다. 등급은 이미 점으로 보인다.
+    hits = [re.sub(r"\([ABC]\)$", "", h) for h in (p.get("hits") or [])]
+    why = " · ".join(dict.fromkeys(hits))[:80]
     if p.get("attach_names"):
-        notes.append(f"첨부 {len(p['attach_names'])}건")
-    if p.get("attach_truncated"):
-        notes.append("첨부 일부만 판독 — 원문 확인 권장")
-    if p.get("demoted"):
-        notes.append("노이즈 키워드로 등급 하향")
-    if p.get("link_is_board"):
-        notes.append("직접 링크 없음 · 게시판에서 검색")
-    if notes:
-        lines.append(f"ℹ️ {esc(' / '.join(notes))}")
+        tag = f"📎{len(p['attach_names'])}"
+        why = f"{why} · {tag}" if why else tag
+    if why:
+        out.append(f"🔎 {esc(why)}")
 
+    # ── AI 판단 ──
+    if p.get("ai_fit") is not None:
+        out.append(f"🤖 <b>{p['ai_fit']}</b>/5"
+                   + (f" · {esc(p.get('ai_why') or '')}" if p.get("ai_why") else ""))
+
+    # ── 믿어도 되는가 ──
+    #  판정을 흔드는 사정만 남긴다. 단순 정보는 위에서 이미 말했다.
+    warn = []
+    if p.get("attach_truncated"):
+        warn.append("첨부 일부만 판독")
+    if p.get("demoted"):
+        warn.append("노이즈 키워드로 등급 하향")
+    if p.get("link_is_board"):
+        warn.append("직접 링크 없음 — 게시판에서 검색")
+    if warn:
+        out.append(f"⚠️ <i>{esc(' · '.join(warn))}</i>")
+
+    # ── 링크 ──
+    #  나라장터 상세는 WebSquare SPA 라 임베디드 웹뷰에서 실패할 수 있어
+    #  공고문 직접 다운로드를 나란히 준다. 공고번호는 <code> 로 둬서
+    #  링크가 안 열릴 때 길게 눌러 복사해 직접 검색할 수 있게 한다.
     link, doc = p.get("link") or "", p.get("doc_url") or ""
-    if link and doc:
-        # 나라장터 상세는 WebSquare SPA 라 임베디드 웹뷰에서 실패할 수 있어
-        # 공고문 직접 다운로드를 나란히 준다.
-        lines.append(f'🔗 <a href="{esc(link)}">공고 상세</a>'
-                     f' · <a href="{esc(doc)}">📄 공고문</a>')
-    elif link:
-        lines.append(f'🔗 <a href="{esc(link)}">공고 보기</a>')
-    elif doc:
-        lines.append(f'📄 <a href="{esc(doc)}">공고문</a>')
+    nav = []
+    if link:
+        nav.append(f'<a href="{esc(link)}">공고 상세</a>')
+    if doc:
+        nav.append(f'<a href="{esc(doc)}">📄 공고문</a>')
+    if nav:
+        out.append("🔗 " + " · ".join(nav))
     if p.get("ref_no"):
-        # 링크가 안 열릴 때 나라장터에서 직접 검색할 수 있게
-        lines.append(f"🔢 <code>{esc(p['ref_no'])}</code>")
-    return "\n".join(lines)
+        out.append(f"🔢 <code>{esc(p['ref_no'])}</code>")
+    return "\n".join(out)
+
 
 
 def build_messages(postings: list[dict], health: dict) -> list[str]:
@@ -98,9 +156,9 @@ def build_messages(postings: list[dict], health: dict) -> list[str]:
 
     # 업역별로 메시지를 나눈다. 수목과 IT 는 판단 기준도 후속 행동도 달라
     # 한 덩어리로 묶으면 둘 다 흐릿해진다.
-    GROUPS = (("tree", "\U0001F333 <b>서울 공공기관 수목·나무의사 공고</b>"),
-              ("it", "\U0001F4BB <b>나라장터 IT용역 공고</b>"))
-    for prof_name, head_label in GROUPS:
+    GROUPS = (("tree", "\U0001F333", "수목·나무의사 공고"),
+              ("it", "\U0001F4BB", "나라장터 IT용역"))
+    for prof_name, icon, label in GROUPS:
         group = [p for p in postings if (p.get("profile") or "tree") == prof_name]
         if not group:
             continue
@@ -115,40 +173,46 @@ def build_messages(postings: list[dict], health: dict) -> list[str]:
         for p in main_items:
             by_tier.setdefault(p.get("tier") or "C", []).append(p)
 
-        counts = (f"확정 {len(by_tier['A'])} · 유력 {len(by_tier['B'])} · "
-                  f"확인필요 {len(by_tier['C'])}")
+        # 머리글은 두 줄로 고정한다. 무엇이 / 몇 건이 / 어떤 비중인지.
+        tally = " · ".join(f"{TIER_DOT[t]} {len(by_tier[t])}"
+                           for t in ("A", "B", "C") if by_tier[t])
         if aside:
-            counts += f" · AI 보류 {len(aside)}"
-        head = f"{head_label}\n신규 {len(group)}건 ({counts})"
+            tally += f" · 🔅 {len(aside)}"
+        head = (f"{icon} <b>{label}</b> · 신규 {len(group)}건\n"
+                f"{tally}  <i>{now_kst():%m/%d %H:%M}</i>")
         buf = [head]
         size = len(head)
+
+        def flush():
+            # 4096자 제한에 걸리면 공고 단위로 끊는다(공고가 잘리지 않게).
+            nonlocal buf, size
+            if buf:
+                msgs.append("\n".join(buf))
+            buf, size = [], 0
+
+        def put(chunk: str):
+            nonlocal size
+            if size + len(chunk) > LIMIT:
+                flush()
+            buf.append(chunk)
+            size += len(chunk)
+
         for tier in ("A", "B", "C"):
             if not by_tier[tier]:
                 continue
-            sec = f"\n━━━ {TIER_BADGE[tier]} ━━━"
-            if size + len(sec) > LIMIT:
-                msgs.append("\n".join(buf)); buf, size = [], 0
-            buf.append(sec); size += len(sec)
+            put(f"\n━━ {TIER_BADGE[tier]} {len(by_tier[tier])}건 ━━")
             for p in by_tier[tier]:
-                block = "\n" + format_posting(p)
-                if size + len(block) > LIMIT:
-                    msgs.append("\n".join(buf)); buf, size = [], 0
-                buf.append(block); size += len(block)
+                put("\n" + format_posting(p))
+
         if aside:
-            sec = "\n━━━ 🔅 AI 보류 (관련 낮음 — 제목만) ━━━"
-            if size + len(sec) > LIMIT:
-                msgs.append("\n".join(buf)); buf, size = [], 0
-            buf.append(sec); size += len(sec)
+            put("\n━━ 🔅 AI 보류 " + str(len(aside)) + "건 ━━\n"
+                "<i>관련이 낮다고 판단했습니다. 지우지 않고 제목만 남깁니다.</i>")
             for p in aside:
                 why = p.get("ai_why") or ""
-                line = (f'\n· <a href="{esc(p.get("link") or "")}">'
-                        f'{esc((p.get("title") or "")[:60])}</a>'
-                        + (f" — <i>{esc(why)}</i>" if why else ""))
-                if size + len(line) > LIMIT:
-                    msgs.append("\n".join(buf)); buf, size = [], 0
-                buf.append(line); size += len(line)
-        if buf:
-            msgs.append("\n".join(buf))
+                put(f'\n· <a href="{esc(p.get("link") or "")}">'
+                    f'{esc((p.get("title") or "")[:60])}</a>'
+                    + (f" <i>— {esc(why)}</i>" if why else ""))
+        flush()
 
 
     # ── 헬스 리포트 ────────────────────────────────────────────────
@@ -222,9 +286,9 @@ def build_messages(postings: list[dict], health: dict) -> list[str]:
         # 알림을 억제한 실패도 숨기지는 않는다 (건수만 표기)
         tail += (f" · 실패 {len(muted)}개(일시/만성 — 알림 억제)"
                  if muted else "")
-        msgs.append(f"✅ 정상 동작 · 신규 공고 없음 "
-                    f"({health['ok']}/{health['total']} 소스, "
-                    f"{health['scanned']}건 확인){tail}")
+        msgs.append(f"✅ <b>신규 공고 없음</b>  <i>{now_kst():%m/%d %H:%M}</i>\n"
+                    f"{health['ok']}/{health['total']} 소스 정상 · "
+                    f"{health['scanned']}건 확인{tail}")
     return msgs
 
 
@@ -246,6 +310,25 @@ def send(token: str, chat_id: str, messages: list[str],
             )
             if r.status_code == 200:
                 sent += 1
+            elif r.status_code == 400:
+                # HTML 파싱 오류일 수 있다. 태그 하나 때문에 공고를 통째로
+                # 잃는 것이 이 시스템에서 가장 비싼 실패다 — 태그를 벗겨
+                # 한 번 더 보낸다. 모양은 나빠도 내용은 도착한다.
+                log.warning("텔레그램 400 — 태그를 벗겨 재시도: %s", r.text[:200])
+                plain = to_plain(text)
+                r2 = requests.post(
+                    API.format(token=token),
+                    json={"chat_id": chat_id, "text": plain,
+                          "disable_web_page_preview": True},
+                    timeout=25,
+                )
+                if r2.status_code == 200:
+                    sent += 1
+                    log.warning("평문으로 발송했습니다 (서식 없음)")
+                else:
+                    failed += 1
+                    log.error("평문 재시도도 실패 %s: %s",
+                              r2.status_code, r2.text[:300])
             else:
                 failed += 1
                 log.error("텔레그램 발송 실패 %s: %s", r.status_code, r.text[:300])
