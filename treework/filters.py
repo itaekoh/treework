@@ -217,6 +217,9 @@ def is_actionable(title: str, tier: str | None, min_tier: str = "C",
         return False                       # 이미 끝난 절차
     if prof.out_of_scope.search(title or ""):
         return False                       # 지원할 수 없는 업역
+    if (prof.subject_mismatch and tier != "A"
+            and prof.subject_mismatch.search(title or "")):
+        return False                       # 관리 대상이 이 업역의 것이 아니다
     if prof.off_topic and prof.off_topic.search(title or ""):
         return False                       # 주제가 수목과 무관
     if prof.admin_notice.search(title or ""):
@@ -294,6 +297,20 @@ IT_OUT_OF_SCOPE = re.compile(
     r"|여론\s*조사|만족도\s*조사|인지도\s*조사|학술\s*연구|연구용역"
     r"|보험|임차|리스\b|차량|비품|소모품")
 
+# '대상이 IT 가 아닌' 건. 위 IT_OUT_OF_SCOPE 와 성격이 다르다.
+#   · IT_OUT_OF_SCOPE  = 업역 자체가 다르다(감리·설계·청소). 무조건 버린다.
+#   · 아래 목록        = 관리 대상이 IT 가 아니다(상수관·승강기·냉난방).
+#                        A티어 신호가 있으면 진짜 IT 사업이므로 살린다.
+#
+# 왜 필요한가: '유지관리용역'·'유지보수'가 B티어라 토목·설비 건이 그 한 단어로
+# 들어온다(실측: '하동군 상수도관망 전문유지관리 용역', '장산1외 2지구
+# 지하수시설 유지관리용역'). 반대로 '하수관로 정비공사 GIS DB 구축 용역'은
+# 토목 단어가 있어도 진짜 IT 사업이다 — 그래서 조건부여야 한다.
+IT_NON_IT_SUBJECT = re.compile(
+    r"상수도|하수도|상수관|하수관|관로|배수지|정수장|취수장|지하수"
+    r"|승강기|소방시설|냉난방|보일러|기계설비|전기설비|전기공사"
+    r"|제방|준설|교량|터널|옹벽|사면")
+
 # IT 에는 '위원 모집' 조건부 규칙이 필요 없다 — 평가위원 공고는 전부 무관하다.
 IT_ADMIN_NOTICE = re.compile(
     r"행정예고|열람\s*공고|공람|공시송달|의견\s*수렴"
@@ -316,6 +333,9 @@ class Profile:
     off_topic: re.Pattern | None
     admin_notice: re.Pattern
     committee_conditional: bool      # 위원 공고를 A티어 조건부로 살릴지
+    # 관리 대상이 이 업역의 것이 아닌 건. A티어면 살린다(out_of_scope 와 달리
+    # 조건부다 — 위 IT_NON_IT_SUBJECT 주석 참고).
+    subject_mismatch: re.Pattern | None = None
 
 
 _TIERS = (("A", TIER_A), ("B", TIER_B), ("C", TIER_C))
@@ -354,6 +374,7 @@ IT = Profile(
     tiers=IT_TIERS, content_map={},
     out_of_scope=IT_OUT_OF_SCOPE, off_topic=None,
     admin_notice=IT_ADMIN_NOTICE, committee_conditional=False,
+    subject_mismatch=IT_NON_IT_SUBJECT,
 )
 PROFILES = {"tree": TREE, "it": IT}
 

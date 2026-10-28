@@ -194,5 +194,83 @@ check("[AI] 일부 행만 와도 나머지는 점수 없이 남는다",
       sorted(ai._parse('[{"i": 2, "fit": 1, "why": "x"}]', 2)), [2])
 
 
+# ── 수도권 지역 필터 ──────────────────────────────────────────────
+# 나라장터 API 의 지역 파라미터가 무시되므로 기관명으로 거른다. 여기서
+# 실수하면 조용히 누락되거나(수도권 건을 버림) 소음이 된다(타지역을 받음).
+import yaml                                     # noqa: E402
+from pathlib import Path                        # noqa: E402
+from treework.collectors import region_verdict  # noqa: E402
+
+ROOT = Path(__file__).resolve().parent.parent
+_SRC = {s["id"]: s for s in
+        yaml.safe_load(open(ROOT / "sources.yml", encoding="utf-8"))["sources"]}
+RW = _SRC["g2b-it"]["region_keywords"]
+KU = _SRC["g2b-it"].get("keep_region_unknown", True)
+
+
+def verdict(org: str, demand: str = "") -> str:
+    return region_verdict(org, demand, RW, KU)
+
+
+check("[지역] 서울 기관은 통과", verdict("서울특별시 성동구"), "hit")
+check("[지역] 인천 기관은 통과", verdict("인천광역시 상수도사업본부"), "hit")
+check("[지역] 경기도청은 통과", verdict("경기도 교육청"), "hit")
+# 경기는 '경기'가 안 들어간 시·군 이름만 쓰는 기관이 많다. 이게 핵심이다.
+check("[지역] 수원시청은 통과(시군명만 있어도)", verdict("수원시"), "hit")
+check("[지역] 성남도시개발공사는 통과", verdict("성남도시개발공사"), "hit")
+check("[지역] 여주시는 통과", verdict("여주시청"), "hit")
+check("[지역] 연천군은 통과", verdict("연천군"), "hit")
+# 광주는 둘이다. 경기 광주시는 받고 광주광역시는 버려야 한다.
+check("[지역] 경기 광주시는 통과", verdict("광주시청"), "hit")
+check("[지역] 광주광역시는 제외", verdict("광주광역시청"), "other")
+check("[지역] 부산은 제외", verdict("부산광역시 기장군"), "other")
+check("[지역] 제주는 제외", verdict("제주특별자치도"), "other")
+# 수요기관 쪽에만 지역이 있어도 받아야 한다(조달청 대행 발주).
+check("[지역] 발주처가 조달청이어도 수요기관이 서울이면 통과",
+      verdict("조달청", "서울특별시 도시기반시설본부"), "hit")
+# 지역을 알 수 없는 기관은 버리지 않는다 — 버리면 조용한 누락이 된다.
+check("[지역] 기관명에 지역이 없으면 남긴다", verdict("국회사무처"), "keep")
+check("[지역] 한국도로공사도 남긴다", verdict("한국도로공사"), "keep")
+check("[지역] keep_region_unknown=False 면 버린다",
+      region_verdict("국회사무처", "", RW, False), "drop")
+check("[지역] region_keywords 가 비면 전국을 받는다",
+      region_verdict("부산광역시", "", [], True), "hit")
+# 경기 31개 시군이 빠짐없이 들어 있는가. 하나라도 빠지면 그 시의 공고가
+# 영영 오지 않는데, 안 오는 것은 눈에 띄지 않는다.
+GYEONGGI = ["수원시", "고양시", "용인시", "성남시", "부천시", "화성시", "안산시",
+            "남양주시", "안양시", "평택시", "시흥시", "파주시", "의정부시", "김포시",
+            "광주시", "광명시", "군포시", "하남시", "오산시", "양주시", "이천시",
+            "구리시", "안성시", "포천시", "의왕시", "여주시", "양평군", "동두천시",
+            "과천시", "가평군", "연천군"]
+missed = [c for c in GYEONGGI if verdict(c) != "hit"]
+check("[지역] 경기 31개 시군이 모두 통과한다", missed, [])
+
+# ── IT 오탐: 토목·설비 유지관리 ───────────────────────────────────
+# '유지관리용역'·'유지보수'가 B티어라 토목 건이 그 한 단어로 들어왔다.
+# 다만 A티어 신호가 있으면 살려야 한다 — 겹치는 제목이 실제로 흔하다.
+def it_pass(title: str) -> bool:
+    m = filters.classify(title, profile="it")
+    return filters.is_actionable(title, m.tier, "B", profile="it")
+
+
+check("[IT] 상수도관망 유지관리는 제외",
+      it_pass("하동군 상수도관망 전문유지관리 용역"), False)
+check("[IT] 지하수시설 유지관리는 제외",
+      it_pass("장산1외 2지구 공사관리 지하수시설 유지관리용역"), False)
+check("[IT] 냉난방시설 유지보수는 제외",
+      it_pass("전문대학 혁신지원사업 관련 교내 냉난방시설 유지보수"), False)
+check("[IT] 토목 단어가 있어도 A티어면 살린다",
+      it_pass("이문-2 소구역 하수관로 정비공사 GIS DB 구축 용역"), True)
+check("[IT] 하천관리 시스템구축도 살린다",
+      it_pass("하천 통합관리 정보시스템 구축 용역"), True)
+check("[IT] 평범한 정보시스템 건은 그대로 통과",
+      it_pass("2027년 행정정보시스템 통합 유지관리 용역"), True)
+# 수목 프로파일은 이 규칙에 영향받지 않아야 한다.
+check("[수목] 상수도 단어가 수목 공고를 막지 않는다",
+      filters.is_actionable("상수도사업본부 수목전정 및 병해충방제 용역",
+                            filters.classify(
+                                "상수도사업본부 수목전정 및 병해충방제 용역").tier,
+                            "C"), True)
+
 print(f"\n실패 {fails}건")
 sys.exit(1 if fails else 0)

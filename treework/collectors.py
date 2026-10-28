@@ -145,6 +145,24 @@ def _sido(*names: str) -> str:
     return ""
 
 
+def region_verdict(org: str, demand: str, region_words, keep_unknown: bool) -> str:
+    """기관명으로 지역을 판정한다. "hit" | "other" | "keep" | "drop".
+
+    나라장터 API 의 지역 파라미터가 무시되므로 기관명 문자열로 거를 수밖에
+    없다. 문제는 기관명에 지역이 없는 발주처가 절반쯤 된다는 것이다
+    (중앙부처·공공기관). 이때 '모르니까 버린다'로 가면 국회·조달청처럼
+    수도권 사업을 내는 기관이 통째로 사라진다 — 조용한 누락이다.
+    그래서 기본은 '모르면 남긴다'이고, **다른 지역임이 분명할 때만** 버린다.
+    """
+    if not region_words:
+        return "hit"                      # 지역 제한 없음 = 전국
+    if any(w in (org or "") or w in (demand or "") for w in region_words):
+        return "hit"
+    if _sido(demand, org):
+        return "other"                    # 시도를 알아냈고 우리 범위 밖
+    return "keep" if keep_unknown else "drop"
+
+
 def _won(v) -> str:
     """'9324493' → '932만원'. 나무의사가 참여할 규모인지 한눈에 보이게."""
     try:
@@ -571,6 +589,11 @@ def collect_g2b_bid(f: Fetcher, cfg: dict, lookback_days: int) -> list[Posting]:
     region_words = cfg.get("region_keywords")
     if region_words is None:
         region_words = ["서울"]
+    # 기관명에 지역이 안 들어가는 발주처가 많다(중앙부처·공공기관, 실측 약 51%).
+    # 지역을 **모른다**는 이유로 버리면 조용한 누락이 된다 — 국회·조달청처럼
+    # 수도권 사업을 내는 기관이 통째로 사라진다. 그래서 기본은 '남긴다'.
+    # 확실히 다른 지역으로 판별되는 건만 버린다.
+    keep_unknown = bool(cfg.get("keep_region_unknown", True))
     min_amount = int(cfg.get("min_amount") or 0)   # 추정가격 하한 (볼륨 조절용)
     page_size = min(int(cfg.get("page_size", 999)), 999)      # 실측 상한 999
     max_pages = int(cfg.get("max_pages", 15))
@@ -610,6 +633,7 @@ def collect_g2b_bid(f: Fetcher, cfg: dict, lookback_days: int) -> list[Posting]:
     out: list[Posting] = []
     total = 0
     pages_read = 0
+    n_other_region = n_unknown_region = n_unknown_kept = 0
     for page in range(1, max_pages + 1):
         body = fetch(page)
         pages_read = page
@@ -634,9 +658,15 @@ def collect_g2b_bid(f: Fetcher, cfg: dict, lookback_days: int) -> list[Posting]:
             demand = str(it.get("dminsttNm") or "")
             # 지역 파라미터가 무시되므로 기관명 문자열로 거른다.
             # region_words 가 비어 있으면 전국을 그대로 받는다.
-            if region_words and not any(w in org or w in demand
-                                        for w in region_words):
+            verdict = region_verdict(org, demand, region_words, keep_unknown)
+            if verdict == "other":
+                n_other_region += 1
                 continue
+            if verdict == "drop":
+                n_unknown_region += 1
+                continue
+            if verdict == "keep":
+                n_unknown_kept += 1
             # 전국으로 넓히면 소액 건이 대량으로 들어온다. 필요할 때만 쓰는
             # 볼륨 조절 장치 (0 이면 제한 없음).
             if min_amount:
@@ -685,7 +715,17 @@ def collect_g2b_bid(f: Fetcher, cfg: dict, lookback_days: int) -> list[Posting]:
                     "lookback_days 를 줄이거나 max_pages 를 늘리세요.",
                     cfg["id"], total, pages_read * page_size)
 
-    log.info("[%s] %d페이지에서 서울 발주 %d건 추출", cfg["id"], pages_read, len(out))
+    if region_words:
+        # 지역 필터가 실제로 무엇을 버렸는지 남긴다. 범위를 조정할 때
+        # 추측이 아니라 이 숫자를 보고 판단한다.
+        log.info("[%s] %d페이지 · 지역필터(%s) 통과 %d건 "
+                 "(타지역 제외 %d · 지역불명 %s %d)",
+                 cfg["id"], pages_read, "/".join(region_words[:3]) + "…",
+                 len(out), n_other_region,
+                 "포함" if keep_unknown else "제외",
+                 n_unknown_kept if keep_unknown else n_unknown_region)
+    else:
+        log.info("[%s] %d페이지에서 전국 %d건 추출", cfg["id"], pages_read, len(out))
     return out
 
 
