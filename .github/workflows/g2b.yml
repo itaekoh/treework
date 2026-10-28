@@ -53,12 +53,24 @@ jobs:
       - name: Claude CLI 설치 (구독 경로를 쓸 때만)
         # ANTHROPIC_API_KEY 가 있으면 pip 의 anthropic 으로 호출하므로 CLI 가
         # 필요 없다. npm install 이 매 실행 20~30초를 먹으니 꼭 필요할 때만.
-        if: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN != '' && secrets.ANTHROPIC_API_KEY == '' }}
-        run: npm install -g @anthropic-ai/claude-code
+        #
+        # 판단은 반드시 셸 안에서 한다. secrets 컨텍스트는 step 의 if: 에서
+        # 쓸 수 없고, 쓰면 워크플로우가 통째로 파싱되지 않아 "No jobs were run"
+        # 으로 죽는다(실측: 2026-10-27~28 수집 전면 중단). env: 로는 쓸 수 있다.
+        env:
+          SUB_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [[ -n "$SUB_TOKEN" && -z "$API_KEY" ]]; then
+            npm install -g @anthropic-ai/claude-code
+          else
+            echo "구독 경로가 아님 — CLI 설치를 건너뜁니다"
+          fi
 
       # 규칙이 깨진 상태로 수집하면 조용히 오탐·누락이 발생한다. 몇 초면 끝난다.
       - name: 회귀 테스트
         run: |
+          python tests/test_workflows.py
           python tests/test_filters.py
           python tests/test_service_key.py
           python tests/test_schedule_ai.py
