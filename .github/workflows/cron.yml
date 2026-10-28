@@ -81,6 +81,7 @@ jobs:
       - name: 회귀 테스트
         run: |
           python tests/test_workflows.py
+          python tests/test_watchdog.py
           python tests/test_filters.py
           python tests/test_service_key.py
           python tests/test_schedule_ai.py

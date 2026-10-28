@@ -85,6 +85,19 @@ def main() -> int:
         parts = [f"🔧 <b>주간 소스 점검</b>",
                  f"전체 {total - len(skipped)}개 소스 정상 동작{tail}"]
 
+    # 감시 장치가 살아 있는지 되묻는다. watchdog.py 는 수집이 멈춘 것을
+    # 알리지만, **자기가 죽으면 아무 말도 못 한다**. 주 1회라도 확인하는
+    # 쪽이 '조용해서 정상인 줄 알았다'보다 낫다.
+    try:
+        from watchdog import silent_hours
+        quiet = silent_hours()
+        if quiet is not None and quiet > 48:
+            parts.append(f"\n⚠️ <b>침묵 감시가 {quiet / 24:.0f}일째 안 돌고 있습니다</b>"
+                         "\n수집이 멈춰도 알림이 오지 않는 상태입니다.")
+    except Exception as e:                               # noqa: BLE001
+        # 이 확인 때문에 주간 점검 자체가 실패하면 본말전도다.
+        log.warning("감시 장치 생존 확인을 건너뜁니다: %s", e)
+
     notify.send(os.environ.get("TELEGRAM_BOT_TOKEN", ""),
                 os.environ.get("TELEGRAM_CHAT_ID", ""),
                 ["\n".join(parts)], dry_run=args.dry_run)

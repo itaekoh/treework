@@ -44,6 +44,11 @@ def korean_holidays(year: int) -> set:
         return set()
 
 
+def is_business_day(d: date) -> bool:
+    """정부기관이 일하는 날인가. 주말·공휴일이면 False."""
+    return d.weekday() < 5 and d not in korean_holidays(d.year)
+
+
 def business_status(now: datetime | None = None) -> tuple[bool, str]:
     """지금이 평일 업무시간인가. (판정, 사유) 반환.
 

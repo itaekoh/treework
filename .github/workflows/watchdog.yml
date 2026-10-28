@@ -1,0 +1,51 @@
+name: 침묵 감시
+
+# 수집이 **통째로 멈춘 것**을 알아차린다. 판단 근거와 설계는 watchdog.py 머리말에.
+#
+# 이 파일은 일부러 최소한으로 둔다. 감시 장치가 감시 대상과 같은 이유로 죽으면
+# 아무 의미가 없다. 그래서
+#   · 수집 워크플로우와 **다른 파일**이다 — cron.yml 이 거부돼도 이건 산다
+#     (실측 2026-10-27: 두 수집 워크플로우가 동시에 거부돼 하루 넘게 침묵)
+#   · 의존성을 최소로 깐다 — requirements.txt 전체가 아니라 필요한 둘만
+#   · 로직을 여기 적지 않는다 — 셸에서 판단하면 테스트할 수 없다
+# 고칠 일이 생기면 watchdog.py 를 고치고 이 파일은 그대로 두는 것이 좋다.
+
+on:
+  schedule:
+    # 하루 두 번. cron 이 4~7시간 밀려도 하루 한 번은 뜨게 하려는 것이다.
+    # 판정은 '통째로 지나간 영업일'로 하므로 **몇 시에 뜨는지는 상관없다**.
+    - cron: "40 1 * * *"     # 10:40 KST
+    - cron: "40 7 * * *"     # 16:40 KST
+  workflow_dispatch:
+
+concurrency:
+  group: treework-watchdog
+  cancel-in-progress: false
+
+permissions:
+  actions: read            # 실행 이력 조회용
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # requirements.txt 전체를 깔지 않는다. 감시 장치가 수집기의 의존성
+      # 문제로 같이 죽으면 안 된다.
+      - run: pip install requests holidays
+
+      - run: python tests/test_watchdog.py
+
+      - name: 침묵 점검
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python watchdog.py
