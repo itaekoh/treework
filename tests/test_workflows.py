@@ -96,5 +96,38 @@ for name in ("cron.yml", "g2b.yml"):
     else:
         ok(f"{name}: 모든 테스트가 등록돼 있다")
 
+# 6. 두 수집 워크플로우가 서로 다른 상태 파일을 쓰는가.
+#    같은 파일을 쓰면 겹쳐 돌 때 rebase 가 충돌하고, 한 번 충돌하면 리베이스가
+#    걸린 채 남아 재시도가 전부 즉시 실패한다 — 그 실행분 상태가 통째로 버려져
+#    다음 실행에서 전부 재발송된다(실측: 2026-10-28, 수목 실행분 61건).
+#    또 '쓰는 파일'과 '커밋하는 파일'이 어긋나면 상태가 영영 저장되지 않는다.
+states: dict[str, str] = {}
+for name in ("cron.yml", "g2b.yml"):
+    doc = yaml.safe_load((ROOT / ".github" / "workflows" / name)
+                         .read_text(encoding="utf-8"))
+    steps = ((doc.get("jobs") or {}).get("collect") or {}).get("steps") or []
+    written = committed = None
+    for s in steps:
+        run = str((s or {}).get("run") or "")
+        if "main.py" in run:
+            m = re.search(r"--state\s+(\S+)", run)
+            written = m.group(1) if m else "seen.json"     # main.py 의 기본값
+        if "git push" in run:
+            committed = ((s or {}).get("env") or {}).get("STATE")
+    if not written:
+        fail(f"{name}: main.py 를 실행하는 단계를 찾지 못했다")
+    elif written != committed:
+        fail(f"{name}: 쓰는 파일({written})과 커밋하는 파일({committed})이 다르다 "
+             f"— 상태가 저장되지 않아 매 실행 재발송된다")
+    else:
+        ok(f"{name}: 상태 파일 {written} 을 쓰고 같은 파일을 커밋한다")
+        states[name] = written
+
+if len(states) == 2 and len(set(states.values())) == 1:
+    fail(f"수집 워크플로우가 상태 파일을 공유한다 ({states}) — 동시 실행 시 "
+         f"한쪽 실행분이 통째로 버려진다")
+elif len(states) == 2:
+    ok(f"수집 워크플로우의 상태 파일이 분리돼 있다 ({', '.join(states.values())})")
+
 print(f"\n실패 {fails}건")
 sys.exit(1 if fails else 0)
