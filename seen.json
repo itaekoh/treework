@@ -521,11 +521,8 @@
 ]
 },
 "gu-yangcheon": {
-"alerted": "2026-10-30",
-"err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
-"err_at": "2026-10-30",
-"fails": 2,
-"ok": "2026-10-29",
+"fails": 0,
+"ok": "2026-10-30",
 "rows": [
 50,
 50,
@@ -540,11 +537,8 @@
 ]
 },
 "gu-ydp-n": {
-"alerted": "2026-10-30",
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-10-30",
-"fails": 2,
-"ok": "2026-10-29",
+"fails": 0,
+"ok": "2026-10-30",
 "rows": [
 10,
 10,
@@ -559,11 +553,8 @@
 ]
 },
 "gu-ydp-r": {
-"alerted": "2026-10-30",
-"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-10-30",
-"fails": 2,
-"ok": "2026-10-29",
+"fails": 0,
+"ok": "2026-10-30",
 "rows": [
 10,
 10,
@@ -581,7 +572,7 @@
 "alerted": "2026-10-30",
 "err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
 "err_at": "2026-10-30",
-"fails": 51,
+"fails": 52,
 "ok": "2026-10-14",
 "rows": [
 10,
@@ -602,14 +593,14 @@
 "rows": [
 55,
 55,
-55,
 54,
 54,
 54,
 54,
 62,
 62,
-57
+57,
+58
 ]
 },
 "seoul-notice": {
@@ -1003,5 +994,5 @@
 "t": "서울특별시 중구 임기제공무원 채용시험 최종합격자 공고(SNS구정홍보 전문요원, 언론홍보, 정책홍보, 주민소통활성화, 법무행정, 도시계획, 운동처방사)"
 }
 },
-"updated_at": "2026-10-30T14:44:05+09:00"
+"updated_at": "2026-10-30T17:40:12+09:00"
 }
