@@ -1,23 +1,23 @@
 {
-"count": 1269,
+"count": 1360,
 "health": {
 "g2b-it": {
 "fails": 0,
-"ok": "2026-11-04",
+"ok": "2026-11-05",
 "rows": [
 4210,
 2427,
 2460,
 2574,
 2607,
-2579
+2579,
+2549
 ]
 },
 "g2b-servc": {
 "fails": 0,
-"ok": "2026-11-04",
+"ok": "2026-11-05",
 "rows": [
-3945,
 3641,
 3949,
 4233,
@@ -26,7 +26,8 @@
 4092,
 4227,
 4329,
-4341
+4341,
+4349
 ]
 }
 },
@@ -36,6 +37,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01792301&bidPbancOrd=000",
 "s": "g2b-it",
 "t": "2027년 희망인사시스템 유지관리 용역"
+},
+"0036b781341ce781b53d": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01809953&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2026년 LG Aimers 운영서버 용역"
 },
 "004b585b68e8a863e86c": {
 "d": "2026-10-28",
@@ -54,6 +61,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01797739&bidPbancOrd=000",
 "s": "g2b-it",
 "t": "2027년 지휘훈련시스템 유지보수 용역"
+},
+"00b021cee352f36babc5": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01811868&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "[재공고]2027 관계부처 해외홍보관 미국(KOREA360 USA) 총괄 운영 위탁용역"
 },
 "00c43332160170c09f38": {
 "d": "2026-09-04",
@@ -127,6 +140,12 @@
 "s": "g2b-it",
 "t": "2027~2029년 저층급변풍경고장비(LLWAS) 유지관리용역(장기계속)"
 },
+"03c87382a1e52a4da86d": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01809308&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 방송통신시스템 통합유지관리 용역"
+},
 "03e0a79df2e740f4ee49": {
 "d": "2026-11-02",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01801724&bidPbancOrd=000",
@@ -157,6 +176,12 @@
 "s": "g2b-servc",
 "t": "(용역)2028년도 신규사업 발굴 및 산림과학기술분야 성과분석 연구"
 },
+"04d7723d2f1e22374e87": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01811731&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2027년 정원도시 서울(서울의 공원)·서울둘레길 누리집 운영 및 유지관리 용역"
+},
 "050212f904963e651dc9": {
 "d": "2026-11-04",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01808816&bidPbancOrd=000",
@@ -174,6 +199,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01790840&bidPbancOrd=001",
 "s": "g2b-it",
 "t": "2027년 경기도 대기환경진단평가시스템 유지관리 용역"
+},
+"05ca39e04be3f9c15cce": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01810655&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "문산·파주 하수관로 정비사업 전산화 용역(GIS DB구축)(전체분)"
 },
 "05d1284f1f3052ab5882": {
 "d": "2026-10-16",
@@ -457,6 +488,12 @@
 "s": "g2b-servc",
 "t": "2027년 상반기 소나무재선충병 방제사업(옥포2지구) 실시설계 용역"
 },
+"0ed8295d63807fdde6d2": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01810803&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 침수예측 정보시스템 유지관리"
+},
 "0f1d029e41f366ea243c": {
 "d": "2026-10-28",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01790036&bidPbancOrd=000",
@@ -559,6 +596,12 @@
 "s": "g2b-servc",
 "t": "익산시 도시숲등 조성·관리계획 수립 용역"
 },
+"134fa623200670d05f00": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01810506&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "IU-EXCEL 교육모델 인증제도 지원 시스템 구축"
+},
 "1354d44173763116fb13": {
 "d": "2026-11-03",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01803136&bidPbancOrd=000",
@@ -612,6 +655,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01795069&bidPbancOrd=000",
 "s": "g2b-it",
 "t": "2027년 하남시립도서관 전산시스템 통합 유지관리 용역"
+},
+"13ff2cf84c540460118e": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01810213&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "개인정보 보호책임자 지정·신고 제도 운영 지원"
 },
 "1443a12d9edad3e80b6a": {
 "d": "2026-11-03",
@@ -1111,6 +1160,12 @@
 "s": "g2b-servc",
 "t": "2026년 선도 산림경영단지 임도구조개량사업 감리용역"
 },
+"24622ebbb40d5ddeb7df": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01804233&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 댐-하천 디지털트윈 물관리플랫폼 유지보수"
+},
 "24779b46e9545f0768f7": {
 "d": "2026-09-30",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751953&bidPbancOrd=000",
@@ -1128,6 +1183,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01795904&bidPbancOrd=000",
 "s": "g2b-it",
 "t": "세계김치연구소 정보시스템 웹 전환 및 기능 개선"
+},
+"251d9c22bf9d27b3e8f2": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01811285&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027~2028년 하남시 홈페이지 서비스 유지관리 용역"
 },
 "2556f6ec2cb2ef972720": {
 "d": "2026-10-28",
@@ -1225,6 +1286,18 @@
 "s": "g2b-it",
 "t": "2026년 여행자 통관분야 동시구현시스템 구축 사업 개인정보영향평가 계약"
 },
+"28932dfe5fc4bde2382b": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01812609&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 정보통신시스템 유지관리 용역"
+},
+"28dd69fed4bb5239acee": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01807258&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 어문연구 정보 시스템 유지 관리 및 운영"
+},
 "28e41f353f00557199c9": {
 "d": "2026-10-28",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01791420&bidPbancOrd=000",
@@ -1296,6 +1369,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01801838&bidPbancOrd=000",
 "s": "g2b-it",
 "t": "2027년 국립박물관단지 통합운영지원센터 클라우드 서비스 이용 및 운영"
+},
+"2be444b3be2dd75c602e": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01810324&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "어업인 안전조업 온라인교육 플랫폼 유지보수 용역"
 },
 "2beb05a5f385ac6d83a2": {
 "d": "2026-10-15",
@@ -1471,6 +1550,12 @@
 "s": "g2b-it",
 "t": "2027년 정책포털·디지털시정 통합유지관리 용역"
 },
+"3122db0bbf8e032800c2": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01809450&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027~2028년 교통정보 전산 및 네트워크 유지관리 용역(총괄 및 1차)"
+},
 "3158d5b14f5afe2cffac": {
 "d": "2026-10-02",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01755376&bidPbancOrd=000",
@@ -1525,6 +1610,12 @@
 "s": "g2b-it",
 "t": "2027년 서울역사박물관 홈페이지 유지관리 용역"
 },
+"3300516ad5c20b7e44ea": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01812540&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "ERP 시스템 개인정보 영향평가"
+},
 "33348e8da48b2f693b9f": {
 "d": "2026-11-03",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01806252&bidPbancOrd=000",
@@ -1578,6 +1669,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01786644&bidPbancOrd=000",
 "s": "g2b-it",
 "t": "2027년도 구급차운영 위탁용역 입찰공고"
+},
+"35ba883235a7648b3ae3": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01808979&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년도 중부권 지진·지진해일 관측장비 유지관리 용역"
 },
 "365c3876073ff1355048": {
 "d": "2026-09-24",
@@ -1699,6 +1796,12 @@
 "s": "g2b-servc",
 "t": "(위탁)원격탐사와 현장 실측을 통한 기존 산림 재적식 재평가 및 개선방안 도출"
 },
+"395632e97acb08b3037f": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01809346&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "HyperWorks ME 71 Units SW 유지보수"
+},
 "39836a8be928dc435792": {
 "d": "2026-10-28",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778082&bidPbancOrd=001",
@@ -1722,6 +1825,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01696694&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "제4회 서서울호수공원 수변음악회 기획 및 운영 용역"
+},
+"3b0d2ff8cba5a000923d": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01809799&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 청년지원 CRM 운영 및 유지관리 용역"
 },
 "3b0d8292181c6ea3bf1d": {
 "d": "2026-10-28",
@@ -1747,6 +1856,12 @@
 "s": "g2b-it",
 "t": "2027년 시흥시 자가통신망 유지관리 용역"
 },
+"3b375515af0c6981c2a5": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01811464&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 통합 지하안전관리시스템 유지관리 용역"
+},
 "3b400e84e5a65992c911": {
 "d": "2026-10-28",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01783912&bidPbancOrd=000",
@@ -1765,6 +1880,12 @@
 "s": "g2b-it",
 "t": "이문-2 소구역 하수관로 정비공사(1권역, 2차분) GIS DB 구축 용역"
 },
+"3c0528568ece867e8b64": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01810345&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 의왕시 ITS 통합 교통정보시스템 유지보수용역"
+},
 "3c72730957b61ba7f068": {
 "d": "2026-10-28",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01796201&bidPbancOrd=000",
@@ -1776,6 +1897,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01785461&bidPbancOrd=000",
 "s": "g2b-it",
 "t": "청풍리조트 오수처리시설 유지보수 용역 계약"
+},
+"3c9f041912d59b4bf110": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01810630&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년~2028년 정보시스템 자원 통합 유지관리 사업"
 },
 "3ca15f7de89960669707": {
 "d": "2026-10-28",
@@ -1927,6 +2054,12 @@
 "s": "g2b-it",
 "t": "2027년 순창군 CCTV 통합관제센터 통합유지보수 용역"
 },
+"41063200e4f1c310319c": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01810037&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 종합상황실 전산장비 유지관리 사업"
+},
 "4196013f90a90bf378ca": {
 "d": "2026-11-03",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01802309&bidPbancOrd=000",
@@ -1938,6 +2071,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01793133&bidPbancOrd=000",
 "s": "g2b-it",
 "t": "2027년 농림위성 지상국시스템 운영 및 유지관리"
+},
+"4235461f58f5bdb37813": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01812029&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 영사기사 자격검정 시스템 유지보수 위탁 용역"
 },
 "424ad91762727e107b0e": {
 "d": "2026-09-16",
@@ -1986,6 +2125,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01789594&bidPbancOrd=000",
 "s": "g2b-it",
 "t": "2027년 거제시 조기경보 통합관리시스템 유지관리 용역"
+},
+"4368f659024baa768fd0": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01802504&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "(재공고) 2027년 보건농림기상 연구관측망 유지관리 용역"
 },
 "4392621260af87eb0d8b": {
 "d": "2026-10-28",
@@ -2041,6 +2186,12 @@
 "s": "g2b-it",
 "t": "2027~2028년 정보통신시스템 유지보수 용역"
 },
+"44d430540ec3584bc727": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01802409&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 강남구청 인터넷수능방송 홈페이지(모바일앱) 통합유지관리 운영 용역"
+},
 "44d5526deeea2596ef6f": {
 "d": "2026-10-28",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01785431&bidPbancOrd=000",
@@ -2070,6 +2221,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01755015&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "핵융합 특수목적법인 설립 요건 및 민관협력 기본방향 기획연구"
+},
+"4592ba6992ff4f77ee53": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01809947&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "‘27 ~ ‘28년 국방연동관리체계(DIMS) 유지보수 사업"
 },
 "4632291a9fce856942fd": {
 "d": "2026-10-28",
@@ -2148,6 +2305,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01763770&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "중장비차고 이전 부지 수목제거 용역"
+},
+"4811224cf1f0f044f014": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01809375&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "전기통신금융사기 통합대응단 시스템 고도화 개인정보영향평가"
 },
 "48610a442ade45d08c00": {
 "d": "2026-09-24",
@@ -2275,6 +2438,12 @@
 "s": "g2b-it",
 "t": "2026 A1 CHALLENGE RACE 대회 행사장 조성 및 중계시스템 구축 입찰 공고"
 },
+"4baf670cb0e6e92be94b": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01811646&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027 수원FC 통합 팬 CRM 어플리케이션 구축 및 입장권 판매 대행 용역"
+},
 "4bb67e49fefa8f83bc29": {
 "d": "2026-11-02",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01803682&bidPbancOrd=000",
@@ -2292,6 +2461,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01793509&bidPbancOrd=000",
 "s": "g2b-it",
 "t": "2027년 한국어교원 자격 심사 시스템 운영 및 유지관리"
+},
+"4c11e696d9e07f894b94": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01809862&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027~2028년 행정정보시스템 통합유지관리 용역"
 },
 "4c294e7509821accce65": {
 "d": "2026-10-28",
@@ -2365,6 +2540,12 @@
 "s": "g2b-it",
 "t": "2026년 통합자동제어설비 유지관리 용역"
 },
+"4ef050fc11e0e78815cd": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01809416&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "27년 V-Pass 시스템 유지관리 용역"
+},
 "4ef6dc033e7b59b2256a": {
 "d": "2026-10-28",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01786796&bidPbancOrd=000",
@@ -2395,6 +2576,12 @@
 "s": "g2b-it",
 "t": "2027년도 Digital Radiography X-ray 유지보수 용역"
 },
+"4f6e1862ea762ce8a5b4": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01811643&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "경기도 감사정보시스템 유지관리 사업"
+},
 "4f932d584cec76ae939e": {
 "d": "2026-10-28",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01788035&bidPbancOrd=000",
@@ -2424,6 +2611,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778884&bidPbancOrd=000",
 "s": "g2b-it",
 "t": "2027년 위기청소년 통합지원정보시스템 운영 및 유지보수"
+},
+"5079b83672091497c45a": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01807809&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 클라우드시스템 통합유지보수 용역"
 },
 "5094b20a7699d8a64b8c": {
 "d": "2026-10-13",
@@ -2490,6 +2683,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748553&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "산림자원 가치 확산을 위한 캠페인 영상 콘텐츠 제작"
+},
+"523875e395a439d845f1": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01812721&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "국가건강검진 흉부방사선 제도 개편에 따른 개인정보 영향평가"
 },
 "52694ebfd6c77cd1e7bf": {
 "d": "2026-10-28",
@@ -2875,6 +3074,12 @@
 "s": "g2b-it",
 "t": "[재공고] 2027년 KTNF설비 유지보수"
 },
+"5e2a084f23828b406e37": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01807111&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 여주시 대표 홈페이지 유지관리 용역[협상에 의한 계약]"
+},
 "5e5c1facea18ade8894e": {
 "d": "2026-10-28",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01785566&bidPbancOrd=000",
@@ -2923,6 +3128,12 @@
 "s": "g2b-it",
 "t": "하남시 영상정보처리기기(CCTV) 및 CCTV 통합관제센터 유지관리 용역"
 },
+"5f57f93e1712a195bfd3": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01783800&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 소스데이터 공유 플랫폼(i.AM) 운영 및 유지보수"
+},
 "5f5ecfbd51867e84fc0e": {
 "d": "2026-09-30",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01749508&bidPbancOrd=000",
@@ -2958,6 +3169,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01782311&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "지봉로 완충녹지 지장물 철거공사(금호타이어) 폐타이어 처리 용역"
+},
+"60773b9f623693c390f0": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01808438&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027~2028년 정보통신시스템 통합유지보수 용역"
 },
 "6078c2ca99953b7a076b": {
 "d": "2026-10-28",
@@ -3048,6 +3265,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01783198&bidPbancOrd=000",
 "s": "g2b-it",
 "t": "2026. 명사와 함께 걷는 배움길 「명사특강」 운영 위탁 용역"
+},
+"6477675cd2f63152d0d9": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01808410&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 기후예측-분석 통합시스템 유지관리 용역"
 },
 "648752b1ffb75630572c": {
 "d": "2026-11-03",
@@ -3175,6 +3398,12 @@
 "s": "g2b-it",
 "t": "서울특별시 북부병원 통합의료정보시스템 구축계약 입찰"
 },
+"68159b99bb11d53438ab": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01812783&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 국가생명윤리정책원 정보시스템 통합유지관리 사업"
+},
 "6845bac59b04dfa81176": {
 "d": "2026-11-02",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01803539&bidPbancOrd=000",
@@ -3246,6 +3475,18 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01781280&bidPbancOrd=001",
 "s": "g2b-it",
 "t": "[정정공고] 2027년 Web Server(iPlanet) 유지보수"
+},
+"6a39ebc60c71a0c70caa": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01809772&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "27년 사이버 보안관제 및 국가 망 보안체계(N2SF) 적용 기반 마련 컨설팅 사업"
+},
+"6a9654d50fe79d607cc8": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01810564&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 산림경영이음 운영 및 유지관리 사업"
 },
 "6b168c2d891e4635d390": {
 "d": "2026-11-04",
@@ -3391,6 +3632,18 @@
 "s": "g2b-it",
 "t": "아미리 63-11번지 일원 오수관로 설치공사 외 16개소 GIS DB구축 용역"
 },
+"6f8e5e2aed1f021ab12b": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01809289&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "국가통합바이오빅데이터구축사업 전장유전체 기반 희귀질환 변이 추출 지원"
+},
+"6fbe937698b2b584a353": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01809365&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년도 기상기후데이터 서비스 플랫폼 유지관리 용역사업"
+},
 "6ff48a7f2c570253286f": {
 "d": "2026-10-28",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01789542&bidPbancOrd=000",
@@ -3469,6 +3722,12 @@
 "s": "g2b-it",
 "t": "[수의시담]27년 고압원격검침 DB암호화SW 유지보수"
 },
+"72b191c8beda6843711e": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01797629&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 자동차융합기술원 업무관리시스템 통합운영 및 유지관리 용역"
+},
 "730ba80b1203ab4130c3": {
 "d": "2026-10-28",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01787778&bidPbancOrd=000",
@@ -3492,6 +3751,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01706343&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "도시숲 달빛거리 범죄예방디자인사업 용역 입찰공고(협상에 의한 계약)"
+},
+"738d39156abab1465c44": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01798516&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 경기도 광역이동지원시스템 유지관리 용역"
 },
 "73fa2852d5bd972a5816": {
 "d": "2026-10-28",
@@ -3679,6 +3944,12 @@
 "s": "g2b-it",
 "t": "고속컴퓨팅연산시스템 유지보수"
 },
+"7a1de115d207541b2660": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01811538&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "27년 국가공간정보통합플랫폼(K-GeoP) 유지관리 및 운영지원"
+},
 "7a2440acf50dd9ccd48f": {
 "d": "2026-11-04",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01809914&bidPbancOrd=000",
@@ -3757,6 +4028,12 @@
 "s": "g2b-it",
 "t": "2026년 사법업무전산화시스템 고도화 사업(품질운영관리시스템)"
 },
+"7d50bdba9025f885c5a2": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01810587&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 새만금 공간정보시스템 관리 및 기능개선 용역"
+},
 "7d86c91669f351a9d8a5": {
 "d": "2026-10-29",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01798163&bidPbancOrd=000",
@@ -3774,6 +4051,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01791974&bidPbancOrd=000",
 "s": "g2b-it",
 "t": "빅데이터혁신융대학대학 사업_AI&Bigdata 게임개발 프로그램 운영 용역"
+},
+"7e0c12024d196bd0137f": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01812144&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "9호선(언주~중앙보훈병원) 조명설비 유지관리 용역"
 },
 "7e447d2eb767dbf06718": {
 "d": "2026-11-03",
@@ -3805,11 +4088,23 @@
 "s": "g2b-it",
 "t": "2027년 한성백제박물관 정보통신시스템 통합유지보수 용역"
 },
+"7f74f06532eff18d6380": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01806672&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027~2028년 마포구 정보통신 통합유지보수 용역"
+},
 "7fb6a358141d87d76428": {
 "d": "2026-10-28",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01796556&bidPbancOrd=000",
 "s": "g2b-it",
 "t": "2027~2028년 귀농귀촌 통합플랫폼(그린대로) 운영 및 유지관리"
+},
+"805a7411958f516b78c8": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01809599&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년~2028년 황사관측장비 유지관리 용역"
 },
 "8072fc938a4c659b44b7": {
 "d": "2026-10-28",
@@ -3835,6 +4130,12 @@
 "s": "g2b-it",
 "t": "27년 빅데이터,정보분석 운영 및 유지관리 사업"
 },
+"8153459392d40c0c909c": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01806907&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 오산시 스마트시티 통합운영센터 정보시스템 통합유지보수 용역"
+},
 "81aa67ee9dd25355b441": {
 "d": "2026-10-28",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01786980&bidPbancOrd=000",
@@ -3846,6 +4147,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01723973&bidPbancOrd=001",
 "s": "g2b-servc",
 "t": "2027년도 평택시 연차별 가로수 계획 수립 용역"
+},
+"81b5508300a6b0e95099": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01809528&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년도 남동부권 지진·지진해일 관측장비 유지관리 용역"
 },
 "81d309c78707bbe78acd": {
 "d": "2026-10-29",
@@ -4027,6 +4334,12 @@
 "s": "g2b-it",
 "t": "2027년 원주형 아이키움 원스톱 통합 플랫폼 유지관리 용역"
 },
+"864c0d0d5ac675ca1373": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01811210&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 대테러센터 종합상황실 시스템 유지보수"
+},
 "864f0c978b402ab0c169": {
 "d": "2026-11-04",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01809232&bidPbancOrd=000",
@@ -4056,6 +4369,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01773717&bidPbancOrd=000",
 "s": "g2b-it",
 "t": "2027년 연제만화도서관 스마트 도서관시스템 통합 유지관리 용역"
+},
+"880ee7ef4c3a2f9e21ef": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01810095&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 서울시 에너지정보 통합시스템 운영 및 유지관리 용역"
 },
 "88180a07dbdb6c6e4e17": {
 "d": "2026-09-09",
@@ -4147,6 +4466,12 @@
 "s": "g2b-it",
 "t": "2027년도 지방세외수입정보시스템 운영관리"
 },
+"8ab7a279f4c21ece967f": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01811250&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 동해세관 감시종합정보시스템 유지보수 용역"
+},
 "8adab8841bd4c81bb4a3": {
 "d": "2026-10-28",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01782636&bidPbancOrd=000",
@@ -4206,6 +4531,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01800323&bidPbancOrd=000",
 "s": "g2b-it",
 "t": "2027년도 정보시스템 통합유지보수 용역(인프라)"
+},
+"8db62adf28551c54d71d": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01810156&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 통합공간정보시스템(SDW) 외 2종 통합 유지관리 용역"
 },
 "8db92c48ee1a79188d38": {
 "d": "2026-11-04",
@@ -4314,6 +4645,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01786007&bidPbancOrd=000",
 "s": "g2b-it",
 "t": "정보시스템 통합유지관리"
+},
+"90a7c5443a852d70f641": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01810029&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 소방안전 빅데이터 플랫폼 위탁운영"
 },
 "90d8a0f48a224de30cb1": {
 "d": "2026-10-06",
@@ -4476,6 +4813,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01702319&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "경주시 도시바람길숲(황성공원) 조성사업(2단계) 건설폐기물 처리용역(처리)"
+},
+"96df7b3844446b76d122": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01811411&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "[국가트라우마센터] 2027년 국가 재난 정신건강 전산시스템 유지관리 용역"
 },
 "9701e4c3f7ab6ea0732d": {
 "d": "2026-09-28",
@@ -4699,6 +5042,12 @@
 "s": "g2b-it",
 "t": "2027년 서울 프리랜서 온 플랫폼 유지관리 용역"
 },
+"9e9e7de971bb77320d4a": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01810649&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "(26G058-H)27~28년 국방급여정보체계 유지보수 용역"
+},
 "9ea5a5c6f6cf1df32d39": {
 "d": "2026-10-28",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01791199&bidPbancOrd=000",
@@ -4836,6 +5185,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01755173&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "제주지방해양경찰청 해양종합훈련시설 및 방제비축기지 신축사업 전기감리용역"
+},
+"a2c448aad0e6fd78995e": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01804998&bidPbancOrd=001",
+"s": "g2b-it",
+"t": "2027년~2028년 산림행정미디어센터 운영 및 유지관리"
 },
 "a2cc50683b5e2ea61216": {
 "d": "2026-10-29",
@@ -5059,6 +5414,18 @@
 "s": "g2b-servc",
 "t": "2026년 서산시 소나무재선충병 방제사업 기본계획 수립용역"
 },
+"a8f11ef52745cdb5ed24": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01810026&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "서울대학교병원 [전산용역비]SMICU 이송 출동 애플리케이션 개발"
+},
+"a9616eb4262f6a9cecee": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01811558&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "(재공고)2027년 정보보호 클러스터 운영관리"
+},
 "a96d0451592352dbdcf4": {
 "d": "2026-09-11",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01725137&bidPbancOrd=000",
@@ -5136,6 +5503,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01808182&bidPbancOrd=000",
 "s": "g2b-it",
 "t": "2027년 노후차 운행제한 시스템 유지보수 용역"
+},
+"ab68586845d09435132b": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01809561&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "[경쟁입찰] 27년도 산업부 사이버안전센터 보안관제 및 사이버안전시스템 통합 유지보수 용역"
 },
 "ab82cfa43f4fd5a0b482": {
 "d": "2026-10-19",
@@ -5377,6 +5750,12 @@
 "s": "g2b-it",
 "t": "26~28-N-유도무기전술훈련체계(GMTT) 유지보수"
 },
+"b2c2f879c48a0b7917f2": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01804753&bidPbancOrd=000",
+"s": "g2b-servc",
+"t": "2027~2028년 산림기술정보통합관리시스템 유지관리 사업"
+},
 "b2c4977d2476cfa07e74": {
 "d": "2026-10-28",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01794197&bidPbancOrd=000",
@@ -5442,6 +5821,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01806661&bidPbancOrd=000",
 "s": "g2b-it",
 "t": "2027년 군포시 교통신호시스템 유지관리 용역"
+},
+"b4db3636118476e8ac0c": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01811378&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "한서대학교 글로컬대학사업단(앵커사업부)· 청년이음-서천·한서대학교 청년 교류회 운영 위탁용역"
 },
 "b4e0707bee6d17754b66": {
 "d": "2026-10-28",
@@ -5575,6 +5960,12 @@
 "s": "g2b-it",
 "t": "초소형군집위성 검증용 지상관측 자료처리시스템 유지보수"
 },
+"b7d2dd7b5f5c57338a2d": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01783501&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "신규 신용평가시스템 구축 용역"
+},
 "b7e2a30e3136dbabb77d": {
 "d": "2026-11-04",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01808732&bidPbancOrd=000",
@@ -5587,11 +5978,23 @@
 "s": "g2b-it",
 "t": "2027년 전국 공소청 사무용 PC등 유지관리 용역 사업"
 },
+"b856ee2a190aa2c38fe0": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01791522&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년~2029년도 환경연구정보서비스 운영 및 유지관리"
+},
 "b88163d3ba54b3dde6de": {
 "d": "2026-09-04",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01712800&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 제주 바다숲 4년차 조성해역 해조류 보식"
+},
+"b89bef5e9df8c98128f8": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01810004&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "디지털서비스_네이버클라우드_정부 네이버웍스"
 },
 "b8ac0d03a88e5c403a61": {
 "d": "2026-10-28",
@@ -5766,6 +6169,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01794006&bidPbancOrd=000",
 "s": "g2b-it",
 "t": "2026년 지능형 통합시스템 고도화 용역"
+},
+"befcf531019d895979e9": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01811691&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 서울 문화유산 통합관리시스템 유지보수(재공고)"
 },
 "bf104d4b764403b9d207": {
 "d": "2026-10-02",
@@ -5989,6 +6398,12 @@
 "s": "g2b-servc",
 "t": "2026년 산불예방 숲가꾸기사업(북방지구) 감리용역"
 },
+"c4cae26e7313adcd7b3e": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01811034&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027~2028년 정보시스템 통합유지관리 용역"
+},
 "c4fb9bc69cb97f7832d9": {
 "d": "2026-10-28",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01788495&bidPbancOrd=000",
@@ -6030,6 +6445,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01795483&bidPbancOrd=000",
 "s": "g2b-it",
 "t": "(긴급)(협상)2027년 첨단교통센터 정보시스템 통합유지관리 용역"
+},
+"c73d9c0ca87b455db891": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01811407&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027~2028년 IT 인프라 통합유지보수 용역"
 },
 "c73e5c5cdb02b9916c25": {
 "d": "2026-10-30",
@@ -6235,6 +6656,12 @@
 "s": "g2b-it",
 "t": "2027년 잠복결핵 검사장비 유지보수 용역"
 },
+"cc7e702ec0f08e897c93": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01812107&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2026년(2차년도) 혁신지원사업「통합 성과관리 시스템 구축」 용역"
+},
 "ccd2518f3dd7823cbdc9": {
 "d": "2026-11-02",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01800781&bidPbancOrd=000",
@@ -6379,6 +6806,12 @@
 "s": "g2b-it",
 "t": "외국인력상담센터 상담시스템 통합 유지관리 용역"
 },
+"d1f03d029d9459b0bf9c": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01810116&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "OWL-Net 모로코 관측소 돔/인클로저/자동운영장비 유지보수"
+},
 "d2a38f147e61e1f09b00": {
 "d": "2026-10-28",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01791126&bidPbancOrd=000",
@@ -6457,6 +6890,12 @@
 "s": "g2b-servc",
 "t": "시각장애 아동의 주체적 참여를 통한 무장애 감각정원 조성사업"
 },
+"d57bfd1e5d9e219ed273": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01779812&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 행정정보시스템 통합유지보수 용역"
+},
 "d58dc0b8b79220df337d": {
 "d": "2026-10-29",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01797250&bidPbancOrd=000",
@@ -6523,6 +6962,12 @@
 "s": "g2b-it",
 "t": "2027년 서울계약마당 시스템 운영 및 유지관리"
 },
+"d8b409cf21283f82d1e5": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01812304&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "고생산성 금속 분말 용융형 3D프린터 유지보수"
+},
 "d8cdcdb0a5e596f2084b": {
 "d": "2026-10-28",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01784443&bidPbancOrd=000",
@@ -6571,6 +7016,12 @@
 "s": "g2b-it",
 "t": "스마트강원 영상통합지원시스템 유지보수 용역"
 },
+"da155f81b0e4d14279a8": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01810234&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "업무용 메신저 시스템 구축 용역"
+},
 "daa517e69782dd8fdaae": {
 "d": "2026-11-04",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01809852&bidPbancOrd=000",
@@ -6618,6 +7069,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01801847&bidPbancOrd=000",
 "s": "g2b-it",
 "t": "[수의시담] 2027년 원격백업툴(Time Navigator) 유지보수"
+},
+"dc3b222256be59440d07": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01810887&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "서울물재생시설공단 보안시스템 유지관리 용역"
 },
 "dc5d144fde3f90061196": {
 "d": "2026-10-28",
@@ -6835,6 +7292,12 @@
 "s": "g2b-it",
 "t": "27~28년 국직부대 암호장비 유지보수 용역"
 },
+"e28027c853ab2a64c262": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01807233&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 지역클라우드센터 정보자원 통합 유지관리"
+},
 "e2819a02eb3e7f65153a": {
 "d": "2026-09-11",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01723509&bidPbancOrd=000",
@@ -6846,6 +7309,18 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01784370&bidPbancOrd=000",
 "s": "g2b-it",
 "t": "OWL-Net 모로코 관측소 돔/인클로저/자동운영장비 유지보수"
+},
+"e304e2500ba7ea021362": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01808308&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 국립중앙과학관 정보시스템 통합 유지관리"
+},
+"e3216c1c13cbbd94273c": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01808985&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년도 남서부권 지진화산 관측장비 유지관리 용역"
 },
 "e36294af6cc2462ea8be": {
 "d": "2026-09-15",
@@ -6870,6 +7345,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01744925&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 큰나무 숲가꾸기사업 감리용역"
+},
+"e3e4be3e76798548530c": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01811229&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "[경쟁입찰]안랩 방화벽(일체형) 유지보수"
 },
 "e407f9e128941e3dac04": {
 "d": "2026-11-02",
@@ -7069,6 +7550,12 @@
 "s": "g2b-servc",
 "t": "2026년 하반기 산불예방 숲가꾸기사업(1지구) 감리용역"
 },
+"e9a26f92bb00ee08fdd4": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01810235&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "(26F053-G)27년 지상군 자원소요분석모델 유지보수"
+},
 "e9aac1bb6762517d12cf": {
 "d": "2026-10-29",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01797762&bidPbancOrd=000",
@@ -7086,6 +7573,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01755826&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "스마트워킹시스템 고도화(모바일화 구현, 이해충돌방지 상세설계) 및 26년 유지보수 용역"
+},
+"e9e2e35a7ef3a833a398": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01808249&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 보훈문화 종합 포털 운영 및 유지관리"
 },
 "eaf230b570b22fbb0895": {
 "d": "2026-11-03",
@@ -7231,6 +7724,12 @@
 "s": "g2b-it",
 "t": "2027년 인천세관 감시종합정보시스템 유지관리 용역"
 },
+"f09b246eb4d31dd9dabc": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01803448&bidPbancOrd=002",
+"s": "g2b-it",
+"t": "2026년 개인정보 유출 방지 솔루션 도입"
+},
 "f0fac7f121ef68f616bc": {
 "d": "2026-10-23",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01782180&bidPbancOrd=002",
@@ -7285,6 +7784,12 @@
 "s": "g2b-it",
 "t": "전문대학 혁신지원사업 관련 교내 냉난방시설 유지보수"
 },
+"f2447d74d4f98c6bd5b4": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01810321&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 한국학중앙연구원 정보시스템 유지관리"
+},
 "f293a57cf159d9df0992": {
 "d": "2026-10-28",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01789276&bidPbancOrd=000",
@@ -7297,6 +7802,12 @@
 "s": "g2b-servc",
 "t": "2026년 부산광역시 어초어장 바다숲 통합관리"
 },
+"f2c7a0e6f4db85b4c7e9": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01809580&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 국방일보 조판시스템 유지보수 사업"
+},
 "f31a5970e7135bae9222": {
 "d": "2026-10-28",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01789043&bidPbancOrd=000",
@@ -7308,6 +7819,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01777196&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "서울보라매초등학교 옥상조경 철거 및 방수공사 건설폐기물처리용역"
+},
+"f33b144145fd79fa533d": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01799247&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 생활안전용 CCTV시스템 통합 유지관리 용역"
 },
 "f350851dfade9c902e13": {
 "d": "2026-10-28",
@@ -7459,6 +7976,12 @@
 "s": "g2b-it",
 "t": "(장기계속)2027-2029년 KOICA 교육운영 위탁 용역"
 },
+"f8e57c7d943697d7bfc2": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01811385&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "인천형 AX(인공지능 전환) ISP 사업"
+},
 "f94bb0f061ba7a6a5862": {
 "d": "2026-10-26",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01790022&bidPbancOrd=000",
@@ -7483,6 +8006,12 @@
 "s": "g2b-it",
 "t": "2027년 경제총조사 통합시스템 운영 및 유지관리 사업"
 },
+"fa81f463be5e595c9fef": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01811769&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "오수처리시설 유지관리 용역 업체 선정"
+},
 "fa9fdd629f793fff9858": {
 "d": "2026-11-02",
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01802543&bidPbancOrd=000",
@@ -7506,6 +8035,18 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746583&bidPbancOrd=000",
 "s": "g2b-servc",
 "t": "2026년 산불예방숲가꾸기 감리용역"
+},
+"fbebb2004025c52d1f2a": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01807371&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "[재공고]2027년 서울특별시교육청교육연구정보원 정보시스템 통합유지관리 용역"
+},
+"fc303466fd3912659d31": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01810979&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "확장현실 교육훈련 인프라 구축"
 },
 "fc593542fe80d50ba22d": {
 "d": "2026-09-16",
@@ -7554,6 +8095,12 @@
 "l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01804998&bidPbancOrd=000",
 "s": "g2b-it",
 "t": "2027년~2028년 산림행정미디어센터 운영 및 유지관리"
+},
+"fdb9d918ede819404c0e": {
+"d": "2026-11-05",
+"l": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01811817&bidPbancOrd=000",
+"s": "g2b-it",
+"t": "2027년 조직정원·위원회관리시스템 유지관리 용역"
 },
 "fde2ea5f92ef76d32e1d": {
 "d": "2026-09-29",
@@ -7646,5 +8193,5 @@
 "t": "`27~`28년 군인공제회C&C 전산시스템 통합유지보수 사업"
 }
 },
-"updated_at": "2026-11-04T15:07:01+09:00"
+"updated_at": "2026-11-05T15:35:38+09:00"
 }
