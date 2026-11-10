@@ -1,9 +1,9 @@
 {
-"count": 67,
+"count": 69,
 "health": {
 "gu-ddm-n": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 10,
 10,
@@ -19,7 +19,7 @@
 },
 "gu-ddm-r": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 10,
 10,
@@ -35,7 +35,7 @@
 },
 "gu-dobong": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 51,
 51,
@@ -51,7 +51,7 @@
 },
 "gu-dongjak": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 50,
 50,
@@ -67,7 +67,7 @@
 },
 "gu-ep-n": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 10,
 10,
@@ -83,7 +83,7 @@
 },
 "gu-ep-r": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 10,
 10,
@@ -99,7 +99,7 @@
 },
 "gu-gangbuk": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 51,
 51,
@@ -115,7 +115,7 @@
 },
 "gu-gangdong-n": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 10,
 10,
@@ -131,7 +131,7 @@
 },
 "gu-gangdong-r": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 10,
 10,
@@ -147,7 +147,7 @@
 },
 "gu-gangnam": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 50,
 50,
@@ -163,7 +163,7 @@
 },
 "gu-gangseo-n": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 10,
 10,
@@ -179,7 +179,7 @@
 },
 "gu-gangseo-r": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 10,
 10,
@@ -195,7 +195,7 @@
 },
 "gu-geumcheon": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 51,
 51,
@@ -211,7 +211,7 @@
 },
 "gu-guro-n": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 10,
 10,
@@ -227,7 +227,7 @@
 },
 "gu-guro-r": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 10,
 10,
@@ -243,7 +243,7 @@
 },
 "gu-gwanak-n": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 10,
 10,
@@ -259,7 +259,7 @@
 },
 "gu-gwanak-r": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 10,
 10,
@@ -275,7 +275,7 @@
 },
 "gu-gwangjin-n": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 10,
 10,
@@ -291,7 +291,7 @@
 },
 "gu-gwangjin-r": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 10,
 10,
@@ -306,7 +306,9 @@
 ]
 },
 "gu-jongno-n": {
-"fails": 0,
+"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+"err_at": "2026-11-10",
+"fails": 1,
 "ok": "2026-11-09",
 "rows": [
 20,
@@ -322,7 +324,9 @@
 ]
 },
 "gu-jongno-r": {
-"fails": 0,
+"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+"err_at": "2026-11-10",
+"fails": 1,
 "ok": "2026-11-09",
 "rows": [
 10,
@@ -339,7 +343,7 @@
 },
 "gu-junggu-n": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 10,
 10,
@@ -355,7 +359,7 @@
 },
 "gu-junggu-r": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 10,
 10,
@@ -378,7 +382,7 @@
 },
 "gu-mapo-n": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 10,
 10,
@@ -394,7 +398,7 @@
 },
 "gu-nowon": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 51,
 51,
@@ -410,7 +414,7 @@
 },
 "gu-sdm-n": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 10,
 10,
@@ -426,7 +430,7 @@
 },
 "gu-sdm-r": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 10,
 10,
@@ -442,7 +446,7 @@
 },
 "gu-seocho": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 50,
 50,
@@ -458,7 +462,7 @@
 },
 "gu-seongdong-n": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 10,
 10,
@@ -474,7 +478,7 @@
 },
 "gu-seongdong-r": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 10,
 10,
@@ -490,7 +494,7 @@
 },
 "gu-songpa-n": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 10,
 10,
@@ -506,9 +510,8 @@
 },
 "gu-songpa-r": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
-10,
 10,
 10,
 10,
@@ -517,11 +520,14 @@
 10,
 10,
 10,
+10,
 10
 ]
 },
 "gu-yangcheon": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
+"err_at": "2026-11-10",
+"fails": 1,
 "ok": "2026-11-09",
 "rows": [
 50,
@@ -537,7 +543,9 @@
 ]
 },
 "gu-ydp-n": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
+"err_at": "2026-11-10",
+"fails": 1,
 "ok": "2026-11-09",
 "rows": [
 10,
@@ -553,7 +561,9 @@
 ]
 },
 "gu-ydp-r": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
+"err_at": "2026-11-10",
+"fails": 1,
 "ok": "2026-11-09",
 "rows": [
 10,
@@ -569,10 +579,10 @@
 ]
 },
 "gu-yongsan-n": {
-"alerted": "2026-11-09",
+"alerted": "2026-11-10",
 "err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
-"err_at": "2026-11-09",
-"fails": 58,
+"err_at": "2026-11-10",
+"fails": 59,
 "ok": "2026-10-14",
 "rows": [
 10,
@@ -589,9 +599,8 @@
 },
 "seoul-job-public": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
-62,
 62,
 57,
 58,
@@ -600,12 +609,13 @@
 63,
 61,
 67,
-69
+69,
+70
 ]
 },
 "seoul-notice": {
 "fails": 0,
-"ok": "2026-11-09",
+"ok": "2026-11-10",
 "rows": [
 100,
 100,
@@ -945,6 +955,12 @@
 "s": "gu-dongjak",
 "t": "서울특별시 동작구 소나무류 반출금지구역 지정 공고"
 },
+"c1c69f44e26e8dbf4964": {
+"d": "2026-11-10",
+"l": "http://nowon.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=23980&homepage_pbs_yn=Y&subCheck=Y",
+"s": "gu-nowon",
+"t": "2026년 소나무재선충병 예방나무주사 사업 시행공고(안).hwpx"
+},
 "ccaa669b329dda8e293b": {
 "d": "2026-09-22",
 "l": "https://www.ddm.go.kr/www/selectBbsNttView.do?key=208&bbsNo=42&nttNo=194861&searchCtgry=&searchCnd=all&searchKrwd=&integrDeptCode=&pageIndex=1",
@@ -962,6 +978,12 @@
 "l": "https://www.gangdong.go.kr/web/newportal/notice/02/58548",
 "s": "gu-gangdong-r",
 "t": "우리구 2026년 푸른도시과 기간제근로자 3차 추가채용과 관련해 다음과 같이 공고합니다."
+},
+"dc2f4ecf7b8d60212164": {
+"d": "2026-11-10",
+"l": "http://gangnam.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=65904&homepage_pbs_yn=Y&subCheck=Y",
+"s": "gu-gangnam",
+"t": "소나무재선충병 방제명령 및 긴급 방제사업 시행 공고.hwpx"
 },
 "ddfd3fb4f73f9f8a99aa": {
 "d": "2026-11-02",
@@ -1024,5 +1046,5 @@
 "t": "서울특별시 중구 임기제공무원 채용시험 최종합격자 공고(SNS구정홍보 전문요원, 언론홍보, 정책홍보, 주민소통활성화, 법무행정, 도시계획, 운동처방사)"
 }
 },
-"updated_at": "2026-11-09T15:10:37+09:00"
+"updated_at": "2026-11-10T16:15:07+09:00"
 }
