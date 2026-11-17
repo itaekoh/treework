@@ -1,8 +1,10 @@
 {
-"count": 77,
+"count": 78,
 "health": {
 "gu-ddm-n": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonWebList.do?key=3291 (Caused by ConnectTimeoutError(<HTTPSConne",
+"err_at": "2026-11-17",
+"fails": 1,
 "ok": "2026-11-16",
 "rows": [
 10,
@@ -18,7 +20,9 @@
 ]
 },
 "gu-ddm-r": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ddm.go.kr', port=443): Max retries exceeded with url: /www/selectBbsNttList.do?bbsNo=42&key=208 (Caused by ConnectTimeoutError(<HTTPSC",
+"err_at": "2026-11-17",
+"fails": 1,
 "ok": "2026-11-16",
 "rows": [
 10,
@@ -35,7 +39,7 @@
 },
 "gu-dobong": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
 51,
 51,
@@ -51,7 +55,7 @@
 },
 "gu-dongjak": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
 50,
 50,
@@ -66,10 +70,10 @@
 ]
 },
 "gu-ep-n": {
-"alerted": "2026-11-16",
+"alerted": "2026-11-17",
 "err": "HTTPError: 417 Client Error: Expectation Failed for url: https://www.ep.go.kr/www/selectEminwonList.do?key=754&notAncmtSeCode=01",
-"err_at": "2026-11-16",
-"fails": 3,
+"err_at": "2026-11-17",
+"fails": 4,
 "ok": "2026-11-11",
 "rows": [
 10,
@@ -85,10 +89,10 @@
 ]
 },
 "gu-ep-r": {
-"alerted": "2026-11-16",
+"alerted": "2026-11-17",
 "err": "HTTPError: 417 Client Error: Expectation Failed for url: https://www.ep.go.kr/www/selectEminwonList.do?key=748&notAncmtSeCode=02",
-"err_at": "2026-11-16",
-"fails": 3,
+"err_at": "2026-11-17",
+"fails": 4,
 "ok": "2026-11-11",
 "rows": [
 10,
@@ -105,7 +109,7 @@
 },
 "gu-gangbuk": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
 51,
 51,
@@ -121,7 +125,7 @@
 },
 "gu-gangdong-n": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
 10,
 10,
@@ -137,7 +141,7 @@
 },
 "gu-gangdong-r": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
 10,
 10,
@@ -153,7 +157,7 @@
 },
 "gu-gangnam": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
 50,
 50,
@@ -168,10 +172,8 @@
 ]
 },
 "gu-gangseo-n": {
-"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
-"err_at": "2026-11-16",
-"fails": 1,
-"ok": "2026-11-13",
+"fails": 0,
+"ok": "2026-11-17",
 "rows": [
 10,
 10,
@@ -186,10 +188,8 @@
 ]
 },
 "gu-gangseo-r": {
-"err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
-"err_at": "2026-11-16",
-"fails": 1,
-"ok": "2026-11-13",
+"fails": 0,
+"ok": "2026-11-17",
 "rows": [
 10,
 10,
@@ -205,7 +205,7 @@
 },
 "gu-geumcheon": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
 51,
 51,
@@ -221,7 +221,7 @@
 },
 "gu-guro-n": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
 10,
 10,
@@ -237,7 +237,7 @@
 },
 "gu-guro-r": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
 10,
 10,
@@ -253,7 +253,7 @@
 },
 "gu-gwanak-n": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
 10,
 10,
@@ -269,7 +269,7 @@
 },
 "gu-gwanak-r": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
 10,
 10,
@@ -285,7 +285,7 @@
 },
 "gu-gwangjin-n": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
 10,
 10,
@@ -301,7 +301,7 @@
 },
 "gu-gwangjin-r": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
 10,
 10,
@@ -317,7 +317,7 @@
 },
 "gu-jongno-n": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
 20,
 20,
@@ -333,7 +333,7 @@
 },
 "gu-jongno-r": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
 10,
 10,
@@ -349,7 +349,7 @@
 },
 "gu-junggu-n": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
 10,
 10,
@@ -365,9 +365,8 @@
 },
 "gu-junggu-r": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
-10,
 10,
 10,
 10,
@@ -376,6 +375,7 @@
 12,
 11,
 11,
+12,
 12
 ]
 },
@@ -388,7 +388,7 @@
 },
 "gu-mapo-n": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
 10,
 10,
@@ -404,7 +404,7 @@
 },
 "gu-nowon": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
 51,
 51,
@@ -420,7 +420,7 @@
 },
 "gu-sdm-n": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
 10,
 10,
@@ -436,7 +436,7 @@
 },
 "gu-sdm-r": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
 10,
 10,
@@ -452,7 +452,7 @@
 },
 "gu-seocho": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
 50,
 50,
@@ -468,7 +468,7 @@
 },
 "gu-seongdong-n": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
 10,
 10,
@@ -484,7 +484,7 @@
 },
 "gu-seongdong-r": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
 10,
 10,
@@ -500,7 +500,7 @@
 },
 "gu-songpa-n": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
 10,
 10,
@@ -516,9 +516,9 @@
 },
 "gu-songpa-r": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
-8,
+10,
 10,
 10,
 10,
@@ -531,7 +531,9 @@
 ]
 },
 "gu-yangcheon": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
+"err_at": "2026-11-17",
+"fails": 1,
 "ok": "2026-11-16",
 "rows": [
 50,
@@ -547,7 +549,9 @@
 ]
 },
 "gu-ydp-n": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
+"err_at": "2026-11-17",
+"fails": 1,
 "ok": "2026-11-16",
 "rows": [
 10,
@@ -563,7 +567,9 @@
 ]
 },
 "gu-ydp-r": {
-"fails": 0,
+"err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
+"err_at": "2026-11-17",
+"fails": 1,
 "ok": "2026-11-16",
 "rows": [
 10,
@@ -579,10 +585,10 @@
 ]
 },
 "gu-yongsan-n": {
-"alerted": "2026-11-16",
+"alerted": "2026-11-17",
 "err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
-"err_at": "2026-11-16",
-"fails": 63,
+"err_at": "2026-11-17",
+"fails": 64,
 "ok": "2026-10-14",
 "rows": [
 10,
@@ -599,9 +605,8 @@
 },
 "seoul-job-public": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
-62,
 63,
 61,
 67,
@@ -610,12 +615,13 @@
 75,
 73,
 72,
-76
+76,
+78
 ]
 },
 "seoul-notice": {
 "fails": 0,
-"ok": "2026-11-16",
+"ok": "2026-11-17",
 "rows": [
 100,
 100,
@@ -798,6 +804,12 @@
 "l": "http://nowon.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=23639&homepage_pbs_yn=Y&subCheck=Y",
 "s": "gu-nowon",
 "t": "2026년 노원구 푸른도시과 공원관리팀 기간제근로자 추가 채용 재공고"
+},
+"6fe9c2e87fb0b3c573b7": {
+"d": "2026-11-17",
+"l": "https://www.gangseo.seoul.kr/gs040302/view?srchPage=&curPage=1&srchKey=&srchText=&mgtNo=68960",
+"s": "gu-gangseo-r",
+"t": "2026년 자연생태분야(산림재난대응단)추가채용 공고"
 },
 "72c66b0b8dac48433dc1": {
 "d": "2026-09-15",
@@ -1094,5 +1106,5 @@
 "t": "서울특별시 중구 임기제공무원 채용시험 최종합격자 공고(SNS구정홍보 전문요원, 언론홍보, 정책홍보, 주민소통활성화, 법무행정, 도시계획, 운동처방사)"
 }
 },
-"updated_at": "2026-11-16T15:23:06+09:00"
+"updated_at": "2026-11-17T16:57:43+09:00"
 }
