@@ -1,9 +1,9 @@
 {
-"count": 82,
+"count": 87,
 "health": {
 "gu-ddm-n": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 10,
 10,
@@ -19,7 +19,7 @@
 },
 "gu-ddm-r": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 10,
 10,
@@ -35,7 +35,7 @@
 },
 "gu-dobong": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 51,
 51,
@@ -51,7 +51,7 @@
 },
 "gu-dongjak": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 50,
 50,
@@ -66,10 +66,10 @@
 ]
 },
 "gu-ep-n": {
-"alerted": "2026-11-20",
+"alerted": "2026-11-23",
 "err": "HTTPError: 417 Client Error: Expectation Failed for url: https://www.ep.go.kr/www/selectEminwonList.do?key=754&notAncmtSeCode=01",
-"err_at": "2026-11-20",
-"fails": 7,
+"err_at": "2026-11-23",
+"fails": 8,
 "ok": "2026-11-11",
 "rows": [
 10,
@@ -85,10 +85,10 @@
 ]
 },
 "gu-ep-r": {
-"alerted": "2026-11-20",
+"alerted": "2026-11-23",
 "err": "HTTPError: 417 Client Error: Expectation Failed for url: https://www.ep.go.kr/www/selectEminwonList.do?key=748&notAncmtSeCode=02",
-"err_at": "2026-11-20",
-"fails": 7,
+"err_at": "2026-11-23",
+"fails": 8,
 "ok": "2026-11-11",
 "rows": [
 10,
@@ -105,7 +105,7 @@
 },
 "gu-gangbuk": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 51,
 51,
@@ -120,10 +120,10 @@
 ]
 },
 "gu-gangdong-n": {
-"alerted": "2026-11-20",
+"alerted": "2026-11-23",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.gangdong.go.kr', port=443): Max retries exceeded with url: /web/newportal/notice/01 (Caused by ConnectTimeoutError(<HTTPSConnection(ho",
-"err_at": "2026-11-20",
-"fails": 3,
+"err_at": "2026-11-23",
+"fails": 4,
 "ok": "2026-11-17",
 "rows": [
 10,
@@ -139,10 +139,10 @@
 ]
 },
 "gu-gangdong-r": {
-"alerted": "2026-11-20",
+"alerted": "2026-11-23",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.gangdong.go.kr', port=443): Max retries exceeded with url: /web/newportal/notice/02 (Caused by ConnectTimeoutError(<HTTPSConnection(ho",
-"err_at": "2026-11-20",
-"fails": 3,
+"err_at": "2026-11-23",
+"fails": 4,
 "ok": "2026-11-17",
 "rows": [
 10,
@@ -159,7 +159,7 @@
 },
 "gu-gangnam": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 50,
 50,
@@ -175,7 +175,7 @@
 },
 "gu-gangseo-n": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 10,
 10,
@@ -191,7 +191,7 @@
 },
 "gu-gangseo-r": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 10,
 10,
@@ -207,7 +207,7 @@
 },
 "gu-geumcheon": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 51,
 51,
@@ -223,7 +223,7 @@
 },
 "gu-guro-n": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 10,
 10,
@@ -239,7 +239,7 @@
 },
 "gu-guro-r": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 10,
 10,
@@ -255,7 +255,7 @@
 },
 "gu-gwanak-n": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 10,
 10,
@@ -271,7 +271,7 @@
 },
 "gu-gwanak-r": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 10,
 10,
@@ -287,7 +287,7 @@
 },
 "gu-gwangjin-n": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 10,
 10,
@@ -303,7 +303,7 @@
 },
 "gu-gwangjin-r": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 10,
 10,
@@ -319,7 +319,7 @@
 },
 "gu-jongno-n": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 20,
 20,
@@ -335,7 +335,7 @@
 },
 "gu-jongno-r": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 10,
 10,
@@ -351,7 +351,7 @@
 },
 "gu-junggu-n": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 10,
 10,
@@ -367,10 +367,9 @@
 },
 "gu-junggu-r": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 10,
-10,
 12,
 11,
 11,
@@ -378,7 +377,8 @@
 12,
 12,
 12,
-12
+12,
+13
 ]
 },
 "gu-jungnang-r": {
@@ -390,7 +390,7 @@
 },
 "gu-mapo-n": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 10,
 10,
@@ -406,7 +406,7 @@
 },
 "gu-nowon": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 51,
 51,
@@ -422,7 +422,7 @@
 },
 "gu-sdm-n": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 10,
 10,
@@ -438,7 +438,7 @@
 },
 "gu-sdm-r": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 10,
 10,
@@ -454,7 +454,7 @@
 },
 "gu-seocho": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 50,
 50,
@@ -470,7 +470,7 @@
 },
 "gu-seongdong-n": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 10,
 10,
@@ -486,7 +486,7 @@
 },
 "gu-seongdong-r": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 10,
 10,
@@ -502,7 +502,7 @@
 },
 "gu-songpa-n": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 10,
 10,
@@ -518,7 +518,7 @@
 },
 "gu-songpa-r": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 10,
 10,
@@ -533,10 +533,10 @@
 ]
 },
 "gu-yangcheon": {
-"alerted": "2026-11-20",
+"alerted": "2026-11-23",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='yangcheon.eminwon.seoul.kr', port=443): Max retries exceeded with url: /emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do (Caused by Connec",
-"err_at": "2026-11-20",
-"fails": 2,
+"err_at": "2026-11-23",
+"fails": 3,
 "ok": "2026-11-18",
 "rows": [
 50,
@@ -552,10 +552,10 @@
 ]
 },
 "gu-ydp-n": {
-"alerted": "2026-11-20",
+"alerted": "2026-11-23",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=01&key=2851 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-11-20",
-"fails": 4,
+"err_at": "2026-11-23",
+"fails": 5,
 "ok": "2026-11-16",
 "rows": [
 10,
@@ -571,10 +571,10 @@
 ]
 },
 "gu-ydp-r": {
-"alerted": "2026-11-20",
+"alerted": "2026-11-23",
 "err": "ConnectTimeout: HTTPSConnectionPool(host='www.ydp.go.kr', port=443): Max retries exceeded with url: /www/selectEminwonList.do?menuFlag=03&key=5286 (Caused by ConnectTimeoutError(<H",
-"err_at": "2026-11-20",
-"fails": 2,
+"err_at": "2026-11-23",
+"fails": 3,
 "ok": "2026-11-18",
 "rows": [
 10,
@@ -590,10 +590,10 @@
 ]
 },
 "gu-yongsan-n": {
-"alerted": "2026-11-20",
+"alerted": "2026-11-23",
 "err": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
-"err_at": "2026-11-20",
-"fails": 67,
+"err_at": "2026-11-23",
+"fails": 68,
 "ok": "2026-10-14",
 "rows": [
 10,
@@ -610,9 +610,8 @@
 },
 "seoul-job-public": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
-69,
 70,
 75,
 73,
@@ -621,12 +620,13 @@
 78,
 78,
 86,
-89
+89,
+90
 ]
 },
 "seoul-notice": {
 "fails": 0,
-"ok": "2026-11-20",
+"ok": "2026-11-23",
 "rows": [
 100,
 100,
@@ -810,6 +810,18 @@
 "s": "gu-junggu-n",
 "t": "2026년「남산자락숲길 페스타」협찬사 모집 공고"
 },
+"5ef9b23e19016bf88125": {
+"d": "2026-11-23",
+"l": "https://dobong.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=49656&homepage_pbs_yn=Y&subCheck=Y",
+"s": "gu-dobong",
+"t": "2027년 자연생태분야 기간제근로자 채용 공고"
+},
+"5f3e40e798df4f7213f1": {
+"d": "2026-11-23",
+"l": "https://dobong.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=49647&homepage_pbs_yn=Y&subCheck=Y",
+"s": "gu-dobong",
+"t": "2027년 도시농업분야 기간제근로자 모집 공고"
+},
 "5f773ec843d31b391f41": {
 "d": "2026-09-11",
 "l": "http://nowon.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=23639&homepage_pbs_yn=Y&subCheck=Y",
@@ -870,6 +882,12 @@
 "s": "seoul-job-public",
 "t": "(서울시청) 서울 매력일자리(정원여가사업 기획 전문가) 사업 참여자 모집 공고"
 },
+"7ec5a35ece4c78cc6810": {
+"d": "2026-11-23",
+"l": "https://dobong.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=49649&homepage_pbs_yn=Y&subCheck=Y",
+"s": "gu-dobong",
+"t": "2027년 공원분야 도시공원 유지관리 기간제근로자 채용 공고"
+},
 "80e87a30d8896d383e5f": {
 "d": "2026-08-18",
 "l": "https://job.seoul.go.kr/hmpg/rmim/pjmg/pjmgDetail.do?pbc_recmnt_mng_no=59212D46860102E8E063C0A8A028653A",
@@ -893,6 +911,18 @@
 "l": "http://gangbuk.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=36742&homepage_pbs_yn=Y&subCheck=Y",
 "s": "gu-gangbuk",
 "t": "2027년 강북구 공원녹지과 기간제근로자 제1회차 채용 공고"
+},
+"9435d7c913d888121cd2": {
+"d": "2026-11-23",
+"l": "https://dobong.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=49646&homepage_pbs_yn=Y&subCheck=Y",
+"s": "gu-dobong",
+"t": "2027년 도봉구 공원여가분야 기간제근로자 채용 공고"
+},
+"956aa33a1412559148bd": {
+"d": "2026-11-23",
+"l": "https://dobong.eminwon.seoul.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?method=selectOfrNotAncmt&methodnm=selectOfrNotAncmtRegst&jndinm=OfrNotAncmtEJB&context=NTIS&not_ancmt_mgt_no=49651&homepage_pbs_yn=Y&subCheck=Y",
+"s": "gu-dobong",
+"t": "2027년 공원분야 수경시설 유지관리 기간제근로자 채용 공고"
 },
 "968ec08022f7d2773d34": {
 "d": "2026-09-16",
@@ -1135,5 +1165,5 @@
 "t": "서울특별시 중구 임기제공무원 채용시험 최종합격자 공고(SNS구정홍보 전문요원, 언론홍보, 정책홍보, 주민소통활성화, 법무행정, 도시계획, 운동처방사)"
 }
 },
-"updated_at": "2026-11-20T16:10:44+09:00"
+"updated_at": "2026-11-23T16:34:20+09:00"
 }
